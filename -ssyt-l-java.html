@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1104,7 +1106,7 @@
 <a id="toc459205316"></a>
 <a id="toc459205110"></a>
 <a id="toc12502280"></a></p>
-<h1 id="2-java">2. <span style="color: #365f91">أساسيات لغة Java</span></h1>
+<h1 id="2-java">2. <span style="color: #365f91">أساسيات لغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi></span></h1>
 <p><a id="toc12502281"></a>
 <a id="toc459349305"></a>
 <a id="toc459263810"></a>
@@ -1116,7 +1118,7 @@
 <a id="toc459205111"></a>
 <a id="toc428596796"></a></p>
 <h2 id="21">2.1. <span style="color: #4f81bd">مقدمة</span></h2>
-<p>سنعتبر لغة Java في البداية لغة برمجة تقليدية. وسنتناول موضوع الكائنات لاحقًا.</p>
+<p>سنعتبر لغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في البداية لغة برمجة تقليدية. وسنتناول موضوع الكائنات لاحقًا.</p>
 <p>في البرنامج، هناك أمران </p>
 <ul>
   <li>البيانات
@@ -1137,9 +1139,9 @@
 <a id="toc459205318"></a>
 <a id="toc459205112"></a>
 <a id="toc428596797"></a></p>
-<h2 id="22-java">2.2. <span style="color: #4f81bd">بيانات Java</span></h2>
+<h2 id="22-java">2.2. <span style="color: #4f81bd">بيانات <bdi dir="ltr" class="odt-ltr-term">Java</bdi></span></h2>
 <p><a id="toc427837273"></a><a id="toc427153100"></a><a id="toc427151488"></a></p>
-<p>تستخدم Java أنواع البيانات التالية:</p>
+<p>تستخدم <bdi dir="ltr" class="odt-ltr-term">Java</bdi> أنواع البيانات التالية:</p>
 <ul>
   <li>الأعداد الصحيحة 
   </li>
@@ -1164,7 +1166,7 @@
 <a id="toc459205113"></a>
 <a id="toc428596798"></a></p>
 <h3 id="221">2.2.1. <span style="color: #4f81bd">أنواع البيانات المحددة مسبقًا</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الترميز</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النطاق</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>حرف</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف يونيكود</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>int</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-231،  231 -1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>long</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-263،  263  -1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>بايت</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-27  , 27  -1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>قصير</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-2(15)،  2(15)،-1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عائم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[3.410⁻³⁸,  3.410³⁸] بالقيمة المطلقة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>مزدوج</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[1.7 × 10⁻³⁰⁸، 1.7 × 10³⁰⁸] من حيث القيمة المطلقة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>منطقية</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1 بت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">صحيح، خطأ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>سلسلة</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>تاريخ</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تاريخ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>حرف</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع الكائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد صحيح</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">int</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>طويل</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">long</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>بايت</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع الكائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">بايت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد عائم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع الكائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد عائم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد مزدوج</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">double</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>منطقية</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">منطقية</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الترميز</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النطاق</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>حرف</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف يونيكود</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">int</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-231،  231 -1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">long</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-263،  263  -1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>بايت</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-27  , 27  -1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>قصير</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[-2(15)،  2(15)،-1]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عائم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[3.410⁻³⁸,  3.410³⁸] بالقيمة المطلقة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>مزدوج</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8 بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">[<bdi dir="ltr" class="odt-ltr-term">1.7 ×</bdi> 10⁻³⁰⁸، <bdi dir="ltr" class="odt-ltr-term">1.7 ×</bdi> 10³⁰⁸] من حيث القيمة المطلقة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>منطقية</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1 بت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">صحيح، خطأ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>سلسلة</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>تاريخ</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تاريخ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>حرف</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع الكائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد صحيح</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">int</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>طويل</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">long</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>بايت</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع الكائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">بايت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد عائم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع الكائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد عائم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد مزدوج</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">double</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>منطقية</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مرجع كائن</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">منطقية</div></td></tr></table>
 
 <p><a id="toc12502284"></a>
 <a id="toc459349308"></a>
@@ -1177,7 +1179,7 @@
 <a id="toc459205114"></a>
 <a id="toc428596799"></a></p>
 <h3 id="222">2.2.2. <span style="color: #4f81bd">ترميز البيانات الحرفية</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد صحيح</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">145، -7، 0xFF (سداسي عشري)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد مزدوج</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">134.789، -45E-18 (-45 × 10⁻¹⁸)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد عائم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">134.789F، <b>-45E-18F </b>(-45 × 10⁻¹⁸)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>حرف</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&#x27;A&#x27;، &#x27;b&#x27;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>سلسلة</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;اليوم&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>منطقية</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">صحيح، خطأ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>تاريخ</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تاريخ جديد (13،10،1954) (اليوم، الشهر، السنة)</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد صحيح</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">145، -7، 0xFF (سداسي عشري)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد مزدوج</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">134.789، -45E-18 (-45 <bdi dir="ltr" class="odt-ltr-term">×</bdi> 10⁻¹⁸)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>عدد عائم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">134.789F، <b>-45E-18F </b>(-45 <bdi dir="ltr" class="odt-ltr-term">×</bdi> 10⁻¹⁸)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>حرف</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&#x27;<bdi dir="ltr" class="odt-ltr-term">A</bdi>&#x27;، &#x27;<bdi dir="ltr" class="odt-ltr-term">b</bdi>&#x27;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>سلسلة</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;اليوم&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>منطقية</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">صحيح، خطأ</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>تاريخ</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تاريخ جديد (13،10،1954) (اليوم، الشهر، السنة)</div></td></tr></table>
 
 <p><a id="toc12502285"></a>
 <a id="toc459349309"></a>
@@ -1198,8 +1200,8 @@
 <h4 id="2231">2.2.3.1. <span style="color: #4f81bd">دور الإعلانات</span></h4>
 <p>يقوم البرنامج بمعالجة البيانات التي تتميز باسم ونوع. يتم تخزين هذه البيانات في الذاكرة. عند ترجمة البرنامج، يقوم المترجم بتخصيص موقع في الذاكرة لكل جزء من البيانات يتميز بعنوان وحجم. ويقوم بذلك باستخدام الإعلانات التي وضعها المبرمج.</p>
 <p>علاوة على ذلك، تسمح هذه الإعلانات للمترجم بالكشف عن أخطاء البرمجة. وبالتالي، فإن العملية</p>
-<p>x=x*2; </p>
-<p>غير صحيحة إذا كانت x سلسلة، على سبيل المثال.</p>
+<p><bdi dir="ltr" class="odt-ltr-term">x</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>*2; </p>
+<p>غير صحيحة إذا كانت <bdi dir="ltr" class="odt-ltr-term">x</bdi> سلسلة، على سبيل المثال.</p>
 <p><a id="toc459349311"></a>
 <a id="toc459263816"></a>
 <a id="toc459263579"></a>
@@ -1209,7 +1211,7 @@
 <p>صيغة إعلان الثابت هي كما يلي:</p>
 <div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;النوع&lt;/mark&gt;**&lt;mark style=&quot;background-color: #ffff00&quot;&gt; النهائي &lt;/mark&gt;**&lt;mark style=&quot;background-color: #ffff00&quot;&gt;الاسم=القيمة؛ &lt;/mark&gt;          //يحدد اسم الثابت=القيمة
 </code></pre></div>
-<p>مثال: <em>final float PI=3.141592F</em>;    </p>
+<p>مثال: <em><bdi dir="ltr" class="odt-ltr-term">final float PI</bdi>=3.141592F</em>;    </p>
 <p><u> </u></p>
 <p><u>ملاحظة</u></p>
 <p>لماذا نعلن الثوابت؟ </p>
@@ -1218,14 +1220,14 @@
   </li>
 </ul>
 
-<div class="highlight"><pre><span></span><code>مثال: *final float VAT\_rate=0.186F*;
+<div class="highlight"><pre><span></span><code>مثال: *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;final float VAT&lt;/bdi&gt;\_rate=0.186F*;
 </code></pre></div>
 <ul>
   <li>سيكون تعديل البرنامج أسهل إذا لزم تغيير &quot;الثابت&quot;. وبالتالي، في الحالة السابقة، إذا تغير معدل ضريبة القيمة المضافة إلى 33٪، فإن التعديل الوحيد المطلوب سيكون تغيير العبارة التي تحدد قيمته:
   </li>
 </ul>
 
-<div class="highlight"><pre><span></span><code>*final float tax\_rate=0.33F*;
+<div class="highlight"><pre><span></span><code>*&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;final float tax&lt;/bdi&gt;\_rate=0.33F*;
 </code></pre></div>
 <p>إذا كنا قد استخدمنا 0.186 صراحةً في البرنامج، فسيتعين علينا عندئذٍ تعديل العديد من العبارات.</p>
 <p><a id="toc459349312"></a>
@@ -1234,7 +1236,7 @@
 <a id="toc459205805"></a>
 <a id="toc459205608"></a></p>
 <h4 id="2233">2.2.3.3. <span style="color: #4f81bd">إعلان المتغيرات</span></h4>
-<p>يتم تحديد المتغير بواسطة اسم ويشير إلى نوع البيانات. يتكون اسم متغير Java من n حرفًا، يجب أن يكون أولها حرفًا، ويمكن أن يكون الباقي أحرفًا أو أرقامًا. تميز Java بين الأحرف الكبيرة والصغيرة. وبالتالي، فإن المتغيرين <strong>FIN</strong> و <strong>fin</strong> مختلفان.</p>
+<p>يتم تحديد المتغير بواسطة اسم ويشير إلى نوع البيانات. يتكون اسم متغير <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من <bdi dir="ltr" class="odt-ltr-term">n</bdi> حرفًا، يجب أن يكون أولها حرفًا، ويمكن أن يكون الباقي أحرفًا أو أرقامًا. تميز <bdi dir="ltr" class="odt-ltr-term">Java</bdi> بين الأحرف الكبيرة والصغيرة. وبالتالي، فإن المتغيرين <strong><bdi dir="ltr" class="odt-ltr-term">FIN</bdi></strong> و <strong><bdi dir="ltr" class="odt-ltr-term">fin</bdi></strong> مختلفان.</p>
 <p>يمكن تهيئة المتغيرات عند إعلانها. صيغة إعلان متغير واحد أو أكثر هي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>identificateur_de_type variable1,variable2,...,variablen;
 </code></pre></div>
@@ -1253,9 +1255,9 @@
 <a id="toc427153101"></a>
 <a id="toc427151489"></a></p>
 <h3 id="224">2.2.4. <span style="color: #4f81bd">التحويلات بين الأرقام وسلاسل الأحرف</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم -&gt; سلسلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i> &quot;&quot; + رقم</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; عدد صحيح</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Integer.parseInt(سلسلة)</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; طويل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Long.parseLong(سلسلة)</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; دبل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Double.valueOf(سلسلة).doubleValue()</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; عدد عائم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Float.valueOf(سلسلة).floatValue()</i></div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم -&gt; سلسلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i> &quot;&quot; + رقم</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; عدد صحيح</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">Integer.parseInt</bdi>(سلسلة)</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; طويل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">Long.parseLong</bdi>(سلسلة)</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; دبل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">Double.valueOf</bdi>(سلسلة).<bdi dir="ltr" class="odt-ltr-term">doubleValue</bdi>()</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة -&gt; عدد عائم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">Float.valueOf</bdi>(سلسلة).<bdi dir="ltr" class="odt-ltr-term">floatValue</bdi>()</i></div></td></tr></table>
 
-<p>فيما يلي برنامج يوضح التقنيات الرئيسية للتحويل بين الأرقام والسلاسل. قد يفشل تحويل سلسلة إلى رقم إذا كانت السلسلة لا تمثل رقمًا صالحًا.<a id="s1"></a> يؤدي هذا إلى خطأ فادح، يُعرف باسم <strong>استثناء</strong> في Java. يمكن معالجة هذا الخطأ باستخدام كتلة <em>try/catch</em> التالية:</p>
+<p>فيما يلي برنامج يوضح التقنيات الرئيسية للتحويل بين الأرقام والسلاسل. قد يفشل تحويل سلسلة إلى رقم إذا كانت السلسلة لا تمثل رقمًا صالحًا.<a id="s1"></a> يؤدي هذا إلى خطأ فادح، يُعرف باسم <strong>استثناء</strong> في <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> يمكن معالجة هذا الخطأ باستخدام كتلة <em><bdi dir="ltr" class="odt-ltr-term">try/catch</bdi></em> التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>try{
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    appel de la fonction susceptible de générer l&#39;exception
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>} catch (Exception e){
@@ -1263,7 +1265,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>instruction suivante
 </code></pre></div>
-<p>إذا لم ترمي الدالة استثناءً، ينتقل البرنامج إلى <strong>العبارة التالية</strong>؛ وإلا، فإنه يدخل إلى نص جملة <em>catch</em> ثم ينتقل إلى <strong>العبارة التالية</strong>. سنعود إلى معالجة الاستثناءات لاحقًا.</p>
+<p>إذا لم ترمي الدالة استثناءً، ينتقل البرنامج إلى <strong>العبارة التالية</strong>؛ وإلا، فإنه يدخل إلى نص جملة <em><bdi dir="ltr" class="odt-ltr-term">catch</bdi></em> ثم ينتقل إلى <strong>العبارة التالية</strong>. سنعود إلى معالجة الاستثناءات لاحقًا.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">import java.io.*;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1369,12 +1371,12 @@
 <a id="toc459205117"></a>
 <a id="toc428596802"></a></p>
 <h3 id="225">2.2.5. <span style="color: #4f81bd">مصفوفات البيانات</span></h3>
-<p>مصفوفة Java هي كائن يسمح بتجميع البيانات من نفس النوع تحت معرف واحد. يتم إعلانها على النحو التالي:</p>
-<p><em><mark style="background-color: #ffff00">Type Array[] = new Type[n] </mark></em>أو <em><mark style="background-color: #ffff00">Type[] Array = new Type[n]</mark></em></p>
-<p>كلا الصيغتين صحيحتان. <strong>n</strong> هو عدد العناصر التي يمكن للمصفوفة استيعابها. تشير الصيغة <em>Array[i]</em> إلى العنصر الموجود <em>في الفهرس i،</em> حيث i يقع في النطاق <em>[0,n-1]</em>. أي إشارة إلى العنصر <em>Array[i]</em> حيث <em>i</em> لا يقع في النطاق <em>[0,n-1]</em> ستؤدي إلى حدوث استثناء.</p>
+<p>مصفوفة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> هي كائن يسمح بتجميع البيانات من نفس النوع تحت معرف واحد. يتم إعلانها على النحو التالي:</p>
+<p><em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">Type Array</bdi>[] = <bdi dir="ltr" class="odt-ltr-term">new Type</bdi>[<bdi dir="ltr" class="odt-ltr-term">n</bdi>] </mark></em>أو <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">Type</bdi>[] <bdi dir="ltr" class="odt-ltr-term">Array</bdi> = <bdi dir="ltr" class="odt-ltr-term">new Type</bdi>[<bdi dir="ltr" class="odt-ltr-term">n</bdi>]</mark></em></p>
+<p>كلا الصيغتين صحيحتان. <strong><bdi dir="ltr" class="odt-ltr-term">n</bdi></strong> هو عدد العناصر التي يمكن للمصفوفة استيعابها. تشير الصيغة <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> إلى العنصر الموجود <em>في الفهرس <bdi dir="ltr" class="odt-ltr-term">i</bdi>،</em> حيث <bdi dir="ltr" class="odt-ltr-term">i</bdi> يقع في النطاق <em>[0,<bdi dir="ltr" class="odt-ltr-term">n-1</bdi>]</em>. أي إشارة إلى العنصر <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> حيث <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em> لا يقع في النطاق <em>[0,<bdi dir="ltr" class="odt-ltr-term">n-1</bdi>]</em> ستؤدي إلى حدوث استثناء.</p>
 <p>يمكن تعريف مصفوفة ثنائية الأبعاد على النحو التالي:</p>
-<p><em><mark style="background-color: #ffff00">Type Array[][] = new Type[n][p] </mark></em>أو <em><mark style="background-color: #ffff00">Type[][] Array = new Type[n][p]</mark></em></p>
-<p>تشير صيغة <em>Array[i]</em> إلى عنصر البيانات <em>i</em> في <em>Array</em> حيث ينتمي i إلى الفاصل <em>[0,n-1]</em>. <em>Array[i]</em> هو نفسه مصفوفة: تشير <em>Array[i][j]</em> إلى العنصر <em>j</em> في <em>Array[i]،</em> حيث ينتمي j إلى الفاصل <em>[0,p-1]</em><strong>.</strong> أي إشارة إلى عنصر في <em>Array</em> بمؤشرات غير صحيحة تؤدي إلى حدوث خطأ فادح.</p>
+<p><em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">Type Array</bdi>[][] = <bdi dir="ltr" class="odt-ltr-term">new Type</bdi>[<bdi dir="ltr" class="odt-ltr-term">n</bdi>][<bdi dir="ltr" class="odt-ltr-term">p</bdi>] </mark></em>أو <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">Type</bdi>[][] <bdi dir="ltr" class="odt-ltr-term">Array</bdi> = <bdi dir="ltr" class="odt-ltr-term">new Type</bdi>[<bdi dir="ltr" class="odt-ltr-term">n</bdi>][<bdi dir="ltr" class="odt-ltr-term">p</bdi>]</mark></em></p>
+<p>تشير صيغة <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> إلى عنصر البيانات <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em> في <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi></em> حيث ينتمي <bdi dir="ltr" class="odt-ltr-term">i</bdi> إلى الفاصل <em>[0,<bdi dir="ltr" class="odt-ltr-term">n-1</bdi>]</em>. <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em> هو نفسه مصفوفة: تشير <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>][<bdi dir="ltr" class="odt-ltr-term">j</bdi>]</em> إلى العنصر <em><bdi dir="ltr" class="odt-ltr-term">j</bdi></em> في <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]،</em> حيث ينتمي <bdi dir="ltr" class="odt-ltr-term">j</bdi> إلى الفاصل <em>[0,<bdi dir="ltr" class="odt-ltr-term">p-1</bdi>]</em><strong>.</strong> أي إشارة إلى عنصر في <em><bdi dir="ltr" class="odt-ltr-term">Array</bdi></em> بمؤشرات غير صحيحة تؤدي إلى حدوث خطأ فادح.</p>
 <p>فيما يلي مثال:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">public<span style="color:#000000"> </span>class<span style="color:#000000"> test1{</span></span></span>
@@ -1393,7 +1395,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>0.33
 </code></pre></div>
-<p>المصفوفة هي كائن له سمة &quot;<em>length</em>&quot;: وهي تمثل حجم المصفوفة.</p>
+<p>المصفوفة هي كائن له سمة &quot;<em><bdi dir="ltr" class="odt-ltr-term">length</bdi></em>&quot;: وهي تمثل حجم المصفوفة.</p>
 <p><a id="toc12502288"></a>
 <a id="toc459349315"></a>
 <a id="toc459263820"></a>
@@ -1404,7 +1406,7 @@
 <a id="toc459205324"></a>
 <a id="toc459205118"></a>
 <a id="toc428596803"></a></p>
-<h2 id="23-java">2.3. <span style="color: #4f81bd">أوامر Java الأساسية</span></h2>
+<h2 id="23-java">2.3. <span style="color: #4f81bd">أوامر <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الأساسية</span></h2>
 <p>نحن نميز    </p>
 <ul>
   <li>بين التعليمات الأساسية التي ينفذها الكمبيوتر
@@ -1444,15 +1446,15 @@
 <a id="toc428596804"></a></p>
 <h3 id="231">2.3.1. <span style="color: #4f81bd">الكتابة على الشاشة</span></h3>
 <p>صيغة عبارة إخراج الشاشة هي كما يلي:</p>
-<p><em><mark style="background-color: #ffff00">System.out.println(التعبير) </mark></em>أو <em><mark style="background-color: #ffff00">System.err.println(التعبير)</mark></em></p>
+<p><em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">System.out.println</bdi>(التعبير) </mark></em>أو <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">System.err.println</bdi>(التعبير)</mark></em></p>
 <p>حيث <em>التعبير</em> هو أي نوع بيانات يمكن تحويله إلى سلسلة ليتم عرضه على الشاشة. في المثال السابق، رأينا جملتي طباعة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">taux</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">taux</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
 </code></pre></div>
-<p>تقوم <strong>System.out</strong> بالكتابة إلى ملف نصي، والذي يكون الشاشة بشكل افتراضي. وينطبق الأمر نفسه على <strong>System.err</strong>. يتم تعيين أرقام (أو <em>واصفات</em>) 1 و 2 لهذه الملفات على التوالي. كما يتم التعامل مع دفق إدخال لوحة المفاتيح (<strong>System.in</strong>) كملف نصي، مع الواصف 0. يدعم كل من DOS و Unix توصيل الأوامر:</p>
+<p>تقوم <strong><bdi dir="ltr" class="odt-ltr-term">System.out</bdi></strong> بالكتابة إلى ملف نصي، والذي يكون الشاشة بشكل افتراضي. وينطبق الأمر نفسه على <strong><bdi dir="ltr" class="odt-ltr-term">System.err</bdi></strong>. يتم تعيين أرقام (أو <em>واصفات</em>) 1 و 2 لهذه الملفات على التوالي. كما يتم التعامل مع دفق إدخال لوحة المفاتيح (<strong><bdi dir="ltr" class="odt-ltr-term">System.in</bdi></strong>) كملف نصي، مع الواصف 0. يدعم كل من <bdi dir="ltr" class="odt-ltr-term">DOS</bdi> و <bdi dir="ltr" class="odt-ltr-term">Unix</bdi> توصيل الأوامر:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    commande1 | commande2
 </code></pre></div>
-<p>يتم توجيه (إعادة توجيه) كل ما يكتبه <em>الأمر 1</em> إلى <em>System.out</em> إلى مدخل <em>System.in للأمر 2</em>. بعبارة أخرى، يقرأ <em>الأمر 2</em> من <em>System.in</em> البيانات التي أنتجها <em>الأمر 2</em> عبر <em>System.</em>out، والتي لم تعد معروضة على الشاشة. يستخدم هذا النظام على نطاق واسع في Unix. في هذا التوجيه، لا يتم إعادة توجيه دفق <em>System.err</em>: فهو يكتب إلى الشاشة. ولهذا السبب يتم استخدامه لكتابة رسائل الخطأ (ومن هنا جاء اسمه <em>err</em>): يمكننا أن نكون على يقين من أنه عند توجيه الأوامر، ستستمر رسائل الخطأ في الظهور على الشاشة. لذلك يجب أن نعتاد على كتابة رسائل الخطأ على الشاشة باستخدام دفق <em>System.err</em> بدلاً من دفق <em>System.out</em>.</p>
+<p>يتم توجيه (إعادة توجيه) كل ما يكتبه <em>الأمر 1</em> إلى <em><bdi dir="ltr" class="odt-ltr-term">System.out</bdi></em> إلى مدخل <em><bdi dir="ltr" class="odt-ltr-term">System.in</bdi> للأمر 2</em>. بعبارة أخرى، يقرأ <em>الأمر 2</em> من <em><bdi dir="ltr" class="odt-ltr-term">System.in</bdi></em> البيانات التي أنتجها <em>الأمر 2</em> عبر <em><bdi dir="ltr" class="odt-ltr-term">System.</bdi></em><bdi dir="ltr" class="odt-ltr-term">out</bdi>، والتي لم تعد معروضة على الشاشة. يستخدم هذا النظام على نطاق واسع في <bdi dir="ltr" class="odt-ltr-term">Unix.</bdi> في هذا التوجيه، لا يتم إعادة توجيه دفق <em><bdi dir="ltr" class="odt-ltr-term">System.err</bdi></em>: فهو يكتب إلى الشاشة. ولهذا السبب يتم استخدامه لكتابة رسائل الخطأ (ومن هنا جاء اسمه <em><bdi dir="ltr" class="odt-ltr-term">err</bdi></em>): يمكننا أن نكون على يقين من أنه عند توجيه الأوامر، ستستمر رسائل الخطأ في الظهور على الشاشة. لذلك يجب أن نعتاد على كتابة رسائل الخطأ على الشاشة باستخدام دفق <em><bdi dir="ltr" class="odt-ltr-term">System.err</bdi></em> بدلاً من دفق <em><bdi dir="ltr" class="odt-ltr-term">System.out</bdi></em>.</p>
 <p><a id="toc12502290"></a>
 <a id="toc459349317"></a>
 <a id="toc459263822"></a>
@@ -1464,12 +1466,12 @@
 <a id="toc459205120"></a>
 <a id="toc428596805"></a></p>
 <h3 id="232">2.3.2. <span style="color: #4f81bd">قراءة البيانات المكتوبة على لوحة المفاتيح</span></h3>
-<p>يتم تمثيل تدفق البيانات الواردة من لوحة المفاتيح بواسطة الكائن <em>System.in</em> من النوع <em>InputStream</em>. ويسمح هذا النوع من الكائنات بقراءة البيانات حرفًا حرفًا. ويترك للمبرمج بعد ذلك استخراج المعلومات ذات الصلة من تدفق الأحرف هذا. ولا يسمح النوع <em>InputStream</em> بقراءة سطر نصي كامل دفعة واحدة. أما النوع <em>BufferedReader</em> فيسمح بذلك باستخدام الطريقة <em>readLine</em>.</p>
-<p>لقراءة أسطر النص التي يتم إدخالها عبر لوحة المفاتيح، نقوم بإنشاء دفق إدخال جديد من النوع <em><code>BufferedReader</code></em> من دفق الإدخال <em><code>System.in*</code> من النوع </em><code>InputStream*</code>:</p>
+<p>يتم تمثيل تدفق البيانات الواردة من لوحة المفاتيح بواسطة الكائن <em><bdi dir="ltr" class="odt-ltr-term">System.in</bdi></em> من النوع <em><bdi dir="ltr" class="odt-ltr-term">InputStream</bdi></em>. ويسمح هذا النوع من الكائنات بقراءة البيانات حرفًا حرفًا. ويترك للمبرمج بعد ذلك استخراج المعلومات ذات الصلة من تدفق الأحرف هذا. ولا يسمح النوع <em><bdi dir="ltr" class="odt-ltr-term">InputStream</bdi></em> بقراءة سطر نصي كامل دفعة واحدة. أما النوع <em><bdi dir="ltr" class="odt-ltr-term">BufferedReader</bdi></em> فيسمح بذلك باستخدام الطريقة <em><bdi dir="ltr" class="odt-ltr-term">readLine</bdi></em>.</p>
+<p>لقراءة أسطر النص التي يتم إدخالها عبر لوحة المفاتيح، نقوم بإنشاء دفق إدخال جديد من النوع <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;BufferedReader&lt;/bdi&gt;</code></em> من دفق الإدخال <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;System.in&lt;/bdi&gt;*</code> من النوع </em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;InputStream&lt;/bdi&gt;*</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">IN</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span>
 </code></pre></div>
 <p>لن نشرح تفاصيل هذه العبارة هنا، لأنها تتضمن مفهوم إنشاء الكائنات. سنستخدمها كما هي.</p>
-<p>قد يفشل إنشاء دفق: عندئذٍ يتم إنشاء خطأ فادح، يُسمى <strong>استثناءً</strong> في Java. كلما كان من المحتمل أن تولد إحدى الطرق استثناءً، يطلب مُركب Java أن يتعامل معها المبرمج. لذلك، لإنشاء دفق الإدخال السابق، يجب أن نكتب فعليًا:</p>
+<p>قد يفشل إنشاء دفق: عندئذٍ يتم إنشاء خطأ فادح، يُسمى <strong>استثناءً</strong> في <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> كلما كان من المحتمل أن تولد إحدى الطرق استثناءً، يطلب مُركب <bdi dir="ltr" class="odt-ltr-term">Java</bdi> أن يتعامل معها المبرمج. لذلك، لإنشاء دفق الإدخال السابق، يجب أن نكتب فعليًا:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">BufferedReader IN=<span style="font-weight:bold;color:#0000ff">null</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">try</span>{</span></span>
@@ -1480,11 +1482,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>مرة أخرى، لن ندخل في تفاصيل معالجة الاستثناءات هنا. بمجرد إنشاء دفق <em>IN</em> السابق، يمكننا قراءة سطر من النص باستخدام العبارة:</p>
+<p>مرة أخرى، لن ندخل في تفاصيل معالجة الاستثناءات هنا. بمجرد إنشاء دفق <em><bdi dir="ltr" class="odt-ltr-term">IN</bdi></em> السابق، يمكننا قراءة سطر من النص باستخدام العبارة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    String ligne;
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    ligne=IN.readLine();
 </code></pre></div>
-<p>يتم تخزين السطر الذي تمت كتابته على لوحة المفاتيح في المتغير <em>ligne</em> ويمكن بعد ذلك استخدامه بواسطة البرنامج.</p>
+<p>يتم تخزين السطر الذي تمت كتابته على لوحة المفاتيح في المتغير <em><bdi dir="ltr" class="odt-ltr-term">ligne</bdi></em> ويمكن بعد ذلك استخدامه بواسطة البرنامج.</p>
 <p><a id="toc12502291"></a>
 <a id="toc459349318"></a>
 <a id="toc459263823"></a>
@@ -1561,7 +1563,7 @@
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>المتغير <em>e</em> هو كائن <em>Exception</em> يتم عرضه هنا باستخدام استدعاء <em>display(e)</em>. لقد صادفنا عرض قيمة الاستثناء هذا في برنامج التحويل الذي رأيناه سابقًا، على الرغم من أننا لم نناقشه في ذلك الوقت.</p>
+<p>المتغير <em><bdi dir="ltr" class="odt-ltr-term">e</bdi></em> هو كائن <em><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></em> يتم عرضه هنا باستخدام استدعاء <em><bdi dir="ltr" class="odt-ltr-term">display</bdi>(<bdi dir="ltr" class="odt-ltr-term">e</bdi>)</em>. لقد صادفنا عرض قيمة الاستثناء هذا في برنامج التحويل الذي رأيناه سابقًا، على الرغم من أننا لم نناقشه في ذلك الوقت.</p>
 <p><a id="toc12502292"></a>
 <a id="toc459349319"></a>
 <a id="toc459263824"></a>
@@ -1573,7 +1575,7 @@
 <a id="toc459205122"></a>
 <a id="toc428596807"></a></p>
 <h3 id="234">2.3.4. <span style="color: #4f81bd">تعيين قيمة تعبير إلى متغير</span></h3>
-<p>ما يهمنا هنا هو العملية  <em>variable=expression;</em></p>
+<p>ما يهمنا هنا هو العملية  <em><bdi dir="ltr" class="odt-ltr-term">variable</bdi>=<bdi dir="ltr" class="odt-ltr-term">expression</bdi>;</em></p>
 <p>يمكن أن يكون التعبير من الأنواع التالية: حسابي، نسبي، منطقي، سلسلة</p>
 <p><a id="toc459349320"></a>
 <a id="toc459263825"></a>
@@ -1583,18 +1585,18 @@
 <h4 id="2341">2.3.4.1. <span style="color: #4f81bd">تفسير عملية التعيين</span></h4>
 <p>العملية <em><mark style="background-color: #ffff00"> متغير=تعبير؛ </mark></em>هي في حد ذاتها <strong>تعبير</strong> يتم تقييمه على النحو التالي:</p>
 <ul>
-  <li>يتم تقييم الطرف الأيمن من عملية التعيين: والنتيجة هي قيمة V.
+  <li>يتم تقييم الطرف الأيمن من عملية التعيين: والنتيجة هي قيمة <bdi dir="ltr" class="odt-ltr-term">V.</bdi>
   </li>
-  <li>يتم تعيين القيمة V للمتغير
+  <li>يتم تعيين القيمة <bdi dir="ltr" class="odt-ltr-term">V</bdi> للمتغير
   </li>
-  <li>القيمة V هي أيضًا قيمة عملية التعيين، التي يُنظر إليها الآن على أنها تعبير.
+  <li>القيمة <bdi dir="ltr" class="odt-ltr-term">V</bdi> هي أيضًا قيمة عملية التعيين، التي يُنظر إليها الآن على أنها تعبير.
   </li>
 </ul>
 
-<p>ولهذا السبب فإن التعبير    <em><mark style="background-color: #ffff00">V1=V2=التعبير </mark></em>صحيح. وبسبب الأسبقية، سيتم تقييم عامل = الموجود في أقصى اليمين.  وبالتالي نحصل على <em><mark style="background-color: #ffff00">V1=(V2=التعبير)</mark></em><em>.</em> يتم تقييم التعبير <em><mark style="background-color: #ffff00">V2=التعبير </mark></em>ويكون له القيمة <em>V</em>. أدى تقييم هذا التعبير إلى تعيين V إلى V2. ثم يتم تقييم عامل = التالي على أنه     <em><mark style="background-color: #ffff00">V1=V</mark></em>. لا تزال قيمة هذا التعبير هي V. ويؤدي تقييمه إلى تعيين V إلى V1. وبالتالي، فإن العملية     <em><mark style="background-color: #ffff00">V1=V2=التعبير </mark></em>هي تعبير يتم تقييمه</p>
-<p>1: يؤدي إلى تعيين قيمة <em>التعبير</em> للمتغيرين V1 و V2</p>
+<p>ولهذا السبب فإن التعبير    <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">V1</bdi>=<bdi dir="ltr" class="odt-ltr-term">V2</bdi>=التعبير </mark></em>صحيح. وبسبب الأسبقية، سيتم تقييم عامل = الموجود في أقصى اليمين.  وبالتالي نحصل على <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">V1</bdi>=(<bdi dir="ltr" class="odt-ltr-term">V2</bdi>=التعبير)</mark></em><em>.</em> يتم تقييم التعبير <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">V2</bdi>=التعبير </mark></em>ويكون له القيمة <em><bdi dir="ltr" class="odt-ltr-term">V</bdi></em>. أدى تقييم هذا التعبير إلى تعيين <bdi dir="ltr" class="odt-ltr-term">V</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">V2.</bdi> ثم يتم تقييم عامل = التالي على أنه     <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">V1</bdi>=<bdi dir="ltr" class="odt-ltr-term">V</bdi></mark></em>. لا تزال قيمة هذا التعبير هي <bdi dir="ltr" class="odt-ltr-term">V.</bdi> ويؤدي تقييمه إلى تعيين <bdi dir="ltr" class="odt-ltr-term">V</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">V1.</bdi> وبالتالي، فإن العملية     <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">V1</bdi>=<bdi dir="ltr" class="odt-ltr-term">V2</bdi>=التعبير </mark></em>هي تعبير يتم تقييمه</p>
+<p>1: يؤدي إلى تعيين قيمة <em>التعبير</em> للمتغيرين <bdi dir="ltr" class="odt-ltr-term">V1</bdi> و <bdi dir="ltr" class="odt-ltr-term">V2</bdi></p>
 <p>2: يعيد قيمة <em>التعبير</em> كنتيجة.</p>
-<p>يمكننا تعميم هذا على تعبير بالصيغة:     <em><mark style="background-color: #ffff00">V1=V2=....=Vn=التعبير</mark></em></p>
+<p>يمكننا تعميم هذا على تعبير بالصيغة:     <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">V1</bdi>=<bdi dir="ltr" class="odt-ltr-term">V2</bdi>=....=<bdi dir="ltr" class="odt-ltr-term">Vn</bdi>=التعبير</mark></em></p>
 <p><a id="toc459349321"></a>
 <a id="toc459263826"></a>
 <a id="toc459263589"></a>
@@ -1610,14 +1612,14 @@
 <p>/ : القسمة: تكون النتيجة هي الناتج الدقيق إذا كان أحد المعاملين على الأقل عددًا حقيقيًا. إذا كان كلا المعاملين عددين <strong>صحيحين</strong>، تكون النتيجة <strong>هي الناتج الصحيح</strong>. وبالتالي، 5/2 -&gt; 2 و 5.0/2 -&gt; 2.5.</p>
 <p>% : القسمة: تكون النتيجة هي الباقي بغض النظر عن طبيعة المعاملات، مع كون الناتج عددًا صحيحًا. وبالتالي، فهذه هي عملية <strong>القسمة على القاسم</strong>.</p>
 <p>هناك العديد من الدوال الرياضية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>double sqrt(double x)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الجذر التربيعي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>double cos(double x)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">جيب التمام</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>جيب التمام</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">جيب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>تانغنت مزدوج(x مزدوج)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الظل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>double pow(double x, double y)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">x أس y (x &gt; 0)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>exp مزدوج (x مزدوج)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">أسي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>double log(double x)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اللوغاريتم الطبيعي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>double abs(double x)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة المطلقة</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">double sqrt</bdi>(<bdi dir="ltr" class="odt-ltr-term">double x</bdi>)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الجذر التربيعي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">double cos</bdi>(<bdi dir="ltr" class="odt-ltr-term">double x</bdi>)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">جيب التمام</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>جيب التمام</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">جيب</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>تانغنت مزدوج(<bdi dir="ltr" class="odt-ltr-term">x</bdi> مزدوج)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الظل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">double pow</bdi>(<bdi dir="ltr" class="odt-ltr-term">double x</bdi>, <bdi dir="ltr" class="odt-ltr-term">double y</bdi>)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">x</bdi> أس <bdi dir="ltr" class="odt-ltr-term">y</bdi> (<bdi dir="ltr" class="odt-ltr-term">x</bdi> &gt; 0)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">exp</bdi> مزدوج (<bdi dir="ltr" class="odt-ltr-term">x</bdi> مزدوج)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">أسي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">double log</bdi>(<bdi dir="ltr" class="odt-ltr-term">double x</bdi>)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اللوغاريتم الطبيعي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">double abs</bdi>(<bdi dir="ltr" class="odt-ltr-term">double x</bdi>)</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة المطلقة</div></td></tr></table>
 
 <p>إلخ...</p>
-<p>جميع هذه الدوال محددة في فئة Java تسمى <strong>Math</strong>. عند استخدامها، يجب أن تسبقها باسم الفئة التي تم تعريفها فيها. وبالتالي، ستكتب:</p>
+<p>جميع هذه الدوال محددة في فئة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> تسمى <strong><bdi dir="ltr" class="odt-ltr-term">Math</bdi></strong>. عند استخدامها، يجب أن تسبقها باسم الفئة التي تم تعريفها فيها. وبالتالي، ستكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>double x, y=4;
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>x=Math.sqrt(y);
 </code></pre></div>
-<p>تعريف فئة <em>Math</em> هو كما يلي: </p>
+<p>تعريف فئة <em><bdi dir="ltr" class="odt-ltr-term">Math</bdi></em> هو كما يلي: </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">public</span>  <span style="font-weight:bold;color:#0000ff">final</span>  <span style="font-weight:bold;color:#0000ff">class</span>  java.lang.Math</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#0000ff">extends</span>  java.lang.Object  (I-§<span style="color:#ff0000">1.12</span>)</span></span>
@@ -1682,43 +1684,43 @@
 
        ==, !=
 </code></pre></div>
-<p>نتيجة التعبير العلائقي هي القيمة المنطقية <em><mark style="background-color: #ffff00">false </mark></em>إذا كان التعبير <em>خاطئًا</em>؛ وإلا، فهي true.</p>
+<p>نتيجة التعبير العلائقي هي القيمة المنطقية <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">false</bdi> </mark></em>إذا كان التعبير <em>خاطئًا</em>؛ وإلا، فهي <bdi dir="ltr" class="odt-ltr-term">true.</bdi></p>
 <p>مثال:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>      boolean fin;
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>      int x;
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>      fin=x&gt;4;
 </code></pre></div>
 <p><u>مقارنة بين حرفين</u></p>
-<p>لنفترض وجود حرفين C1 و C2. يمكن مقارنتهما باستخدام العوامل </p>
+<p>لنفترض وجود حرفين <bdi dir="ltr" class="odt-ltr-term">C1</bdi> و <bdi dir="ltr" class="odt-ltr-term">C2.</bdi> يمكن مقارنتهما باستخدام العوامل </p>
 <div class="highlight"><pre><span></span><code>&amp;lt;، &amp;lt;=، ==، !=، &amp;gt;، &amp;gt;=
 </code></pre></div>
-<p>في هذه الحالة، تتم مقارنة رموز ASCII الخاصة بهما — وهي أرقام. تذكر أنه وفقًا لترتيب ASCII، تنطبق العلاقات التالية:</p>
-<p>مسافة &lt; .. &lt; &#x27;0&#x27; &lt; &#x27;1&#x27; &lt; .. &lt; &#x27;9&#x27; &lt; .. &lt; &#x27;A&#x27; &lt; &#x27;B&#x27; &lt; .. &lt; &#x27;Z&#x27; &lt; .. &lt; &#x27;a&#x27; &lt; &#x27;b&#x27; &lt; .. &lt; &#x27;z&#x27;</p>
+<p>في هذه الحالة، تتم مقارنة رموز <bdi dir="ltr" class="odt-ltr-term">ASCII</bdi> الخاصة بهما — وهي أرقام. تذكر أنه وفقًا لترتيب <bdi dir="ltr" class="odt-ltr-term">ASCII</bdi>، تنطبق العلاقات التالية:</p>
+<p>مسافة &lt; .. &lt; &#x27;0&#x27; &lt; &#x27;1&#x27; &lt; .. &lt; &#x27;9&#x27; &lt; .. &lt; &#x27;<bdi dir="ltr" class="odt-ltr-term">A</bdi>&#x27; &lt; &#x27;<bdi dir="ltr" class="odt-ltr-term">B</bdi>&#x27; &lt; .. &lt; &#x27;<bdi dir="ltr" class="odt-ltr-term">Z</bdi>&#x27; &lt; .. &lt; &#x27;<bdi dir="ltr" class="odt-ltr-term">a</bdi>&#x27; &lt; &#x27;<bdi dir="ltr" class="odt-ltr-term">b</bdi>&#x27; &lt; .. &lt; &#x27;<bdi dir="ltr" class="odt-ltr-term">z</bdi>&#x27;</p>
 <p><u>مقارنة سلسلتين من الأحرف</u></p>
 <p>يتم مقارنتهما حرفًا بحرف. أول عدم تساوي يتم العثور عليه بين حرفين يؤدي إلى عدم تساوي في نفس الاتجاه للسلسلتين.</p>
 <p><u>أمثلة</u>:</p>
-<p>لنفترض مقارنة السلسلتين &quot;Cat&quot; و &quot;Dog&quot;</p>
-<p>تسمح لنا هذه المتباينة الأخيرة باستنتاج أن &quot;Cat&quot; &lt; &quot;Dog&quot;.</p>
+<p>لنفترض مقارنة السلسلتين &quot;<bdi dir="ltr" class="odt-ltr-term">Cat</bdi>&quot; و &quot;<bdi dir="ltr" class="odt-ltr-term">Dog</bdi>&quot;</p>
+<p>تسمح لنا هذه المتباينة الأخيرة باستنتاج أن &quot;<bdi dir="ltr" class="odt-ltr-term">Cat</bdi>&quot; &lt; &quot;<bdi dir="ltr" class="odt-ltr-term">Dog</bdi>&quot;.</p>
 <p><img src="images/10000000000002D60000013549DDDF27.png" width="363" height="155" style="width:9.604cm;height:4.089cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D60000013549DDDF27.png" /></p>
-<p>لنفكر في مقارنة السلسلتين &quot;Cat&quot; و &quot;Kitten&quot;. هما متساويتان طوال الوقت حتى تنتهي السلسلة &quot;Cat&quot;. في هذه الحالة، تُعتبر السلسلة التي انتهت هي &quot;الأصغر&quot;. وبالتالي، لدينا العلاقة </p>
-<div class="highlight"><pre><span></span><code>&amp;quot;Cat&amp;quot; &amp;lt; &amp;quot;Kitten&amp;quot;.
+<p>لنفكر في مقارنة السلسلتين &quot;<bdi dir="ltr" class="odt-ltr-term">Cat</bdi>&quot; و &quot;<bdi dir="ltr" class="odt-ltr-term">Kitten</bdi>&quot;. هما متساويتان طوال الوقت حتى تنتهي السلسلة &quot;<bdi dir="ltr" class="odt-ltr-term">Cat</bdi>&quot;. في هذه الحالة، تُعتبر السلسلة التي انتهت هي &quot;الأصغر&quot;. وبالتالي، لدينا العلاقة </p>
+<div class="highlight"><pre><span></span><code>&amp;quot;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Cat&lt;/bdi&gt;&amp;quot; &amp;lt; &amp;quot;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Kitten&lt;/bdi&gt;&amp;quot;.
 </code></pre></div>
 <p><u>دوال لمقارنة سلسلتين</u></p>
-<p>لا يمكننا استخدام عوامل العلاقة &lt;، &lt;=، ==، !=، &gt;، &gt;= هنا. يجب علينا استخدام طرق من فئة <em>String</em>:</p>
+<p>لا يمكننا استخدام عوامل العلاقة &lt;، &lt;=، ==، !=، &gt;، &gt;= هنا. يجب علينا استخدام طرق من فئة <em><bdi dir="ltr" class="odt-ltr-term">String</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">String</span><span class="w"> </span><span class="n">chaine1</span><span class="p">,</span><span class="w"> </span><span class="n">chaine2</span><span class="p">;</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">chaine1</span><span class="o">=</span><span class="err">…</span><span class="p">;</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">chaine2</span><span class="o">=</span><span class="err">…</span><span class="p">;</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">chaine1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">chaine2</span><span class="p">);</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">egal</span><span class="o">=</span><span class="n">chaine1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">chaine2</span><span class="p">)</span>
 </code></pre></div>
-<p>في الكود أعلاه، ستكون قيمة المتغير <em>i</em>:</p>
+<p>في الكود أعلاه، ستكون قيمة المتغير <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code>    0: إذا كانت السلسلتان متساويتين
 
     1: إذا كانت السلسلة 1 &amp;gt; السلسلة 2
 
     -1: إذا كانت السلسلة 1 &amp;lt; السلسلة 2
 </code></pre></div>
-<p>ستكون قيمة المتغير <em>equal</em> هي <em>true</em> إذا كانت السلسلتان متساويتين.</p>
+<p>ستكون قيمة المتغير <em><bdi dir="ltr" class="odt-ltr-term">equal</bdi></em> هي <em><bdi dir="ltr" class="odt-ltr-term">true</bdi></em> إذا كانت السلسلتان متساويتين.</p>
 <p><a id="toc459349324"></a>
 <a id="toc459263829"></a>
 <a id="toc459263592"></a>
@@ -1740,14 +1742,14 @@
 <a id="toc459205621"></a></p>
 <h4 id="2346">2.3.4.6. <span style="color: #4f81bd">العمليات على البتات</span></h4>
 <p><u><strong>المشغلات</strong></u></p>
-<p>لنفترض أن i و j عددان صحيحان.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i&lt;&lt;n</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحول i بمقدار n بتات إلى اليسار. البتات الواردة هي أصفار.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i&gt;&gt;n</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحول i n بتات إلى اليمين. إذا كان i عددًا صحيحًا موقّعًا (signed char، int، long)، يتم الحفاظ على بت الإشارة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i &amp; j</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تُجري عملية &quot;AND&quot; المنطقية بين i و j بتًا بتًا.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i | j</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُنفذ عملية OR المنطقية بين i و j بتًا بتًا.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>~i</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعكس i إلى 1</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i^j</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُجري عملية XOR بين i و j</div></td></tr></table>
+<p>لنفترض أن <bdi dir="ltr" class="odt-ltr-term">i</bdi> و <bdi dir="ltr" class="odt-ltr-term">j</bdi> عددان صحيحان.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>&lt;&lt;<bdi dir="ltr" class="odt-ltr-term">n</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحول <bdi dir="ltr" class="odt-ltr-term">i</bdi> بمقدار <bdi dir="ltr" class="odt-ltr-term">n</bdi> بتات إلى اليسار. البتات الواردة هي أصفار.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>&gt;&gt;<bdi dir="ltr" class="odt-ltr-term">n</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحول <bdi dir="ltr" class="odt-ltr-term">i n</bdi> بتات إلى اليمين. إذا كان <bdi dir="ltr" class="odt-ltr-term">i</bdi> عددًا صحيحًا موقّعًا (<bdi dir="ltr" class="odt-ltr-term">signed char</bdi>، <bdi dir="ltr" class="odt-ltr-term">int</bdi>، <bdi dir="ltr" class="odt-ltr-term">long</bdi>)، يتم الحفاظ على بت الإشارة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi> &amp; <bdi dir="ltr" class="odt-ltr-term">j</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تُجري عملية &quot;<bdi dir="ltr" class="odt-ltr-term">AND</bdi>&quot; المنطقية بين <bdi dir="ltr" class="odt-ltr-term">i</bdi> و <bdi dir="ltr" class="odt-ltr-term">j</bdi> بتًا بتًا.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi> | <bdi dir="ltr" class="odt-ltr-term">j</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُنفذ عملية <bdi dir="ltr" class="odt-ltr-term">OR</bdi> المنطقية بين <bdi dir="ltr" class="odt-ltr-term">i</bdi> و <bdi dir="ltr" class="odt-ltr-term">j</bdi> بتًا بتًا.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>~<bdi dir="ltr" class="odt-ltr-term">i</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعكس <bdi dir="ltr" class="odt-ltr-term">i</bdi> إلى 1</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>^<bdi dir="ltr" class="odt-ltr-term">j</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُجري عملية <bdi dir="ltr" class="odt-ltr-term">XOR</bdi> بين <bdi dir="ltr" class="odt-ltr-term">i</bdi> و <bdi dir="ltr" class="odt-ltr-term">j</bdi></div></td></tr></table>
 
 <p>دع</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>    int i=0x123F, k=0xF123;
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    unsigned j=0xF123;
 </code></pre></div>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>عملية</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القيمة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i&lt;&lt;4</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0x23F0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i&gt;&gt;4</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0x0123  يتم الحفاظ على بت الإشارة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>k&gt;&gt;4</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0xFF12  يتم الحفاظ على بت الإشارة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i&amp;j</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0x1023</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>i|j</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0xF33F</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>~i</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0xEDC0</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>عملية</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القيمة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>&lt;&lt;4</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0x23F0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>&gt;&gt;4</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0x0123  يتم الحفاظ على بت الإشارة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">k</bdi>&gt;&gt;4</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0xFF12  يتم الحفاظ على بت الإشارة.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">j</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0x1023</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">i</bdi>|<bdi dir="ltr" class="odt-ltr-term">j</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0xF33F</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>~<bdi dir="ltr" class="odt-ltr-term">i</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0xEDC0</div></td></tr></table>
 
 <p><a id="toc459349326"></a>
 <a id="toc459263831"></a>
@@ -1755,45 +1757,45 @@
 <a id="toc459205819"></a>
 <a id="toc459205622"></a></p>
 <h4 id="2347">2.3.4.7. <span style="color: #4f81bd">تركيبة من العوامل</span></h4>
-<div class="highlight"><pre><span></span><code>   يمكن كتابة a=a+b على النحو التالي: a+=b
+<div class="highlight"><pre><span></span><code>   يمكن كتابة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;a&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;a+b&lt;/bdi&gt; على النحو التالي: &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;a+&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;b&lt;/bdi&gt;
 
-   يمكن كتابة a=a-b على النحو التالي: a-=b
+   يمكن كتابة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;a&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;a-b&lt;/bdi&gt; على النحو التالي: &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;a-&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;b&lt;/bdi&gt;
 </code></pre></div>
 <p>وينطبق الأمر نفسه على العوامل <em>/، %، *، &lt;&lt;، &gt;&gt;، &amp;، |، ^</em></p>
-<p>وبالتالي، يمكن كتابة <em>a=a+2;</em> على النحو التالي: <em>a+=2;</em> </p>
+<p>وبالتالي، يمكن كتابة <em><bdi dir="ltr" class="odt-ltr-term">a</bdi>=<bdi dir="ltr" class="odt-ltr-term">a+2</bdi>;</em> على النحو التالي: <em><bdi dir="ltr" class="odt-ltr-term">a+</bdi>=2;</em> </p>
 <p><a id="toc459349327"></a>
 <a id="toc459263832"></a>
 <a id="toc459263595"></a>
 <a id="toc459205820"></a>
 <a id="toc459205623"></a></p>
 <h4 id="2348">2.3.4.8. <span style="color: #4f81bd">عوامل الزيادة والنقصان</span></h4>
-<p>الترميز <em>variable++</em> يعني <em>variable=variable+1</em> أو <em>variable+=1</em></p>
-<p>الرمز <em>variable--</em> يعني <em>variable=variable-1</em> أو <em>variable-=1</em>.</p>
+<p>الترميز <em><bdi dir="ltr" class="odt-ltr-term">variable++</bdi></em> يعني <em><bdi dir="ltr" class="odt-ltr-term">variable</bdi>=<bdi dir="ltr" class="odt-ltr-term">variable+1</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">variable+</bdi>=1</em></p>
+<p>الرمز <em><bdi dir="ltr" class="odt-ltr-term">variable--</bdi></em> يعني <em><bdi dir="ltr" class="odt-ltr-term">variable</bdi>=<bdi dir="ltr" class="odt-ltr-term">variable-1</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">variable-</bdi>=1</em>.</p>
 <p><a id="toc459349328"></a>
 <a id="toc459263833"></a>
 <a id="toc459263596"></a>
 <a id="toc459205821"></a>
 <a id="toc459205624"></a></p>
 <h4 id="2349">2.3.4.9. <span style="color: #4f81bd">عامل ?</span></h4>
-<p>يتم تقييم التعبير    <em><mark style="background-color: #ffff00">expr_cond ? expr1:expr2 </mark></em>يتم تقييمه على النحو التالي:</p>
-<p>1: يتم تقييم التعبير <em>expr_cond</em>. هذا تعبير شرطي بقيمة صحيحة أو خاطئة </p>
-<p>2: إذا كانت القيمة صحيحة، فإن قيمة التعبير هي قيمة <em>expr1</em>. ولا يتم تقييم <em>expr2</em>.</p>
-<p>3: إذا كان خطأً، يحدث العكس: تكون قيمة التعبير هي قيمة <em>expr2</em>. ولا يتم تقييم <em>expr1</em>.</p>
+<p>يتم تقييم التعبير    <em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">expr</bdi>_cond ? <bdi dir="ltr" class="odt-ltr-term">expr1:expr2</bdi> </mark></em>يتم تقييمه على النحو التالي:</p>
+<p>1: يتم تقييم التعبير <em><bdi dir="ltr" class="odt-ltr-term">expr</bdi>_cond</em>. هذا تعبير شرطي بقيمة صحيحة أو خاطئة </p>
+<p>2: إذا كانت القيمة صحيحة، فإن قيمة التعبير هي قيمة <em><bdi dir="ltr" class="odt-ltr-term">expr1</bdi></em>. ولا يتم تقييم <em><bdi dir="ltr" class="odt-ltr-term">expr2</bdi></em>.</p>
+<p>3: إذا كان خطأً، يحدث العكس: تكون قيمة التعبير هي قيمة <em><bdi dir="ltr" class="odt-ltr-term">expr2</bdi></em>. ولا يتم تقييم <em><bdi dir="ltr" class="odt-ltr-term">expr1</bdi></em>.</p>
 <p><u>مثال</u></p>
-<div class="highlight"><pre><span></span><code>*i = (j &amp;gt; 4 ? j + 1 : j - 1);*
+<div class="highlight"><pre><span></span><code>*&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;i&lt;/bdi&gt; = (&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;j&lt;/bdi&gt; &amp;gt; 4 ? &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;j&lt;/bdi&gt; + 1 : &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;j&lt;/bdi&gt; - 1);*
 </code></pre></div>
-<p>سيُعيّن للمتغير i:</p>
-<p><em>j+1</em> إذا كان <em>j&gt;4</em>، و <em>j-1</em> في الحالات الأخرى</p>
-<p>وهذا يعادل كتابة <em>if(j&gt;4) i=j+1; else i=j-1;</em> ولكنه أكثر إيجازًا.</p>
+<p>سيُعيّن للمتغير <bdi dir="ltr" class="odt-ltr-term">i:</bdi></p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">j+1</bdi></em> إذا كان <em><bdi dir="ltr" class="odt-ltr-term">j</bdi>&gt;4</em>، و <em><bdi dir="ltr" class="odt-ltr-term">j-1</bdi></em> في الحالات الأخرى</p>
+<p>وهذا يعادل كتابة <em><bdi dir="ltr" class="odt-ltr-term">if</bdi>(<bdi dir="ltr" class="odt-ltr-term">j</bdi>&gt;4) <bdi dir="ltr" class="odt-ltr-term">i</bdi>=<bdi dir="ltr" class="odt-ltr-term">j+1</bdi>; <bdi dir="ltr" class="odt-ltr-term">else i</bdi>=<bdi dir="ltr" class="odt-ltr-term">j-1</bdi>;</em> ولكنه أكثر إيجازًا.</p>
 <p><a id="toc459349329"></a>
 <a id="toc459263834"></a>
 <a id="toc459263597"></a>
 <a id="toc459205822"></a>
 <a id="toc459205625"></a></p>
 <h4 id="23410">2.3.4.10. <span style="color: #4f81bd">أولوية العمليات بشكل عام</span></h4>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">() []  وظيفة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">! ~ ++ --</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">dg</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مشغلات التحويل (النوع) الجديدة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">dg</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">*  /  %</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">+  -</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;&lt;  &gt;&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt; &lt;=  &gt; &gt;= instanceof</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">==    !=</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&amp;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">^</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">|</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&amp;&amp;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">||</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">gd</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">   :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">dg</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">= += -= إلخ.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">dg</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">() []  وظيفة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">! ~ ++ --</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">dg</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مشغلات التحويل (النوع) الجديدة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">dg</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">*  /  %</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">+  -</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;&lt;  &gt;&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt; &lt;=  &gt; &gt;= <bdi dir="ltr" class="odt-ltr-term">instanceof</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">==    !=</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&amp;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">^</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">|</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&amp;&amp;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">||</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">gd</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">   :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">dg</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">= += -= إلخ.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">dg</bdi></div></td></tr></table>
 
-<p><strong>gd</strong>: يشير إلى أنه، بالنسبة للمشغلات ذات الأولوية المتساوية، يتم مراعاة الأولوية من اليسار إلى اليمين. وهذا يعني أنه عندما يحتوي التعبير على مشغلات ذات أولوية متساوية، يتم تقييم المشغل الأبعد إلى اليسار في التعبير أولاً. يشير <strong>dg</strong> إلى الأولوية من اليمين إلى اليسار.</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">gd</bdi></strong>: يشير إلى أنه، بالنسبة للمشغلات ذات الأولوية المتساوية، يتم مراعاة الأولوية من اليسار إلى اليمين. وهذا يعني أنه عندما يحتوي التعبير على مشغلات ذات أولوية متساوية، يتم تقييم المشغل الأبعد إلى اليسار في التعبير أولاً. يشير <strong><bdi dir="ltr" class="odt-ltr-term">dg</bdi></strong> إلى الأولوية من اليمين إلى اليسار.</p>
 <p><a id="toc459349330"></a>
 <a id="toc459263835"></a>
 <a id="toc459263598"></a>
@@ -1806,12 +1808,12 @@
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>float isurj;
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>isurj= (float)i/j;   // priorité de () sur /
 </code></pre></div>
-<p>هنا، من الضروري تحويل <em>i</em> أو <em>j</em> إلى نوع عائم؛ وإلا، فإن القسمة ستُرجع ناتجًا صحيحًا بدلاً من قيمة عائمة.</p>
-<div class="highlight"><pre><span></span><code>     *i* هي قيمة مشفرة بدقة في 2 بايت
+<p>هنا، من الضروري تحويل <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em> أو <em><bdi dir="ltr" class="odt-ltr-term">j</bdi></em> إلى نوع عائم؛ وإلا، فإن القسمة ستُرجع ناتجًا صحيحًا بدلاً من قيمة عائمة.</p>
+<div class="highlight"><pre><span></span><code>     *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;i&lt;/bdi&gt;* هي قيمة مشفرة بدقة في 2 بايت
 
-     *(float) i* هي نفس القيمة، المشفرة تقريبًا كرقم عائم على 4 بايت
+     *(&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;float&lt;/bdi&gt;) &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;i&lt;/bdi&gt;* هي نفس القيمة، المشفرة تقريبًا كرقم عائم على 4 بايت
 </code></pre></div>
-<p>وبالتالي، هناك تحويل لنوع قيمة <em>i</em>. يحدث هذا التحويل فقط خلال فترة الحساب؛ حيث تحتفظ المتغير <em>i</em> دائمًا بنوع <em>int</em> الخاص بها.</p>
+<p>وبالتالي، هناك تحويل لنوع قيمة <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em>. يحدث هذا التحويل فقط خلال فترة الحساب؛ حيث تحتفظ المتغير <em><bdi dir="ltr" class="odt-ltr-term">i</bdi></em> دائمًا بنوع <em><bdi dir="ltr" class="odt-ltr-term">int</bdi></em> الخاص بها.</p>
 <p><a id="toc12502293"></a>
 <a id="toc459349331"></a>
 <a id="toc459263836"></a>
@@ -1834,11 +1836,11 @@
 <a id="toc459205124"></a>
 <a id="toc428596809"></a></p>
 <h3 id="241">2.4.1. <span style="color: #4f81bd">توقف</span></h3>
-<p>تسمح لك طريقة <em>exit</em> المحددة في فئة <em>System</em> بإيقاف تنفيذ البرنامج.</p>
-<div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><u><i>الصيغة</i></u><i>     : void exit(int status)</i></div>
+<p>تسمح لك طريقة <em><bdi dir="ltr" class="odt-ltr-term">exit</bdi></em> المحددة في فئة <em><bdi dir="ltr" class="odt-ltr-term">System</bdi></em> بإيقاف تنفيذ البرنامج.</p>
+<div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><u><i>الصيغة</i></u><i>     : <bdi dir="ltr" class="odt-ltr-term">void exit</bdi>(<bdi dir="ltr" class="odt-ltr-term">int status</bdi>)</i></div>
 
 <p><u> الإجراء  </u> : يوقف العملية الحالية ويعيد قيمة الحالة إلى العملية الأم</p>
-<p>تقوم <strong>exit</strong> بإنهاء العملية الحالية وإرجاع التحكم إلى العملية المستدعية. يمكن للعملية المستدعية استخدام قيمة <em>الحالة</em>. في نظام DOS، يتم إرجاع متغير <em>الحالة</em> هذا إلى DOS في متغير النظام <strong>ERRORLEVEL</strong>، والذي يمكن التحقق من قيمته في ملف دفعي. في نظام Unix، يسترد المتغير <strong>$?</strong> قيمة <em>الحالة</em> إذا كان مترجم الأوامر هو Bourne Shell (/bin/sh).</p>
+<p>تقوم <strong><bdi dir="ltr" class="odt-ltr-term">exit</bdi></strong> بإنهاء العملية الحالية وإرجاع التحكم إلى العملية المستدعية. يمكن للعملية المستدعية استخدام قيمة <em>الحالة</em>. في نظام <bdi dir="ltr" class="odt-ltr-term">DOS</bdi>، يتم إرجاع متغير <em>الحالة</em> هذا إلى <bdi dir="ltr" class="odt-ltr-term">DOS</bdi> في متغير النظام <strong><bdi dir="ltr" class="odt-ltr-term">ERRORLEVEL</bdi></strong>، والذي يمكن التحقق من قيمته في ملف دفعي. في نظام <bdi dir="ltr" class="odt-ltr-term">Unix</bdi>، يسترد المتغير <strong>$?</strong> قيمة <em>الحالة</em> إذا كان مترجم الأوامر هو <bdi dir="ltr" class="odt-ltr-term">Bourne Shell</bdi> (/<bdi dir="ltr" class="odt-ltr-term">bin/sh</bdi>).</p>
 <p>مثال:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>    System.exit(0);
 </code></pre></div>
@@ -1869,13 +1871,13 @@
   </li>
   <li>الأقواس المتعرجة ضرورية فقط إذا كان هناك أكثر من إجراء واحد.
   </li>
-  <li>يمكن حذف جملة else.
+  <li>يمكن حذف جملة <bdi dir="ltr" class="odt-ltr-term">else.</bdi>
   </li>
-  <li>لا يوجد &quot;then&quot;.
+  <li>لا يوجد &quot;<bdi dir="ltr" class="odt-ltr-term">then</bdi>&quot;.
   </li>
 </ul>
 
-<p>المكافئ الخوارزمي لهذه البنية هو بنية <em>if-then-else</em>:</p>
+<p>المكافئ الخوارزمي لهذه البنية هو بنية <em><bdi dir="ltr" class="odt-ltr-term">if-then-else</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>si condition
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>  alors actions_condition_vraie
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>  sinon actions_conditions_fausse
@@ -1908,7 +1910,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="color:#000000"></span></span></span>
 </code></pre></div>
 
-<p>في المثال السابق، إلى أي <em>عبارة <code>if</code></em> تشير عبارة <em><code>else</code></em>؟ القاعدة هي أن <em><code>else</code></em> تشير دائمًا إلى أقرب عبارة <code>*if</code><em>: </em><code>if(n&amp;gt;6)</code>* في هذا المثال. لننظر إلى مثال آخر:</p>
+<p>في المثال السابق، إلى أي <em>عبارة <code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;if&lt;/bdi&gt;</code></em> تشير عبارة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;else&lt;/bdi&gt;</code></em>؟ القاعدة هي أن <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;else&lt;/bdi&gt;</code></em> تشير دائمًا إلى أقرب عبارة <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;if&lt;/bdi&gt;</code><em>: </em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;if&lt;/bdi&gt;(&lt;bdi dir="ltr" class="odt-ltr-term"&gt;n&lt;/bdi&gt;&amp;gt;6)</code>* في هذا المثال. لننظر إلى مثال آخر:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">public<span style="color:#000000"> </span>static<span style="color:#000000"> </span><span style="color:#ff0000">void</span><span style="color:#000000"> main(</span><span style="color:#ff0000">void</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">{  </span><span style="color:#ff0000">int</span><span style="color:#000000"> n=</span><span style="color:#ff0000">0</span><span style="color:#000000">;</span></span></span>
@@ -1920,7 +1922,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="color:#000000"></span></span></span>
 </code></pre></div>
 
-<p>هنا أردنا وضع <em>else</em> في <em>عبارة if(n&gt;1)</em> وعدم وضع <em>else</em> في عبارة <em>if(n&gt;6)</em>. وبسبب الملاحظة السابقة، نحن مضطرون لوضع else في <em>عبارة if(n&gt;6)</em>، التي لا تحتوي على أي عبارة.</p>
+<p>هنا أردنا وضع <em><bdi dir="ltr" class="odt-ltr-term">else</bdi></em> في <em>عبارة <bdi dir="ltr" class="odt-ltr-term">if</bdi>(<bdi dir="ltr" class="odt-ltr-term">n</bdi>&gt;1)</em> وعدم وضع <em><bdi dir="ltr" class="odt-ltr-term">else</bdi></em> في عبارة <em><bdi dir="ltr" class="odt-ltr-term">if</bdi>(<bdi dir="ltr" class="odt-ltr-term">n</bdi>&gt;6)</em>. وبسبب الملاحظة السابقة، نحن مضطرون لوضع <bdi dir="ltr" class="odt-ltr-term">else</bdi> في <em>عبارة <bdi dir="ltr" class="odt-ltr-term">if</bdi>(<bdi dir="ltr" class="odt-ltr-term">n</bdi>&gt;6)</em>، التي لا تحتوي على أي عبارة.</p>
 <p><a id="toc12502296"></a>
 <a id="toc459349334"></a>
 <a id="toc459263839"></a>
@@ -1952,9 +1954,9 @@
   </li>
   <li>يمكن حذف الجملة <i>الافتراضية</i>.
   </li>
-  <li>القيم vi هي القيم المحتملة للتعبير. إذا كانت نتيجة التعبير هي vi، يتم تنفيذ الإجراءات التي تلي جملة<b> case </b>vi.
+  <li>القيم <bdi dir="ltr" class="odt-ltr-term">vi</bdi> هي القيم المحتملة للتعبير. إذا كانت نتيجة التعبير هي <bdi dir="ltr" class="odt-ltr-term">vi</bdi>، يتم تنفيذ الإجراءات التي تلي جملة<b> <bdi dir="ltr" class="odt-ltr-term">case</bdi> </b><bdi dir="ltr" class="odt-ltr-term">vi.</bdi>
   </li>
-  <li>يؤدي بيان <i>break</i> إلى الخروج من بنية case. إذا كان غائبًا في نهاية كتلة التعليمات للقيمة <i>vi</i>، يستمر التنفيذ بالتعليمات الخاصة بالقيمة <i>vi+1</i>.
+  <li>يؤدي بيان <i><bdi dir="ltr" class="odt-ltr-term">break</bdi></i> إلى الخروج من بنية <bdi dir="ltr" class="odt-ltr-term">case.</bdi> إذا كان غائبًا في نهاية كتلة التعليمات للقيمة <i><bdi dir="ltr" class="odt-ltr-term">vi</bdi></i>، يستمر التنفيذ بالتعليمات الخاصة بالقيمة <i><bdi dir="ltr" class="odt-ltr-term">vi+1</bdi></i>.
   </li>
 </ul>
 
@@ -2001,11 +2003,11 @@
 
 <p><u><strong>ملاحظات</strong></u></p>
 <ul>
-  <li>يتم وضع المعلمات الثلاثة <i>لحلقة for </i>بين قوسين.
+  <li>يتم وضع المعلمات الثلاثة <i>لحلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi> </i>بين قوسين.
   </li>
-  <li>يتم فصل المعلمات الثلاثة <i>لحلقة for </i>بفواصل منقوطة.
+  <li>يتم فصل المعلمات الثلاثة <i>لحلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi> </i>بفواصل منقوطة.
   </li>
-  <li>تنتهي كل عملية في <i>حلقة for </i>بفاصلة منقوطة.
+  <li>تنتهي كل عملية في <i>حلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi> </i>بفاصلة منقوطة.
   </li>
   <li>لا تكون الأقواس المتعرجة ضرورية إلا إذا كان هناك أكثر من إجراء واحد.
   </li>
@@ -2013,12 +2015,12 @@
   </li>
 </ul>
 
-<p>المكافئ الخوارزمي هو بنية <em>for</em>:</p>
+<p>المكافئ الخوارزمي هو بنية <em><bdi dir="ltr" class="odt-ltr-term">for</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>pour i variant de id à if avec un pas de ip
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>        actions
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>finpour
 </code></pre></div>
-<p>والتي يمكن ترجمتها إلى بنية <em>while</em>:</p>
+<p>والتي يمكن ترجمتها إلى بنية <em><bdi dir="ltr" class="odt-ltr-term">while</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>    i  id
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    tantque i&lt;=if
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>        actions
@@ -2031,8 +2033,8 @@
 <a id="toc459205830"></a>
 <a id="toc459205633"></a></p>
 <h4 id="2442">2.4.4.2. <span style="color: #4f81bd">عدد التكرارات غير معروف</span></h4>
-<p>هناك العديد من هياكل التحكم في Java لهذه الحالة.</p>
-<p><u><strong>حلقة while</strong> </u></p>
+<p>هناك العديد من هياكل التحكم في <bdi dir="ltr" class="odt-ltr-term">Java</bdi> لهذه الحالة.</p>
+<p><u><strong>حلقة <bdi dir="ltr" class="odt-ltr-term">while</bdi></strong> </u></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#0000ff">while</span>(condition){</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          actions;</span></span>
@@ -2052,12 +2054,12 @@
   </li>
 </ul>
 
-<p>البنية الخوارزمية المقابلة هي بنية while:</p>
+<p>البنية الخوارزمية المقابلة هي بنية <bdi dir="ltr" class="odt-ltr-term">while:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>tantque condition
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>        actions
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>fintantque
 </code></pre></div>
-<p><u><strong>بنية Do-while</strong></u></p>
+<p><u><strong>بنية <bdi dir="ltr" class="odt-ltr-term">Do-while</bdi></strong></u></p>
 <p>الصيغة هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-weight:bold;color:#0000ff">do</span>{</span></span>
@@ -2083,7 +2085,7 @@
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    actions
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>jusqu&#39;à condition
 </code></pre></div>
-<p><u><strong>هيكل لـ (for)</strong></u></p>
+<p><u><strong>هيكل لـ (<bdi dir="ltr" class="odt-ltr-term">for</bdi>)</strong></u></p>
 <p>الصيغة هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">for</span>(instructions_départ;condition;instructions_fin_boucle){</span></span>
@@ -2094,17 +2096,17 @@
 <p>تستمر الحلقة طالما أن الشرط صحيح (يتم تقييمه قبل كل تكرار). يتم تنفيذ <em>تعليمات_البداية</em> قبل الدخول إلى الحلقة للمرة الأولى. يتم تنفيذ <em>تعليمات_نهاية_الحلقة</em> بعد كل تكرار.</p>
 <p><u><strong>ملاحظات</strong></u></p>
 <ul>
-  <li>يتم وضع المعلمات الثلاثة <i>لحلقة for </i>بين قوسين.
+  <li>يتم وضع المعلمات الثلاثة <i>لحلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi> </i>بين قوسين.
   </li>
-  <li>يتم فصل المعلمات الثلاثة <i>لحلقة for </i>بفواصل منقوطة.
+  <li>يتم فصل المعلمات الثلاثة <i>لحلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi> </i>بفواصل منقوطة.
   </li>
-  <li>تنتهي كل عبارة for بفاصلة منقوطة.
+  <li>تنتهي كل عبارة <bdi dir="ltr" class="odt-ltr-term">for</bdi> بفاصلة منقوطة.
   </li>
   <li>لا تكون الأقواس المتعرجة ضرورية إلا في حالة وجود أكثر من إجراء واحد.
   </li>
   <li>لا يتبع الأقواس المتعرجة فاصلة منقوطة.
   </li>
-  <li>يتم فصل العبارات المختلفة في <i>start_statements </i>و <i>end_loop_statements </i>بفواصل.
+  <li>يتم فصل العبارات المختلفة في <i><bdi dir="ltr" class="odt-ltr-term">start_statements</bdi> </i>و <i><bdi dir="ltr" class="odt-ltr-term">end_loop_statements</bdi> </i>بفواصل.
   </li>
 </ul>
 
@@ -2116,7 +2118,7 @@
 <a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>fintantque
 </code></pre></div>
 <p><u>أمثلة</u></p>
-<p>تحسب جميع البرامج التالية مجموع أول n أعداد صحيحة.</p>
+<p>تحسب جميع البرامج التالية مجموع أول <bdi dir="ltr" class="odt-ltr-term">n</bdi> أعداد صحيحة.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#ff0000">1</span>  <span style="font-weight:bold;color:#0000ff">for</span>(i=<span style="color:#ff0000">1</span>, somme=<span style="color:#ff0000">0</span>;i&lt;=n;i=i+<span style="color:#ff0000">1</span>)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        somme=somme+a[i];</span></span>
@@ -2133,7 +2135,7 @@
 </code></pre></div>
 
 <p><u><em>عبارات التحكم في الحلقات</em></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>break</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يخرج من حلقة for أو while أو do...while.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>continue</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينتقل إلى التكرار التالي لدورات for و while و do...while</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">break</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يخرج من حلقة <bdi dir="ltr" class="odt-ltr-term">for</bdi> أو <bdi dir="ltr" class="odt-ltr-term">while</bdi> أو <bdi dir="ltr" class="odt-ltr-term">do...while.</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">continue</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينتقل إلى التكرار التالي لدورات <bdi dir="ltr" class="odt-ltr-term">for</bdi> و <bdi dir="ltr" class="odt-ltr-term">while</bdi> و <bdi dir="ltr" class="odt-ltr-term">do...while</bdi></div></td></tr></table>
 
 <p><a id="toc12502298"></a>
 <a id="toc459349339"></a>
@@ -2145,8 +2147,8 @@
 <a id="toc459205335"></a>
 <a id="toc459205129"></a>
 <a id="toc428596814"></a></p>
-<h2 id="25-java">2.5. <span style="color: #4f81bd">بنية برنامج Java</span></h2>
-<p>قد يكون لبرنامج Java الذي لا يستخدم فئات أو دوال محددة من قبل المستخدم بخلاف الدالة <em>main</em> البنية التالية:</p>
+<h2 id="25-java">2.5. <span style="color: #4f81bd">بنية برنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi></span></h2>
+<p>قد يكون لبرنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الذي لا يستخدم فئات أو دوال محددة من قبل المستخدم بخلاف الدالة <em><bdi dir="ltr" class="odt-ltr-term">main</bdi></em> البنية التالية:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">public<span style="color:#000000"> </span>class<span style="color:#000000"> test1{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>public<span style="color:#000000"> </span>static<span style="color:#000000"> </span><span style="color:#ff0000">void</span><span style="color:#000000"> main(String arg[]){</span></span></span>
@@ -2155,7 +2157,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}// class</span></span>
 </code></pre></div>
 
-<p>الوظيفة الرئيسية، المعروفة أيضًا باسم الأسلوب، هي أول ما يتم تنفيذه عند تشغيل برنامج Java. ويجب أن تحتوي على التوقيع التالي:</p>
+<p>الوظيفة الرئيسية، المعروفة أيضًا باسم الأسلوب، هي أول ما يتم تنفيذه عند تشغيل برنامج <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> ويجب أن تحتوي على التوقيع التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>public<span style="color:#000000"> </span>static<span style="color:#000000"> </span><span style="color:#ff0000">void</span><span style="color:#000000"> main(String arg[]){</span></span></span>
 </code></pre></div>
@@ -2165,8 +2167,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>public<span style="color:#000000"> </span>static<span style="color:#000000"> </span><span style="color:#ff0000">void</span><span style="color:#000000"> main(String[] arg){</span></span></span>
 </code></pre></div>
 
-<p>يمكن أن يكون اسم الحجة <em>arg</em> أي شيء. وهي عبارة عن مصفوفة من السلاسل تمثل حجج سطر الأوامر. سنعود إلى هذا لاحقًا.</p>
-<p>إذا كنت تستخدم دوال قد ترمي استثناءات لا ترغب في معالجتها صراحةً، فيمكنك تغليف كود البرنامج في كتلة <strong>try/catch</strong>:</p>
+<p>يمكن أن يكون اسم الحجة <em><bdi dir="ltr" class="odt-ltr-term">arg</bdi></em> أي شيء. وهي عبارة عن مصفوفة من السلاسل تمثل حجج سطر الأوامر. سنعود إلى هذا لاحقًا.</p>
+<p>إذا كنت تستخدم دوال قد ترمي استثناءات لا ترغب في معالجتها صراحةً، فيمكنك تغليف كود البرنامج في كتلة <strong><bdi dir="ltr" class="odt-ltr-term">try/catch</bdi></strong>:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">public<span style="color:#000000"> </span>class<span style="color:#000000"> test1{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>public<span style="color:#000000"> </span>static<span style="color:#000000"> </span><span style="color:#ff0000">void</span><span style="color:#000000"> main(String arg[]){</span></span></span>
@@ -2192,25 +2194,25 @@
 <p>لنأخذ مثالاً. لنفكر في عبارة الكتابة التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;java&quot;</span><span class="p">);</span>
 </code></pre></div>
-<p>الذي يطبع <em>&quot;java&quot;</em> على الشاشة. هناك الكثير مما يحدث في هذا البيان البسيط:</p>
+<p>الذي يطبع <em>&quot;<bdi dir="ltr" class="odt-ltr-term">java</bdi>&quot;</em> على الشاشة. هناك الكثير مما يحدث في هذا البيان البسيط:</p>
 <ul>
-  <li><i>System </i>هي فئة اسمها الكامل هو <i>java.lang.System</i>
+  <li><i><bdi dir="ltr" class="odt-ltr-term">System</bdi> </i>هي فئة اسمها الكامل هو <i><bdi dir="ltr" class="odt-ltr-term">java.lang.System</bdi></i>
   </li>
-  <li><i>out </i>هي خاصية لهذه الفئة من النوع <i>java.io.PrintStream</i>، وهي فئة أخرى
+  <li><i><bdi dir="ltr" class="odt-ltr-term">out</bdi> </i>هي خاصية لهذه الفئة من النوع <i><bdi dir="ltr" class="odt-ltr-term">java.io.PrintStream</bdi></i>، وهي فئة أخرى
   </li>
-  <li><i>println </i>هي طريقة لفئة<i> java.io.PrintStream</i>.
+  <li><i><bdi dir="ltr" class="odt-ltr-term">println</bdi> </i>هي طريقة لفئة<i> <bdi dir="ltr" class="odt-ltr-term">java.io.PrintStream</bdi></i>.
   </li>
 </ul>
 
-<p>لن نعقد هذا الشرح دون داعٍ، فهو يأتي في وقت مبكر جدًا لأنه يتطلب فهم مفهوم الفئة الذي لم يتم تناوله بعد. يمكن اعتبار الفئة موردًا. هنا، سيحتاج المُترجم إلى الوصول إلى كل من فئتي <em>java.lang.System</em> و <em>java.io.PrintStream</em>. يتم تنظيم مئات فئات Java في أرشيفات تُعرف أيضًا باسم الحزم. تُستخدم عبارات <em>الاستيراد</em> الموضوعة في بداية البرنامج لإخبار المُترجم بالفئات الخارجية التي يحتاجها البرنامج (تلك المستخدمة ولكن غير المُعرَّفة في ملف المصدر المراد ترجمته). وبالتالي، في مثالنا، يحتاج برنامجنا إلى فئتي <em>java.lang.System</em> و <em>java.io.PrintStream</em>. نحدد ذلك باستخدام عبارة <em>الاستيراد</em>. يمكننا كتابة ما يلي في بداية البرنامج:</p>
+<p>لن نعقد هذا الشرح دون داعٍ، فهو يأتي في وقت مبكر جدًا لأنه يتطلب فهم مفهوم الفئة الذي لم يتم تناوله بعد. يمكن اعتبار الفئة موردًا. هنا، سيحتاج المُترجم إلى الوصول إلى كل من فئتي <em><bdi dir="ltr" class="odt-ltr-term">java.lang.System</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">java.io.PrintStream</bdi></em>. يتم تنظيم مئات فئات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في أرشيفات تُعرف أيضًا باسم الحزم. تُستخدم عبارات <em>الاستيراد</em> الموضوعة في بداية البرنامج لإخبار المُترجم بالفئات الخارجية التي يحتاجها البرنامج (تلك المستخدمة ولكن غير المُعرَّفة في ملف المصدر المراد ترجمته). وبالتالي، في مثالنا، يحتاج برنامجنا إلى فئتي <em><bdi dir="ltr" class="odt-ltr-term">java.lang.System</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">java.io.PrintStream</bdi></em>. نحدد ذلك باستخدام عبارة <em>الاستيراد</em>. يمكننا كتابة ما يلي في بداية البرنامج:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.System</span><span class="p">;</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintStream</span><span class="p">;</span>
 </code></pre></div>
-<p>نظرًا لأن برنامج Java يستخدم عادةً عشرات الفئات الخارجية، فسيكون من الممل كتابة جميع عبارات <em>الاستيراد</em> الضرورية. تم تجميع الفئات في حزم، ويمكننا استيراد الحزمة بأكملها. وبالتالي، لاستيراد حزمتي <em>java.lang</em> و <em>java.io</em>، نكتب:</p>
+<p>نظرًا لأن برنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> يستخدم عادةً عشرات الفئات الخارجية، فسيكون من الممل كتابة جميع عبارات <em>الاستيراد</em> الضرورية. تم تجميع الفئات في حزم، ويمكننا استيراد الحزمة بأكملها. وبالتالي، لاستيراد حزمتي <em><bdi dir="ltr" class="odt-ltr-term">java.lang</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">java.io</bdi></em>، نكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.lang.</span><span class="o">*</span><span class="p">;</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.</span><span class="o">*</span><span class="p">;</span>
 </code></pre></div>
-<p>تحتوي حزمة <em>java.lang</em> على جميع الفئات الأساسية في Java ويتم استيرادها تلقائيًا بواسطة المُجمع. لذا، في النهاية، سنكتب فقط:</p>
+<p>تحتوي حزمة <em><bdi dir="ltr" class="odt-ltr-term">java.lang</bdi></em> على جميع الفئات الأساسية في <bdi dir="ltr" class="odt-ltr-term">Java</bdi> ويتم استيرادها تلقائيًا بواسطة المُجمع. لذا، في النهاية، سنكتب فقط:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.</span><span class="o">*</span><span class="p">;</span>
 </code></pre></div>
 <p><a id="toc12502299"></a>
@@ -2224,7 +2226,7 @@
 <a id="toc459205128"></a>
 <a id="toc428596813"></a></p>
 <h2 id="26">2.6. <span style="color: #4f81bd">معالجة الاستثناءات</span></h2>
-<p>العديد من وظائف Java قادرة على توليد استثناءات، أي أخطاء. وقد صادفنا بالفعل إحدى هذه الوظائف، وهي وظيفة <em>readLine</em>:</p>
+<p>العديد من وظائف <bdi dir="ltr" class="odt-ltr-term">Java</bdi> قادرة على توليد استثناءات، أي أخطاء. وقد صادفنا بالفعل إحدى هذه الوظائف، وهي وظيفة <em><bdi dir="ltr" class="odt-ltr-term">readLine</bdi></em>:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">String ligne=null;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">try</span>{</span></span>
@@ -2236,7 +2238,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}// try</span></span>
 </code></pre></div>
 
-<p>عندما يكون من المحتمل أن ترمي دالة استثناءً، يطلب مُركِّب Java من المبرمج معالجته من أجل إنتاج برامج أكثر مقاومة للأخطاء: يجب عليك دائمًا تجنب &quot;تعطل&quot; التطبيق بشكل غير متوقع. هنا، ترمي الدالة <em>readLine</em> استثناءً إذا لم يكن هناك ما يُقرأ — على سبيل المثال، لأن دفق الإدخال قد أُغلق. تتبع معالجة الاستثناءات هذا النمط:</p>
+<p>عندما يكون من المحتمل أن ترمي دالة استثناءً، يطلب مُركِّب <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من المبرمج معالجته من أجل إنتاج برامج أكثر مقاومة للأخطاء: يجب عليك دائمًا تجنب &quot;تعطل&quot; التطبيق بشكل غير متوقع. هنا، ترمي الدالة <em><bdi dir="ltr" class="odt-ltr-term">readLine</bdi></em> استثناءً إذا لم يكن هناك ما يُقرأ — على سبيل المثال، لأن دفق الإدخال قد أُغلق. تتبع معالجة الاستثناءات هذا النمط:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>try{
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    appel de la fonction susceptible de générer l&#39;exception
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>} catch (Exception e){
@@ -2244,9 +2246,9 @@
 <a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>}
 <a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>instruction suivante
 </code></pre></div>
-<p>إذا لم تُطلق الدالة استثناءً، ينتقل البرنامج إلى <strong>الجملة</strong> التالية؛ وإلا، فإنه يدخل إلى نص جملة <em>catch</em> ثم ينتقل إلى <strong>الجملة التالية</strong>. يرجى ملاحظة النقاط التالية:</p>
+<p>إذا لم تُطلق الدالة استثناءً، ينتقل البرنامج إلى <strong>الجملة</strong> التالية؛ وإلا، فإنه يدخل إلى نص جملة <em><bdi dir="ltr" class="odt-ltr-term">catch</bdi></em> ثم ينتقل إلى <strong>الجملة التالية</strong>. يرجى ملاحظة النقاط التالية:</p>
 <ul>
-  <li><b>e </b>هو كائن مشتق من نوع <i>Exception</i>. يمكننا أن نكون أكثر تحديدًا باستخدام أنواع مثل <i>IOException و SecurityException و ArithmeticException </i>وغيرها: هناك حوالي عشرين نوعًا من الاستثناءات. بكتابة <i>catch (Exception e)</i>، نشير إلى أننا نريد معالجة جميع أنواع الاستثناءات. إذا كان من المحتمل أن يولد الكود الموجود في كتلة <i>try </i>أنواعًا متعددة من الاستثناءات، فقد نرغب في أن نكون أكثر تحديدًا من خلال معالجة الاستثناء باستخدام كتل <i>catch</i> متعددة:
+  <li><b><bdi dir="ltr" class="odt-ltr-term">e</bdi> </b>هو كائن مشتق من نوع <i><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></i>. يمكننا أن نكون أكثر تحديدًا باستخدام أنواع مثل <i><bdi dir="ltr" class="odt-ltr-term">IOException</bdi> و <bdi dir="ltr" class="odt-ltr-term">SecurityException</bdi> و <bdi dir="ltr" class="odt-ltr-term">ArithmeticException</bdi> </i>وغيرها: هناك حوالي عشرين نوعًا من الاستثناءات. بكتابة <i><bdi dir="ltr" class="odt-ltr-term">catch</bdi> (<bdi dir="ltr" class="odt-ltr-term">Exception e</bdi>)</i>، نشير إلى أننا نريد معالجة جميع أنواع الاستثناءات. إذا كان من المحتمل أن يولد الكود الموجود في كتلة <i><bdi dir="ltr" class="odt-ltr-term">try</bdi> </i>أنواعًا متعددة من الاستثناءات، فقد نرغب في أن نكون أكثر تحديدًا من خلال معالجة الاستثناء باستخدام كتل <i><bdi dir="ltr" class="odt-ltr-term">catch</bdi></i> متعددة:
   </li>
 </ul>
 
@@ -2266,7 +2268,7 @@
 </code></pre></div>
 
 <ul>
-  <li>يمكن إضافة جملة <b>finally </b>إلى كتل <i>try/catch</i>:
+  <li>يمكن إضافة جملة <b><bdi dir="ltr" class="odt-ltr-term">finally</bdi> </b>إلى كتل <i><bdi dir="ltr" class="odt-ltr-term">try/catch</bdi></i>:
   </li>
 </ul>
 
@@ -2280,9 +2282,9 @@
 <a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>}
 <a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>instruction suivante
 </code></pre></div>
-<p>هنا، سواء حدثت استثناء أم لا، سيتم دائمًا تنفيذ الكود الموجود في جملة <em>finally</em>.</p>
+<p>هنا، سواء حدثت استثناء أم لا، سيتم دائمًا تنفيذ الكود الموجود في جملة <em><bdi dir="ltr" class="odt-ltr-term">finally</bdi></em>.</p>
 <ul>
-  <li>تحتوي فئة <i>Exception</i> على طريقة <b>getMessage() </b>التي تُرجع رسالة توضح تفاصيل الخطأ الذي حدث. لذا، إذا أردنا عرض هذه الرسالة، نكتب:
+  <li>تحتوي فئة <i><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></i> على طريقة <b><bdi dir="ltr" class="odt-ltr-term">getMessage</bdi>() </b>التي تُرجع رسالة توضح تفاصيل الخطأ الذي حدث. لذا، إذا أردنا عرض هذه الرسالة، نكتب:
   </li>
 </ul>
 
@@ -2292,7 +2294,7 @@
 <a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>}//catch
 </code></pre></div>
 <ul>
-  <li>تحتوي فئة <i>Exception </i>على طريقة <b>toString() </b>التي تُرجع سلسلة تشير إلى نوع الاستثناء وقيمة الخاصية <i>Message</i>. وبالتالي يمكننا كتابة:
+  <li>تحتوي فئة <i><bdi dir="ltr" class="odt-ltr-term">Exception</bdi> </i>على طريقة <b><bdi dir="ltr" class="odt-ltr-term">toString</bdi>() </b>التي تُرجع سلسلة تشير إلى نوع الاستثناء وقيمة الخاصية <i><bdi dir="ltr" class="odt-ltr-term">Message</bdi></i>. وبالتالي يمكننا كتابة:
   </li>
 </ul>
 
@@ -2307,7 +2309,7 @@
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    ...
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>}//catch
 </code></pre></div>
-<p>هنا لدينا عملية <em>string + Exception</em> التي سيتم تحويلها تلقائيًا إلى <em>string + Exception.toString()</em> بواسطة المُجمع من أجل ربط سلسلتين.</p>
+<p>هنا لدينا عملية <em><bdi dir="ltr" class="odt-ltr-term">string</bdi> + <bdi dir="ltr" class="odt-ltr-term">Exception</bdi></em> التي سيتم تحويلها تلقائيًا إلى <em><bdi dir="ltr" class="odt-ltr-term">string</bdi> + <bdi dir="ltr" class="odt-ltr-term">Exception.toString</bdi>()</em> بواسطة المُجمع من أجل ربط سلسلتين.</p>
 <p>يوضح المثال التالي استثناءً تم إنشاؤه باستخدام عنصر مصفوفة غير موجود:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1">// tables</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
@@ -2416,16 +2418,16 @@
 <a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="w">  </span><span class="p">}</span><span class="c1">//hand</span>
 <a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a><span class="p">}</span><span class="c1">//class</span>
 </code></pre></div>
-<p>يجب تسمية ملف المصدر الذي يحتوي على فئة <em>coucou</em> السابقة باسم <em>coucou.java</em>:</p>
+<p>يجب تسمية ملف المصدر الذي يحتوي على فئة <em><bdi dir="ltr" class="odt-ltr-term">coucou</bdi></em> السابقة باسم <em><bdi dir="ltr" class="odt-ltr-term">coucou.java</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>E:\data\serge\JAVA\ESSAIS\intro1&gt;dir
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>10/06/2002  08:42                  228 coucou.java
 </code></pre></div>
-<p>يتم ترجمة وتشغيل برنامج Java في نافذة DOS. توجد الملفات التنفيذية <em>javac.exe</em> (المترجم) و <em>java.exe</em> (المترجم الفوري) في دليل <em>bin</em> ضمن دليل تثبيت JDK:</p>
+<p>يتم ترجمة وتشغيل برنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في نافذة <bdi dir="ltr" class="odt-ltr-term">DOS.</bdi> توجد الملفات التنفيذية <em><bdi dir="ltr" class="odt-ltr-term">javac.exe</bdi></em> (المترجم) و <em><bdi dir="ltr" class="odt-ltr-term">java.exe</bdi></em> (المترجم الفوري) في دليل <em><bdi dir="ltr" class="odt-ltr-term">bin</bdi></em> ضمن دليل تثبيت <bdi dir="ltr" class="odt-ltr-term">JDK:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>E:\data\serge\JAVA\classes\paquetages\personne&gt;dir &quot;e:\program files\jdk14\bin\java?.exe&quot;
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>07/02/2002  12:52               24 649 java.exe
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>07/02/2002  12:52               28 766 javac.exe
 </code></pre></div>
-<p>سيقوم المُجمِّع <em>javac.exe</em> بتحليل ملف المصدر .java وإنتاج ملف .class مُجمَّع. لا يمكن للمعالج تشغيل هذا الملف على الفور. فهو يتطلب مترجم Java (<em>java.exe</em>)، المعروف باسم الآلة الافتراضية أو JVM (Java Virtual Machine). من الكود الوسيط في ملف .class، تُنشئ الآلة الافتراضية تعليمات خاصة بمعالج الجهاز الذي تعمل عليه. توجد آلات افتراضية لـ Java لأنواع مختلفة من أنظمة التشغيل (Windows وUnix وMac OS وغيرها). يمكن تنفيذ ملف .class بواسطة أي من هذه الآلات الافتراضية، وبالتالي على أي نظام تشغيل. تعد قابلية النقل عبر الأنظمة هذه إحدى نقاط القوة الرئيسية لـ Java.</p>
+<p>سيقوم المُجمِّع <em><bdi dir="ltr" class="odt-ltr-term">javac.exe</bdi></em> بتحليل ملف المصدر .<bdi dir="ltr" class="odt-ltr-term">java</bdi> وإنتاج ملف .<bdi dir="ltr" class="odt-ltr-term">class</bdi> مُجمَّع. لا يمكن للمعالج تشغيل هذا الملف على الفور. فهو يتطلب مترجم <bdi dir="ltr" class="odt-ltr-term">Java</bdi> (<em><bdi dir="ltr" class="odt-ltr-term">java.exe</bdi></em>)، المعروف باسم الآلة الافتراضية أو <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> (<bdi dir="ltr" class="odt-ltr-term">Java Virtual Machine</bdi>). من الكود الوسيط في ملف .<bdi dir="ltr" class="odt-ltr-term">class</bdi>، تُنشئ الآلة الافتراضية تعليمات خاصة بمعالج الجهاز الذي تعمل عليه. توجد آلات افتراضية لـ <bdi dir="ltr" class="odt-ltr-term">Java</bdi> لأنواع مختلفة من أنظمة التشغيل (<bdi dir="ltr" class="odt-ltr-term">Windows</bdi> و<bdi dir="ltr" class="odt-ltr-term">Unix</bdi> و<bdi dir="ltr" class="odt-ltr-term">Mac OS</bdi> وغيرها). يمكن تنفيذ ملف .<bdi dir="ltr" class="odt-ltr-term">class</bdi> بواسطة أي من هذه الآلات الافتراضية، وبالتالي على أي نظام تشغيل. تعد قابلية النقل عبر الأنظمة هذه إحدى نقاط القوة الرئيسية لـ <bdi dir="ltr" class="odt-ltr-term">Java.</bdi></p>
 <p>دعونا نقوم بتجميع البرنامج السابق:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>E:\data\serge\JAVA\ESSAIS\intro1&gt;&quot;e:\program files\jdk14\bin\javac&quot; coucou.java
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
@@ -2433,11 +2435,11 @@
 <a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>10/06/2002  08:42                  228 coucou.java
 <a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>10/06/2002  08:48                  403 coucou.class
 </code></pre></div>
-<p>دعونا نقوم بتشغيل ملف <em>.class</em> الذي تم إنشاؤه: </p>
+<p>دعونا نقوم بتشغيل ملف <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الذي تم إنشاؤه: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>E:\data\serge\JAVA\ESSAIS\intro1&gt;&quot;e:\program files\jdk14\bin\java&quot; coucou
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>coucou
 </code></pre></div>
-<p>لاحظ أنه في أمر التنفيذ أعلاه، لم نحدد اللاحقة <em>.class</em> لملف <em>coucou.class</em> المراد تنفيذه. فهي ضمنية. إذا كان دليل <em>bin</em> الخاص بـ JDK موجودًا في مسار PATH لجهاز DOS، فلن نحتاج إلى توفير المسار الكامل لملفات <em>javac.exe</em> و <em>java.exe</em> القابلة للتنفيذ. يمكننا ببساطة كتابة </p>
+<p>لاحظ أنه في أمر التنفيذ أعلاه، لم نحدد اللاحقة <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> لملف <em><bdi dir="ltr" class="odt-ltr-term">coucou.class</bdi></em> المراد تنفيذه. فهي ضمنية. إذا كان دليل <em><bdi dir="ltr" class="odt-ltr-term">bin</bdi></em> الخاص بـ <bdi dir="ltr" class="odt-ltr-term">JDK</bdi> موجودًا في مسار <bdi dir="ltr" class="odt-ltr-term">PATH</bdi> لجهاز <bdi dir="ltr" class="odt-ltr-term">DOS</bdi>، فلن نحتاج إلى توفير المسار الكامل لملفات <em><bdi dir="ltr" class="odt-ltr-term">javac.exe</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">java.exe</bdi></em> القابلة للتنفيذ. يمكننا ببساطة كتابة </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>javac coucou.java
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>java coucou
 </code></pre></div>
@@ -2455,13 +2457,13 @@
 <a id="toc427153129"></a>
 <a id="toc427151517"></a></p>
 <h2 id="28">2.8. <span style="color: #4f81bd">الحجج الرئيسية للبرنامج</span></h2>
-<p>تقبل الدالة <em>الرئيسية</em> مصفوفة من السلاسل كمعلمات: <em>String[]</em>. تحتوي هذه المصفوفة على حجج سطر الأوامر المستخدمة لتشغيل التطبيق. وبالتالي، إذا قمنا بتشغيل البرنامج P باستخدام الأمر:</p>
+<p>تقبل الدالة <em>الرئيسية</em> مصفوفة من السلاسل كمعلمات: <em><bdi dir="ltr" class="odt-ltr-term">String</bdi>[]</em>. تحتوي هذه المصفوفة على حجج سطر الأوامر المستخدمة لتشغيل التطبيق. وبالتالي، إذا قمنا بتشغيل البرنامج <bdi dir="ltr" class="odt-ltr-term">P</bdi> باستخدام الأمر:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>        java P arg0 arg1 … argn
 </code></pre></div>
 <p>وإذا تم تعريف الدالة الرئيسية على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span>
 </code></pre></div>
-<p>فسيكون لدينا arg[0]=&quot;arg0&quot;، arg[1]=&quot;arg1&quot; … وإليك مثال على ذلك:</p>
+<p>فسيكون لدينا <bdi dir="ltr" class="odt-ltr-term">arg</bdi>[0]=&quot;<bdi dir="ltr" class="odt-ltr-term">arg0</bdi>&quot;، <bdi dir="ltr" class="odt-ltr-term">arg</bdi>[1]=&quot;<bdi dir="ltr" class="odt-ltr-term">arg1</bdi>&quot; … وإليك مثال على ذلك:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">import java.io.*;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2493,7 +2495,7 @@
 <a id="toc459205133"></a>
 <a id="toc428596818"></a></p>
 <h2 id="29">2.9. <span style="color: #4f81bd">تمرير المعلمات إلى دالة</span></h2>
-<p>أظهرت الأمثلة السابقة برامج Java تحتوي على دالة واحدة فقط، وهي الدالة <em>الرئيسية</em>. يوضح المثال التالي كيفية استخدام الدوال وكيفية تبادل المعلومات بينها. يتم تمرير معلمات الدالة دائمًا بالقيمة: أي يتم نسخ قيمة المعلمة الفعلية إلى المعلمة الشكلية المقابلة.</p>
+<p>أظهرت الأمثلة السابقة برامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> تحتوي على دالة واحدة فقط، وهي الدالة <em>الرئيسية</em>. يوضح المثال التالي كيفية استخدام الدوال وكيفية تبادل المعلومات بينها. يتم تمرير معلمات الدالة دائمًا بالقيمة: أي يتم نسخ قيمة المعلمة الفعلية إلى المعلمة الشكلية المقابلة.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">import java.io.*;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2523,39 +2525,39 @@
 <a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>Paramètre formel a=30
 <a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>Paramètre effectif age=20
 </code></pre></div>
-<p>تم نسخ قيم المعلمات الفعلية &quot;dad&quot; و 20 إلى المعلمات الشكلية S و a. ثم تم تعديلهما. بقيت المعلمات الفعلية دون تغيير. لاحظ هنا نوع المعلمات الفعلية:</p>
+<p>تم نسخ قيم المعلمات الفعلية &quot;<bdi dir="ltr" class="odt-ltr-term">dad</bdi>&quot; و 20 إلى المعلمات الشكلية <bdi dir="ltr" class="odt-ltr-term">S</bdi> و <bdi dir="ltr" class="odt-ltr-term">a.</bdi> ثم تم تعديلهما. بقيت المعلمات الفعلية دون تغيير. لاحظ هنا نوع المعلمات الفعلية:</p>
 <ul>
-  <li><i>S </i>هو مرجع كائن، أي عنوان كائن في الذاكرة
+  <li><i><bdi dir="ltr" class="odt-ltr-term">S</bdi> </i>هو مرجع كائن، أي عنوان كائن في الذاكرة
   </li>
-  <li><i>age </i>هو عدد صحيح
+  <li><i><bdi dir="ltr" class="odt-ltr-term">age</bdi> </i>هو عدد صحيح
   </li>
 </ul>
 
 <h2 id="210">2.10. <span style="color: #4f81bd">مثال على حساب الضريبة</span></h2>
 <p>سنختتم هذا الفصل بمثال سنعود إليه عدة مرات في هذا المستند. نقترح كتابة برنامج لحساب ضريبة دافع الضرائب. سنأخذ الحالة المبسطة لدافع الضرائب الذي لا يملك سوى راتبه ليبلغ عنه:</p>
 <ul>
-  <li>نحسب عدد شرائح الضريبة للموظف <b>على النحو التالي: nbParts = nbEnfants / 2 + 1 </b>إذا كان غير متزوج، و <b>nbEnfants / 2 + 2 </b>إذا كان متزوجًا، حيث <i>nbEnfants </i>هو عدد الأطفال.
+  <li>نحسب عدد شرائح الضريبة للموظف <b>على النحو التالي: <bdi dir="ltr" class="odt-ltr-term">nbParts</bdi> = <bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> / 2 + 1 </b>إذا كان غير متزوج، و <b><bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> / 2 + 2 </b>إذا كان متزوجًا، حيث <i><bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> </i>هو عدد الأطفال.
   </li>
   <li>إذا كان لديه ثلاثة أطفال على الأقل، يحصل على نصف حصة إضافية.
   </li>
-  <li>نحسب الدخل الخاضع للضريبة <b>R = 0.72 × S، </b>حيث S هو الراتب السنوي
+  <li>نحسب الدخل الخاضع للضريبة <b><bdi dir="ltr" class="odt-ltr-term">R</bdi> = <bdi dir="ltr" class="odt-ltr-term">0.72 × S</bdi>، </b>حيث <bdi dir="ltr" class="odt-ltr-term">S</bdi> هو الراتب السنوي
   </li>
-  <li>نحسب معامل الأسرة <b>QF = R / nbParts</b>
+  <li>نحسب معامل الأسرة <b><bdi dir="ltr" class="odt-ltr-term">QF</bdi> = <bdi dir="ltr" class="odt-ltr-term">R</bdi> / <bdi dir="ltr" class="odt-ltr-term">nbParts</bdi></b>
   </li>
-  <li>نحسب ضريبتك <b>I</b>. انظر الجدول التالي:
+  <li>نحسب ضريبتك <b><bdi dir="ltr" class="odt-ltr-term">I</bdi></b>. انظر الجدول التالي:
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">12,620.0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">13,190</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.05</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">631</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">15,640</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1,290.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">24,740</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.15</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2,072.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">31,810</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3,309.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">39,970</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.25</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4,900</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">48,360</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6,898.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">55,790</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.35</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">9,316.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">92,970</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">12,106</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">127,860</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.45</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">16,754.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">151,250</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.50</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">23,147.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">172,040</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.55</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">30,710</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">195,000</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.60</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">39,312</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.65</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">49,062</div></td></tr></table>
 
-<p>يحتوي كل صف على 3 حقول. لحساب الضريبة I، نبحث عن الصف الأول الذي يكون فيه <em>QF &lt;= الحقل 1</em>. على سبيل المثال، إذا كان QF = 23,000، فسنجد الصف</p>
+<p>يحتوي كل صف على 3 حقول. لحساب الضريبة <bdi dir="ltr" class="odt-ltr-term">I</bdi>، نبحث عن الصف الأول الذي يكون فيه <em><bdi dir="ltr" class="odt-ltr-term">QF</bdi> &lt;= الحقل 1</em>. على سبيل المثال، إذا كان <bdi dir="ltr" class="odt-ltr-term">QF</bdi> = 23,000، فسنجد الصف</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>    24740        0.15        2072.5
 </code></pre></div>
-<p>الضريبة I تساوي إذن <strong>0.15*R - 2072.5*nbParts</strong>. إذا كان QF بحيث لا تتحقق الشرط <em>QF&lt;=field1</em> أبدًا، يتم استخدام المعاملات من الصف الأخير. هنا:</p>
+<p>الضريبة <bdi dir="ltr" class="odt-ltr-term">I</bdi> تساوي إذن <strong>0.15*<bdi dir="ltr" class="odt-ltr-term">R</bdi> - 2072.5*<bdi dir="ltr" class="odt-ltr-term">nbParts</bdi></strong>. إذا كان <bdi dir="ltr" class="odt-ltr-term">QF</bdi> بحيث لا تتحقق الشرط <em><bdi dir="ltr" class="odt-ltr-term">QF</bdi>&lt;=<bdi dir="ltr" class="odt-ltr-term">field1</bdi></em> أبدًا، يتم استخدام المعاملات من الصف الأخير. هنا:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>    0                0.65        49062
 </code></pre></div>
-<p>مما يعطي الضريبة I = 0.65*R - 49062*nbParts.</p>
-<p>برنامج Java المقابل هو كما يلي:</p>
+<p>مما يعطي الضريبة <bdi dir="ltr" class="odt-ltr-term">I</bdi> = 0.65*<bdi dir="ltr" class="odt-ltr-term">R</bdi> - 49062*<bdi dir="ltr" class="odt-ltr-term">nbParts.</bdi></p>
+<p>برنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> المقابل هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">import</span> java.io.*;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>

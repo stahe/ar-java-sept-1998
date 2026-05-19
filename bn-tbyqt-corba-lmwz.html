@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1070,28 +1072,28 @@
 <a id="toc12362989"></a>
 <a id="toc10974766"></a>
 <a id="toc459349656"></a></p>
-<h1 id="10-corba">10. <span style="color: #365f91">بناء تطبيقات CORBA الموزعة</span></h1>
+<h1 id="10-corba">10. <span style="color: #365f91">بناء تطبيقات <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> الموزعة</span></h1>
 <p><a id="toc12502478"></a>
 <a id="toc12362990"></a>
 <a id="toc10974767"></a>
 <a id="toc459349657"></a></p>
 <h2 id="101">10.1. <span style="color: #4f81bd">مقدمة</span></h2>
-<p>في الفصل السابق، رأينا كيفية إنشاء تطبيقات موزعة في Java باستخدام حزمة RMI. هنا، نتناول نفس المشكلة، ولكن هذه المرة باستخدام بنية CORBA. CORBA (<em>Common Object Request Broker Architecture</em>) هي مواصفة حددتها OMG (<em>Object Management Group</em>)، التي تضم العديد من الشركات في صناعة تكنولوجيا المعلومات. تحدد CORBA &quot;ناقل برمجي&quot; يمكن الوصول إليه من قبل التطبيقات المكتوبة بلغات مختلفة:</p>
+<p>في الفصل السابق، رأينا كيفية إنشاء تطبيقات موزعة في <bdi dir="ltr" class="odt-ltr-term">Java</bdi> باستخدام حزمة <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> هنا، نتناول نفس المشكلة، ولكن هذه المرة باستخدام بنية <bdi dir="ltr" class="odt-ltr-term">CORBA. CORBA</bdi> (<em><bdi dir="ltr" class="odt-ltr-term">Common Object Request Broker Architecture</bdi></em>) هي مواصفة حددتها <bdi dir="ltr" class="odt-ltr-term">OMG</bdi> (<em><bdi dir="ltr" class="odt-ltr-term">Object Management Group</bdi></em>)، التي تضم العديد من الشركات في صناعة تكنولوجيا المعلومات. تحدد <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> &quot;ناقل برمجي&quot; يمكن الوصول إليه من قبل التطبيقات المكتوبة بلغات مختلفة:</p>
 <p><img src="images/10000000000005130000013B7F875D86.png" width="650" height="158" style="width:17.186cm;height:4.168cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005130000013B7F875D86.png" /></p>
-<p>سنرى أن بناء تطبيق موزع باستخدام CORBA يشبه الطريقة المستخدمة مع Java RMI: فالمفاهيم متشابهة. توفر CORBA ميزة قابلية التشغيل البيني مع التطبيقات المكتوبة بلغات أخرى.</p>
+<p>سنرى أن بناء تطبيق موزع باستخدام <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> يشبه الطريقة المستخدمة مع <bdi dir="ltr" class="odt-ltr-term">Java RMI:</bdi> فالمفاهيم متشابهة. توفر <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> ميزة قابلية التشغيل البيني مع التطبيقات المكتوبة بلغات أخرى.</p>
 <p><a id="toc12502479"></a>
 <a id="toc12362991"></a>
 <a id="toc10974768"></a>
 <a id="toc459349658"></a></p>
-<h2 id="102-corba">10.2. <span style="color: #4f81bd">عملية تطوير تطبيق CORBA</span></h2>
+<h2 id="102-corba">10.2. <span style="color: #4f81bd">عملية تطوير تطبيق <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></h2>
 <p><a id="toc12502480"></a>
 <a id="toc12362992"></a>
 <a id="toc10974769"></a>
 <a id="toc459349659"></a></p>
 <h3 id="1021">10.2.1. <span style="color: #4f81bd">مقدمة</span></h3>
-<p>لتطوير تطبيق خادم-عميل باستخدام CORBA، سنتبع الخطوات التالية:</p>
+<p>لتطوير تطبيق خادم-عميل باستخدام <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi>، سنتبع الخطوات التالية:</p>
 <ol>
-  <li>كتابة واجهة الخادم باستخدام IDL <i>(لغة تعريف الواجهة)</i>
+  <li>كتابة واجهة الخادم باستخدام <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> <i>(لغة تعريف الواجهة)</i>
   </li>
   <li>إنشاء فئات &quot;الهيكل&quot; و&quot;الركيزة&quot; للخادم
   </li>
@@ -1101,7 +1103,7 @@
   </li>
   <li>تجميع جميع الفئات
   </li>
-  <li>تشغيل دليل خدمات CORBA
+  <li>تشغيل دليل خدمات <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi>
   </li>
   <li>تشغيل الخادم
   </li>
@@ -1109,49 +1111,49 @@
   </li>
 </ol>
 
-<p>سنستخدم خادم echo، الذي سبق استخدامه في سياق RMI، كمثال أول لنا. سيسمح هذا للقارئ برؤية الاختلافات بين الطريقتين.</p>
-<p>تم اختبار التطبيق باستخدام JDK 1.2.</p>
+<p>سنستخدم خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi>، الذي سبق استخدامه في سياق <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، كمثال أول لنا. سيسمح هذا للقارئ برؤية الاختلافات بين الطريقتين.</p>
+<p>تم اختبار التطبيق باستخدام <bdi dir="ltr" class="odt-ltr-term">JDK 1.2</bdi>.</p>
 <p><a id="toc12502481"></a>
 <a id="toc12362993"></a>
 <a id="toc10974770"></a>
 <a id="toc459349660"></a></p>
 <h3 id="1022">10.2.2. <span style="color: #4f81bd">كتابة واجهة الخادم</span></h3>
-<p>كما هو الحال مع Java RMI، يتم تعريف الخادم من خلال واجهته فيما يتعلق بالعميل. في حين أن الفئات التي تنفذ الخادم ليست مطلوبة من قبل العميل، فإن فئات واجهته مطلوبة. في حين استخدمت Java RMI واجهة Java لإنشاء فئات &quot;الهيكل&quot; و&quot;الركيزة&quot; للخادم، تتطلب بنية Java CORBA أن توصف الواجهة بلغة أخرى غير Java. ستنشئ هذه الواجهة عدة فئات، يستخدم العميل بعضها ويستخدم الخادم البعض الآخر.</p>
-<p>سيكون وصف واجهة echo كما يلي:</p>
+<p>كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">Java RMI</bdi>، يتم تعريف الخادم من خلال واجهته فيما يتعلق بالعميل. في حين أن الفئات التي تنفذ الخادم ليست مطلوبة من قبل العميل، فإن فئات واجهته مطلوبة. في حين استخدمت <bdi dir="ltr" class="odt-ltr-term">Java RMI</bdi> واجهة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> لإنشاء فئات &quot;الهيكل&quot; و&quot;الركيزة&quot; للخادم، تتطلب بنية <bdi dir="ltr" class="odt-ltr-term">Java CORBA</bdi> أن توصف الواجهة بلغة أخرى غير <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> ستنشئ هذه الواجهة عدة فئات، يستخدم العميل بعضها ويستخدم الخادم البعض الآخر.</p>
+<p>سيكون وصف واجهة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">module</span><span class="w"> </span><span class="n">echo</span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">interface</span> <span class="nc">iSrvEcho</span><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="nf">echo</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">};</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">};</span>
 </code></pre></div>
-<p>سيتم تخزين وصف الواجهة في ملف <strong>echo.idl</strong>. وهو مكتوب بلغة IDL (<em>لغة تعريف الواجهة</em>) الخاصة بـ OMG. ولكي يكون قابلاً للاستخدام، يجب تحليله بواسطة برنامج يقوم بإنشاء ملفات مصدر باللغة المستخدمة لتطوير تطبيق CORBA. هنا، سنستخدم برنامج <strong>idltojava.exe</strong>، الذي سيقوم بإنشاء ملفات المصدر <em>.java</em> اللازمة للتطبيق استنادًا إلى الواجهة السابقة. لا يتم تضمين برنامج <em>idltojava.exe</em> مع JDK. ويمكن تنزيله من موقع Sun <strong>على</strong> الويب <strong>على http://java.sun.com</strong>. </p>
-<p>دعونا نحلل بضع أسطر من واجهة <em>IDL</em> السابقة:</p>
+<p>سيتم تخزين وصف الواجهة في ملف <strong><bdi dir="ltr" class="odt-ltr-term">echo.idl</bdi></strong>. وهو مكتوب بلغة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> (<em>لغة تعريف الواجهة</em>) الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">OMG.</bdi> ولكي يكون قابلاً للاستخدام، يجب تحليله بواسطة برنامج يقوم بإنشاء ملفات مصدر باللغة المستخدمة لتطوير تطبيق <bdi dir="ltr" class="odt-ltr-term">CORBA.</bdi> هنا، سنستخدم برنامج <strong><bdi dir="ltr" class="odt-ltr-term">idltojava.exe</bdi></strong>، الذي سيقوم بإنشاء ملفات المصدر <em>.<bdi dir="ltr" class="odt-ltr-term">java</bdi></em> اللازمة للتطبيق استنادًا إلى الواجهة السابقة. لا يتم تضمين برنامج <em><bdi dir="ltr" class="odt-ltr-term">idltojava.exe</bdi></em> مع <bdi dir="ltr" class="odt-ltr-term">JDK.</bdi> ويمكن تنزيله من موقع <bdi dir="ltr" class="odt-ltr-term">Sun</bdi> <strong>على</strong> الويب <strong>على <bdi dir="ltr" class="odt-ltr-term">http://java.sun.com</bdi></strong>. </p>
+<p>دعونا نحلل بضع أسطر من واجهة <em><bdi dir="ltr" class="odt-ltr-term">IDL</bdi></em> السابقة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>module echo
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>مكافئ **لحزمة** Java **echo**. سيؤدي ترجمة الواجهة إلى إنشاء حزمة Java echo، أي دليل يحتوي على فئات Java.
+<div class="highlight"><pre><span></span><code>مكافئ **لحزمة** &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java&lt;/bdi&gt; **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;echo&lt;/bdi&gt;**. سيؤدي ترجمة الواجهة إلى إنشاء حزمة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java echo&lt;/bdi&gt;، أي دليل يحتوي على فئات &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java.&lt;/bdi&gt;
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">interface</span> <span class="nc">iSrvEcho</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>تعادل **واجهة** Java **iSrvEcho**. ستؤدي إلى إنشاء واجهة Java.
+<div class="highlight"><pre><span></span><code>تعادل **واجهة** &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java&lt;/bdi&gt; **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;iSrvEcho&lt;/bdi&gt;**. ستؤدي إلى إنشاء واجهة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java.&lt;/bdi&gt;
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>string echo(in string msg)
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>تعادل عبارة Java **String echo(String msg)**. لا تتطابق الأنواع في لغة IDL تمامًا مع تلك الموجودة في لغة Java. سيتم شرح أوجه التطابق لاحقًا في هذا الفصل. في لغة IDL، يمكن أن تكون معلمات الدالة معلمات إدخال (**in**) أو إخراج (**out**) أو إدخال-إخراج (**inout**). هنا، تستقبل طريقة *echo* معلمة إدخال *msg،* وهي سلسلة، وتُرجع سلسلة كنتيجة.
+<div class="highlight"><pre><span></span><code>تعادل عبارة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java&lt;/bdi&gt; **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;String echo&lt;/bdi&gt;(&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;String msg&lt;/bdi&gt;)**. لا تتطابق الأنواع في لغة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;IDL&lt;/bdi&gt; تمامًا مع تلك الموجودة في لغة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Java.&lt;/bdi&gt; سيتم شرح أوجه التطابق لاحقًا في هذا الفصل. في لغة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;IDL&lt;/bdi&gt;، يمكن أن تكون معلمات الدالة معلمات إدخال (**&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;in&lt;/bdi&gt;**) أو إخراج (**&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;out&lt;/bdi&gt;**) أو إدخال-إخراج (**&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;inout&lt;/bdi&gt;**). هنا، تستقبل طريقة *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;echo&lt;/bdi&gt;* معلمة إدخال *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;msg&lt;/bdi&gt;،* وهي سلسلة، وتُرجع سلسلة كنتيجة.
 </code></pre></div>
-<p>الواجهة السابقة هي واجهة خادم echo الخاص بنا. تذكر أن الواجهة البعيدة تصف طرق كائن الخادم التي يمكن للعملاء الوصول إليها. هنا، ستكون طريقة <em>echo</em> فقط متاحة للعملاء.</p>
+<p>الواجهة السابقة هي واجهة خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi> الخاص بنا. تذكر أن الواجهة البعيدة تصف طرق كائن الخادم التي يمكن للعملاء الوصول إليها. هنا، ستكون طريقة <em><bdi dir="ltr" class="odt-ltr-term">echo</bdi></em> فقط متاحة للعملاء.</p>
 <p><a id="toc12502482"></a>
 <a id="toc12362994"></a>
 <a id="toc10974771"></a>
 <a id="toc459349661"></a></p>
-<h3 id="1023-idl">10.2.3. <span style="color: #4f81bd">ترجمة واجهة IDL للخادم</span></h3>
-<p>بمجرد تعريف واجهة الخادم، نقوم بإنشاء ملفات Java المقابلة.</p>
+<h3 id="1023-idl">10.2.3. <span style="color: #4f81bd">ترجمة واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> للخادم</span></h3>
+<p>بمجرد تعريف واجهة الخادم، نقوم بإنشاء ملفات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> المقابلة.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>E:\data\java\corba\ECHO&gt;dir *.idl
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ECHO     IDL            78  15/03/99  13:56 ECHO.IDL
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>E:\data\java\corba\ECHO&gt;d:\javaidl\idltojava.exe -fno-cpp echo.idl
 </code></pre></div>
-<p>يُستخدم الخيار <em>-fno-cpp</em> للإشارة إلى عدم استخدام أي معالج مسبق (يُستخدم بشكل شائع مع C/C++). يؤدي ترجمة ملف <em>echo.idl</em> إلى إنشاء دليل فرعي <em>echo</em> يحتوي على الملفات التالية:</p>
+<p>يُستخدم الخيار <em>-<bdi dir="ltr" class="odt-ltr-term">fno-cpp</bdi></em> للإشارة إلى عدم استخدام أي معالج مسبق (يُستخدم بشكل شائع مع <bdi dir="ltr" class="odt-ltr-term">C/C++</bdi>). يؤدي ترجمة ملف <em><bdi dir="ltr" class="odt-ltr-term">echo.idl</bdi></em> إلى إنشاء دليل فرعي <em><bdi dir="ltr" class="odt-ltr-term">echo</bdi></em> يحتوي على الملفات التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>E:\data\java\corba\ECHO&gt;dir echo
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>_ISRVE~1 JAV         1 095  17/03/99  17:19 _iSrvEchoStub.java
@@ -1160,7 +1162,7 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>ISRVEC~3 JAV         1 827  17/03/99  17:19 iSrvEchoHelper.java
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>_ISRVE~2 JAV         1 803  17/03/99  17:19 _iSrvEchoImplBase.java
 </code></pre></div>
-<p>ملف <em>iSrvEcho.java</em> هو ملف Java الذي يصف واجهة الخادم:</p>
+<p>ملف <em><bdi dir="ltr" class="odt-ltr-term">iSrvEcho.java</bdi></em> هو ملف <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الذي يصف واجهة الخادم:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cm">/*</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="cm"> * File: ./ECHO/ISRVECHO.JAVA</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="cm"> * From: ECHO.IDL</span>
@@ -1176,7 +1178,7 @@
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يمكننا أن نرى أن هذا يمثل ترجمة حرفية تقريبًا لواجهة IDL. إذا كنت مهتمًا بما يكفي للاطلاع على محتويات ملفات</span><em><span style="color: #000000"> .java </span></em><span style="color: #000000">الأخرى، فستجد أشياء أكثر تعقيدًا. إليك ما تقوله الوثائق عن دور هذه الملفات المختلفة:</span></p>
+<p><span style="color: #000000">يمكننا أن نرى أن هذا يمثل ترجمة حرفية تقريبًا لواجهة <bdi dir="ltr" class="odt-ltr-term">IDL.</bdi> إذا كنت مهتمًا بما يكفي للاطلاع على محتويات ملفات</span><em><span style="color: #000000"> .<bdi dir="ltr" class="odt-ltr-term">java</bdi> </span></em><span style="color: #000000">الأخرى، فستجد أشياء أكثر تعقيدًا. إليك ما تقوله الوثائق عن دور هذه الملفات المختلفة:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>iSrvEcho.java
 </code></pre></div>
@@ -1186,17 +1188,17 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>_iSrvEchoImplbase.java
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">    تنفذ واجهة </span><em><span style="color: #000000">iSrvEcho</span></em><span style="color: #000000"> السابقة. وهي فئة مجردة، &quot;هيكل&quot; الخادم، تزود الخادم بوظائف CORBA التي يتطلبها التطبيق الموزع.</span></p>
+<p><span style="color: #000000">    تنفذ واجهة </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">iSrvEcho</bdi></span></em><span style="color: #000000"> السابقة. وهي فئة مجردة، &quot;هيكل&quot; الخادم، تزود الخادم بوظائف <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> التي يتطلبها التطبيق الموزع.</span></p>
 <p><em><span style="color: #000000"> </span></em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>_iSrvEchoStub.java
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">    هذا هو &quot;البديل&quot; للخادم الذي سيستخدمه العميل. ويوفر للعميل وظائف CORBA اللازمة للوصول إلى الخادم.</span></p>
+<p><span style="color: #000000">    هذا هو &quot;البديل&quot; للخادم الذي سيستخدمه العميل. ويوفر للعميل وظائف <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> اللازمة للوصول إلى الخادم.</span></p>
 <p><em><span style="color: #000000"> </span></em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>iSrvEchoHelper.java
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">    يوفر الطرق اللازمة لإدارة مراجع كائنات CORBA</span></p>
+<p><span style="color: #000000">    يوفر الطرق اللازمة لإدارة مراجع كائنات <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></p>
 <p><em><span style="color: #000000"> </span></em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>iSrvEchoHolder.java
 </code></pre></div>
@@ -1206,8 +1208,8 @@
 <a id="toc12362995"></a>
 <a id="toc10974772"></a>
 <a id="toc459349662"></a></p>
-<h3 id="1024-idl">10.2.4. <span style="color: #4f81bd">ترجمة الفئات التي تم إنشاؤها من واجهة IDL</span></h3>
-<p>من المستحسن ترجمة الفئات السابقة. سنرى في مثال آخر أنه يمكن هنا اكتشاف الأخطاء الناتجة عن التشغيل غير الصحيح لمولد <em>idltojava</em>. هنا، يسير كل شيء بسلاسة، وبعد الترجمة، توجد الملفات التالية في دليل حزمة <em>echo</em>:</p>
+<h3 id="1024-idl">10.2.4. <span style="color: #4f81bd">ترجمة الفئات التي تم إنشاؤها من واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi></span></h3>
+<p>من المستحسن ترجمة الفئات السابقة. سنرى في مثال آخر أنه يمكن هنا اكتشاف الأخطاء الناتجة عن التشغيل غير الصحيح لمولد <em><bdi dir="ltr" class="odt-ltr-term">idltojava</bdi></em>. هنا، يسير كل شيء بسلاسة، وبعد الترجمة، توجد الملفات التالية في دليل حزمة <em><bdi dir="ltr" class="odt-ltr-term">echo</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>E:\data\java\corba\ECHO\echo&gt;dir
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>_ISRVE~1 JAV         1 095  17/03/99  17:19 _iSrvEchoStub.java
@@ -1228,8 +1230,8 @@
 <h3 id="1025">10.2.5. <span style="color: #4f81bd">تنفيذ الخادم</span></h3>
 <p><a id="toc10974774"></a>
 <a id="toc459349664"></a></p>
-<h4 id="10251-isrvecho">10.2.5.1. <span style="color: #4f81bd">تنفيذ واجهة iSrvEcho</span></h4>
-<p>لقد قمنا بتعريف واجهة <em>iSrvEcho</em> سابقًا. سنقوم الآن بكتابة الفئة التي تنفذ هذه الواجهة. وستكون مشتقة من فئة<em><span style="color: #000000"> _iSrvEchoImplbase.java</span></em>، <span style="color: #000000">والتي، كما هو مذكور أعلاه، تنفذ بالفعل واجهة </span><em><span style="color: #000000">iSrvEcho</span></em><span style="color: #000000">.</span></p>
+<h4 id="10251-isrvecho">10.2.5.1. <span style="color: #4f81bd">تنفيذ واجهة <bdi dir="ltr" class="odt-ltr-term">iSrvEcho</bdi></span></h4>
+<p>لقد قمنا بتعريف واجهة <em><bdi dir="ltr" class="odt-ltr-term">iSrvEcho</bdi></em> سابقًا. سنقوم الآن بكتابة الفئة التي تنفذ هذه الواجهة. وستكون مشتقة من فئة<em><span style="color: #000000"> _iSrvEchoImplbase.<bdi dir="ltr" class="odt-ltr-term">java</bdi></span></em>، <span style="color: #000000">والتي، كما هو مذكور أعلاه، تنفذ بالفعل واجهة </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">iSrvEcho</bdi></span></em><span style="color: #000000">.</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">echo.*</span><span class="p">;</span>
@@ -1242,7 +1244,7 @@
 <a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="p">}</span><span class="c1">// fine echo</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="p">}</span><span class="c1">// end of class</span>
 </code></pre></div>
-<p>الرمز واضح بذاته. يتم حفظ هذه الفئة في الملف <em>srvEcho.java</em> في الدليل الأصلي لحزمة واجهة <em>iSrvEcho</em>.</p>
+<p>الرمز واضح بذاته. يتم حفظ هذه الفئة في الملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho.java</bdi></em> في الدليل الأصلي لحزمة واجهة <em><bdi dir="ltr" class="odt-ltr-term">iSrvEcho</bdi></em>.</p>
 <p>يمكنك ترجمته للتحقق:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>E:\data\java\corba\ECHO&gt;j:\jdk12\bin\javac srvEcho.java
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
@@ -1256,7 +1258,7 @@
 <p><a id="toc10974775"></a>
 <a id="toc459349665"></a></p>
 <h4 id="10252">10.2.5.2. <span style="color: #4f81bd">كتابة فئة إنشاء الخادم</span></h4>
-<p>كما هو الحال مع تطبيق RMI للعميل والخادم، يجب تسجيل خادم CORBA في دليل حتى يتمكن العملاء من الوصول إليه. إن إجراء التسجيل هذا هو الذي يختلف، على مستوى التطوير، اعتمادًا على ما إذا كان لديك تطبيق CORBA أو RMI. فيما يلي الإجراء الخاص بخادم echo CORBA المسجل في ملف <em>serverEcho.java</em>: </p>
+<p>كما هو الحال مع تطبيق <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> للعميل والخادم، يجب تسجيل خادم <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> في دليل حتى يتمكن العملاء من الوصول إليه. إن إجراء التسجيل هذا هو الذي يختلف، على مستوى التطوير، اعتمادًا على ما إذا كان لديك تطبيق <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> أو <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> فيما يلي الإجراء الخاص بخادم <bdi dir="ltr" class="odt-ltr-term">echo CORBA</bdi> المسجل في ملف <em><bdi dir="ltr" class="odt-ltr-term">serverEcho.java</bdi></em>: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">echo.*</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">;</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">org.omg.CosNaming.</span>
@@ -1314,15 +1316,15 @@
 <a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a><span class="p">}</span><span class="c1">// serveurEcho</span>
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">فيما يلي، نلخص أساسيات بدء تشغيل الخادم دون الخوض في التفاصيل التي قد تبدو معقدة للوهلة الأولى. من المهم تذكر النقاط الرئيسية من المثال السابق، حيث إنها ستكون موجودة في كل خادم CORBA.</span></p>
+<p><span style="color: #000000">فيما يلي، نلخص أساسيات بدء تشغيل الخادم دون الخوض في التفاصيل التي قد تبدو معقدة للوهلة الأولى. من المهم تذكر النقاط الرئيسية من المثال السابق، حيث إنها ستكون موجودة في كل خادم <bdi dir="ltr" class="odt-ltr-term">CORBA.</bdi></span></p>
 <p><span style="color: #000000"> </span></p>
 <h5 id="102521">10.2.5.2.1. <span style="color: #243f60">معلمات الخادم</span></h5>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يجب أن يسجل خادم CORBA نفسه لدى خدمة دليل تعمل على جهاز ومنفذ معينين. سيتلقى تطبيقنا هاتين المعلومتين كمعلمات. يجب أن يكون للخدمة المسجلة اسم، والذي سيكون المعلمة الثالثة. </span></p>
+<p><span style="color: #000000">يجب أن يسجل خادم <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> نفسه لدى خدمة دليل تعمل على جهاز ومنفذ معينين. سيتلقى تطبيقنا هاتين المعلومتين كمعلمات. يجب أن يكون للخدمة المسجلة اسم، والذي سيكون المعلمة الثالثة. </span></p>
 <p><span style="color: #000000"> </span></p>
-<h5 id="102522-corba">10.2.5.2.2. <span style="color: #243f60">إنشاء كائن الوصول إلى خدمة الدليل CORBA</span></h5>
+<h5 id="102522-corba">10.2.5.2.2. <span style="color: #243f60">إنشاء كائن الوصول إلى خدمة الدليل <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></h5>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">للوصول إلى خدمة الدليل وتسجيل خادم echo الخاص بنا، نحتاج إلى كائن يسمى ORB (Object Request Broker)، يتم الحصول عليه باستخدام طريقة الفئة التالية:</span></p>
+<p><span style="color: #000000">للوصول إلى خدمة الدليل وتسجيل خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi> الخاص بنا، نحتاج إلى كائن يسمى <bdi dir="ltr" class="odt-ltr-term">ORB</bdi> (<bdi dir="ltr" class="odt-ltr-term">Object Request Broker</bdi>)، يتم الحصول عليه باستخدام طريقة الفئة التالية:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ORB ORB.init(String [] args, Properties prop)
 </code></pre></div>
@@ -1337,7 +1339,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يستخدم المثال التسلسل التالي للحصول على كائن ORB:</span></p>
+<p><span style="color: #000000">يستخدم المثال التسلسل التالي للحصول على كائن <bdi dir="ltr" class="odt-ltr-term">ORB:</bdi></span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    String[] initORB={<span style="font-style:italic">&quot;-ORBInitialHost&quot;</span>,<span style="font-weight:bold">machine</span>,<span style="font-style:italic">&quot;-ORBInitialPort&quot;</span>,<span style="font-weight:bold">port</span>};
@@ -1357,9 +1359,9 @@
 </code></pre></div>
 
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">تم تعيين المعلمة الثانية لطريقة </span><em><span style="color: #000000">init </span></em><span style="color: #000000">على </span><em><span style="color: #000000">القيمة null</span></em><span style="color: #000000">. ولو تم تعيين المعلمة الأولى أيضًا على </span><em><span style="color: #000000">القيمة </span></em><span style="color: #000000">null، لكان الزوج (machine,port) المستخدم هو الزوج الافتراضي </span><strong><span style="color: #000000">(localhost,900)</span></strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">تم تعيين المعلمة الثانية لطريقة </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">init</bdi> </span></em><span style="color: #000000">على </span><em><span style="color: #000000">القيمة <bdi dir="ltr" class="odt-ltr-term">null</bdi></span></em><span style="color: #000000">. ولو تم تعيين المعلمة الأولى أيضًا على </span><em><span style="color: #000000">القيمة </span></em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">null</bdi>، لكان الزوج (<bdi dir="ltr" class="odt-ltr-term">machine</bdi>,<bdi dir="ltr" class="odt-ltr-term">port</bdi>) المستخدم هو الزوج الافتراضي </span><strong><span style="color: #000000">(<bdi dir="ltr" class="odt-ltr-term">localhost</bdi>,900)</span></strong><span style="color: #000000">.</span></p>
 <p><span style="color: #000000"> </span></p>
-<h5 id="102523-corba">10.2.5.2.3. <span style="color: #243f60">تسجيل الخادم في دليل خدمات CORBA</span></h5>
+<h5 id="102523-corba">10.2.5.2.3. <span style="color: #243f60">تسجيل الخادم في دليل خدمات <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></h5>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">يتم تسجيل الخادم في الدليل من خلال العمليات التالية:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1376,19 +1378,19 @@
 <a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">            </span><span class="n">srvEcho</span><span class="p">();</span><span class="w"> </span><span class="n">ncRef</span><span class="p">.</span><span class="na">rebind</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">serveurEcho</span><span class="p">);</span><span class="w"> </span><span class="n">orb</span><span class="p">.</span><span class="na">connect</span><span class="p">(</span><span class="n">serveurEcho</span><span class="p">);</span>
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يتضمن الجزء الأول من الكود إعداد اسم الخدمة. يتم تمثيل هذا الاسم في الكود بواسطة المتغير </span><strong><span style="color: #000000">path</span></strong><span style="color: #000000">. يتكون اسم الخدمة من عدة مكونات:</span></p>
+<p><span style="color: #000000">يتضمن الجزء الأول من الكود إعداد اسم الخدمة. يتم تمثيل هذا الاسم في الكود بواسطة المتغير </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">path</bdi></span></strong><span style="color: #000000">. يتكون اسم الخدمة من عدة مكونات:</span></p>
 <ul>
-  <li><span style="color: #000000">مكون أولي </span><i><span style="color: #000000">objRef</span></i><span style="color: #000000">، وهو كائن عام يجب تحويله إلى نوع </span><i><span style="color: #000000">NamingContext</span></i><span style="color: #000000">، وهو هنا </span><i><span style="color: #000000">ncRef</span></i><span style="color: #000000">.</span>
+  <li><span style="color: #000000">مكون أولي </span><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">objRef</bdi></span></i><span style="color: #000000">، وهو كائن عام يجب تحويله إلى نوع </span><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">NamingContext</bdi></span></i><span style="color: #000000">، وهو هنا </span><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">ncRef</bdi></span></i><span style="color: #000000">.</span>
   </li>
-  <li><span style="color: #000000">اسم الخدمة، هنا </span><i><span style="color: #000000">`serviceName</span></i><span style="color: #000000">`، الذي تم تمريره كمعلمة إلى الخادم</span>
+  <li><span style="color: #000000">اسم الخدمة، هنا </span><i><span style="color: #000000">`<bdi dir="ltr" class="odt-ltr-term">serviceName</bdi></span></i><span style="color: #000000">`، الذي تم تمريره كمعلمة إلى الخادم</span>
   </li>
 </ul>
 
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يتم تجميع مكونات الاسم هذه (</span><em><span style="color: #000000">NameComponent</span></em><span style="color: #000000">) في مصفوفة، هنا </span><em><span style="color: #000000">path</span></em><span style="color: #000000">. وهذه المصفوفة هي التي &quot;تسمي&quot; الخدمة التي تم إنشاؤها بدقة. بمجرد إنشاء الاسم، فإنه يبقى </span></p>
+<p><span style="color: #000000">يتم تجميع مكونات الاسم هذه (</span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">NameComponent</bdi></span></em><span style="color: #000000">) في مصفوفة، هنا </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">path</bdi></span></em><span style="color: #000000">. وهذه المصفوفة هي التي &quot;تسمي&quot; الخدمة التي تم إنشاؤها بدقة. بمجرد إنشاء الاسم، فإنه يبقى </span></p>
 <p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">ربطه بمثيل للخادم (فئة srvEcho التي تم إنشاؤها سابقًا)</span>
+  <li><span style="color: #000000">ربطه بمثيل للخادم (فئة <bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi> التي تم إنشاؤها سابقًا)</span>
   </li>
 </ul>
 
@@ -1433,15 +1435,15 @@
 <a id="toc459349668"></a></p>
 <h4 id="10261">10.2.6.1. <span style="color: #4f81bd">الرمز</span></h4>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">نقوم بكتابة عميل لاختبار خدمة echo الخاصة بنا. سنمرر إلى العميل نفس المعلمات الثلاثة التي مررناها إلى الخادم:</span></p>
+<p><span style="color: #000000">نقوم بكتابة عميل لاختبار خدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> الخاصة بنا. سنمرر إلى العميل نفس المعلمات الثلاثة التي مررناها إلى الخادم:</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><strong><span style="color: #000000">الجهاز</span></strong><span style="color: #000000">: الجهاز الذي يوجد عليه دليل خدمة CORBA</span></p>
+<p><strong><span style="color: #000000">الجهاز</span></strong><span style="color: #000000">: الجهاز الذي يوجد عليه دليل خدمة <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></p>
 <p><strong><span style="color: #000000">المنفذ</span></strong><span style="color: #000000">: المنفذ الذي يعمل عليه هذا الدليل</span></p>
-<p><strong><span style="color: #000000">serviceName</span></strong><span style="color: #000000">: اسم خدمة الصدى</span></p>
+<p><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">serviceName</bdi></span></strong><span style="color: #000000">: اسم خدمة الصدى</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يتصل العميل بخدمة echo ثم يطلب من المستخدم كتابة الرسائل على لوحة المفاتيح. يتم إرسال هذه الرسائل إلى خادم echo، الذي يعيد إرسالها. يتم عرض سجل لهذا الحوار على الشاشة.</span></p>
+<p><span style="color: #000000">يتصل العميل بخدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> ثم يطلب من المستخدم كتابة الرسائل على لوحة المفاتيح. يتم إرسال هذه الرسائل إلى خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi>، الذي يعيد إرسالها. يتم عرض سجل لهذا الحوار على الشاشة.</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يشبه عميل CORBA لخدمة echo إلى حد كبير عميل RMI الذي تمت كتابته مسبقًا. هنا أيضًا، يجب على العميل الاتصال بخدمة الدليل للحصول على مرجع إلى كائن الخادم الذي يرغب في الاتصال به. يكمن الاختلاف بين العميلين في هذا الأمر وحده. فيما يلي كود عميل CORBA echo:</span></p>
+<p><span style="color: #000000">يشبه عميل <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> لخدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> إلى حد كبير عميل <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> الذي تمت كتابته مسبقًا. هنا أيضًا، يجب على العميل الاتصال بخدمة الدليل للحصول على مرجع إلى كائن الخادم الذي يرغب في الاتصال به. يكمن الاختلاف بين العميلين في هذا الأمر وحده. فيما يلي كود عميل <bdi dir="ltr" class="odt-ltr-term">CORBA echo:</bdi></span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#0000ff">    </span><span style="font-style:italic;color:#0000ff"></span></span></span>
@@ -1451,13 +1453,13 @@
 <a id="toc459349669"></a></p>
 <h4 id="10262">10.2.6.2. <span style="color: #4f81bd">توصيل العميل بالخادم</span></h4>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يتصل عميل CORBA أعلاه بالخادم باستخدام العبارة التالية:</span></p>
+<p><span style="color: #000000">يتصل عميل <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> أعلاه بالخادم باستخدام العبارة التالية:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>        // on fait la liaison avec le serveur d&#39;écho
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>        iSrvEcho serveurEcho=getServeurEcho(machine,port,nomService);
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">بعد هذه العملية، يحتفظ العميل بمرجع إلى خادم echo. ومن هذه النقطة فصاعدًا، لا يختلف عميل CORBA عن عميل RMI. الطريقة الخاصة التي تنشئ الاتصال بالخادم هي كما يلي:</span></p>
+<p><span style="color: #000000">بعد هذه العملية، يحتفظ العميل بمرجع إلى خادم <bdi dir="ltr" class="odt-ltr-term">echo.</bdi> ومن هذه النقطة فصاعدًا، لا يختلف عميل <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> عن عميل <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> الطريقة الخاصة التي تنشئ الاتصال بالخادم هي كما يلي:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
@@ -1554,7 +1556,7 @@
 <p><span style="color: #000000">نرى نفس تسلسلات الكود الموجودة في الخادم:</span></p>
 <p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">نقوم بإنشاء كائن ORB الذي سيسمح لنا بالاتصال بدليل خدمات CORBA</span>
+  <li><span style="color: #000000">نقوم بإنشاء كائن <bdi dir="ltr" class="odt-ltr-term">ORB</bdi> الذي سيسمح لنا بالاتصال بدليل خدمات <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span>
   </li>
 </ul>
 
@@ -1564,7 +1566,7 @@
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
 <ul>
-  <li><span style="color: #000000">نحدد المكونات المختلفة لاسم خدمة echo</span>
+  <li><span style="color: #000000">نحدد المكونات المختلفة لاسم خدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi></span>
   </li>
 </ul>
 
@@ -1575,7 +1577,7 @@
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">      </span><span class="n">NameComponent</span><span class="w"> </span><span class="n">path</span><span class="o">[]=</span><span class="p">{</span><span class="n">nc</span><span class="p">};</span>
 </code></pre></div>
 <ul>
-  <li><span style="color: #000000">نطلب مرجعًا لخدمة echo من خدمة الدليل (وهذا هو ما يميزنا عن الخادم)</span>
+  <li><span style="color: #000000">نطلب مرجعًا لخدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> من خدمة الدليل (وهذا هو ما يميزنا عن الخادم)</span>
   </li>
 </ul>
 
@@ -1608,14 +1610,14 @@
 <a id="toc459349672"></a></p>
 <h4 id="10271">10.2.7.1. <span style="color: #4f81bd">بدء خدمة الدليل</span></h4>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">على جهاز يعمل بنظام Windows، نبدأ خدمة الدليل على النحو التالي:</span></p>
+<p><span style="color: #000000">على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، نبدأ خدمة الدليل على النحو التالي:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>E:\data\java\corba\ECHO&gt;start j:\jdk12\bin\tnameserv -ORBInitialPort 1000
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">وهذا يبدأ خدمة الدليل على المنفذ 1000 للجهاز.</span></p>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">تعرض خدمة الدليل </span><strong><span style="color: #000000">tnameserv </span></strong><span style="color: #000000">شاشة تبدو كما يلي:</span></p>
+<p><span style="color: #000000">تعرض خدمة الدليل </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">tnameserv</bdi> </span></strong><span style="color: #000000">شاشة تبدو كما يلي:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Initial Naming Context:
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>IOR:000000000000002849444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f
@@ -1627,9 +1629,9 @@
 <p><span style="color: #000000">من الصعب قراءة النص، لكن لاحظ السطر الأخير: الخدمة نشطة على المنفذ 1000.</span></p>
 <p><a id="toc10974783"></a>
 <a id="toc459349673"></a></p>
-<h4 id="10272-echo">10.2.7.2. <span style="color: #4f81bd">تشغيل خادم echo</span></h4>
+<h4 id="10272-echo">10.2.7.2. <span style="color: #4f81bd">تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi></span></h4>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">يتم تشغيل خدمة echo بثلاثة معلمات:</span></p>
+<p><span style="color: #000000">يتم تشغيل خدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> بثلاثة معلمات:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">E:\data\java\corba\ECHO&gt;start j:\jdk12\bin\java serveurEcho <span style="font-weight:bold">localhost 1000 srvEcho</span></span></span>
@@ -1656,7 +1658,7 @@
 
 <p><a id="toc10974785"></a>
 <a id="toc459349675"></a></p>
-<h4 id="10274-windows">10.2.7.4. <span style="color: #4f81bd">تشغيل العميل على جهاز يعمل بنظام Windows بخلاف الخادم</span></h4>
+<h4 id="10274-windows">10.2.7.4. <span style="color: #4f81bd">تشغيل العميل على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> بخلاف الخادم</span></h4>
 <p><span style="color: #000000"> </span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>E:\data\java\corba\ECHO&gt;j:\jdk12\bin\java cltEcho tahe.istia.univ-angers.fr 1000 srvEcho
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>--&gt; Connexion au serveur CORBA en cours...
@@ -1671,31 +1673,31 @@
 <a id="toc12362999"></a>
 <a id="toc10974786"></a>
 <a id="toc459349676"></a></p>
-<h2 id="103-2-sql">10.3. <span style="color: #4f81bd">مثال 2: خادم SQL</span></h2>
+<h2 id="103-2-sql">10.3. <span style="color: #4f81bd">مثال 2: خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></span></h2>
 <p><a id="toc12502488"></a>
 <a id="toc12363000"></a>
 <a id="toc10974787"></a>
 <a id="toc459349677"></a></p>
 <h3 id="1031">10.3.1. <span style="color: #4f81bd">مقدمة</span></h3>
-<p>هنا نعيد النظر في كود خادم SQL الذي تم فحصه سابقًا في سياق Java RMI، مرة أخرى لتسليط الضوء على أوجه التشابه والاختلاف بين النهجين. للتذكير، دور خادم SQL هذا هو كما يلي: يعمل على جهاز يعمل بنظام Windows ويسمح للعملاء عن بُعد بالوصول إلى قواعد بيانات ODBC العامة الموجودة على جهاز Windows هذا.</p>
+<p>هنا نعيد النظر في كود خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الذي تم فحصه سابقًا في سياق <bdi dir="ltr" class="odt-ltr-term">Java RMI</bdi>، مرة أخرى لتسليط الضوء على أوجه التشابه والاختلاف بين النهجين. للتذكير، دور خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> هذا هو كما يلي: يعمل على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> ويسمح للعملاء عن بُعد بالوصول إلى قواعد بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> العامة الموجودة على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> هذا.</p>
 <p><img src="images/100000000000048B00000191777377F0.png" width="582" height="201" style="width:15.386cm;height:5.306cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000048B00000191777377F0.png" /></p>
-<p>يمكن لعميل CORBA تنفيذ ثلاث عمليات:</p>
+<p>يمكن لعميل <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> تنفيذ ثلاث عمليات:</p>
 <ul>
   <li>الاتصال بقاعدة البيانات التي يختارها
   </li>
-  <li>إرسال استعلامات SQL
+  <li>إرسال استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>
   </li>
   <li>إغلاق الاتصال
   </li>
 </ul>
 
-<p>يقوم الخادم بتنفيذ استعلامات SQL الخاصة بالعميل وإرسال النتائج مرة أخرى إلى العميل. هذه هي وظيفته الأساسية، ولهذا السبب نسميه خادم SQL. نطبق الخطوات المختلفة التي تمت تغطيتها سابقًا مع خادم echo.</p>
+<p>يقوم الخادم بتنفيذ استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الخاصة بالعميل وإرسال النتائج مرة أخرى إلى العميل. هذه هي وظيفته الأساسية، ولهذا السبب نسميه خادم <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi> نطبق الخطوات المختلفة التي تمت تغطيتها سابقًا مع خادم <bdi dir="ltr" class="odt-ltr-term">echo.</bdi></p>
 <p><a id="toc12502489"></a>
 <a id="toc12363001"></a>
 <a id="toc10974788"></a>
 <a id="toc459349678"></a></p>
-<h3 id="1032-idl">10.3.2. <span style="color: #4f81bd">كتابة واجهة IDL للخادم</span></h3>
-<p>للتذكير، إليك واجهة RMI التي استخدمناها للخادم:</p>
+<h3 id="1032-idl">10.3.2. <span style="color: #4f81bd">كتابة واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> للخادم</span></h3>
+<p>للتذكير، إليك واجهة <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> التي استخدمناها للخادم:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w"> </span><span class="c1">// remote interface p</span>
@@ -1709,14 +1711,14 @@
 <a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="n">moteException</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <p>وكانت أدوار الطرق المختلفة كما يلي:</p>
-<p><strong>Connect</strong>: يتصل العميل بقاعدة بيانات بعيدة، موفراً برنامج التشغيل وعنوان URL الخاص بـ JDBC، بالإضافة إلى معرفه وكلمة مروره للوصول إلى قاعدة البيانات. يعرض الخادم سلسلة تشير إلى نتيجة الاتصال:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">Connect</bdi></strong>: يتصل العميل بقاعدة بيانات بعيدة، موفراً برنامج التشغيل وعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الخاص بـ <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>، بالإضافة إلى معرفه وكلمة مروره للوصول إلى قاعدة البيانات. يعرض الخادم سلسلة تشير إلى نتيجة الاتصال:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>    200 - Connexion réussie
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    500 - Echec de la connexion
 </code></pre></div>
-<p><strong>executeSQL</strong>: يطلب العميل تنفيذ استعلام SQL على قاعدة البيانات التي يتصل بها. ويحدد الحرف الذي يجب أن يفصل بين الحقول في النتائج التي يتم إرجاعها إليه. يعرض الخادم مصفوفة من السلاسل:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">executeSQL</bdi></strong>: يطلب العميل تنفيذ استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على قاعدة البيانات التي يتصل بها. ويحدد الحرف الذي يجب أن يفصل بين الحقول في النتائج التي يتم إرجاعها إليه. يعرض الخادم مصفوفة من السلاسل:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>    100 n
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>لاستعلام تحديث قاعدة البيانات، حيث n هو عدد الصفوف التي تم تحديثها
+<div class="highlight"><pre><span></span><code>لاستعلام تحديث قاعدة البيانات، حيث &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;n&lt;/bdi&gt; هو عدد الصفوف التي تم تحديثها
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>    500 msg d’erreur
 </code></pre></div>
@@ -1736,7 +1738,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>    200 Base fermée
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>    500 Erreur lors de la fermeture de la base (msg d’erreur)
 </code></pre></div>
-<p>ستكون واجهة IDL للخادم كما يلي:</p>
+<p>ستكون واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> للخادم كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">module</span><span class="w"> </span><span class="n">srvSQL</span><span class="p">{</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">    </span><span class="n">typedef</span><span class="w"> </span><span class="n">sequence</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">resultats</span><span class="p">;</span>
@@ -1748,7 +1750,7 @@
 <a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a><span class="w">    </span><span class="p">};</span><span class="c1">// interface</span>
 <a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a><span class="p">};</span><span class="c1">// module</span>
 </code></pre></div>
-<p>الميزة الجديدة الوحيدة مقارنةً بما رأيناه في واجهة IDL لخادم Echo هي استخدام الكلمة الرئيسية <strong><code>sequence</code></strong>. تتيح لك هذه الكلمة الرئيسية تعريف مصفوفة أحادية البعد. ويتم التعريف على مرحلتين:</p>
+<p>الميزة الجديدة الوحيدة مقارنةً بما رأيناه في واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">Echo</bdi> هي استخدام الكلمة الرئيسية <strong><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;sequence&lt;/bdi&gt;</code></strong>. تتيح لك هذه الكلمة الرئيسية تعريف مصفوفة أحادية البعد. ويتم التعريف على مرحلتين:</p>
 <ul>
   <li>تحديد نوع لتعيين المصفوفة، وهنا <b>النتائج</b>: 
   </li>
@@ -1757,7 +1759,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">typedef</span> <span class="n">sequence</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">resultats</span><span class="p">;</span>
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">كلمة </span><em><span style="color: #000000">typedef </span></em><span style="color: #000000">معروفة جيدًا لمبرمجي C/C++: فهي تسمح لك بتعريف نوع جديد. هنا، يتم تعريف النوع </span><em><span style="color: #000000">resultats </span></em><span style="color: #000000">على أنه مكافئ للنوع </span><strong><span style="color: #000000">sequence&lt;string&gt;</span></strong><span style="color: #000000">، أي مصفوفة ديناميكية (غير محددة الحجم) من سلاسل الأحرف.</span></p>
+<p><span style="color: #000000">كلمة </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">typedef</bdi> </span></em><span style="color: #000000">معروفة جيدًا لمبرمجي <bdi dir="ltr" class="odt-ltr-term">C/C++:</bdi> فهي تسمح لك بتعريف نوع جديد. هنا، يتم تعريف النوع </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">resultats</bdi> </span></em><span style="color: #000000">على أنه مكافئ للنوع </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">sequence</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">string</bdi>&gt;</span></strong><span style="color: #000000">، أي مصفوفة ديناميكية (غير محددة الحجم) من سلاسل الأحرف.</span></p>
 <p><span style="color: #000000"> </span></p>
 <ul>
   <li>استخدام النوع الجديد عند الحاجة
@@ -1766,13 +1768,13 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>resultats executeSQL(in string requete, in string separateur);
 </code></pre></div>
-<p>وبالتالي، تُرجع طريقة <em>executeSQL</em> مصفوفة من السلاسل.</p>
+<p>وبالتالي، تُرجع طريقة <em><bdi dir="ltr" class="odt-ltr-term">executeSQL</bdi></em> مصفوفة من السلاسل.</p>
 <p><a id="toc12502490"></a>
 <a id="toc12363002"></a>
 <a id="toc10974789"></a>
 <a id="toc459349679"></a></p>
-<h3 id="1033-idl">10.3.3. <span style="color: #4f81bd">تجميع واجهة IDL للخادم</span></h3>
-<p>يتم وضع واجهة IDL السابقة في الملف <em>srvSQL.idl</em>. نقوم بترجمة هذا الملف:</p>
+<h3 id="1033-idl">10.3.3. <span style="color: #4f81bd">تجميع واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> للخادم</span></h3>
+<p>يتم وضع واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> السابقة في الملف <em><bdi dir="ltr" class="odt-ltr-term">srvSQL.idl</bdi></em>. نقوم بترجمة هذا الملف:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>E:\data\java\corba\sql&gt;d:\javaidl\idltojava -fno-cpp srvSQL.idl
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>
 <a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>E:\data\java\corba\sql&gt;dir
@@ -1780,7 +1782,7 @@
 <a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>SRVSQL   IDL           275  19/03/99   9:59 srvSQL.idl
 <a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>SRVSQL         &lt;REP&gt;        19/03/99   9:41 srvSQL
 </code></pre></div>
-<p>يمكننا أن نرى أن عملية التجميع أنشأت مجلدًا يحمل اسم وحدة واجهة IDL (<em>srvSQL</em>). دعونا نلقي نظرة على محتويات هذا المجلد:</p>
+<p>يمكننا أن نرى أن عملية التجميع أنشأت مجلدًا يحمل اسم وحدة واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> (<em><bdi dir="ltr" class="odt-ltr-term">srvSQL</bdi></em>). دعونا نلقي نظرة على محتويات هذا المجلد:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>E:\data\java\corba\sql&gt;dir srvSQl
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>RESULT~1 JAV           833  19/03/99  10:00 resultatsHolder.java
@@ -1791,8 +1793,8 @@
 <a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>INTERS~3 JAV         1 855  19/03/99  10:00 interSQLHelper.java
 <a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>_INTER~2 JAV         4 535  19/03/99  10:00 _interSQLImplBase.java
 </code></pre></div>
-<p>يرجى ملاحظة أن ملفات <em>Helper</em> و <em>Holder</em> هي فئات مرتبطة بمعلمات الإدخال/الإخراج ونتائج أساليب الواجهة البعيدة. يحتوي الدليل srvSQL على جميع ملفات .java المتعلقة بواجهة <em>interSQL</em> المُعرَّفة في ملف .idl. كما يحتوي على الملفات المتعلقة بنوع <em>النتائج</em> الذي تم إنشاؤه في واجهة IDL.</p>
-<p>ملف <em>interSQL.java</em> هو ملف Java الخاص بواجهة الخادم الخاص بنا. من المهم التحقق من أن ما تم إنشاؤه تلقائيًا يتطابق مع توقعاتنا. ملف <em>interSQL.java</em> الذي تم إنشاؤه هو كما يلي:</p>
+<p>يرجى ملاحظة أن ملفات <em><bdi dir="ltr" class="odt-ltr-term">Helper</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">Holder</bdi></em> هي فئات مرتبطة بمعلمات الإدخال/الإخراج ونتائج أساليب الواجهة البعيدة. يحتوي الدليل <bdi dir="ltr" class="odt-ltr-term">srvSQL</bdi> على جميع ملفات .<bdi dir="ltr" class="odt-ltr-term">java</bdi> المتعلقة بواجهة <em><bdi dir="ltr" class="odt-ltr-term">interSQL</bdi></em> المُعرَّفة في ملف .<bdi dir="ltr" class="odt-ltr-term">idl.</bdi> كما يحتوي على الملفات المتعلقة بنوع <em>النتائج</em> الذي تم إنشاؤه في واجهة <bdi dir="ltr" class="odt-ltr-term">IDL.</bdi></p>
+<p>ملف <em><bdi dir="ltr" class="odt-ltr-term">interSQL.java</bdi></em> هو ملف <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الخاص بواجهة الخادم الخاص بنا. من المهم التحقق من أن ما تم إنشاؤه تلقائيًا يتطابق مع توقعاتنا. ملف <em><bdi dir="ltr" class="odt-ltr-term">interSQL.java</bdi></em> الذي تم إنشاؤه هو كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="cm">/*</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="cm"> * File: ./SRVSQL/INTERSQL.JAVA</span>
 <a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="cm"> * From: SRVSQL.IDL</span>
@@ -1811,7 +1813,7 @@
 <a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a><span class="p">;</span>
 <a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a><span class="p">}</span>
 </code></pre></div>
-<p>يمكننا أن نرى أن لدينا نفس الواجهة المستخدمة في خادم-عميل RMI. لذا يمكننا المتابعة. دعونا نقوم بتجميع كل ملفات .java هذه:</p>
+<p>يمكننا أن نرى أن لدينا نفس الواجهة المستخدمة في خادم-عميل <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> لذا يمكننا المتابعة. دعونا نقوم بتجميع كل ملفات .<bdi dir="ltr" class="odt-ltr-term">java</bdi> هذه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>E:\data\java\corba\sql\srvSQL&gt;j:\jdk12\bin\javac *.java
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>Note: _interSQLImplBase.java uses or overrides a deprecated API.  Recompile with
@@ -1832,8 +1834,8 @@
 <a id="toc12363003"></a>
 <a id="toc10974790"></a>
 <a id="toc459349680"></a></p>
-<h3 id="1034-sql-server">10.3.4. <span style="color: #4f81bd">كتابة SQL Server</span></h3>
-<p>سنقوم الآن بكتابة كود خادم SQL. تذكر أن هذه الفئة يجب أن تنحدر من الفئة المجردة <em>_nomInterfaceImplBase</em> التي تم إنشاؤها عن طريق ترجمة ملف IDL. وبصرف النظر عن هذه الميزة الخاصة، وباستثناء تسلسلات الكود المتعلقة بتسجيل الخدمة في الدليل، فإن كود خادم CORBA مطابق تمامًا لكود خادم RMI:</p>
+<h3 id="1034-sql-server">10.3.4. <span style="color: #4f81bd">كتابة <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi></span></h3>
+<p>سنقوم الآن بكتابة كود خادم <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi> تذكر أن هذه الفئة يجب أن تنحدر من الفئة المجردة <em>_nomInterfaceImplBase</em> التي تم إنشاؤها عن طريق ترجمة ملف <bdi dir="ltr" class="odt-ltr-term">IDL.</bdi> وبصرف النظر عن هذه الميزة الخاصة، وباستثناء تسلسلات الكود المتعلقة بتسجيل الخدمة في الدليل، فإن كود خادم <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> مطابق تمامًا لكود خادم <bdi dir="ltr" class="odt-ltr-term">RMI:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
@@ -1945,7 +1947,7 @@
 <a id="__codelineno-44-109" name="__codelineno-44-109" href="#__codelineno-44-109"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-44-110" name="__codelineno-44-110" href="#__codelineno-44-110"></a><span class="p">}</span><span class="c1">// class SQLServant</span>
 </code></pre></div>
-<p>توجد هذه الفئة في ملف <em>SQLServant.java</em> الذي نقوم بتركيبه:</p>
+<p>توجد هذه الفئة في ملف <em><bdi dir="ltr" class="odt-ltr-term">SQLServant.java</bdi></em> الذي نقوم بتركيبه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>E:\data\java\corba\sql&gt;dir
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>SRVSQL   IDL           275  19/03/99   9:59 srvSQL.idl
@@ -1962,12 +1964,12 @@
 <a id="toc12363004"></a>
 <a id="toc10974791"></a>
 <a id="toc459349681"></a></p>
-<h3 id="1035-sql-server">10.3.5. <span style="color: #4f81bd">كتابة برنامج تشغيل SQL Server</span></h3>
-<p>تمثل الفئة السابقة خادم SQL بمجرد تشغيله. قبل ذلك، يجب تسجيله في دليل خدمات CORBA. كما هو الحال مع خدمة echo، سنقوم بذلك باستخدام فئة خاصة سنمرر إليها ثلاثة معلمات في وقت التشغيل:</p>
-<p><strong><span style="color: #000000">الجهاز</span></strong><span style="color: #000000">: الجهاز الذي يوجد عليه دليل خدمة CORBA</span></p>
+<h3 id="1035-sql-server">10.3.5. <span style="color: #4f81bd">كتابة برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi></span></h3>
+<p>تمثل الفئة السابقة خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> بمجرد تشغيله. قبل ذلك، يجب تسجيله في دليل خدمات <bdi dir="ltr" class="odt-ltr-term">CORBA.</bdi> كما هو الحال مع خدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi>، سنقوم بذلك باستخدام فئة خاصة سنمرر إليها ثلاثة معلمات في وقت التشغيل:</p>
+<p><strong><span style="color: #000000">الجهاز</span></strong><span style="color: #000000">: الجهاز الذي يوجد عليه دليل خدمة <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></p>
 <p><strong><span style="color: #000000">المنفذ</span></strong><span style="color: #000000">: المنفذ الذي يعمل عليه هذا الدليل</span></p>
-<p><strong><span style="color: #000000">serviceName</span></strong><span style="color: #000000">: اسم خدمة SQL</span></p>
-<p>كود هذه الفئة مطابق تقريبًا لكود الفئة التي قامت بنفس المهمة لخدمة echo. وقد قمنا بتمييز السطر الذي يختلف بين الفئتين بالخط العريض: فهو لا ينشئ نفس كائن الخادم. وبالتالي، يمكننا أن نرى أن آلية تشغيل الخادم تظل كما هي. وإذا قمنا بعزل هذه الآلية في فئة، كما تم هنا، فإنها تصبح شبه شفافة بالنسبة للمطور.</p>
+<p><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">serviceName</bdi></span></strong><span style="color: #000000">: اسم خدمة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></span></p>
+<p>كود هذه الفئة مطابق تقريبًا لكود الفئة التي قامت بنفس المهمة لخدمة <bdi dir="ltr" class="odt-ltr-term">echo.</bdi> وقد قمنا بتمييز السطر الذي يختلف بين الفئتين بالخط العريض: فهو لا ينشئ نفس كائن الخادم. وبالتالي، يمكننا أن نرى أن آلية تشغيل الخادم تظل كما هي. وإذا قمنا بعزل هذه الآلية في فئة، كما تم هنا، فإنها تصبح شبه شفافة بالنسبة للمطور.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">srvSQL.*</span><span class="p">;</span>
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.omg.CosNaming.*</span><span class="p">;</span>
@@ -2031,32 +2033,32 @@
 <a id="toc10974792"></a>
 <a id="toc459349682"></a></p>
 <h3 id="1036">10.3.6. <span style="color: #4f81bd">رمز العميل</span></h3>
-<p>يتم استدعاء عميل خادم CORBA بالمعلمات التالية:</p>
+<p>يتم استدعاء عميل خادم <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> بالمعلمات التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>    machine port nomServiceAnnuaire pilote urlBase id mdp separateur
 </code></pre></div>
-<p><strong><span style="color: #000000">الجهاز</span></strong><span style="color: #000000">: الجهاز الذي يوجد عليه دليل خدمة CORBA</span></p>
+<p><strong><span style="color: #000000">الجهاز</span></strong><span style="color: #000000">: الجهاز الذي يوجد عليه دليل خدمة <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></span></p>
 <p><strong><span style="color: #000000">المنفذ</span></strong><span style="color: #000000">: المنفذ الذي يعمل عليه هذا الدليل</span></p>
-<p><strong><span style="color: #000000">serviceName</span></strong><span style="color: #000000">: اسم خدمة SQL</span></p>
-<p><strong>driver</strong>: برنامج التشغيل الذي يجب أن يستخدمه خادم SQL لإدارة قاعدة البيانات المطلوبة</p>
-<p><strong>baseUrl</strong>: عنوان URL JDBC لقاعدة البيانات المراد إدارتها</p>
-<p><strong>id</strong>: معرف العميل أو null في حالة عدم وجود معرف</p>
-<p><strong>password</strong>: كلمة مرور العميل أو null في حالة عدم وجود كلمة مرور</p>
-<p><strong>separator</strong>: الحرف الذي يجب أن يستخدمه خادم SQL لفصل الحقول في صفوف نتائج الاستعلام</p>
+<p><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">serviceName</bdi></span></strong><span style="color: #000000">: اسم خدمة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></span></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">driver</bdi></strong>: برنامج التشغيل الذي يجب أن يستخدمه خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لإدارة قاعدة البيانات المطلوبة</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">baseUrl</bdi></strong>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL JDBC</bdi> لقاعدة البيانات المراد إدارتها</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">id</bdi></strong>: معرف العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود معرف</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">password</bdi></strong>: كلمة مرور العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود كلمة مرور</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">separator</bdi></strong>: الحرف الذي يجب أن يستخدمه خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لفصل الحقول في صفوف نتائج الاستعلام</p>
 <p>فيما يلي مثال على المعلمات المحتملة: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>    localhost 1000 srvSQL sun.jdbc.odbc.JdbcOdbcDriver jdbc:odbc:articles null null ,
 </code></pre></div>
 <p>حيث:</p>
-<p><strong>الجهاز:</strong> الجهاز الذي يوجد عليه دليل خدمة CORBA</p>
+<p><strong>الجهاز:</strong> الجهاز الذي يوجد عليه دليل خدمة <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi></p>
 <p><strong>المنفذ</strong>: المنفذ الذي يعمل عليه هذا الدليل</p>
-<p><strong>srvSQL</strong>: <strong>srvSQL،</strong> اسم CORBA لخادم SQL</p>
-<p><strong>driver</strong>: <strong>sun.jdbc.odbc.JdbcOdbcDriver،</strong>     برنامج التشغيل القياسي لقواعد البيانات المزودة بواجهة ODBC</p>
-<p><strong>urlBase</strong>: <strong>jdbc:odbc:articles،</strong> لاستخدام قاعدة بيانات articles المعلنة في قائمة قواعد بيانات ODBC العامة على جهاز Windows</p>
-<p><strong>id</strong>: <strong>null،</strong> لا يوجد معرف</p>
-<p><strong>password</strong>: <strong>null،</strong> لا توجد كلمة مرور</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">srvSQL</bdi></strong>: <strong><bdi dir="ltr" class="odt-ltr-term">srvSQL</bdi>،</strong> اسم <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">driver</bdi></strong>: <strong><bdi dir="ltr" class="odt-ltr-term">sun.jdbc.odbc.JdbcOdbcDriver</bdi>،</strong>     برنامج التشغيل القياسي لقواعد البيانات المزودة بواجهة <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">urlBase</bdi></strong>: <strong><bdi dir="ltr" class="odt-ltr-term">jdbc:odbc:articles</bdi>،</strong> لاستخدام قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">articles</bdi> المعلنة في قائمة قواعد بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> العامة على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">id</bdi></strong>: <strong><bdi dir="ltr" class="odt-ltr-term">null</bdi>،</strong> لا يوجد معرف</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">password</bdi></strong>: <strong><bdi dir="ltr" class="odt-ltr-term">null</bdi>،</strong> لا توجد كلمة مرور</p>
 <p><strong>الفاصل</strong>: <strong>،</strong> سيتم فصل حقول النتائج بفاصلة</p>
 <p>بمجرد التشغيل باستخدام المعلمات المذكورة أعلاه، يقوم العميل بتنفيذ الخطوات التالية:</p>
 <ul>
-  <li>يتصل بالجهاز <b>machine </b>على المنفذ <b>port </b>لطلب خدمة CORBA <b> srvSQL</b>
+  <li>يتصل بالجهاز <b><bdi dir="ltr" class="odt-ltr-term">machine</bdi> </b>على المنفذ <b><bdi dir="ltr" class="odt-ltr-term">port</bdi> </b>لطلب خدمة <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> <b> <bdi dir="ltr" class="odt-ltr-term">srvSQL</bdi></b>
   </li>
   <li>يطلبون اتصالاً بقاعدة بيانات المقالات
   </li>
@@ -2065,9 +2067,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>connect(‘’sun.jdbc.odbc.JdbcOdbcDriver’’, ‘‘jdbc:odbc:articles’’, ’’’’, ’’’’)
 </code></pre></div>
 <ul>
-  <li>يطلبون من المستخدم كتابة استعلام SQL على لوحة المفاتيح
+  <li>يطلبون من المستخدم كتابة استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على لوحة المفاتيح
   </li>
-  <li>يرسله إلى خادم SQL
+  <li>يرسله إلى خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>
   </li>
 </ul>
 
@@ -2076,23 +2078,23 @@
 <ul>
   <li>يعرض النتائج التي أرجعها الخادم على الشاشة
   </li>
-  <li>يطلب من المستخدم مرة أخرى كتابة استعلام SQL على لوحة المفاتيح. سيتوقف عند <b>انتهاء</b> الاستعلام.
+  <li>يطلب من المستخدم مرة أخرى كتابة استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على لوحة المفاتيح. سيتوقف عند <b>انتهاء</b> الاستعلام.
   </li>
 </ul>
 
 <p>فيما يلي كود عميل جافا. ومن المفترض أن تكون التعليقات كافية لفهمه. يرجى ملاحظة ما يلي:</p>
 <ul>
-  <li>الرمز مطابق لرمز عميل RMI الذي تمت دراسته سابقًا. ويختلف في عملية طلب الخدمة من الدليل، وهي عملية معزولة في طريقة <i>getServeurSQL</i>.
+  <li>الرمز مطابق لرمز عميل <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> الذي تمت دراسته سابقًا. ويختلف في عملية طلب الخدمة من الدليل، وهي عملية معزولة في طريقة <i><bdi dir="ltr" class="odt-ltr-term">getServeurSQL</bdi></i>.
   </li>
-  <li>طريقة <i>getServeurSQL </i>مطابقة لتلك المكتوبة لعميل echo
+  <li>طريقة <i><bdi dir="ltr" class="odt-ltr-term">getServeurSQL</bdi> </i>مطابقة لتلك المكتوبة لعميل <bdi dir="ltr" class="odt-ltr-term">echo</bdi>
   </li>
 </ul>
 
 <p>وبالتالي يمكننا أن نلاحظ أن:</p>
 <ul>
-  <li>يختلف عميل CORBA عن عميل RMI فقط في طريقة اتصاله بالخادم
+  <li>يختلف عميل <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi> عن عميل <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> فقط في طريقة اتصاله بالخادم
   </li>
-  <li>هذه الطريقة متطابقة لجميع عملاء CORBA
+  <li>هذه الطريقة متطابقة لجميع عملاء <bdi dir="ltr" class="odt-ltr-term">CORBA</bdi>
   </li>
 </ul>
 
@@ -2257,7 +2259,7 @@
 <p><a id="toc10974794"></a>
 <a id="toc459349684"></a></p>
 <h4 id="10371">10.3.7.1. <span style="color: #4f81bd">المتطلبات</span></h4>
-<p>نفترض أن قاعدة بيانات ACCESS باسم Articles متاحة للجميع على جهاز Windows الخاص بخادم SQL:</p>
+<p>نفترض أن قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> باسم <bdi dir="ltr" class="odt-ltr-term">Articles</bdi> متاحة للجميع على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الخاص بخادم <bdi dir="ltr" class="odt-ltr-term">SQL:</bdi></p>
 <p><img src="images/10000000000001E10000017A05218BBB.png" width="480" height="377" style="width:12.702cm;height:9.982cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E10000017A05218BBB.png" /></p>
 <p>تتميز قاعدة البيانات هذه بالبنية التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">النوع</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الرمز</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر المكون من 4 أحرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الاسم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسمه (سلسلة)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعره (الفعلي)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>المخزون_الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي (عدد صحيح)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد_الأدنى_للمخزون</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى للمخزون (عدد صحيح) الذي يجب تجديد المخزون عند انخفاضه إلى ما دونه</div></td></tr></table>
@@ -2277,11 +2279,11 @@
 </code></pre></div>
 <p><a id="toc10974796"></a>
 <a id="toc459349686"></a></p>
-<h4 id="10373-sql">10.3.7.3. <span style="color: #4f81bd">بدء تشغيل خادم SQL</span></h4>
-<p>بدء تشغيل خادم SQL:</p>
+<h4 id="10373-sql">10.3.7.3. <span style="color: #4f81bd">بدء تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></span></h4>
+<p>بدء تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">SQL:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>E:\data\java\corba\sql&gt;start j:\jdk12\bin\java serveurSQL localhost 1000 srvSQL
 </code></pre></div>
-<p>يتم عرض ما يلي في نافذة DOS:</p>
+<p>يتم عرض ما يلي في نافذة <bdi dir="ltr" class="odt-ltr-term">DOS:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>    Serveur SQL prêt
 </code></pre></div>
 <p><a id="toc10974797"></a>
@@ -2342,17 +2344,17 @@
 <a id="toc12363007"></a>
 <a id="toc10974799"></a>
 <a id="toc459349689"></a></p>
-<h2 id="104-idl-java">10.4. <span style="color: #4f81bd">مطابقات IDL - JAVA</span></h2>
-<p>نقدم هنا التوافقات بين أنواع IDL البسيطة وأنواع Java:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع</b> IDL <br></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نوع Java<br></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">boolean</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">منطقية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">wchar</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">بايت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">java.lang.String</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">wstring</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">java.lang.String</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">short</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">short</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">short غير موقّع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">short</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">int</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل غير موقّع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">int</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل جدًا</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل طويل غير موقّع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">float</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد عائم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>double</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">double</div></td></tr></table>
+<h2 id="104-idl-java">10.4. <span style="color: #4f81bd">مطابقات <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> - <bdi dir="ltr" class="odt-ltr-term">JAVA</bdi></span></h2>
+<p>نقدم هنا التوافقات بين أنواع <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> البسيطة وأنواع <bdi dir="ltr" class="odt-ltr-term">Java:</bdi></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>نوع</b> <bdi dir="ltr" class="odt-ltr-term">IDL</bdi> <br></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نوع <bdi dir="ltr" class="odt-ltr-term">Java</bdi><br></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">boolean</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">منطقية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">wchar</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">بايت</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">بايت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">java.lang.String</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">wstring</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">java.lang.String</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">short</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">short</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">short</bdi> غير موقّع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">short</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">int</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل غير موقّع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">int</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل جدًا</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل طويل غير موقّع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طويل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">float</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عدد عائم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">double</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">double</bdi></div></td></tr></table>
 
-<p>تذكر أنه لتعريف مصفوفة من العناصر من النوع T في واجهة IDL، نستخدم العبارة:</p>
+<p>تذكر أنه لتعريف مصفوفة من العناصر من النوع <bdi dir="ltr" class="odt-ltr-term">T</bdi> في واجهة <bdi dir="ltr" class="odt-ltr-term">IDL</bdi>، نستخدم العبارة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>    <span class="n">typedef</span>   <span class="n">sequence</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">nomType</span><span class="p">;</span>
 </code></pre></div>
-<p>وأننا نستخدم بعد ذلك <em>TypeName</em> للإشارة إلى نوع المصفوفة. وبالتالي، في واجهة خادم SQL، استخدمنا الإعلان:</p>
+<p>وأننا نستخدم بعد ذلك <em><bdi dir="ltr" class="odt-ltr-term">TypeName</bdi></em> للإشارة إلى نوع المصفوفة. وبالتالي، في واجهة خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>، استخدمنا الإعلان:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>    <span class="n">typedef</span> <span class="n">sequence</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">resultats</span><span class="p">;</span>
 </code></pre></div>
-<p>بحيث يشير <em>results</em> إلى مصفوفة <em>String[]</em> في Java.</p>
+<p>بحيث يشير <em><bdi dir="ltr" class="odt-ltr-term">results</bdi></em> إلى مصفوفة <em><bdi dir="ltr" class="odt-ltr-term">String</bdi>[]</em> في <bdi dir="ltr" class="odt-ltr-term">Java.</bdi></p>
 
 
 

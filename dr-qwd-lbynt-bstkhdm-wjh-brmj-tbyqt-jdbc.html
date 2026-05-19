@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -886,7 +888,7 @@
 <a id="toc12019305"></a>
 <a id="toc10974720"></a>
 <a id="toc459349610"></a></p>
-<h1 id="6-jdbc">6. <span style="color: #365f91">إدارة قواعد البيانات باستخدام واجهة برمجة تطبيقات JDBC</span></h1>
+<h1 id="6-jdbc">6. <span style="color: #365f91">إدارة قواعد البيانات باستخدام واجهة برمجة تطبيقات <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi></span></h1>
 <p><a id="toc12502404"></a>
 <a id="toc12362916"></a>
 <a id="toc12361088"></a>
@@ -895,11 +897,11 @@
 <a id="toc10974721"></a>
 <a id="toc459349611"></a></p>
 <h2 id="61">6.1. <span style="color: #4f81bd">نظرة عامة</span></h2>
-<p>هناك العديد من قواعد البيانات في السوق. لتوحيد الوصول إلى قواعد البيانات في نظام MS Windows، طورت Microsoft واجهة تسمى ODBC (Open DataBase Connectivity). تخفي هذه الطبقة الميزات الخاصة بكل قاعدة بيانات خلف واجهة قياسية. هناك العديد من برامج تشغيل ODBC المتاحة في نظام MS Windows والتي تسهل الوصول إلى قواعد البيانات. فيما يلي، على سبيل المثال، قائمة ببرامج تشغيل ODBC المثبتة على جهاز يعمل بنظام Win95: </p>
+<p>هناك العديد من قواعد البيانات في السوق. لتوحيد الوصول إلى قواعد البيانات في نظام <bdi dir="ltr" class="odt-ltr-term">MS Windows</bdi>، طورت <bdi dir="ltr" class="odt-ltr-term">Microsoft</bdi> واجهة تسمى <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> (<bdi dir="ltr" class="odt-ltr-term">Open DataBase Connectivity</bdi>). تخفي هذه الطبقة الميزات الخاصة بكل قاعدة بيانات خلف واجهة قياسية. هناك العديد من برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> المتاحة في نظام <bdi dir="ltr" class="odt-ltr-term">MS Windows</bdi> والتي تسهل الوصول إلى قواعد البيانات. فيما يلي، على سبيل المثال، قائمة ببرامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> المثبتة على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Win95:</bdi> </p>
 <p><img src="images/10000000000001E10000017A8A50A132.png" width="481" height="378" style="width:12.726cm;height:10.001cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E10000017A8A50A132.png" /></p>
 <p>يمكن لأي تطبيق يعتمد على برامج التشغيل هذه استخدام أي من قواعد البيانات المذكورة أعلاه دون الحاجة إلى تعديل.</p>
 <p><img src="images/1000000000000504000000C4AAAD88CC.png" width="642" height="98" style="width:16.986cm;height:2.593cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000504000000C4AAAD88CC.png" /></p>
-<p>ولتمكين تطبيقات Java من الاستفادة أيضًا من واجهة ODBC، أنشأت شركة Sun واجهة JDBC (Java Database Connectivity)، التي تعمل كوسيط بين تطبيق Java وواجهة ODBC:</p>
+<p>ولتمكين تطبيقات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من الاستفادة أيضًا من واجهة <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>، أنشأت شركة <bdi dir="ltr" class="odt-ltr-term">Sun</bdi> واجهة <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> (<bdi dir="ltr" class="odt-ltr-term">Java Database Connectivity</bdi>)، التي تعمل كوسيط بين تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> وواجهة <bdi dir="ltr" class="odt-ltr-term">ODBC:</bdi></p>
 <p><img src="images/10000000000004F0000000D136E7E60E.png" width="632" height="105" style="width:16.722cm;height:2.766cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F0000000D136E7E60E.png" /></p>
 <p><a id="toc12502405"></a>
 <a id="toc12362917"></a>
@@ -917,11 +919,11 @@
 <a id="toc10974723"></a>
 <a id="toc459349613"></a></p>
 <h3 id="621">6.2.1. <span style="color: #4f81bd">مقدمة</span></h3>
-<p>في تطبيق Java يستخدم قاعدة بيانات مع واجهة JDBC، تتضمن العملية عمومًا الخطوات التالية:</p>
+<p>في تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> يستخدم قاعدة بيانات مع واجهة <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>، تتضمن العملية عمومًا الخطوات التالية:</p>
 <ol>
   <li>الاتصال بقاعدة البيانات
   </li>
-  <li>إرسال استعلامات SQL إلى قاعدة البيانات
+  <li>إرسال استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> إلى قاعدة البيانات
   </li>
   <li>استلام ومعالجة نتائج هذه الاستعلامات
   </li>
@@ -929,15 +931,15 @@
   </li>
 </ol>
 
-<p>يتم تنفيذ الخطوتين 2 و 3 بشكل متكرر، ولا يتم إغلاق الاتصال إلا في نهاية عمليات قاعدة البيانات. هذا نمط قياسي نسبيًا قد تكون على دراية به إذا كنت قد استخدمت قاعدة بيانات تفاعلية من قبل. سنفصل كل خطوة من هذه الخطوات باستخدام مثال. سنأخذ قاعدة بيانات Access باسم ARTICLES ذات البنية التالية: </p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>name</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الرمز</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر المكون من 4 أحرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الاسم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسمه (سلسلة)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعره (الفعلي)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>المخزون_الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي (عدد صحيح)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد_الأدنى_للمخزون</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى للمخزون (عدد صحيح) الذي يجب تجديد المخزون عند انخفاضه إلى ما دونه</div></td></tr></table>
+<p>يتم تنفيذ الخطوتين 2 و 3 بشكل متكرر، ولا يتم إغلاق الاتصال إلا في نهاية عمليات قاعدة البيانات. هذا نمط قياسي نسبيًا قد تكون على دراية به إذا كنت قد استخدمت قاعدة بيانات تفاعلية من قبل. سنفصل كل خطوة من هذه الخطوات باستخدام مثال. سنأخذ قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Access</bdi> باسم <bdi dir="ltr" class="odt-ltr-term">ARTICLES</bdi> ذات البنية التالية: </p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">name</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الرمز</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر المكون من 4 أحرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الاسم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسمه (سلسلة)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعره (الفعلي)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>المخزون_الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي (عدد صحيح)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد_الأدنى_للمخزون</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى للمخزون (عدد صحيح) الذي يجب تجديد المخزون عند انخفاضه إلى ما دونه</div></td></tr></table>
 
-<p>يتم تعريف قاعدة بيانات ACCESS هذه كمصدر بيانات &quot;مستخدم&quot; في مدير قاعدة بيانات ODBC:</p>
+<p>يتم تعريف قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> هذه كمصدر بيانات &quot;مستخدم&quot; في مدير قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC:</bdi></p>
 <p><img src="images/10000000000001E2000001DE8115D9DC.png" width="482" height="478" style="width:12.755cm;height:12.649cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E2000001DE8115D9DC.png" /></p>
 <p><img src="images/10000000000001E10000017A05218BBB.png" width="481" height="378" style="width:12.726cm;height:10.001cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E10000017A05218BBB.png" /></p>
 <p>يتم تحديد خصائصها باستخدام زر <em>&quot;تكوين</em>&quot; على النحو التالي:</p>
 <p><img src="images/10000000000001FD000001383803C532.png" width="509" height="312" style="width:13.467cm;height:8.255cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FD000001383803C532.png" /></p>
-<p>يتضمن هذا التكوين بشكل أساسي ربط قاعدة بيانات ARTICLES بملف Access <em>articles.mdb</em> المطابق لهذه القاعدة. وبمجرد الانتهاء من ذلك، تصبح قاعدة بيانات ARTICLES متاحة للتطبيقات التي تستخدم واجهة ODBC.</p>
+<p>يتضمن هذا التكوين بشكل أساسي ربط قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES</bdi> بملف <bdi dir="ltr" class="odt-ltr-term">Access</bdi> <em><bdi dir="ltr" class="odt-ltr-term">articles.mdb</bdi></em> المطابق لهذه القاعدة. وبمجرد الانتهاء من ذلك، تصبح قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES</bdi> متاحة للتطبيقات التي تستخدم واجهة <bdi dir="ltr" class="odt-ltr-term">ODBC.</bdi></p>
 <p><a id="toc12502407"></a>
 <a id="toc12362919"></a>
 <a id="toc12361091"></a>
@@ -946,30 +948,30 @@
 <a id="toc10974724"></a>
 <a id="toc459349614"></a></p>
 <h3 id="622">6.2.2. <span style="color: #4f81bd">خطوة الاتصال</span></h3>
-<p>لاستخدام قاعدة بيانات، يجب على تطبيق Java أولاً إنشاء اتصال. ويتم ذلك باستخدام طريقة الفئة التالية:</p>
+<p>لاستخدام قاعدة بيانات، يجب على تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> أولاً إنشاء اتصال. ويتم ذلك باستخدام طريقة الفئة التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Connection DriverManager.getConnection(String URL, String id, String mdp)
 </code></pre></div>
 <p>حيث </p>
-<p><em>DriverManager</em>: فئة Java تحتوي على قائمة برامج التشغيل المتاحة للتطبيق</p>
-<p><em>Connection:</em> فئة Java تنشئ رابطًا بين التطبيق وقاعدة البيانات، والتي من خلالها سيرسل التطبيق استعلامات SQL إلى قاعدة البيانات ويتلقى النتائج</p>
-<p><em>URL:</em> الاسم الذي يحدد قاعدة البيانات. هذا الاسم مشابه لعناوين URL على الإنترنت. ولهذا السبب فهو جزء من فئة URL. ومع ذلك، لا علاقة للإنترنت بهذا الأمر على الإطلاق. يتخذ عنوان URL الشكل التالي: </p>
-<div class="highlight"><pre><span></span><code>    **jdbc:driver\_name:source\_name;param=val1;param2=val2**
+<p><em><bdi dir="ltr" class="odt-ltr-term">DriverManager</bdi></em>: فئة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> تحتوي على قائمة برامج التشغيل المتاحة للتطبيق</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">Connection:</bdi></em> فئة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> تنشئ رابطًا بين التطبيق وقاعدة البيانات، والتي من خلالها سيرسل التطبيق استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> إلى قاعدة البيانات ويتلقى النتائج</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">URL:</bdi></em> الاسم الذي يحدد قاعدة البيانات. هذا الاسم مشابه لعناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> على الإنترنت. ولهذا السبب فهو جزء من فئة <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> ومع ذلك، لا علاقة للإنترنت بهذا الأمر على الإطلاق. يتخذ عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الشكل التالي: </p>
+<div class="highlight"><pre><span></span><code>    **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdbc:driver&lt;/bdi&gt;\_name:&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;source&lt;/bdi&gt;\_name;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;param&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;val1&lt;/bdi&gt;;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;param2&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;val2&lt;/bdi&gt;**
 
-في أمثلةنا، حيث سنستخدم برامج تشغيل ODBC فقط، يُسمى برنامج التشغيل **odbc**. يتكون الجزء الثالث من عنوان URL من اسم المصدر وأي معلمات. في أمثلةنا، ستكون هذه مصادر ODBC معروفة للنظام. وبالتالي، سيكون عنوان URL لمصدر بيانات *Articles* المحدد سابقًا هو
+في أمثلةنا، حيث سنستخدم برامج تشغيل &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ODBC&lt;/bdi&gt; فقط، يُسمى برنامج التشغيل **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;odbc&lt;/bdi&gt;**. يتكون الجزء الثالث من عنوان &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;URL&lt;/bdi&gt; من اسم المصدر وأي معلمات. في أمثلةنا، ستكون هذه مصادر &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ODBC&lt;/bdi&gt; معروفة للنظام. وبالتالي، سيكون عنوان &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;URL&lt;/bdi&gt; لمصدر بيانات *&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Articles&lt;/bdi&gt;* المحدد سابقًا هو
 
-    **jdbc:odbc:Articles**
+    **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdbc:odbc:Articles&lt;/bdi&gt;**
 </code></pre></div>
-<p><em>id</em>: معرف المستخدم (تسجيل الدخول)</p>
-<p><em>mdp</em>: كلمة مرور المستخدم</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">id</bdi></em>: معرف المستخدم (تسجيل الدخول)</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">mdp</bdi></em>: كلمة مرور المستخدم</p>
 <p>باختصار، يتصل البرنامج بقاعدة بيانات:</p>
 <ul>
-  <li>يتم تحديده بواسطة اسم (URL)
+  <li>يتم تحديده بواسطة اسم (<bdi dir="ltr" class="odt-ltr-term">URL</bdi>)
   </li>
   <li>بمعلومات اعتماد المستخدم (المعرف، كلمة المرور)
   </li>
 </ul>
 
-<p>إذا كانت هذه المعلمات الثلاثة صحيحة، وإذا كان برنامج التشغيل القادر على إنشاء الاتصال بين تطبيق Java وقاعدة البيانات المحددة موجودًا، يتم إنشاء اتصال بين تطبيق Java وقاعدة البيانات. يتم تمثيل هذا الاتصال في البرنامج بواسطة كائن <em>Connection</em> الذي ترجع فئة <em>DriverManager</em>. نظرًا لأن هذا الاتصال قد يفشل لأسباب مختلفة، فقد يرمي استثناءً. لذلك سنكتب:</p>
+<p>إذا كانت هذه المعلمات الثلاثة صحيحة، وإذا كان برنامج التشغيل القادر على إنشاء الاتصال بين تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> وقاعدة البيانات المحددة موجودًا، يتم إنشاء اتصال بين تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> وقاعدة البيانات. يتم تمثيل هذا الاتصال في البرنامج بواسطة كائن <em><bdi dir="ltr" class="odt-ltr-term">Connection</bdi></em> الذي ترجع فئة <em><bdi dir="ltr" class="odt-ltr-term">DriverManager</bdi></em>. نظرًا لأن هذا الاتصال قد يفشل لأسباب مختلفة، فقد يرمي استثناءً. لذلك سنكتب:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">    Connection connexion=<span style="font-weight:bold;color:#0000ff">null</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    URL base=...;</span></span>
@@ -982,17 +984,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>للاتصال بقاعدة بيانات، يجب أن يكون لديك برنامج التشغيل المناسب. في أمثلةنا، سيكون هذا هو برنامج تشغيل ODBC القادر على التعامل مع قاعدة البيانات المطلوبة. في حين يجب أن يكون برنامج التشغيل هذا متاحًا في قائمة برامج تشغيل ODBC على الجهاز، يجب أن يكون لديك أيضًا فئة Java التي ستتفاعل معه. للقيام بذلك، سيطلب التطبيق الفئة اللازمة على النحو التالي:</p>
+<p>للاتصال بقاعدة بيانات، يجب أن يكون لديك برنامج التشغيل المناسب. في أمثلةنا، سيكون هذا هو برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> القادر على التعامل مع قاعدة البيانات المطلوبة. في حين يجب أن يكون برنامج التشغيل هذا متاحًا في قائمة برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> على الجهاز، يجب أن يكون لديك أيضًا فئة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> التي ستتفاعل معه. للقيام بذلك، سيطلب التطبيق الفئة اللازمة على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nomClasse</span><span class="p">)</span>
 </code></pre></div>
-<p>لا ترتبط فئة <strong>Class</strong> بأي شكل من الأشكال بواجهة JDBC. إنها فئة عامة لإدارة الفئات. تسمح طريقتها الثابتة <strong>forName</strong> بتحميل فئة ديناميكيًا، مما يجعل سماتها وطرقها الثابتة متاحة. تسمى الفئة التي تتفاعل مع برامج تشغيل MS Windows ODBC <strong>&quot;sun.jdbc.odbc.JdbcOdbcDriver</strong>&quot;. لذلك سنكتب (قد ترمي الطريقة استثناءً):</p>
+<p>لا ترتبط فئة <strong><bdi dir="ltr" class="odt-ltr-term">Class</bdi></strong> بأي شكل من الأشكال بواجهة <bdi dir="ltr" class="odt-ltr-term">JDBC.</bdi> إنها فئة عامة لإدارة الفئات. تسمح طريقتها الثابتة <strong><bdi dir="ltr" class="odt-ltr-term">forName</bdi></strong> بتحميل فئة ديناميكيًا، مما يجعل سماتها وطرقها الثابتة متاحة. تسمى الفئة التي تتفاعل مع برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MS Windows ODBC</bdi> <strong>&quot;<bdi dir="ltr" class="odt-ltr-term">sun.jdbc.odbc.JdbcOdbcDriver</bdi></strong>&quot;. لذلك سنكتب (قد ترمي الطريقة استثناءً):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">try</span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="err">«</span><span class="w"> </span><span class="n">sun</span><span class="p">.</span><span class="na">jdbc</span><span class="p">.</span><span class="na">odbc</span><span class="p">.</span><span class="na">JdbcOdbcDriver</span><span class="w"> </span><span class="err">»</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">){</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="c1">// handle exception (non-existent class)</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
 </code></pre></div>
-<p>توجد الفئات المطلوبة لواجهة JDBC في حزمة <strong>java.sql</strong>. ولذلك، نكتب في بداية البرنامج:</p>
+<p>توجد الفئات المطلوبة لواجهة <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> في حزمة <strong><bdi dir="ltr" class="odt-ltr-term">java.sql</bdi></strong>. ولذلك، نكتب في بداية البرنامج:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 </code></pre></div>
 <p>فيما يلي برنامج يتيح لك الاتصال بقاعدة بيانات:</p>
@@ -1051,24 +1053,24 @@
 <a id="toc10974725"></a>
 <a id="toc459349615"></a></p>
 <h3 id="623">6.2.3. <span style="color: #4f81bd">إرسال الاستعلامات إلى قاعدة البيانات</span></h3>
-<p>تسمح واجهة JDBC بإرسال استعلامات SQL إلى قاعدة البيانات المتصلة بتطبيق Java، بالإضافة إلى معالجة نتائج هذه الاستعلامات. SQL (<em>لغة الاستعلام الهيكلية</em>) هي لغة استعلام موحدة لقواعد البيانات العلائقية. هناك عدة أنواع من الاستعلامات:</p>
+<p>تسمح واجهة <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> بإرسال استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> إلى قاعدة البيانات المتصلة بتطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>، بالإضافة إلى معالجة نتائج هذه الاستعلامات. <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> (<em>لغة الاستعلام الهيكلية</em>) هي لغة استعلام موحدة لقواعد البيانات العلائقية. هناك عدة أنواع من الاستعلامات:</p>
 <ul>
-  <li>عبارات استعلام قاعدة البيانات (SELECT)
+  <li>عبارات استعلام قاعدة البيانات (<bdi dir="ltr" class="odt-ltr-term">SELECT</bdi>)
   </li>
-  <li>استعلامات تحديث قاعدة البيانات (INSERT، DELETE، UPDATE)
+  <li>استعلامات تحديث قاعدة البيانات (<bdi dir="ltr" class="odt-ltr-term">INSERT</bdi>، <bdi dir="ltr" class="odt-ltr-term">DELETE</bdi>، <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi>)
   </li>
-  <li>استعلامات لإنشاء/حذف الجداول (CREATE، DELETE)
+  <li>استعلامات لإنشاء/حذف الجداول (<bdi dir="ltr" class="odt-ltr-term">CREATE</bdi>، <bdi dir="ltr" class="odt-ltr-term">DELETE</bdi>)
   </li>
 </ul>
 
-<p>نفترض هنا أن القارئ على دراية بأساسيات لغة SQL.</p>
+<p>نفترض هنا أن القارئ على دراية بأساسيات لغة <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi></p>
 <p><a id="toc10974726"></a>
 <a id="toc459349616"></a></p>
-<h4 id="6231-statement">6.2.3.1. <span style="color: #4f81bd">فئة Statement</span></h4>
-<p>لإرسال أي استعلام SQL إلى قاعدة بيانات، يجب أن يحتوي تطبيق Java على كائن من نوع <strong>Statement</strong>. سيخزن هذا الكائن، من بين أمور أخرى، نص الاستعلام. يرتبط هذا الكائن بالضرورة بالاتصال الحالي. لذلك، فإن إحدى طرق الاتصال القائمة هي التي تسمح لك بإنشاء كائنات <em>Statement</em> اللازمة لإصدار استعلامات SQL. إذا كان <em>connection</em> هو الكائن الذي يمثل الاتصال بقاعدة البيانات، يتم الحصول على كائن <em>Statement</em> على النحو التالي:</p>
+<h4 id="6231-statement">6.2.3.1. <span style="color: #4f81bd">فئة <bdi dir="ltr" class="odt-ltr-term">Statement</bdi></span></h4>
+<p>لإرسال أي استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> إلى قاعدة بيانات، يجب أن يحتوي تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> على كائن من نوع <strong><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></strong>. سيخزن هذا الكائن، من بين أمور أخرى، نص الاستعلام. يرتبط هذا الكائن بالضرورة بالاتصال الحالي. لذلك، فإن إحدى طرق الاتصال القائمة هي التي تسمح لك بإنشاء كائنات <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> اللازمة لإصدار استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi> إذا كان <em><bdi dir="ltr" class="odt-ltr-term">connection</bdi></em> هو الكائن الذي يمثل الاتصال بقاعدة البيانات، يتم الحصول على كائن <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    Statement requete=connexion.CreateStatement();
 </code></pre></div>
-<p>بمجرد الحصول على كائن Statement، يمكن تنفيذ استعلامات SQL. ويتم ذلك بطرق مختلفة اعتمادًا على ما إذا كان الاستعلام يهدف إلى استرداد البيانات أو تحديث قاعدة البيانات.</p>
+<p>بمجرد الحصول على كائن <bdi dir="ltr" class="odt-ltr-term">Statement</bdi>، يمكن تنفيذ استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi> ويتم ذلك بطرق مختلفة اعتمادًا على ما إذا كان الاستعلام يهدف إلى استرداد البيانات أو تحديث قاعدة البيانات.</p>
 <p><a id="toc10974727"></a>
 <a id="toc459349617"></a></p>
 <h4 id="6232">6.2.3.2. <span style="color: #4f81bd">تنفيذ استعلام لاسترداد البيانات من قاعدة البيانات</span></h4>
@@ -1080,47 +1082,47 @@
 </code></pre></div>
 <p>الكلمات الرئيسية في السطر الأول هي فقط المطلوبة؛ أما البقية فهي اختيارية. وهناك كلمات رئيسية أخرى غير موضحة هنا.</p>
 <ol>
-  <li>يتم إجراء عملية ربط مع جميع الجداول المدرجة بعد الكلمة الرئيسية `<b>FROM`</b>
+  <li>يتم إجراء عملية ربط مع جميع الجداول المدرجة بعد الكلمة الرئيسية `<b><bdi dir="ltr" class="odt-ltr-term">FROM</bdi>`</b>
   </li>
-  <li>يتم الاحتفاظ فقط بالأعمدة التي تلي الكلمة الرئيسية `<b>select`</b>
+  <li>يتم الاحتفاظ فقط بالأعمدة التي تلي الكلمة الرئيسية `<b><bdi dir="ltr" class="odt-ltr-term">select</bdi>`</b>
   </li>
-  <li>يتم الاحتفاظ فقط بالصفوف التي تستوفي شرط الكلمة الرئيسية `<b>where`</b>
+  <li>يتم الاحتفاظ فقط بالصفوف التي تستوفي شرط الكلمة الرئيسية `<b><bdi dir="ltr" class="odt-ltr-term">where</bdi>`</b>
   </li>
-  <li>تشكل الصفوف الناتجة، المرتبة وفقًا للتعبير الوارد في الكلمة الرئيسية<b> `ORDER BY`</b>، نتيجة الاستعلام.
+  <li>تشكل الصفوف الناتجة، المرتبة وفقًا للتعبير الوارد في الكلمة الرئيسية<b> `<bdi dir="ltr" class="odt-ltr-term">ORDER BY</bdi>`</b>، نتيجة الاستعلام.
   </li>
 </ol>
 
-<p>نتيجة <em><code>SELECT</code></em> هي جدول. إذا أخذنا في الاعتبار جدول <code>ARTICLES</code> السابق وأردنا الحصول على أسماء العناصر التي يقل مخزونها الحالي عن الحد الأدنى، فسنكتب: <em><code>SELECT name FROM articles WHERE current\_stock &amp;lt; min\_stock*</code>. وإذا أردنا فرزها أبجديًا حسب الاسم، فسنكتب:     </em>select name from articles where current_stock &lt; minimum_stock order by name*</p>
-<p>لتنفيذ هذا النوع من الاستعلامات، توفر فئة <em>Statement</em> طريقة <strong>executeQuery</strong>:</p>
+<p>نتيجة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;SELECT&lt;/bdi&gt;</code></em> هي جدول. إذا أخذنا في الاعتبار جدول <code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;ARTICLES&lt;/bdi&gt;</code> السابق وأردنا الحصول على أسماء العناصر التي يقل مخزونها الحالي عن الحد الأدنى، فسنكتب: <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;SELECT name FROM articles WHERE current&lt;/bdi&gt;\_stock &amp;lt; &lt;bdi dir="ltr" class="odt-ltr-term"&gt;min&lt;/bdi&gt;\_stock*</code>. وإذا أردنا فرزها أبجديًا حسب الاسم، فسنكتب:     </em><bdi dir="ltr" class="odt-ltr-term">select name from articles where current</bdi>_stock &lt; <bdi dir="ltr" class="odt-ltr-term">minimum</bdi>_stock <bdi dir="ltr" class="odt-ltr-term">order by name</bdi>*</p>
+<p>لتنفيذ هذا النوع من الاستعلامات، توفر فئة <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> طريقة <strong><bdi dir="ltr" class="odt-ltr-term">executeQuery</bdi></strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    ResultSet executeQuery(String requête)
 </code></pre></div>
-<p>حيث <em>query</em> هو نص استعلام SELECT المراد تنفيذه.</p>
+<p>حيث <em><bdi dir="ltr" class="odt-ltr-term">query</bdi></em> هو نص استعلام <bdi dir="ltr" class="odt-ltr-term">SELECT</bdi> المراد تنفيذه.</p>
 <p>وبالتالي، إذا </p>
 <ul>
-  <li>كان<i> connection </i>هو الكائن الذي يمثل الاتصال بقاعدة البيانات
+  <li>كان<i> <bdi dir="ltr" class="odt-ltr-term">connection</bdi> </i>هو الكائن الذي يمثل الاتصال بقاعدة البيانات
   </li>
-  <li><b>Statement s = connection.createStatement() </b>ينشئ كائن <i>Statement </i>المطلوب لتنفيذ استعلامات SQL
+  <li><b><bdi dir="ltr" class="odt-ltr-term">Statement s</bdi> = <bdi dir="ltr" class="odt-ltr-term">connection.createStatement</bdi>() </b>ينشئ كائن <i><bdi dir="ltr" class="odt-ltr-term">Statement</bdi> </i>المطلوب لتنفيذ استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>
   </li>
-  <li>تنفيذ الأمر <b>ResultSet rs = s.executeQuery(&quot;</b><i><b>select name from articles where current_stock &lt; minimum_stock&quot;) </b></i>يؤدي إلى تنفيذ استعلام <i>SELECT </i>وتعيين صفوف نتائج الاستعلام إلى كائن من نوع <i>ResultSet</i>.
+  <li>تنفيذ الأمر <b><bdi dir="ltr" class="odt-ltr-term">ResultSet rs</bdi> = <bdi dir="ltr" class="odt-ltr-term">s.executeQuery</bdi>(&quot;</b><i><b><bdi dir="ltr" class="odt-ltr-term">select name from articles where current_stock</bdi> &lt; <bdi dir="ltr" class="odt-ltr-term">minimum_stock</bdi>&quot;) </b></i>يؤدي إلى تنفيذ استعلام <i><bdi dir="ltr" class="odt-ltr-term">SELECT</bdi> </i>وتعيين صفوف نتائج الاستعلام إلى كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></i>.
   </li>
 </ul>
 <p><a id="toc10974728"></a>
 <a id="toc459349618"></a></p>
-<h4 id="6233-resultset-select">6.2.3.3. <span style="color: #4f81bd">فئة ResultSet: نتيجة استعلام SELECT</span></h4>
-<p>يمثل كائن <em>ResultSet</em> جدولًا، أي مجموعة من الصفوف والأعمدة. في أي وقت معين، لا يمكن الوصول إلا إلى صف واحد من الجدول، يُعرف <strong>بالصف الحالي</strong>. عند الإنشاء الأولي ل<em>ـ ResultSet</em>، يكون الصف الحالي هو الصف رقم 1 إذا لم يكن <em>ResultSet</em> فارغًا. للانتقال إلى الصف التالي، توفر فئة <em>ResultSet</em> الطريقة <em>التالية</em>:</p>
+<h4 id="6233-resultset-select">6.2.3.3. <span style="color: #4f81bd">فئة <bdi dir="ltr" class="odt-ltr-term">ResultSet:</bdi> نتيجة استعلام <bdi dir="ltr" class="odt-ltr-term">SELECT</bdi></span></h4>
+<p>يمثل كائن <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> جدولًا، أي مجموعة من الصفوف والأعمدة. في أي وقت معين، لا يمكن الوصول إلا إلى صف واحد من الجدول، يُعرف <strong>بالصف الحالي</strong>. عند الإنشاء الأولي ل<em>ـ <bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em>، يكون الصف الحالي هو الصف رقم 1 إذا لم يكن <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> فارغًا. للانتقال إلى الصف التالي، توفر فئة <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> الطريقة <em>التالية</em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    boolean next()
 </code></pre></div>
-<p>تحاول هذه الطريقة الانتقال إلى الصف التالي في <em>ResultSet</em> وتُرجع <em>true</em> في حالة النجاح، و <em>false</em> في حالة الفشل. في حالة النجاح، يصبح الصف التالي هو الصف الحالي الجديد. يتم فقدان الصف السابق ولا يمكن استرداده. يحتوي جدول <em>ResultSet</em> على الأعمدة <em>col1 و col2</em> و... للوصول إلى الحقول المختلفة للصف الحالي، تتوفر الطرق التالية:</p>
+<p>تحاول هذه الطريقة الانتقال إلى الصف التالي في <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> وتُرجع <em><bdi dir="ltr" class="odt-ltr-term">true</bdi></em> في حالة النجاح، و <em><bdi dir="ltr" class="odt-ltr-term">false</bdi></em> في حالة الفشل. في حالة النجاح، يصبح الصف التالي هو الصف الحالي الجديد. يتم فقدان الصف السابق ولا يمكن استرداده. يحتوي جدول <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> على الأعمدة <em><bdi dir="ltr" class="odt-ltr-term">col1</bdi> و <bdi dir="ltr" class="odt-ltr-term">col2</bdi></em> و... للوصول إلى الحقول المختلفة للصف الحالي، تتوفر الطرق التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Type getType(&quot;coli&quot;) 
 </code></pre></div>
-<p>لاسترداد حقل &quot;<em>coli</em>&quot; من الصف الحالي. يشير <em>Type</em> إلى نوع حقل <em>coli</em>. غالبًا ما تُستخدم طريقة <em>getString</em> على جميع الحقول، مما يسمح لك باسترداد محتوى الحقل كسلسلة. يمكنك بعد ذلك تحويلها إذا لزم الأمر. إذا كنت لا تعرف اسم العمود، يمكنك استخدام الطرق </p>
+<p>لاسترداد حقل &quot;<em><bdi dir="ltr" class="odt-ltr-term">coli</bdi></em>&quot; من الصف الحالي. يشير <em><bdi dir="ltr" class="odt-ltr-term">Type</bdi></em> إلى نوع حقل <em><bdi dir="ltr" class="odt-ltr-term">coli</bdi></em>. غالبًا ما تُستخدم طريقة <em><bdi dir="ltr" class="odt-ltr-term">getString</bdi></em> على جميع الحقول، مما يسمح لك باسترداد محتوى الحقل كسلسلة. يمكنك بعد ذلك تحويلها إذا لزم الأمر. إذا كنت لا تعرف اسم العمود، يمكنك استخدام الطرق </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Type getType(i) 
 </code></pre></div>
-<p>حيث i هو مؤشر العمود المطلوب (i&gt;=1).</p>
+<p>حيث <bdi dir="ltr" class="odt-ltr-term">i</bdi> هو مؤشر العمود المطلوب (<bdi dir="ltr" class="odt-ltr-term">i</bdi>&gt;=1).</p>
 <p><a id="toc10974729"></a>
 <a id="toc459349619"></a></p>
 <h4 id="6234">6.2.3.4. <span style="color: #4f81bd">مثال أول</span></h4>
-<p>فيما يلي برنامج يعرض محتويات قاعدة البيانات ARTICLES التي تم إنشاؤها سابقًا:</p>
+<p>فيما يلي برنامج يعرض محتويات قاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES</bdi> التي تم إنشاؤها سابقًا:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
@@ -1185,22 +1187,22 @@
 </code></pre></div>
 <p><a id="toc10974730"></a>
 <a id="toc459349620"></a></p>
-<h4 id="6235-resultsetmetadata">6.2.3.5. <span style="color: #4f81bd">فئة ResultSetMetadata</span></h4>
-<p>في المثال السابق، نعرف أسماء أعمدة <em>ResultSet</em>. إذا لم نكن نعرفها، فلن نتمكن من استخدام طريقة <em>getType(column_name)</em>. بدلاً من ذلك، نستخدم <em>getType(column_number)</em>. ومع ذلك، للحصول على جميع الأعمدة، سنحتاج إلى معرفة عدد الأعمدة الموجودة في <em>ResultSet</em>. لا توفر فئة <em>ResultSet</em> هذه المعلومات. بل إن فئة <em>ResultSetMetaData</em> هي التي توفرها. بشكل عام، توفر هذه الفئة معلومات حول بنية الجدول، أي طبيعة أعمدة الجدول. </p>
-<p>نصل إلى المعلومات المتعلقة ببنية <em>ResultSet</em> عن طريق إنشاء مثيل لكائن <em>ResultSetMetaData</em> أولاً. إذا كان RS هو ResultSet، يتم الحصول على <em>ResultSetMetaData</em> المرتبط به عن طريق:</p>
+<h4 id="6235-resultsetmetadata">6.2.3.5. <span style="color: #4f81bd">فئة <bdi dir="ltr" class="odt-ltr-term">ResultSetMetadata</bdi></span></h4>
+<p>في المثال السابق، نعرف أسماء أعمدة <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em>. إذا لم نكن نعرفها، فلن نتمكن من استخدام طريقة <em><bdi dir="ltr" class="odt-ltr-term">getType</bdi>(<bdi dir="ltr" class="odt-ltr-term">column</bdi>_name)</em>. بدلاً من ذلك، نستخدم <em><bdi dir="ltr" class="odt-ltr-term">getType</bdi>(<bdi dir="ltr" class="odt-ltr-term">column</bdi>_number)</em>. ومع ذلك، للحصول على جميع الأعمدة، سنحتاج إلى معرفة عدد الأعمدة الموجودة في <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em>. لا توفر فئة <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> هذه المعلومات. بل إن فئة <em><bdi dir="ltr" class="odt-ltr-term">ResultSetMetaData</bdi></em> هي التي توفرها. بشكل عام، توفر هذه الفئة معلومات حول بنية الجدول، أي طبيعة أعمدة الجدول. </p>
+<p>نصل إلى المعلومات المتعلقة ببنية <em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em> عن طريق إنشاء مثيل لكائن <em><bdi dir="ltr" class="odt-ltr-term">ResultSetMetaData</bdi></em> أولاً. إذا كان <bdi dir="ltr" class="odt-ltr-term">RS</bdi> هو <bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi>، يتم الحصول على <em><bdi dir="ltr" class="odt-ltr-term">ResultSetMetaData</bdi></em> المرتبط به عن طريق:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>    RS.getMetaData()
 </code></pre></div>
-<p>توجد طريقتان مفيدتان في فئة <em>ResultSetMetaData</em>:</p>
+<p>توجد طريقتان مفيدتان في فئة <em><bdi dir="ltr" class="odt-ltr-term">ResultSetMetaData</bdi></em>:</p>
 <ol>
-  <li><b>int getColumnCount()، </b>التي تُرجع عدد الأعمدة في <i>ResultSet</i>
+  <li><b><bdi dir="ltr" class="odt-ltr-term">int getColumnCount</bdi>()، </b>التي تُرجع عدد الأعمدة في <i><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></i>
   </li>
-  <li><b>String getColumnLabel(int i)، </b>والتي تُرجع اسم العمود i في <i>ResultSet </i>(i &gt;= 1)
+  <li><b><bdi dir="ltr" class="odt-ltr-term">String getColumnLabel</bdi>(<bdi dir="ltr" class="odt-ltr-term">int i</bdi>)، </b>والتي تُرجع اسم العمود <bdi dir="ltr" class="odt-ltr-term">i</bdi> في <i><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi> </i>(<bdi dir="ltr" class="odt-ltr-term">i</bdi> &gt;= 1)
   </li>
 </ol>
 <p><a id="toc10974731"></a>
 <a id="toc459349621"></a></p>
 <h4 id="6236">6.2.3.6. <span style="color: #4f81bd">مثال ثانٍ</span></h4>
-<p>عرض البرنامج السابق محتويات قاعدة بيانات ARTICLES. هنا، نكتب برنامجًا ينفذ أي استعلام SQL <em>SELECT</em> يكتبه المستخدم على لوحة المفاتيح على قاعدة بيانات ARTICLES.</p>
+<p>عرض البرنامج السابق محتويات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES.</bdi> هنا، نكتب برنامجًا ينفذ أي استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> <em><bdi dir="ltr" class="odt-ltr-term">SELECT</bdi></em> يكتبه المستخدم على لوحة المفاتيح على قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES.</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
@@ -1297,14 +1299,14 @@
 <p><a id="toc10974732"></a>
 <a id="toc459349622"></a></p>
 <h4 id="6237">6.2.3.7. <span style="color: #4f81bd">تنفيذ استعلام تحديث قاعدة البيانات</span></h4>
-<p>يُستخدم كائن <em>Statement</em> لتخزين استعلامات SQL. لم تعد الطريقة التي يستخدمها هذا الكائن لتنفيذ استعلامات تحديث SQL (INSERT، UPDATE، DELETE) هي طريقة <em>executeQuery</em> التي تمت مناقشتها سابقًا، بل أصبحت طريقة <em>executeUpdate</em>:</p>
+<p>يُستخدم كائن <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> لتخزين استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi> لم تعد الطريقة التي يستخدمها هذا الكائن لتنفيذ استعلامات تحديث <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> (<bdi dir="ltr" class="odt-ltr-term">INSERT</bdi>، <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi>، <bdi dir="ltr" class="odt-ltr-term">DELETE</bdi>) هي طريقة <em><bdi dir="ltr" class="odt-ltr-term">executeQuery</bdi></em> التي تمت مناقشتها سابقًا، بل أصبحت طريقة <em><bdi dir="ltr" class="odt-ltr-term">executeUpdate</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span><span class="nb">int</span><span class="w"> </span><span class="n">executeUpdate</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">requête</span><span class="p">)</span>
 </code></pre></div>
-<p>يكمن الاختلاف في النتيجة: في حين أن <em>executeQuery</em> كانت تُرجع مجموعة النتائج (<em>ResultSet</em>)، فإن <em>executeUpdate</em> تُرجع عدد الصفوف التي تأثرت بعملية التحديث.</p>
+<p>يكمن الاختلاف في النتيجة: في حين أن <em><bdi dir="ltr" class="odt-ltr-term">executeQuery</bdi></em> كانت تُرجع مجموعة النتائج (<em><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></em>)، فإن <em><bdi dir="ltr" class="odt-ltr-term">executeUpdate</bdi></em> تُرجع عدد الصفوف التي تأثرت بعملية التحديث.</p>
 <p><a id="toc10974733"></a>
 <a id="toc459349623"></a></p>
 <h4 id="6238">6.2.3.8. <span style="color: #4f81bd">مثال ثالث</span></h4>
-<p>سنعود إلى البرنامج السابق ونعدله قليلاً: أصبحت الاستعلامات التي يتم كتابتها على لوحة المفاتيح الآن استعلامات تحديث لقاعدة بيانات ARTICLES.</p>
+<p>سنعود إلى البرنامج السابق ونعدله قليلاً: أصبحت الاستعلامات التي يتم كتابتها على لوحة المفاتيح الآن استعلامات تحديث لقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES.</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
@@ -1370,8 +1372,8 @@
 <a id="__codelineno-18-63" name="__codelineno-18-63" href="#__codelineno-18-63"></a><span class="p">}</span><span class="c1">// class    </span>
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">فيما يلي نتائج عدة عمليات تشغيل لبرنامجي </span><em><span style="color: #000000">sql1 وsql2</span></em><span style="color: #000000">:</span></p>
-<p><strong>قائمة الصفوف في قاعدة بيانات ARTICLES:</strong></p>
+<p><span style="color: #000000">فيما يلي نتائج عدة عمليات تشغيل لبرنامجي </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">sql1</bdi> و<bdi dir="ltr" class="odt-ltr-term">sql2</bdi></span></em><span style="color: #000000">:</span></p>
+<p><strong>قائمة الصفوف في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ARTICLES:</bdi></strong></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content">E:\data\java\jdbc\0&gt;java sql1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Connexion avec la base ARTICLES établie</span></span>
@@ -1473,11 +1475,11 @@
 
 <p><a id="toc10974734"></a>
 <a id="toc459349624"></a></p>
-<h4 id="6239-sql">6.2.3.9. <span style="color: #4f81bd">تنفيذ أي استعلام SQL</span></h4>
-<p>يحتوي كائن <em>Statement</em> المطلوب لتنفيذ استعلامات SQL على طريقة <em>execute</em> قادرة على تنفيذ أي نوع من استعلامات SQL:</p>
+<h4 id="6239-sql">6.2.3.9. <span style="color: #4f81bd">تنفيذ أي استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></span></h4>
+<p>يحتوي كائن <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> المطلوب لتنفيذ استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على طريقة <em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em> قادرة على تنفيذ أي نوع من استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>    boolean execute(String requête)
 </code></pre></div>
-<p>القيمة المرجعة هي القيمة المنطقية <em><code>true</code></em> إذا أعاد الاستعلام <em><code>ResultSet*</code> (</em><code>executeQuery*</code>) ، و<em><code>false</code></em> إذا أعاد رقمًا (<em><code>executeUpdate*</code>). يمكن استرداد </em><code>ResultSet</code><em> الناتج باستخدام طريقة </em><em><code>getResultSet</code></em><em> ، وعدد الصفوف المحدثة باستخدام طريقة </em><em><code>getUpdateCount</code></em>*. وبالتالي، سنكتب:</p>
+<p>القيمة المرجعة هي القيمة المنطقية <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;true&lt;/bdi&gt;</code></em> إذا أعاد الاستعلام <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;ResultSet&lt;/bdi&gt;*</code> (</em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;executeQuery&lt;/bdi&gt;*</code>) ، و<em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;false&lt;/bdi&gt;</code></em> إذا أعاد رقمًا (<em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;executeUpdate&lt;/bdi&gt;*</code>). يمكن استرداد </em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;ResultSet&lt;/bdi&gt;</code><em> الناتج باستخدام طريقة </em><em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;getResultSet&lt;/bdi&gt;</code></em><em> ، وعدد الصفوف المحدثة باستخدام طريقة </em><em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;getUpdateCount&lt;/bdi&gt;</code></em>*. وبالتالي، سنكتب:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content">Statement S=...;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">ResultSet RS=...;</span></span>
@@ -1499,7 +1501,7 @@
 <p><a id="toc10974735"></a>
 <a id="toc459349625"></a></p>
 <h4 id="62310">6.2.3.10. <span style="color: #4f81bd">المثال الرابع</span></h4>
-<p>نأخذ المفهوم من البرنامجين <em>sql1</em> و <em>sql2</em> ونطبقه على برنامج <em>sql3</em> الذي يمكنه الآن تنفيذ أي استعلام SQL يتم كتابته على لوحة المفاتيح. ولجعل البرنامج أكثر عمومية، يتم تمرير خصائص قاعدة البيانات المراد استخدامها كمعلمات إلى البرنامج.</p>
+<p>نأخذ المفهوم من البرنامجين <em><bdi dir="ltr" class="odt-ltr-term">sql1</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">sql2</bdi></em> ونطبقه على برنامج <em><bdi dir="ltr" class="odt-ltr-term">sql3</bdi></em> الذي يمكنه الآن تنفيذ أي استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> يتم كتابته على لوحة المفاتيح. ولجعل البرنامج أكثر عمومية، يتم تمرير خصائص قاعدة البيانات المراد استخدامها كمعلمات إلى البرنامج.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
@@ -1694,7 +1696,7 @@
 <a id="toc12502409"></a>
 <a id="toc12157546"></a></p>
 <h2 id="63">6.3. <span style="color: #4f81bd">حساب الضرائب باستخدام قاعدة بيانات</span></h2>
-<p>في المرة الأخيرة التي تناولنا فيها مشكلة حساب الضرائب، استخدمنا واجهة رسومية وتم تخزين البيانات في ملف. سنعيد النظر في هذه النسخة، مع افتراض أن البيانات موجودة في قاعدة بيانات ODBC-MySQL. MySQL هو نظام إدارة قواعد البيانات مفتوح المصدر يمكن استخدامه على منصات مختلفة، بما في ذلك Windows وLinux. باستخدام نظام إدارة قواعد البيانات هذا، تم إنشاء قاعدة بيانات <strong>باسم</strong> dbimpots، تحتوي على جدول واحد يسمى <strong>impots</strong>. يتم التحكم في الوصول إلى قاعدة البيانات بواسطة اسم مستخدم/كلمة مرور، وفي هذه الحالة <strong>admimpots/mdpimpots</strong>. توضح لقطة الشاشة كيفية استخدام قاعدة بيانات <strong>dbimpots</strong> مع MySQL:</p>
+<p>في المرة الأخيرة التي تناولنا فيها مشكلة حساب الضرائب، استخدمنا واجهة رسومية وتم تخزين البيانات في ملف. سنعيد النظر في هذه النسخة، مع افتراض أن البيانات موجودة في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC-MySQL. MySQL</bdi> هو نظام إدارة قواعد البيانات مفتوح المصدر يمكن استخدامه على منصات مختلفة، بما في ذلك <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> و<bdi dir="ltr" class="odt-ltr-term">Linux.</bdi> باستخدام نظام إدارة قواعد البيانات هذا، تم إنشاء قاعدة بيانات <strong>باسم</strong> <bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi>، تحتوي على جدول واحد يسمى <strong><bdi dir="ltr" class="odt-ltr-term">impots</bdi></strong>. يتم التحكم في الوصول إلى قاعدة البيانات بواسطة اسم مستخدم/كلمة مرور، وفي هذه الحالة <strong><bdi dir="ltr" class="odt-ltr-term">admimpots/mdpimpots</bdi></strong>. توضح لقطة الشاشة كيفية استخدام قاعدة بيانات <strong><bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi></strong> مع <bdi dir="ltr" class="odt-ltr-term">MySQL:</bdi></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content">C:\Program Files\EasyPHP\mysql\bin&gt;<span style="font-weight:bold;background-color:#ffff00">mysql -u admimpots -p</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;background-color:#ffff00">Enter password: *********</span><span style="font-weight:bold;background-color:#ffff00"></span></span></span>
@@ -1751,13 +1753,13 @@
 <p>الواجهة الرسومية للتطبيق هي كما يلي:</p>
 <p><img src="images/1000000000000378000003D8894527B1.png" width="444" height="492" style="width:11.748cm;height:13.018cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000378000003D8894527B1.png" /></p>
 <p>خضعت الواجهة الرسومية لبعض التغييرات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>لا.</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextField</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">txtConnection</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة اتصال قاعدة بيانات ODBC</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JScrollPane</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JScrollPane1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حاوية لمنطقة النص (Textarea) 3</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextArea</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">txtStatus</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض رسائل الحالة، بما في ذلك رسائل الخطأ</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>لا.</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JTextField</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">txtConnection</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سلسلة اتصال قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JScrollPane</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JScrollPane1</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حاوية لمنطقة النص (<bdi dir="ltr" class="odt-ltr-term">Textarea</bdi>) 3</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JTextArea</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">txtStatus</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض رسائل الحالة، بما في ذلك رسائل الخطأ</div></td></tr></table>
 
-<p>سلسلة الاتصال التي تم إدخالها في (1) لها التنسيق التالي: <strong>DSN;login;password</strong> مع</p>
+<p>سلسلة الاتصال التي تم إدخالها في (1) لها التنسيق التالي: <strong><bdi dir="ltr" class="odt-ltr-term">DSN</bdi>;<bdi dir="ltr" class="odt-ltr-term">login</bdi>;<bdi dir="ltr" class="odt-ltr-term">password</bdi></strong> مع</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>DSN
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">هو اسم DSN لمصدر بيانات ODBC</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">هو اسم <bdi dir="ltr" class="odt-ltr-term">DSN</bdi> لمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>login
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">هو هوية مستخدم لديه حق الوصول للقراءة إلى قاعدة البيانات</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1765,36 +1767,36 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كلمة المرور الخاصة به</div></td></tr></table>
 
-<p>تم إنشاء قاعدة بيانات <em>dbimpots</em> يدويًا باستخدام MySQL. يتم تحويلها إلى مصدر بيانات ODBC على النحو التالي:</p>
+<p>تم إنشاء قاعدة بيانات <em><bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi></em> يدويًا باستخدام <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> يتم تحويلها إلى مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> على النحو التالي:</p>
 <ul>
-  <li>قم بتشغيل &quot;مدير مصدر بيانات ODBC&quot; 32 بت
+  <li>قم بتشغيل &quot;مدير مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>&quot; 32 بت
   </li>
 </ul>
 
 <p><img src="images/10000000000001CA000000A7EA9ED477.png" width="458" height="167" style="width:12.12cm;height:4.419cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CA000000A7EA9ED477.png" /></p>
 <ul>
-  <li>استخدم الزر [Add] لإضافة مصدر بيانات ODBC جديد
+  <li>استخدم الزر [<bdi dir="ltr" class="odt-ltr-term">Add</bdi>] لإضافة مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> جديد
   </li>
 </ul>
 
 <p><img src="images/10000000000001D4000001566FD948CF.png" width="468" height="342" style="width:12.383cm;height:9.049cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D4000001566FD948CF.png" /></p>
 <ul>
-  <li>حدد برنامج تشغيل MySQL وانقر على [Finish]
+  <li>حدد برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> وانقر على [<bdi dir="ltr" class="odt-ltr-term">Finish</bdi>]
   </li>
 </ul>
 
 <p><img src="images/10000000000004DD000002C74BA8D2AC.png" width="623" height="356" style="width:16.471cm;height:9.407cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004DD000002C74BA8D2AC.png" /></p>
 <ul>
-  <li>يطلب برنامج تشغيل MySQL بعض المعلومات:
+  <li>يطلب برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> بعض المعلومات:
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم DSN الذي سيتم إعطاؤه لمصدر بيانات ODBC — يمكن أن يكون أي اسم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>2</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الجهاز الذي يعمل عليه نظام إدارة قواعد البيانات MySQL — هنا، <i>localhost</i>. تجدر الإشارة إلى أن قاعدة البيانات قد تكون قاعدة بيانات بعيدة. ولن تلاحظ التطبيقات المحلية التي تستخدم مصدر بيانات ODBC ذلك. وينطبق هذا بشكل خاص على تطبيق Java الخاص بنا.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>3</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قاعدة بيانات MySQL المراد استخدامها. MySQL هو نظام إدارة قواعد البيانات (DBMS) الذي يدير قواعد البيانات العلائقية، وهي مجموعات من الجداول المرتبطة ببعضها البعض من خلال علاقات. هنا، نحدد اسم قاعدة البيانات التي يتم إدارتها.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>4</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم المستخدم الذي لديه حقوق الوصول إلى قاعدة البيانات هذه</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>5</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كلمة المرور الخاصة به</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم <bdi dir="ltr" class="odt-ltr-term">DSN</bdi> الذي سيتم إعطاؤه لمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> — يمكن أن يكون أي اسم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>2</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الجهاز الذي يعمل عليه نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> — هنا، <i><bdi dir="ltr" class="odt-ltr-term">localhost</bdi></i>. تجدر الإشارة إلى أن قاعدة البيانات قد تكون قاعدة بيانات بعيدة. ولن تلاحظ التطبيقات المحلية التي تستخدم مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> ذلك. وينطبق هذا بشكل خاص على تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الخاص بنا.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>3</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> المراد استخدامها. <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> هو نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) الذي يدير قواعد البيانات العلائقية، وهي مجموعات من الجداول المرتبطة ببعضها البعض من خلال علاقات. هنا، نحدد اسم قاعدة البيانات التي يتم إدارتها.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>4</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم المستخدم الذي لديه حقوق الوصول إلى قاعدة البيانات هذه</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>5</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كلمة المرور الخاصة به</div></td></tr></table>
 
-<p>بمجرد تحديد مصدر بيانات ODBC، يمكننا اختبار برنامجنا:</p>
+<p>بمجرد تحديد مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>، يمكننا اختبار برنامجنا:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001430000016CCE514EE1.png" width="324" height="365" style="display:inline-block; margin:4px;width:8.56cm;height:9.648cm;" class="odt-zoomable" data-zoom-src="images/10000000000001430000016CCE514EE1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000016A565280B8.png" width="325" height="362" style="display:inline-block; margin:4px;width:8.601cm;height:9.58cm;" class="odt-zoomable" data-zoom-src="images/10000000000001450000016A565280B8.png" /></td></tr></table>
 
-<p>دعونا نلقي نظرة على الكود الذي تم تعديله مقارنةً بالإصدار الرسومي الذي لا يحتوي على قاعدة بيانات. فيما يلي كود فئة <code>*impots</code>* المستخدم حتى الآن:</p>
+<p>دعونا نلقي نظرة على الكود الذي تم تعديله مقارنةً بالإصدار الرسومي الذي لا يحتوي على قاعدة بيانات. فيما يلي كود فئة <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impots&lt;/bdi&gt;</code>* المستخدم حتى الآن:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1">// creation of an impots class</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">impots</span><span class="p">{</span>
@@ -1835,14 +1837,14 @@
 <a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a><span class="w">    </span><span class="p">}</span><span class="c1">//calculate</span>
 <a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a><span class="p">}</span><span class="c1">//class</span>
 </code></pre></div>
-<p>تقوم هذه الفئة بإنشاء المصفوفات الثلاثة <em>limits</em> و <em>coeffR</em> و <em>coeffN</em> من ثلاث مصفوفات يتم تمريرها كمعلمات إلى منشئها. وقد قررنا إضافة منشئ جديد يتيح لنا إنشاء المصفوفات الثلاث نفسها من قاعدة بيانات:</p>
+<p>تقوم هذه الفئة بإنشاء المصفوفات الثلاثة <em><bdi dir="ltr" class="odt-ltr-term">limits</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">coeffR</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">coeffN</bdi></em> من ثلاث مصفوفات يتم تمريرها كمعلمات إلى منشئها. وقد قررنا إضافة منشئ جديد يتيح لنا إنشاء المصفوفات الثلاث نفسها من قاعدة بيانات:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">impots</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dsnIMPOTS</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userIMPOTS</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">mdpIMPOTS</span><span class="p">)</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">      </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">,</span><span class="n">ClassNotFoundException</span><span class="p">{</span>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">    </span><span class="c1">// dsnIMPOTS: DSN database name</span>
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">     </span><span class="c1">// userIMPOTS, mdpIMPOTS: database login/password</span>
 </code></pre></div>
-<p>في هذا المثال، قررنا عدم تنفيذ هذا المنشئ الجديد في فئة <code>*impots</code>* بل في فئة مشتقة، وهي <code>*impotsJDBC*</code>:</p>
+<p>في هذا المثال، قررنا عدم تنفيذ هذا المنشئ الجديد في فئة <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impots&lt;/bdi&gt;</code>* بل في فئة مشتقة، وهي <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impotsJDBC&lt;/bdi&gt;*</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
@@ -1894,27 +1896,27 @@
 <a id="__codelineno-29-49" name="__codelineno-29-49" href="#__codelineno-29-49"></a><span class="w">  </span><span class="p">}</span><span class="c1">//manufacturer</span>
 <a id="__codelineno-29-50" name="__codelineno-29-50" href="#__codelineno-29-50"></a><span class="p">}</span><span class="c1">//class</span>
 </code></pre></div>
-<p>يقوم المنشئ بقراءة محتويات جدول <em>impots</em> من قاعدة البيانات التي تم تمريرها إليه كمعلمات، ويملأ المصفوفات الثلاث: <em>limites</em> و <em>coeffR</em> و <em>coeffN</em>. وقد تحدث بعض الأخطاء. ولا يتعامل المنشئ معها، بل «يحيلها» إلى البرنامج المستدعي:</p>
+<p>يقوم المنشئ بقراءة محتويات جدول <em><bdi dir="ltr" class="odt-ltr-term">impots</bdi></em> من قاعدة البيانات التي تم تمريرها إليه كمعلمات، ويملأ المصفوفات الثلاث: <em><bdi dir="ltr" class="odt-ltr-term">limites</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">coeffR</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">coeffN</bdi></em>. وقد تحدث بعض الأخطاء. ولا يتعامل المنشئ معها، بل «يحيلها» إلى البرنامج المستدعي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">impotsJDBC</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dsnIMPOTS</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userIMPOTS</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">mdpIMPOTS</span><span class="p">)</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">      </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">,</span><span class="n">ClassNotFoundException</span><span class="p">{</span>
 </code></pre></div>
-<p>إذا نظرنا عن كثب إلى الكود السابق، يمكننا أن نرى أن فئة <em>impotsJDBC</em> تستخدم مباشرة حقول <em>limits</em> و <em>coeffR</em> و <em>coeffN</em> الخاصة بفئتها الأساسية <em>impots</em>. وبما أن هذه الحقول مُعلنة على أنها خاصة:</p>
+<p>إذا نظرنا عن كثب إلى الكود السابق، يمكننا أن نرى أن فئة <em><bdi dir="ltr" class="odt-ltr-term">impotsJDBC</bdi></em> تستخدم مباشرة حقول <em><bdi dir="ltr" class="odt-ltr-term">limits</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">coeffR</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">coeffN</bdi></em> الخاصة بفئتها الأساسية <em><bdi dir="ltr" class="odt-ltr-term">impots</bdi></em>. وبما أن هذه الحقول مُعلنة على أنها خاصة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>    private double[] limites, coeffR, coeffN;
 </code></pre></div>
-<p>فإن فئة <em>impotsJDBC</em> لا تملك وصولاً مباشراً إلى هذه الحقول. لذلك نقوم بإجراء تعديل أولي على الفئة الأساسية بكتابة:</p>
+<p>فإن فئة <em><bdi dir="ltr" class="odt-ltr-term">impotsJDBC</bdi></em> لا تملك وصولاً مباشراً إلى هذه الحقول. لذلك نقوم بإجراء تعديل أولي على الفئة الأساسية بكتابة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>  protected double[] limites=null;
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>  protected double[] coeffR=null;
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>  protected double[] coeffN=null;
 </code></pre></div>
-<p>تسمح السمة <em>protected</em> للفئات المشتقة من فئة <em>impots</em> بالوصول المباشر إلى الحقول المعلنة بهذه السمة. نحتاج إلى إجراء تعديل ثانٍ. يتم إعلان منشئ الفئة الفرعية <em>impotsJDBC</em> على النحو التالي:</p>
+<p>تسمح السمة <em><bdi dir="ltr" class="odt-ltr-term">protected</bdi></em> للفئات المشتقة من فئة <em><bdi dir="ltr" class="odt-ltr-term">impots</bdi></em> بالوصول المباشر إلى الحقول المعلنة بهذه السمة. نحتاج إلى إجراء تعديل ثانٍ. يتم إعلان منشئ الفئة الفرعية <em><bdi dir="ltr" class="odt-ltr-term">impotsJDBC</bdi></em> على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">impotsJDBC</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dsnIMPOTS</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userIMPOTS</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">mdpIMPOTS</span><span class="p">)</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">      </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="p">,</span><span class="n">ClassNotFoundException</span><span class="p">{</span>
 </code></pre></div>
-<p>نعلم أنه قبل إنشاء كائن لفئة فرعية، يجب أولاً إنشاء كائن للفئة الأصلية. للقيام بذلك، يجب أن تستدعي منشئة الفئة الفرعية صراحةً منشئة الفئة الأصلية باستخدام عبارة <em>super(....)</em>. هنا، لم يتم ذلك لأننا لا نستطيع تحديد أي منشئة من الفئة الأصلية يمكننا استدعاؤها. يوجد حاليًا منشئ واحد فقط، وهو غير مناسب. سيقوم المُجمع بعد ذلك بالبحث في الفئة الأم عن منشئ بدون معلمات يمكنه استدعاءه. لا يجد المُجمع منشئًا، وهذا يؤدي إلى حدوث خطأ في التجميع. لذلك نضيف منشئًا بدون معلمات إلى فئة <em>impots</em> الخاصة بنا:</p>
+<p>نعلم أنه قبل إنشاء كائن لفئة فرعية، يجب أولاً إنشاء كائن للفئة الأصلية. للقيام بذلك، يجب أن تستدعي منشئة الفئة الفرعية صراحةً منشئة الفئة الأصلية باستخدام عبارة <em><bdi dir="ltr" class="odt-ltr-term">super</bdi>(....)</em>. هنا، لم يتم ذلك لأننا لا نستطيع تحديد أي منشئة من الفئة الأصلية يمكننا استدعاؤها. يوجد حاليًا منشئ واحد فقط، وهو غير مناسب. سيقوم المُجمع بعد ذلك بالبحث في الفئة الأم عن منشئ بدون معلمات يمكنه استدعاءه. لا يجد المُجمع منشئًا، وهذا يؤدي إلى حدوث خطأ في التجميع. لذلك نضيف منشئًا بدون معلمات إلى فئة <em><bdi dir="ltr" class="odt-ltr-term">impots</bdi></em> الخاصة بنا:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>  // constructeur vide
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>  protected impots(){}
 </code></pre></div>
-<p>نعلنها على أنها &quot;<em>محمية</em>&quot; بحيث لا يمكن استخدامها إلا من قبل الفئات الفرعية. يبدو هيكل فئة <em>impots</em> الآن كما يلي:</p>
+<p>نعلنها على أنها &quot;<em>محمية</em>&quot; بحيث لا يمكن استخدامها إلا من قبل الفئات الفرعية. يبدو هيكل فئة <em><bdi dir="ltr" class="odt-ltr-term">impots</bdi></em> الآن كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">impots</span><span class="p">{</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span><span class="c1">// data required for tax calculation</span>
@@ -1938,7 +1940,7 @@
 <a id="__codelineno-35-21" name="__codelineno-35-21" href="#__codelineno-35-21"></a><span class="w">    </span><span class="p">}</span><span class="c1">//calculate</span>
 <a id="__codelineno-35-22" name="__codelineno-35-22" href="#__codelineno-35-22"></a><span class="p">}</span><span class="c1">//class</span>
 </code></pre></div>
-<p>يصبح الإجراء الخاص بقائمة <em>Initialize</em> في تطبيقنا كما يلي:</p>
+<p>يصبح الإجراء الخاص بقائمة <em><bdi dir="ltr" class="odt-ltr-term">Initialize</bdi></em> في تطبيقنا كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">mnuInitialiser_actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="c1">// retrieve the connection string</span>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span><span class="n">Pattern</span><span class="w"> </span><span class="n">séparateur</span><span class="o">=</span><span class="n">Pattern</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;\\s*;\\s*&quot;</span><span class="p">);</span>
@@ -1970,7 +1972,7 @@
 <a id="__codelineno-36-29" name="__codelineno-36-29" href="#__codelineno-36-29"></a><span class="w">    </span><span class="p">}</span><span class="c1">//catch</span>
 <a id="__codelineno-36-30" name="__codelineno-36-30" href="#__codelineno-36-30"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div>
-<p>بمجرد إنشاء الكائن <em>objImpots</em>، يصبح التطبيق مطابقًا للتطبيق الرسومي الذي تمت كتابته مسبقًا. ندعو القارئ إلى الرجوع إليه.</p>
+<p>بمجرد إنشاء الكائن <em><bdi dir="ltr" class="odt-ltr-term">objImpots</bdi></em>، يصبح التطبيق مطابقًا للتطبيق الرسومي الذي تمت كتابته مسبقًا. ندعو القارئ إلى الرجوع إليه.</p>
 <p><a id="toc12502410"></a>
 <a id="toc12362922"></a>
 <a id="toc12361094"></a>
@@ -1987,7 +1989,7 @@
 <a id="toc10974737"></a>
 <a id="toc459349627"></a></p>
 <h3 id="641-1">6.4.1. <span style="color: #4f81bd">التمرين 1</span></h3>
-<p>قم بتوفير واجهة رسومية لبرنامج <em>sql3</em> السابق.</p>
+<p>قم بتوفير واجهة رسومية لبرنامج <em><bdi dir="ltr" class="odt-ltr-term">sql3</bdi></em> السابق.</p>
 <p><a id="toc12502412"></a>
 <a id="toc12362924"></a>
 <a id="toc12361096"></a>
@@ -1996,11 +1998,11 @@
 <a id="toc10974738"></a>
 <a id="toc459349628"></a></p>
 <h3 id="642-2">6.4.2. <span style="color: #4f81bd">التمرين 2</span></h3>
-<p>لا يمكن لبرنامج Java الصغير الوصول إلى قاعدة البيانات إلا من خلال الخادم الذي تم تحميله منه. ونظرًا لأن البرنامج الصغير لا يملك حق الوصول إلى القرص الخاص بالجهاز الذي يعمل عليه، فلا يمكن أن تكون قاعدة البيانات موجودة على جهاز العميل الذي يستخدم البرنامج الصغير. وبالتالي، فإننا في الحالة التالية:</p>
+<p>لا يمكن لبرنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الصغير الوصول إلى قاعدة البيانات إلا من خلال الخادم الذي تم تحميله منه. ونظرًا لأن البرنامج الصغير لا يملك حق الوصول إلى القرص الخاص بالجهاز الذي يعمل عليه، فلا يمكن أن تكون قاعدة البيانات موجودة على جهاز العميل الذي يستخدم البرنامج الصغير. وبالتالي، فإننا في الحالة التالية:</p>
 <p><img src="images/10000000000004AF000000BFBCD12CC5.png" width="600" height="96" style="width:15.863cm;height:2.528cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004AF000000BFBCD12CC5.png" /></p>
 <p>قد يكون الجهاز الذي يعمل عليه التطبيق الصغير، والخادم، والجهاز الذي يستضيف قاعدة البيانات ثلاثة أجهزة مختلفة. هنا، نفترض أن قاعدة البيانات موجودة على الخادم.</p>
 <p><u><strong>المشكلة 1</strong></u></p>
-<p>اكتب تطبيق الخادم التالي بلغة Java:</p>
+<p>اكتب تطبيق الخادم التالي بلغة <bdi dir="ltr" class="odt-ltr-term">Java:</bdi></p>
 <ul>
   <li>يعمل تطبيق الخادم على منفذ يتم تمريره إليه كمعلمة
   </li>
@@ -2017,9 +2019,9 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Pilote Java/URL base/UID/MDP/requête SQL
 </code></pre></div>
-<p>يتم فصل المعلمات بشرطة مائلة. المعلمات الأربع الأولى هي تلك الخاصة ببرنامج <em>sql3</em> الموصوف في هذا الفصل.</p>
+<p>يتم فصل المعلمات بشرطة مائلة. المعلمات الأربع الأولى هي تلك الخاصة ببرنامج <em><bdi dir="ltr" class="odt-ltr-term">sql3</bdi></em> الموصوف في هذا الفصل.</p>
 <ul>
-  <li>ثم يقوم تطبيق الخادم بإنشاء اتصال بقاعدة البيانات المحددة، والتي يجب أن تكون موجودة على نفس الجهاز الذي يوجد عليه الخادم، ويقوم بتنفيذ استعلام SQL عليها. يتم إرجاع النتائج إلى العميل بالتنسيق التالي:
+  <li>ثم يقوم تطبيق الخادم بإنشاء اتصال بقاعدة البيانات المحددة، والتي يجب أن تكون موجودة على نفس الجهاز الذي يوجد عليه الخادم، ويقوم بتنفيذ استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> عليها. يتم إرجاع النتائج إلى العميل بالتنسيق التالي:
   </li>
 </ul>
 
@@ -2027,7 +2029,7 @@
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>100 - ligne2
 </code></pre></div>
 <p>...</p>
-<p>إذا كانت النتيجة من استعلام Select، أو</p>
+<p>إذا كانت النتيجة من استعلام <bdi dir="ltr" class="odt-ltr-term">Select</bdi>، أو</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>101 - nbLignes
 </code></pre></div>
 <p>لإرجاع عدد الصفوف المتأثرة <strong>باستعلام التحديث</strong>. في حالة حدوث خطأ في اتصال قاعدة البيانات أو خطأ في تنفيذ الاستعلام، يقوم التطبيق بإرجاع </p>
@@ -2039,7 +2041,7 @@
 </ul>
 
 <p><u><strong>المشكلة 2</strong></u></p>
-<p>أنشئ تطبيق Java صغير يستعلم عن الخادم الموصوف أعلاه. يمكنك الاستلهام من الواجهة الرسومية في التمرين 1. ونظرًا لأن منفذ الخادم قد يختلف، فسيتم إدخاله عبر واجهة التطبيق الصغير. وينطبق الأمر نفسه على جميع المعلمات المطلوبة لإرسال الصف:</p>
+<p>أنشئ تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> صغير يستعلم عن الخادم الموصوف أعلاه. يمكنك الاستلهام من الواجهة الرسومية في التمرين 1. ونظرًا لأن منفذ الخادم قد يختلف، فسيتم إدخاله عبر واجهة التطبيق الصغير. وينطبق الأمر نفسه على جميع المعلمات المطلوبة لإرسال الصف:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Pilote Java/URL base/UID/MDP/requête SQL
 </code></pre></div>
 <p>التي يجب على العميل إرسالها إلى الخادم.</p>
@@ -2051,20 +2053,20 @@
 <a id="toc10974739"></a>
 <a id="toc459349629"></a></p>
 <h3 id="643-3">6.4.3. <span style="color: #4f81bd">التمرين 3</span></h3>
-<p>يصف النص التالي مشكلة كان من المفترض في الأصل حلها في Visual Basic. قم بتكييفها للمعالجة في Java داخل تطبيق صغير. سيعتمد هذا التطبيق الصغير على الخادم من التمرين 2. يمكن تعديل الواجهة الرسومية لتتناسب مع سياق التنفيذ الجديد.</p>
-<p>نقترح إنشاء تطبيق يسلط الضوء على مختلف عمليات التحديث الممكنة على جدول في قاعدة بيانات ACCESS. تسمى قاعدة بيانات ACCESS <strong>articles.mdb</strong>. وتحتوي على جدول واحد يسمى <strong>articles</strong> يسرد العناصر التي تبيعها شركة ما. وهيكلها كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>name</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الرمز</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر المكون من 4 أحرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الاسم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسمه (سلسلة)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعره (الفعلي)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>المخزون_الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي (عدد صحيح)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد_الأدنى_للمخزون</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى للمخزون (عدد صحيح) الذي يجب تجديد المخزون عند انخفاضه إلى ما دونه</div></td></tr></table>
+<p>يصف النص التالي مشكلة كان من المفترض في الأصل حلها في <bdi dir="ltr" class="odt-ltr-term">Visual Basic.</bdi> قم بتكييفها للمعالجة في <bdi dir="ltr" class="odt-ltr-term">Java</bdi> داخل تطبيق صغير. سيعتمد هذا التطبيق الصغير على الخادم من التمرين 2. يمكن تعديل الواجهة الرسومية لتتناسب مع سياق التنفيذ الجديد.</p>
+<p>نقترح إنشاء تطبيق يسلط الضوء على مختلف عمليات التحديث الممكنة على جدول في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS.</bdi> تسمى قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> <strong><bdi dir="ltr" class="odt-ltr-term">articles.mdb</bdi></strong>. وتحتوي على جدول واحد يسمى <strong><bdi dir="ltr" class="odt-ltr-term">articles</bdi></strong> يسرد العناصر التي تبيعها شركة ما. وهيكلها كما يلي:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">name</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الرمز</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر المكون من 4 أحرف</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الاسم</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسمه (سلسلة)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعره (الفعلي)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>المخزون_الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي (عدد صحيح)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد_الأدنى_للمخزون</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى للمخزون (عدد صحيح) الذي يجب تجديد المخزون عند انخفاضه إلى ما دونه</div></td></tr></table>
 
 <p>نقترح عرض هذا الجدول وتحديثه باستخدام النموذج التالي:</p>
 <p><img src="images/10000000000004A7000003741F606AE8.png" width="596" height="442" style="width:15.759cm;height:11.696cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A7000003741F606AE8.png" /></p>
 <p>العناصر في هذا النموذج هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الوظيفة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">السجل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم السجل المعروض</div><div style="margin:0 0 0.5em 0">القيمة &quot;false&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الرمز</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم العنصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">السعر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعر العنصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي للمنتج</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى لمخزون المنتج</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">7</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">البيانات</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">البيانات 1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ضبط البيانات المرتبطة بقاعدة البيانات</div><div style="margin:0 0 0.5em 0">databasename=مسار ملف articles.mdb</div><div style="margin:0 0 0.5em 0">مصدر السجلات=articles</div><div style="margin:0 0 0.5em 0">connect=access</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">HScrollBar</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الموضع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح لك بالتنقل في الجدول</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">9</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">موافق</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح لك بتأكيد التحديث - يظهر فقط أثناء التحديث</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">10</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إلغاء</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح لك بإلغاء التحديث - يظهر فقط أثناء التحديث</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">11</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الإطار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الإطار 1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لأغراض جمالية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">12</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الأساسي</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم قاعدة البيانات المفتوحة</div><div style="margin:0 0 0.5em 0">تم تعيين enabled على false</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">13</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">sourcename</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم الجدول المفتوح</div><div style="margin:0 0 0.5em 0">تم تعيين enabled على false</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الوظيفة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">السجل</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رقم السجل المعروض</div><div style="margin:0 0 0.5em 0">القيمة &quot;<bdi dir="ltr" class="odt-ltr-term">false</bdi>&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الرمز</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">رمز العنصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم العنصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">السعر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">سعر العنصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">5</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">المخزون الحالي للمنتج</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الحد الأدنى لمخزون المنتج</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">7</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">البيانات</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">البيانات 1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ضبط البيانات المرتبطة بقاعدة البيانات</div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">databasename</bdi>=مسار ملف <bdi dir="ltr" class="odt-ltr-term">articles.mdb</bdi></div><div style="margin:0 0 0.5em 0">مصدر السجلات=<bdi dir="ltr" class="odt-ltr-term">articles</bdi></div><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">connect</bdi>=<bdi dir="ltr" class="odt-ltr-term">access</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">HScrollBar</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الموضع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح لك بالتنقل في الجدول</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">9</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">موافق</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح لك بتأكيد التحديث - يظهر فقط أثناء التحديث</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">10</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">زر</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إلغاء</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح لك بإلغاء التحديث - يظهر فقط أثناء التحديث</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">11</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الإطار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الإطار 1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لأغراض جمالية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">12</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع النص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الأساسي</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم قاعدة البيانات المفتوحة</div><div style="margin:0 0 0.5em 0">تم تعيين <bdi dir="ltr" class="odt-ltr-term">enabled</bdi> على <bdi dir="ltr" class="odt-ltr-term">false</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">13</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مربع نص</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">sourcename</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم الجدول المفتوح</div><div style="margin:0 0 0.5em 0">تم تعيين <bdi dir="ltr" class="odt-ltr-term">enabled</bdi> على <bdi dir="ltr" class="odt-ltr-term">false</bdi></div></td></tr></table>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>إنشاء الورقة في VB</b></div>
+<div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>إنشاء الورقة في <bdi dir="ltr" class="odt-ltr-term">VB</bdi></b></div>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>عنصر التحكم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الميزات الخاصة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>data1</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم ملء حقول databasename و recordsource. يجب أن يشير databasename إلى قاعدة بيانات Access <b>articles.mdb </b>الموجودة في الدليل الخاص بك، وأن يشير recordsource إلى جدول <b>articles.</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>code</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">هذا مربع نص نريد ربطه بحقل code للسجل الحالي في data1. للقيام بذلك، نملأ حقلين:</div><div style="margin:0 0 0.5em 0"><b>datasource</b>: أدخل data1 للإشارة إلى أن مربع النص مرتبط بالجدول المرتبط بـ <b>data1</b></div><div style="margin:0 0 0.5em 0"><b>حقل البيانات</b>: حدد حقل <b>الرمز </b>من جدول <b>articles</b></div><div style="margin:0 0 0.5em 0">بعد هذه الخطوات، سيحتوي مربع النص code دائمًا على حقل code للسجل الحالي في data1. وبالمقابل، سيؤدي تغيير محتوى مربع النص هذا إلى تحديث حقل code للسجل الحالي.</div><div style="margin:0 0 0.5em 0">افعل الشيء نفسه مع مربعات النص الأخرى</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>name</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: data1 حقل البيانات: name</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: data1 حقل البيانات: price</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: data1 حقل البيانات: current_stock</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد الأدنى</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: data1 حقل البيانات: stock_min</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>عنصر التحكم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الميزات الخاصة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">data1</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم ملء حقول <bdi dir="ltr" class="odt-ltr-term">databasename</bdi> و <bdi dir="ltr" class="odt-ltr-term">recordsource.</bdi> يجب أن يشير <bdi dir="ltr" class="odt-ltr-term">databasename</bdi> إلى قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Access</bdi> <b><bdi dir="ltr" class="odt-ltr-term">articles.mdb</bdi> </b>الموجودة في الدليل الخاص بك، وأن يشير <bdi dir="ltr" class="odt-ltr-term">recordsource</bdi> إلى جدول <b><bdi dir="ltr" class="odt-ltr-term">articles.</bdi></b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">code</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">هذا مربع نص نريد ربطه بحقل <bdi dir="ltr" class="odt-ltr-term">code</bdi> للسجل الحالي في <bdi dir="ltr" class="odt-ltr-term">data1.</bdi> للقيام بذلك، نملأ حقلين:</div><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">datasource</bdi></b>: أدخل <bdi dir="ltr" class="odt-ltr-term">data1</bdi> للإشارة إلى أن مربع النص مرتبط بالجدول المرتبط بـ <b><bdi dir="ltr" class="odt-ltr-term">data1</bdi></b></div><div style="margin:0 0 0.5em 0"><b>حقل البيانات</b>: حدد حقل <b>الرمز </b>من جدول <b><bdi dir="ltr" class="odt-ltr-term">articles</bdi></b></div><div style="margin:0 0 0.5em 0">بعد هذه الخطوات، سيحتوي مربع النص <bdi dir="ltr" class="odt-ltr-term">code</bdi> دائمًا على حقل <bdi dir="ltr" class="odt-ltr-term">code</bdi> للسجل الحالي في <bdi dir="ltr" class="odt-ltr-term">data1.</bdi> وبالمقابل، سيؤدي تغيير محتوى مربع النص هذا إلى تحديث حقل <bdi dir="ltr" class="odt-ltr-term">code</bdi> للسجل الحالي.</div><div style="margin:0 0 0.5em 0">افعل الشيء نفسه مع مربعات النص الأخرى</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i><bdi dir="ltr" class="odt-ltr-term">name</bdi></i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: <bdi dir="ltr" class="odt-ltr-term">data1</bdi> حقل البيانات: <bdi dir="ltr" class="odt-ltr-term">name</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>السعر</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: <bdi dir="ltr" class="odt-ltr-term">data1</bdi> حقل البيانات: <bdi dir="ltr" class="odt-ltr-term">price</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحالي</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: <bdi dir="ltr" class="odt-ltr-term">data1</bdi> حقل البيانات: <bdi dir="ltr" class="odt-ltr-term">current_stock</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>الحد الأدنى</i></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مصدر البيانات: <bdi dir="ltr" class="odt-ltr-term">data1</bdi> حقل البيانات: <bdi dir="ltr" class="odt-ltr-term">stock_min</bdi></div></td></tr></table>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>القوائم</b></div>
@@ -2077,16 +2079,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القائمة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القائمة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الوظيفة</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>إضافة
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">mnuadd</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لإضافة سجل جديد إلى جدول العناصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">mnuadd</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لإضافة سجل جديد إلى جدول العناصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>حذف
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">delete</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لحذف السجل المعروض حاليًا من جدول العناصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">delete</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لحذف السجل المعروض حاليًا من جدول العناصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>تحرير
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تحرير</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لتعديل السجل المعروض حاليًا في جدول العناصر</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>السابق
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">mnuprecedent</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للانتقال إلى السجل السابق</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">mnuprecedent</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للانتقال إلى السجل السابق</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>التالي
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لأسفل-التالي</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للتخطي إلى التسجيل التالي</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -2095,21 +2097,21 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">السابق</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للانتقال إلى المقطع الأول</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>الأخير
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">mnunlast</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للانتقال إلى آخر تسجيل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">mnunlast</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للانتقال إلى آخر تسجيل</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>خروج
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">mnuquit</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للخروج من التطبيق</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">mnuquit</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">للخروج من التطبيق</div></td></tr></table>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>تحميل الورقة</b></div>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>أثناء حدث form_load، يتم فتح الجدول المرتبط بـ <em>data1</em> (<em>data1.refresh</em>). إذا فشل فتح الجدول، يتم عرض رسالة خطأ وينتهي البرنامج (<em>end</em>). خلاف ذلك، يتم عرض النموذج مع ظهور السجل الأول من جدول <em>articles</em>. لا يُسمح بإدخال أي بيانات في الحقول (الخاصية enabled مضبوطة على false). لا يمكن الإدخال إلا باستخدام خياري Add و Edit. يتم إخفاء زري &quot;موافق&quot; و&quot;إلغاء&quot; (visible=false).</p>
+<p>أثناء حدث <bdi dir="ltr" class="odt-ltr-term">form</bdi>_load، يتم فتح الجدول المرتبط بـ <em><bdi dir="ltr" class="odt-ltr-term">data1</bdi></em> (<em><bdi dir="ltr" class="odt-ltr-term">data1.refresh</bdi></em>). إذا فشل فتح الجدول، يتم عرض رسالة خطأ وينتهي البرنامج (<em><bdi dir="ltr" class="odt-ltr-term">end</bdi></em>). خلاف ذلك، يتم عرض النموذج مع ظهور السجل الأول من جدول <em><bdi dir="ltr" class="odt-ltr-term">articles</bdi></em>. لا يُسمح بإدخال أي بيانات في الحقول (الخاصية <bdi dir="ltr" class="odt-ltr-term">enabled</bdi> مضبوطة على <bdi dir="ltr" class="odt-ltr-term">false</bdi>). لا يمكن الإدخال إلا باستخدام خياري <bdi dir="ltr" class="odt-ltr-term">Add</bdi> و <bdi dir="ltr" class="odt-ltr-term">Edit.</bdi> يتم إخفاء زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>).</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>الجزء 1</b></div>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>نقترح إنشاء الإجراءات المتعلقة بخيارات القائمة المختلفة بالإضافة إلى زري OK و Cancel. في الوقت الحالي، سنتجاهل النقاط التالية:</p>
+<p>نقترح إنشاء الإجراءات المتعلقة بخيارات القائمة المختلفة بالإضافة إلى زري <bdi dir="ltr" class="odt-ltr-term">OK</bdi> و <bdi dir="ltr" class="odt-ltr-term">Cancel.</bdi> في الوقت الحالي، سنتجاهل النقاط التالية:</p>
 <ul>
   <li>تمكين/تعطيل خيارات معينة في القائمة: على سبيل المثال، يجب تعطيل خيار &quot;<b>التالي</b>&quot; إذا كان المؤشر على السجل الأخير في الجدول
   </li>
@@ -2119,25 +2121,25 @@
 
 <p><strong>قائمة &quot;تصفح&quot;/&quot;التالي&quot;</strong></p>
 <ul>
-  <li>ينتقل إلى السجل التالي (data1.RecordSet.MoveNext) إذا لم نكن في نهاية الملف (data1.RecordSet.EOF). يقوم بتحديث مربع نص السجل (data1.RecordSet.AbsolutePosition / data1.RecordSet.RecordCount).
+  <li>ينتقل إلى السجل التالي (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.MoveNext</bdi>) إذا لم نكن في نهاية الملف (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.EOF</bdi>). يقوم بتحديث مربع نص السجل (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.AbsolutePosition</bdi> / <bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.RecordCount</bdi>).
   </li>
 </ul>
 
 <p><strong>قائمة &quot;تصفح/السابق&quot;</strong></p>
 <ul>
-  <li>ينتقل إلى السجل السابق (data1.RecordSet.MovePrevious) إذا لم نكن في بداية الملف (data1.RecordSet.BOF). يقوم بتحديث مربع نص السجل.
+  <li>ينتقل إلى السجل السابق (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.MovePrevious</bdi>) إذا لم نكن في بداية الملف (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.BOF</bdi>). يقوم بتحديث مربع نص السجل.
   </li>
 </ul>
 
 <p><strong>قائمة &quot;تصفح/الأول&quot;</strong></p>
 <ul>
-  <li>ينتقل إلى السجل الأول (data1.RecordSet.MoveFirst) إذا لم يكن الملف فارغًا (data1.RecordSet.RecordCount = 0). يقوم بتحديث مربع نص السجل.
+  <li>ينتقل إلى السجل الأول (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.MoveFirst</bdi>) إذا لم يكن الملف فارغًا (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.RecordCount</bdi> = 0). يقوم بتحديث مربع نص السجل.
   </li>
 </ul>
 
 <p><strong>قائمة &quot;تصفح/الأخير&quot;</strong></p>
 <ul>
-  <li>ينتقل إلى السجل الأخير (data1.RecordSet.MoveLast) إذا لم يكن الملف فارغًا (data1.RecordSet.RecordCount = 0). يقوم بتحديث مربع نص السجل.
+  <li>ينتقل إلى السجل الأخير (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.MoveLast</bdi>) إذا لم يكن الملف فارغًا (<bdi dir="ltr" class="odt-ltr-term">data1.RecordSet.RecordCount</bdi> = 0). يقوم بتحديث مربع نص السجل.
   </li>
 </ul>
 
@@ -2145,23 +2147,23 @@
 <ul>
   <li>يسمح لك بإضافة سجل إلى الجدول
   </li>
-  <li>يدخل في وضع إضافة سجل (data1.recordset.addnew)
+  <li>يدخل في وضع إضافة سجل (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.addnew</bdi>)
   </li>
-  <li>تمكين إدخال البيانات في الحقول الخمسة: الرمز، الاسم، السعر، إلخ. (enabled=true)
+  <li>تمكين إدخال البيانات في الحقول الخمسة: الرمز، الاسم، السعر، إلخ. (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>)
   </li>
-  <li>يعطل قوائم &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (enabled=false)
+  <li>يعطل قوائم &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>)
   </li>
-  <li>يعرض زري &quot;موافق&quot; و&quot;إلغاء&quot; (visible=true)
+  <li>يعرض زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>)
   </li>
 </ul>
 
 <p><strong>زر &quot;موافق&quot;</strong></p>
 <ul>
-  <li>يحفظ تحديث السجل (data1.recordset.Update)
+  <li>يحفظ تحديث السجل (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.Update</bdi>)
   </li>
-  <li>يخفي زري &quot;موافق&quot; و&quot;إلغاء&quot; (visible=false)
+  <li>يخفي زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>)
   </li>
-  <li>تمكين خيارات &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (enabled=true)
+  <li>تمكين خيارات &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>)
   </li>
   <li>يحدّث مربع النص في النموذج
   </li>
@@ -2169,11 +2171,11 @@
 
 <p><strong>زر &quot;إلغاء&quot;</strong></p>
 <ul>
-  <li>يلغي تحديث السجل (data1.recordset.CancelUpdate)
+  <li>يلغي تحديث السجل (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.CancelUpdate</bdi>)
   </li>
-  <li>يخفي زري &quot;موافق&quot; و&quot;إلغاء&quot; (visible=false)
+  <li>يخفي زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>)
   </li>
-  <li>تمكين خيارات &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (enabled=true)
+  <li>تمكين خيارات &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>)
   </li>
   <li>يحدّث مربع النص في النموذج
   </li>
@@ -2183,39 +2185,39 @@
 <ul>
   <li>تسمح لك بتحرير السجل المعروض في النموذج
   </li>
-  <li>يدخل في وضع تحرير السجل (data1.recordset.edit)
+  <li>يدخل في وضع تحرير السجل (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.edit</bdi>)
   </li>
-  <li>يتيح الإدخال في الحقول الأربعة: الاسم والسعر وما إلى ذلك (enabled=true) ولكن ليس في حقل الرمز (enabled=false)
+  <li>يتيح الإدخال في الحقول الأربعة: الاسم والسعر وما إلى ذلك (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>) ولكن ليس في حقل الرمز (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>)
   </li>
-  <li>يعطل قوائم &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (enabled=false)
+  <li>يعطل قوائم &quot;تحرير&quot; و&quot;تصفح&quot; و&quot;خروج&quot; (<bdi dir="ltr" class="odt-ltr-term">enabled</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>)
   </li>
-  <li>يعرض زري &quot;موافق&quot; و&quot;إلغاء&quot; (visible=true)
+  <li>يعرض زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>)
   </li>
 </ul>
 
 <p><strong>قائمة &quot;تحرير/حذف&quot;</strong></p>
 <ul>
-  <li>يسمح لك بحذف (data1.recordset.delete) السجل المعروض من الجدول 
+  <li>يسمح لك بحذف (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.delete</bdi>) السجل المعروض من الجدول 
   </li>
-  <li>ينتقل إلى السجل التالي (data1.recordset.movenext)
+  <li>ينتقل إلى السجل التالي (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.movenext</bdi>)
   </li>
 </ul>
 
 <p><strong>قائمة الخروج</strong></p>
 <ul>
-  <li>يفرغ النموذج (unload me)
+  <li>يفرغ النموذج (<bdi dir="ltr" class="odt-ltr-term">unload me</bdi>)
   </li>
 </ul>
 
-<p><strong>حدث form_unload (cancel كعدد صحيح)</strong></p>
+<p><strong>حدث <bdi dir="ltr" class="odt-ltr-term">form</bdi>_unload (<bdi dir="ltr" class="odt-ltr-term">cancel</bdi> كعدد صحيح)</strong></p>
 <ul>
-  <li>يتم تشغيله بواسطة عملية<b> unload me </b>أو عن طريق إغلاق النموذج باستخدام Alt-F4 أو النقر المزدوج على أيقونة علبة النظام، وليس بالضرورة عن طريق خيار <b>الخروج</b>.
+  <li>يتم تشغيله بواسطة عملية<b> <bdi dir="ltr" class="odt-ltr-term">unload me</bdi> </b>أو عن طريق إغلاق النموذج باستخدام <bdi dir="ltr" class="odt-ltr-term">Alt-F4</bdi> أو النقر المزدوج على أيقونة علبة النظام، وليس بالضرورة عن طريق خيار <b>الخروج</b>.
   </li>
-  <li>يعرض السؤال &quot;هل تريد حقًا الخروج من التطبيق؟&quot; مع زرين نعم/لا (msgbox مع style=vbyes+vbno)
+  <li>يعرض السؤال &quot;هل تريد حقًا الخروج من التطبيق؟&quot; مع زرين نعم/لا (<bdi dir="ltr" class="odt-ltr-term">msgbox</bdi> مع <bdi dir="ltr" class="odt-ltr-term">style</bdi>=<bdi dir="ltr" class="odt-ltr-term">vbyes+vbno</bdi>)
   </li>
-  <li>إذا كانت الإجابة &quot;لا&quot; (=vbno)، فاضبط الإلغاء على -1 واخرج من إجراء form_unload. الإلغاء المضبوط على -1 يشير إلى رفض إغلاق النافذة.
+  <li>إذا كانت الإجابة &quot;لا&quot; (=<bdi dir="ltr" class="odt-ltr-term">vbno</bdi>)، فاضبط الإلغاء على -1 واخرج من إجراء <bdi dir="ltr" class="odt-ltr-term">form_unload.</bdi> الإلغاء المضبوط على -1 يشير إلى رفض إغلاق النافذة.
   </li>
-  <li>إذا كانت الإجابة &quot;نعم&quot; (=vbyes)، يتم إغلاق قاعدة البيانات (data1.recordset.close، data1.database.close).
+  <li>إذا كانت الإجابة &quot;نعم&quot; (=<bdi dir="ltr" class="odt-ltr-term">vbyes</bdi>)، يتم إغلاق قاعدة البيانات (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.close</bdi>، <bdi dir="ltr" class="odt-ltr-term">data1.database.close</bdi>).
   </li>
 </ul>
 
@@ -2223,7 +2225,7 @@
 <div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>الجزء 2 - إدارة القوائم</b></div>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>هنا، نركز على تمكين/تعطيل القوائم. بعد كل عملية تغير السجل الحالي، سنستدعي إجراءً يمكننا تسميته <strong>Oueston</strong>. سيتحقق هذا الإجراء من الشروط التالية:</p>
+<p>هنا، نركز على تمكين/تعطيل القوائم. بعد كل عملية تغير السجل الحالي، سنستدعي إجراءً يمكننا تسميته <strong><bdi dir="ltr" class="odt-ltr-term">Oueston</bdi></strong>. سيتحقق هذا الإجراء من الشروط التالية:</p>
 <p>.    إذا كان الملف فارغًا، فإننا</p>
 <ul>
   <li>قوائم &quot;تصفح&quot; و&quot;تحرير/حذف&quot;، 
@@ -2254,35 +2256,35 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>يحتوي شريط التمرير الأفقي على ثلاثة حقول مهمة:</p>
 <ul>
-  <li>min: قيمته الدنيا
+  <li><bdi dir="ltr" class="odt-ltr-term">min:</bdi> قيمته الدنيا
   </li>
-  <li>max: قيمته القصوى
+  <li><bdi dir="ltr" class="odt-ltr-term">max:</bdi> قيمته القصوى
   </li>
   <li>القيمة: قيمته الحالية
   </li>
 </ul>
 
 <p><strong>تهيئة شريط التمرير</strong></p>
-<p>عند التحميل (form_load)، سيتم تهيئة شريط التمرير على النحو التالي:</p>
+<p>عند التحميل (<bdi dir="ltr" class="odt-ltr-term">form</bdi>_load)، سيتم تهيئة شريط التمرير على النحو التالي:</p>
 <ul>
-  <li>min=0
+  <li><bdi dir="ltr" class="odt-ltr-term">min</bdi>=0
   </li>
-  <li>max=data1.recordset.recordcount-1
+  <li><bdi dir="ltr" class="odt-ltr-term">max</bdi>=<bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount-1</bdi>
   </li>
   <li>القيمة=1
   </li>
 </ul>
 
-<p>لاحظ أنه فور فتح قاعدة البيانات (data1.refresh)، يكون عدد السجلات في الجدول الذي يمثله data1.recordset.recordcount غير صحيح. يجب الانتقال إلى نهاية الجدول (MoveLast)، ثم العودة إلى بداية الجدول (MoveFirst) حتى يصبح صحيحًا.</p>
+<p>لاحظ أنه فور فتح قاعدة البيانات (<bdi dir="ltr" class="odt-ltr-term">data1.refresh</bdi>)، يكون عدد السجلات في الجدول الذي يمثله <bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount</bdi> غير صحيح. يجب الانتقال إلى نهاية الجدول (<bdi dir="ltr" class="odt-ltr-term">MoveLast</bdi>)، ثم العودة إلى بداية الجدول (<bdi dir="ltr" class="odt-ltr-term">MoveFirst</bdi>) حتى يصبح صحيحًا.</p>
 <p><strong>الإجراء المباشر على محرك الأقراص</strong></p>
 <p>يمثل موضع مؤشر شريط التمرير الموضع في الجدول.</p>
-<p>عندما يغير المستخدم شريط التمرير (المسمى position هنا)، يتم تشغيل حدث position_change. في هذا الحدث، سنقوم بتغيير السجل الحالي في الجدول بحيث يعكس الحركة التي تمت على شريط التمرير. للقيام بذلك، سنستخدم حقل <strong>absoluteposition</strong> في data1.recordset. عندما نعين القيمة <strong>i</strong> لهذا الحقل، يصبح السجل رقم i في الجدول هو السجل الحالي. يتم ترقيم السجلات بدءًا من 0، وبالتالي يكون لها رقم في النطاق [0،data1.recordset.recordcount-1]. في الإجراء position_change، نكتب ببساطة</p>
+<p>عندما يغير المستخدم شريط التمرير (المسمى <bdi dir="ltr" class="odt-ltr-term">position</bdi> هنا)، يتم تشغيل حدث <bdi dir="ltr" class="odt-ltr-term">position</bdi>_change. في هذا الحدث، سنقوم بتغيير السجل الحالي في الجدول بحيث يعكس الحركة التي تمت على شريط التمرير. للقيام بذلك، سنستخدم حقل <strong><bdi dir="ltr" class="odt-ltr-term">absoluteposition</bdi></strong> في <bdi dir="ltr" class="odt-ltr-term">data1.recordset.</bdi> عندما نعين القيمة <strong><bdi dir="ltr" class="odt-ltr-term">i</bdi></strong> لهذا الحقل، يصبح السجل رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في الجدول هو السجل الحالي. يتم ترقيم السجلات بدءًا من 0، وبالتالي يكون لها رقم في النطاق [0،<bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount-1</bdi>]. في الإجراء <bdi dir="ltr" class="odt-ltr-term">position</bdi>_change، نكتب ببساطة</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>    data1.recordset.absoluteposition=position.value
 </code></pre></div>
 <p>بحيث يعكس السجل الحالي المعروض في النموذج الحركة التي تمت على عصا التحكم.</p>
-<p>بمجرد الانتهاء من ذلك، سنقوم بعد ذلك باستدعاء إجراء <strong>Oueston</strong> لتحديث القوائم.</p>
-<p><strong>تحديث DCS</strong></p>
-<p>نظرًا لأن موضع مؤشر محرك الأقراص يجب أن يعكس الموضع في الجدول، يجب تحديث قيمة محرك الأقراص في كل مرة يحدث فيها تغيير في السجل الحالي في الجدول، يتم تشغيله بواسطة إحدى القوائم. نظرًا لأن كل منها يستدعي إجراء Oueston، فمن الأفضل وضع هذا التحديث داخل هذا الإجراء أيضًا. اكتب هنا ببساطة:</p>
+<p>بمجرد الانتهاء من ذلك، سنقوم بعد ذلك باستدعاء إجراء <strong><bdi dir="ltr" class="odt-ltr-term">Oueston</bdi></strong> لتحديث القوائم.</p>
+<p><strong>تحديث <bdi dir="ltr" class="odt-ltr-term">DCS</bdi></strong></p>
+<p>نظرًا لأن موضع مؤشر محرك الأقراص يجب أن يعكس الموضع في الجدول، يجب تحديث قيمة محرك الأقراص في كل مرة يحدث فيها تغيير في السجل الحالي في الجدول، يتم تشغيله بواسطة إحدى القوائم. نظرًا لأن كل منها يستدعي إجراء <bdi dir="ltr" class="odt-ltr-term">Oueston</bdi>، فمن الأفضل وضع هذا التحديث داخل هذا الإجراء أيضًا. اكتب هنا ببساطة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>    position.value=data1.recordset.absoluteposition
 </code></pre></div>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
@@ -2292,29 +2294,29 @@
 <p>نضيف خيار التصفح/البحث، الذي يسمح للمستخدم بعرض عنصر ما عن طريق إدخال رمزه.</p>
 <p>عند تمكين هذا الخيار، تحدث الخطوات التالية:</p>
 <ul>
-  <li>يتحول النظام إلى وضع &quot;إضافة جديد&quot; (Addnew)، وذلك فقط لتجنب تعديل السجل الحالي الذي كان مفتوحًا عند تمكين الخيار،
+  <li>يتحول النظام إلى وضع &quot;إضافة جديد&quot; (<bdi dir="ltr" class="odt-ltr-term">Addnew</bdi>)، وذلك فقط لتجنب تعديل السجل الحالي الذي كان مفتوحًا عند تمكين الخيار،
   </li>
   <li>نقوم بتمكين الإدخال في حقل الرمز ومسح محتويات حقل السجل،
   </li>
   <li>يتم تعطيل القوائم، ويتم عرض زري <b>&quot;موافق</b>&quot; و&quot;<b>إلغاء</b>&quot;
   </li>
-  <li>عندما ينقر المستخدم على &quot;موافق&quot;، يجب أن نبحث عن السجل المطابق للرمز الذي أدخله المستخدم. ومع ذلك، فإن إجراء OK_click مستخدم بالفعل لخياري <b>&quot;تصفح/إضافة</b>&quot; و<b>&quot;تصفح/تعديل</b>&quot;. للتمييز بين هذه الحالات، نحتاج إلى إدارة متغير عام، سنسميه هنا &quot;<b>state</b>&quot;، والذي سيكون له ثلاث قيم محتملة: &quot;add&quot; و&quot;modify&quot; و&quot;search&quot;. ستستخدم الإجراءات المرتبطة بزرّي &quot;موافق&quot; و&quot;إلغاء&quot; هذا المتغير لتحديد السياق الذي يتم استدعاؤها فيه.
+  <li>عندما ينقر المستخدم على &quot;موافق&quot;، يجب أن نبحث عن السجل المطابق للرمز الذي أدخله المستخدم. ومع ذلك، فإن إجراء <bdi dir="ltr" class="odt-ltr-term">OK_click</bdi> مستخدم بالفعل لخياري <b>&quot;تصفح/إضافة</b>&quot; و<b>&quot;تصفح/تعديل</b>&quot;. للتمييز بين هذه الحالات، نحتاج إلى إدارة متغير عام، سنسميه هنا &quot;<b><bdi dir="ltr" class="odt-ltr-term">state</bdi></b>&quot;، والذي سيكون له ثلاث قيم محتملة: &quot;<bdi dir="ltr" class="odt-ltr-term">add</bdi>&quot; و&quot;<bdi dir="ltr" class="odt-ltr-term">modify</bdi>&quot; و&quot;<bdi dir="ltr" class="odt-ltr-term">search</bdi>&quot;. ستستخدم الإجراءات المرتبطة بزرّي &quot;موافق&quot; و&quot;إلغاء&quot; هذا المتغير لتحديد السياق الذي يتم استدعاؤها فيه.
   </li>
-  <li>إذا كانت<b> الحالة </b>هي &quot;search&quot;، في الإجراء المرتبط بـ OK، فإننا
+  <li>إذا كانت<b> الحالة </b>هي &quot;<bdi dir="ltr" class="odt-ltr-term">search</bdi>&quot;، في الإجراء المرتبط بـ <bdi dir="ltr" class="odt-ltr-term">OK</bdi>، فإننا
     <ul>
-      <li>نقوم بإلغاء عملية addnew (data1.recordset.cancelupdate) لأننا لم نكن ننوي إضافة سجل. لاحظ أن السجل الحالي يعود بعد ذلك إلى السجل الذي كان معروضًا على الشاشة قبل عملية &quot;تصفح/بحث&quot;.
+      <li>نقوم بإلغاء عملية <bdi dir="ltr" class="odt-ltr-term">addnew</bdi> (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.cancelupdate</bdi>) لأننا لم نكن ننوي إضافة سجل. لاحظ أن السجل الحالي يعود بعد ذلك إلى السجل الذي كان معروضًا على الشاشة قبل عملية &quot;تصفح/بحث&quot;.
       </li>
-      <li>قم ببناء معايير البحث بناءً على الرمز وابدأ البحث (data1.recordset.findfirst criteria)،
+      <li>قم ببناء معايير البحث بناءً على الرمز وابدأ البحث (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.findfirst criteria</bdi>)،
       </li>
-      <li>وإذا فشل البحث (data1.recordset.nomatch=true)، نقوم بإخطار المستخدم، ثم نعود إلى وضع الإضافة (addnew) ونخرج من الإجراء OK. سيحتاج المستخدم إلى إعادة إدخال رمز جديد أو تحديد خيار Cancel.
+      <li>وإذا فشل البحث (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.nomatch</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi>)، نقوم بإخطار المستخدم، ثم نعود إلى وضع الإضافة (<bdi dir="ltr" class="odt-ltr-term">addnew</bdi>) ونخرج من الإجراء <bdi dir="ltr" class="odt-ltr-term">OK.</bdi> سيحتاج المستخدم إلى إعادة إدخال رمز جديد أو تحديد خيار <bdi dir="ltr" class="odt-ltr-term">Cancel.</bdi>
       </li>
       <li>إذا نجح البحث، يصبح السجل الذي تم العثور عليه هو السجل النشط الجديد. نقوم باستعادة القوائم وإخفاء أزرار &quot;موافق&quot;/&quot;إلغاء&quot; وتعطيل الإدخال في حقل الرمز والخروج من الإجراء.
       </li>
     </ul>
   </li>
-  <li>.    إذا كانت<b> الحالة </b>&quot;search&quot;، في الإجراء المرتبط بـ Cancel، فإننا
+  <li>.    إذا كانت<b> الحالة </b>&quot;<bdi dir="ltr" class="odt-ltr-term">search</bdi>&quot;، في الإجراء المرتبط بـ <bdi dir="ltr" class="odt-ltr-term">Cancel</bdi>، فإننا
     <ul>
-      <li>نقوم بإلغاء عملية addnew (data1.recordset.cancelupdate). ثم يعود النظام تلقائيًا إلى السجل الذي كان نشطًا قبل عملية التصفح/البحث.
+      <li>نقوم بإلغاء عملية <bdi dir="ltr" class="odt-ltr-term">addnew</bdi> (<bdi dir="ltr" class="odt-ltr-term">data1.recordset.cancelupdate</bdi>). ثم يعود النظام تلقائيًا إلى السجل الذي كان نشطًا قبل عملية التصفح/البحث.
       </li>
       <li>استعادة القوائم، وإخفاء أزرار &quot;موافق&quot;/&quot;إلغاء&quot;، وتعطيل الإدخال في حقل الرمز، والخروج من الإجراء.
       </li>
@@ -2385,7 +2387,7 @@
 <a id="__codelineno-53-19" name="__codelineno-53-19" href="#__codelineno-53-19"></a>skis nautiques, 3, 1800.00 F, 5400.00 F
 <a id="__codelineno-53-20" name="__codelineno-53-20" href="#__codelineno-53-20"></a>Total à payer : 7804 F
 </code></pre></div>
-<p><strong>السؤال</strong>: قم بإنشاء ما يعادل هذا التطبيق الويب باستخدام تطبيق Java الصغير.</p>
+<p><strong>السؤال</strong>: قم بإنشاء ما يعادل هذا التطبيق الويب باستخدام تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الصغير.</p>
 
 
 

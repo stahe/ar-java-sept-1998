@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -772,7 +774,7 @@
 <a id="toc9394428"></a>
 <a id="toc9054087"></a></p>
 <h2 id="71">7.1. <span style="color: #4f81bd">مقدمة</span></h2>
-<p>عند تشغيل أحد التطبيقات، يتم تنفيذه في تدفق تنفيذ يُسمى <strong>مؤشر ترابط</strong>. الفئة التي تمثل <em>مؤشر الترابط</em> هي فئة <em>java.lang.Thread</em>، والتي تحتوي على الخصائص والطرق التالية:</p>
+<p>عند تشغيل أحد التطبيقات، يتم تنفيذه في تدفق تنفيذ يُسمى <strong>مؤشر ترابط</strong>. الفئة التي تمثل <em>مؤشر الترابط</em> هي فئة <em><bdi dir="ltr" class="odt-ltr-term">java.lang.Thread</bdi></em>، والتي تحتوي على الخصائص والطرق التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">currentThread</span><span class="p">()</span>
 </code></pre></div>
@@ -791,10 +793,10 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يبدأ تنفيذ الخيط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>run()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم تنفيذ هذه الطريقة تلقائيًا بعد تنفيذ طريقة start السابقة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتم تنفيذ هذه الطريقة تلقائيًا بعد تنفيذ طريقة <bdi dir="ltr" class="odt-ltr-term">start</bdi> السابقة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sleep(n)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">توقف تنفيذ مؤشر الترابط لمدة n مللي ثانية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">توقف تنفيذ مؤشر الترابط لمدة <bdi dir="ltr" class="odt-ltr-term">n</bdi> مللي ثانية</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>join()
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عملية حجب — تنتظر انتهاء الخيط قبل الانتقال إلى التعليمات التالية</div></td></tr></table>
@@ -803,10 +805,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Thread</span><span class="p">()</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ مرجعًا لمهمة غير متزامنة. هذه المهمة لا تزال غير نشطة. يجب أن تحتوي المهمة التي تم إنشاؤها على طريقة <b>تشغيل</b>: في أغلب الأحيان، سيتم استخدام فئة مشتقة من <i>Thread</i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ مرجعًا لمهمة غير متزامنة. هذه المهمة لا تزال غير نشطة. يجب أن تحتوي المهمة التي تم إنشاؤها على طريقة <b>تشغيل</b>: في أغلب الأحيان، سيتم استخدام فئة مشتقة من <i><bdi dir="ltr" class="odt-ltr-term">Thread</bdi></i>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Thread</span><span class="p">(</span><span class="n">Runnable</span><span class="w"> </span><span class="n">object</span><span class="p">)</span>
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مثل ما سبق، لكن الكائن <i>Runnable</i> الذي يتم تمريره كمعلمة ينفذ طريقة <i>run</i>.</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مثل ما سبق، لكن الكائن <i><bdi dir="ltr" class="odt-ltr-term">Runnable</bdi></i> الذي يتم تمريره كمعلمة ينفذ طريقة <i><bdi dir="ltr" class="odt-ltr-term">run</bdi></i>.</div></td></tr></table>
 
 <p>دعونا نلقي نظرة على تطبيق بسيط يوضح وجود مؤشر ترابط تنفيذ رئيسي — وهو المؤشر الذي تعمل فيه الدالة <em>الرئيسية</em> للفئة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// use of threads</span>
@@ -855,9 +857,9 @@
 <ul>
   <li>تعمل الدالة <i>الرئيسية </i>بشكل صحيح في مؤشر ترابط
   </li>
-  <li>يمكننا الوصول إلى خصائص هذا الخيط عبر <i>Thread.currentThread()</i>
+  <li>يمكننا الوصول إلى خصائص هذا الخيط عبر <i><bdi dir="ltr" class="odt-ltr-term">Thread.currentThread</bdi>()</i>
   </li>
-  <li>دور طريقة <i>sleep</i>. هنا، يظل الخيط الذي ينفذ <i>main </i>في حالة سكون لمدة ثانية واحدة بين كل عرض.
+  <li>دور طريقة <i><bdi dir="ltr" class="odt-ltr-term">sleep</bdi></i>. هنا، يظل الخيط الذي ينفذ <i><bdi dir="ltr" class="odt-ltr-term">main</bdi> </i>في حالة سكون لمدة ثانية واحدة بين كل عرض.
   </li>
 </ul>
 <p><a id="toc12502417"></a>
@@ -870,27 +872,27 @@
 <h2 id="72">7.2. <span style="color: #4f81bd">إنشاء خيوط التنفيذ</span></h2>
 <p>من الممكن أن تكون هناك تطبيقات حيث يتم تنفيذ أجزاء من الكود &quot;بشكل متزامن&quot; في خيوط تنفيذ مختلفة. عندما نقول أن الخيوط تعمل بشكل متزامن، فإننا غالبًا ما نستخدم المصطلح بشكل فضفاض. إذا كان الجهاز يحتوي على معالج واحد فقط، كما هو الحال في كثير من الأحيان، فإن الخيوط تتشارك هذا المعالج: حيث يمكن لكل منها الوصول إليه، بالتناوب، لفترة وجيزة (بضع ميلي ثوانٍ). وهذا ما يخلق الوهم بالتنفيذ المتوازي. يعتمد مقدار الوقت المخصص <em>لخيط</em> على عوامل مختلفة، بما في ذلك أولويته، التي لها قيمة افتراضية ولكن يمكن أيضًا تعيينها برمجيًا. عندما يكون <em>الخيط</em> هو صاحب المعالج، فإنه عادةً ما يستخدمه طوال الوقت المخصص له. ومع ذلك، يمكنه تحريره مبكرًا:</p>
 <ul>
-  <li>عن طريق انتظار حدث (<i>wait، join</i>)
+  <li>عن طريق انتظار حدث (<i><bdi dir="ltr" class="odt-ltr-term">wait</bdi>، <bdi dir="ltr" class="odt-ltr-term">join</bdi></i>)
   </li>
-  <li>عن طريق السكون لفترة محددة (<i>sleep</i>)
+  <li>عن طريق السكون لفترة محددة (<i><bdi dir="ltr" class="odt-ltr-term">sleep</bdi></i>)
   </li>
 </ul>
 
 <ul>
-  <li>يمكن إنشاء <b>مؤشر ترابط T </b>بطرق مختلفة
+  <li>يمكن إنشاء <b>مؤشر ترابط <bdi dir="ltr" class="odt-ltr-term">T</bdi> </b>بطرق مختلفة
   </li>
 </ul>
 
 <ol>
     <ul>
-      <li>عن طريق توسيع فئة <i>Thread </i>وتجاوز طريقة <i>run</i> الخاصة بها.
+      <li>عن طريق توسيع فئة <i><bdi dir="ltr" class="odt-ltr-term">Thread</bdi> </i>وتجاوز طريقة <i><bdi dir="ltr" class="odt-ltr-term">run</bdi></i> الخاصة بها.
       </li>
-      <li>عن طريق تنفيذ واجهة <i>Runnable </i>في فئة واستخدام منشئ<i> new Thread(Runnable)</i>. <i>Runnable </i>هي واجهة تحدد طريقة واحدة فقط: <i>public void run()</i>. وبالتالي، فإن وسيطة المنشئ السابق هي أي مثيل فئة ينفذ طريقة <i>run</i> هذه.
+      <li>عن طريق تنفيذ واجهة <i><bdi dir="ltr" class="odt-ltr-term">Runnable</bdi> </i>في فئة واستخدام منشئ<i> <bdi dir="ltr" class="odt-ltr-term">new Thread</bdi>(<bdi dir="ltr" class="odt-ltr-term">Runnable</bdi>)</i>. <i><bdi dir="ltr" class="odt-ltr-term">Runnable</bdi> </i>هي واجهة تحدد طريقة واحدة فقط: <i><bdi dir="ltr" class="odt-ltr-term">public void run</bdi>()</i>. وبالتالي، فإن وسيطة المنشئ السابق هي أي مثيل فئة ينفذ طريقة <i><bdi dir="ltr" class="odt-ltr-term">run</bdi></i> هذه.
       </li>
     </ul>
 </ol>
 
-<p>في المثال التالي، يتم إنشاء الخيوط باستخدام فئة مجهولة تمتد فئة Thread:</p>
+<p>في المثال التالي، يتم إنشاء الخيوط باستخدام فئة مجهولة تمتد فئة <bdi dir="ltr" class="odt-ltr-term">Thread:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">            </span><span class="c1">// create thread i</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">            </span><span class="n">tâches</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="k">new</span><span class="w"> </span><span class="n">Thread</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">          </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -898,19 +900,19 @@
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">      </span><span class="p">};</span><span class="c1">//def tasks[i]</span>
 </code></pre></div>
-<p>تقوم طريقة <em>run</em> هنا ببساطة باستدعاء طريقة <em>display</em>.</p>
+<p>تقوم طريقة <em><bdi dir="ltr" class="odt-ltr-term">run</bdi></em> هنا ببساطة باستدعاء طريقة <em><bdi dir="ltr" class="odt-ltr-term">display</bdi></em>.</p>
 <ul>
-  <li>يتم بدء تنفيذ الخيط T بواسطة <b>T.start()</b>: تنتمي هذه الطريقة إلى فئة Thread وتقوم بعدد من عمليات التهيئة قبل استدعاء طريقة <i>run</i> الخاصة بـ Thread أو واجهة <i>Runnable </i>تلقائيًا. لا ينتظر البرنامج الذي ينفذ عبارة<i> T.start() </i>انتهاء المهمة T: بل ينتقل فورًا إلى العبارة التالية. وبذلك يكون لدينا مهمتان تعملان بالتوازي. وغالبًا ما تحتاجان إلى التواصل مع بعضهما البعض لمعرفة حالة العمل المشترك المطلوب إنجازه. وهذه هي مشكلة تزامن الخيوط.
+  <li>يتم بدء تنفيذ الخيط <bdi dir="ltr" class="odt-ltr-term">T</bdi> بواسطة <b><bdi dir="ltr" class="odt-ltr-term">T.start</bdi>()</b>: تنتمي هذه الطريقة إلى فئة <bdi dir="ltr" class="odt-ltr-term">Thread</bdi> وتقوم بعدد من عمليات التهيئة قبل استدعاء طريقة <i><bdi dir="ltr" class="odt-ltr-term">run</bdi></i> الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">Thread</bdi> أو واجهة <i><bdi dir="ltr" class="odt-ltr-term">Runnable</bdi> </i>تلقائيًا. لا ينتظر البرنامج الذي ينفذ عبارة<i> <bdi dir="ltr" class="odt-ltr-term">T.start</bdi>() </i>انتهاء المهمة <bdi dir="ltr" class="odt-ltr-term">T:</bdi> بل ينتقل فورًا إلى العبارة التالية. وبذلك يكون لدينا مهمتان تعملان بالتوازي. وغالبًا ما تحتاجان إلى التواصل مع بعضهما البعض لمعرفة حالة العمل المشترك المطلوب إنجازه. وهذه هي مشكلة تزامن الخيوط.
   </li>
 </ul>
 
 <ul>
-  <li>بمجرد بدء التشغيل، يعمل الخيط بشكل مستقل. وسيتوقف عندما تنتهي وظيفة <i>run </i>التي يقوم بتنفيذها من عملها.
+  <li>بمجرد بدء التشغيل، يعمل الخيط بشكل مستقل. وسيتوقف عندما تنتهي وظيفة <i><bdi dir="ltr" class="odt-ltr-term">run</bdi> </i>التي يقوم بتنفيذها من عملها.
   </li>
 </ul>
 
 <ul>
-  <li>يمكننا انتظار انتهاء تنفيذ الخيط T باستخدام <b>T.join()</b>. هذه تعليمات حجب: يتم حجب البرنامج الذي ينفذها حتى تنتهي المهمة T من عملها. وهي أيضًا وسيلة للتزامن.
+  <li>يمكننا انتظار انتهاء تنفيذ الخيط <bdi dir="ltr" class="odt-ltr-term">T</bdi> باستخدام <b><bdi dir="ltr" class="odt-ltr-term">T.join</bdi>()</b>. هذه تعليمات حجب: يتم حجب البرنامج الذي ينفذها حتى تنتهي المهمة <bdi dir="ltr" class="odt-ltr-term">T</bdi> من عملها. وهي أيضًا وسيلة للتزامن.
   </li>
 </ul>
 
@@ -972,7 +974,7 @@
 <a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a><span class="w">    </span><span class="p">}</span><span class="c1">// poster</span>
 <a id="__codelineno-12-56" name="__codelineno-12-56" href="#__codelineno-12-56"></a><span class="p">}</span><span class="c1">//class</span>
 </code></pre></div>
-<p>يقوم الخيط الرئيسي، الذي ينفذ الدالة الرئيسية، بإنشاء 5 خيوط أخرى مسؤولة عن تنفيذ الدالة الثابتة <em>display</em>. النتائج هي كما يلي:</p>
+<p>يقوم الخيط الرئيسي، الذي ينفذ الدالة الرئيسية، بإنشاء 5 خيوط أخرى مسؤولة عن تنفيذ الدالة الثابتة <em><bdi dir="ltr" class="odt-ltr-term">display</bdi></em>. النتائج هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">début du thread myMainThread</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Début d&#x27;exécution de la méthode affiche dans le Thread 0 : 15:48:3</span></span>
@@ -997,15 +999,15 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>            // on lance l&#39;exécution du thread i
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>            tâches[i].start();
 </code></pre></div>
-<p>تبدأ تنفيذ مؤشر الترابط <em>tasks[i]</em>، ولكن بمجرد الانتهاء من ذلك، يستمر التنفيذ فورًا مع العبارة التالية دون انتظار انتهاء مؤشر الترابط.</p>
+<p>تبدأ تنفيذ مؤشر الترابط <em><bdi dir="ltr" class="odt-ltr-term">tasks</bdi>[<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</em>، ولكن بمجرد الانتهاء من ذلك، يستمر التنفيذ فورًا مع العبارة التالية دون انتظار انتهاء مؤشر الترابط.</p>
 <ul>
   <li>يجب أن تنفذ جميع الخيوط التي تم إنشاؤها طريقة <i>العرض</i>. ترتيب التنفيذ غير متوقع. على الرغم من أن ترتيب التنفيذ في المثال يبدو أنه يتبع الترتيب الذي تم فيه تشغيل الخيوط، لا يمكن استخلاص أي استنتاجات عامة من ذلك. يحتوي نظام التشغيل هنا على 6 خيوط ومعالج واحد. وسيقوم بتخصيص المعالج لهذه الخيوط الست وفقًا لقواعده الخاصة.
   </li>
-  <li>تُظهر النتائج تأثير طريقة <i>sleep</i>. في المثال، يكون الخيط 0 هو أول من ينفذ طريقة <i>display</i>. يتم عرض رسالة بدء التنفيذ، ثم ينفذ طريقة sleep، التي تعلقه لمدة ثانية واحدة. ثم يفقد المعالج، الذي يصبح متاحًا لخيط آخر. يوضح المثال أن الخيط 1 سيحصل عليه. سيتبع الخيط 1 نفس مسار الخيوط الأخرى. عندما تنتهي فترة السكون التي تبلغ ثانية واحدة للخيط 0، يمكن استئناف تنفيذه. يمنحه النظام المعالج، ويمكنه إكمال تنفيذ طريقة <i>العرض</i>.
+  <li>تُظهر النتائج تأثير طريقة <i><bdi dir="ltr" class="odt-ltr-term">sleep</bdi></i>. في المثال، يكون الخيط 0 هو أول من ينفذ طريقة <i><bdi dir="ltr" class="odt-ltr-term">display</bdi></i>. يتم عرض رسالة بدء التنفيذ، ثم ينفذ طريقة <bdi dir="ltr" class="odt-ltr-term">sleep</bdi>، التي تعلقه لمدة ثانية واحدة. ثم يفقد المعالج، الذي يصبح متاحًا لخيط آخر. يوضح المثال أن الخيط 1 سيحصل عليه. سيتبع الخيط 1 نفس مسار الخيوط الأخرى. عندما تنتهي فترة السكون التي تبلغ ثانية واحدة للخيط 0، يمكن استئناف تنفيذه. يمنحه النظام المعالج، ويمكنه إكمال تنفيذ طريقة <i>العرض</i>.
   </li>
 </ul>
 
-<p>دعونا نعدل برنامجنا لإنهاء طريقة <code>*main</code>* بالتعليمات التالية:</p>
+<p>دعونا نعدل برنامجنا لإنهاء طريقة <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;main&lt;/bdi&gt;</code>* بالتعليمات التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">         </span><span class="c1">// end of hand</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;fin du thread &quot;</span><span class="w"> </span><span class="o">+</span><span class="n">main</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">     </span><span class="c1">// application shutdown</span>
@@ -1025,7 +1027,7 @@
 <p>بمجرد أن تنفذ الطريقة <em>الرئيسية</em> العبارة: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>    System.exit(0);
 </code></pre></div>
-<p>تتوقف جميع مؤشرات الترابط الخاصة بالتطبيق، وليس مؤشر الترابط <em>الرئيسي</em> فقط. قد ترغب الطريقة <em>الرئيسية</em> في انتظار انتهاء تنفيذ مؤشرات الترابط التي أنشأتها قبل إنهاء نفسها. يمكن القيام بذلك باستخدام طريقة <em>join</em> الخاصة بفئة <em>Thread</em>:</p>
+<p>تتوقف جميع مؤشرات الترابط الخاصة بالتطبيق، وليس مؤشر الترابط <em>الرئيسي</em> فقط. قد ترغب الطريقة <em>الرئيسية</em> في انتظار انتهاء تنفيذ مؤشرات الترابط التي أنشأتها قبل إنهاء نفسها. يمكن القيام بذلك باستخدام طريقة <em><bdi dir="ltr" class="odt-ltr-term">join</bdi></em> الخاصة بفئة <em><bdi dir="ltr" class="odt-ltr-term">Thread</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">     </span><span class="c1">// waiting for all threads</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">tâches</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">            </span><span class="c1">// we wait for thread i</span>
@@ -1060,9 +1062,9 @@
 <a id="toc9394430"></a>
 <a id="toc9054089"></a></p>
 <h2 id="73">7.3. <span style="color: #4f81bd">فوائد الخيوط</span></h2>
-<p>الآن بعد أن أبرزنا وجود مؤشر ترابط افتراضي — وهو الذي ينفذ الطريقة <em>Main</em> — ونعرف كيفية إنشاء مؤشرات ترابط أخرى، دعونا ننظر في فوائد مؤشرات الترابط بالنسبة لنا ولماذا نعرضها هنا. هناك نوع من التطبيقات يناسب استخدام الخيوط بشكل جيد: تطبيقات العميل-الخادم على الإنترنت. في مثل هذا التطبيق، يستجيب خادم موجود على الجهاز S1 لطلبات العملاء الموجودين على أجهزة بعيدة C1، C2، ...، Cn.</p>
+<p>الآن بعد أن أبرزنا وجود مؤشر ترابط افتراضي — وهو الذي ينفذ الطريقة <em><bdi dir="ltr" class="odt-ltr-term">Main</bdi></em> — ونعرف كيفية إنشاء مؤشرات ترابط أخرى، دعونا ننظر في فوائد مؤشرات الترابط بالنسبة لنا ولماذا نعرضها هنا. هناك نوع من التطبيقات يناسب استخدام الخيوط بشكل جيد: تطبيقات العميل-الخادم على الإنترنت. في مثل هذا التطبيق، يستجيب خادم موجود على الجهاز <bdi dir="ltr" class="odt-ltr-term">S1</bdi> لطلبات العملاء الموجودين على أجهزة بعيدة <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، <bdi dir="ltr" class="odt-ltr-term">C2</bdi>، ...، <bdi dir="ltr" class="odt-ltr-term">Cn.</bdi></p>
 <p><img src="images/100000000000037D0000012A2A636DB3.png" width="445" height="148" style="width:11.762cm;height:3.925cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000037D0000012A2A636DB3.png" /></p>
-<p>نستخدم تطبيقات الإنترنت التي تتبع هذا النمط كل يوم: خدمات الويب، والبريد الإلكتروني، وتصفح المنتديات، ونقل الملفات... في الرسم البياني أعلاه، يجب أن يخدم الخادم S1 العملاء C1، C2، ...، Cn في وقت واحد. إذا أخذنا مثال خادم FTP (بروتوكول نقل الملفات) الذي يوصل الملفات إلى عملائه، فإننا نعلم أن نقل الملفات قد يستغرق أحيانًا عدة ساعات. وبالطبع، من المستحيل أن يحتكر عميل واحد الخادم لفترة طويلة كهذه. ما يحدث عادةً هو أن الخادم ينشئ عددًا من خيوط التنفيذ يساوي عدد العملاء. ثم يكون كل خيط مسؤولاً عن التعامل مع عميل معين. ونظرًا لأن المعالج يتم مشاركته بشكل دوري بين جميع الخيوط النشطة على الجهاز، فإن الخادم يقضي وقتًا قصيرًا مع كل عميل، مما يضمن تزامن الخدمة.</p>
+<p>نستخدم تطبيقات الإنترنت التي تتبع هذا النمط كل يوم: خدمات الويب، والبريد الإلكتروني، وتصفح المنتديات، ونقل الملفات... في الرسم البياني أعلاه، يجب أن يخدم الخادم <bdi dir="ltr" class="odt-ltr-term">S1</bdi> العملاء <bdi dir="ltr" class="odt-ltr-term">C1</bdi>، <bdi dir="ltr" class="odt-ltr-term">C2</bdi>، ...، <bdi dir="ltr" class="odt-ltr-term">Cn</bdi> في وقت واحد. إذا أخذنا مثال خادم <bdi dir="ltr" class="odt-ltr-term">FTP</bdi> (بروتوكول نقل الملفات) الذي يوصل الملفات إلى عملائه، فإننا نعلم أن نقل الملفات قد يستغرق أحيانًا عدة ساعات. وبالطبع، من المستحيل أن يحتكر عميل واحد الخادم لفترة طويلة كهذه. ما يحدث عادةً هو أن الخادم ينشئ عددًا من خيوط التنفيذ يساوي عدد العملاء. ثم يكون كل خيط مسؤولاً عن التعامل مع عميل معين. ونظرًا لأن المعالج يتم مشاركته بشكل دوري بين جميع الخيوط النشطة على الجهاز، فإن الخادم يقضي وقتًا قصيرًا مع كل عميل، مما يضمن تزامن الخدمة.</p>
 <p><img src="images/1000000000000365000001B04D202552.png" width="435" height="216" style="width:11.499cm;height:5.717cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000365000001B04D202552.png" /></p>
 <p><a id="toc12362931"></a>
 <a id="toc12361103"></a>
@@ -1074,8 +1076,8 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000008F0000007B7A151255.png" width="142" height="122" style="display:inline-block; margin:4px;width:3.747cm;height:3.223cm;" class="odt-zoomable" data-zoom-src="images/100000000000008F0000007B7A151255.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000008C0000007819A2608F.png" width="142" height="121" style="display:inline-block; margin:4px;width:3.747cm;height:3.21cm;" class="odt-zoomable" data-zoom-src="images/100000000000008C0000007819A2608F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000008E0000007A24BFEFA6.png" width="142" height="122" style="display:inline-block; margin:4px;width:3.747cm;height:3.217cm;" class="odt-zoomable" data-zoom-src="images/100000000000008E0000007A24BFEFA6.png" /></td></tr></table>
 
 <p>لكي تعمل الساعة، يجب أن تقوم عملية ما بتحديث الوقت كل ثانية. وفي الوقت نفسه، يجب مراقبة الأحداث التي تحدث في النافذة: عندما ينقر المستخدم على زر &quot;إيقاف&quot;، يجب إيقاف الساعة. لدينا هنا مهمتان متوازيتان وغير متزامنتان: يمكن للمستخدم النقر في أي وقت. </p>
-<p>تخيل اللحظة التي لم يتم فيها تشغيل الساعة بعد ويضغط المستخدم على زر &quot;ابدأ&quot;. هذا حدث كلاسيكي، وقد يعتقد المرء أن إحدى طرق الخيط الذي تعمل فيه النافذة يمكنها عندئذ إدارة الساعة. ومع ذلك، عندما تعمل إحدى طرق تطبيق واجهة المستخدم الرسومية (GUI)، فإن خيطها لا يستمع بعد ذلك لأحداث واجهة المستخدم الرسومية. تحدث هذه الأحداث وتوضع في قائمة انتظار ليتم معالجتها بواسطة التطبيق بمجرد انتهاء الطريقة قيد التشغيل حاليًا. في مثال الساعة لدينا، ستظل الطريقة قيد التشغيل دائمًا لأن النقر على زر &quot;إيقاف&quot; هو الوسيلة الوحيدة لإيقافها. ومع ذلك، لن تتم معالجة هذا الحدث إلا بعد انتهاء الطريقة. نحن عالقون في حلقة مفرغة.</p>
-<p>يتمثل حل هذه المشكلة في أنه عندما ينقر المستخدم على زر &quot;Start&quot;، يتم تشغيل مهمة لإدارة الساعة، ولكن يمكن للتطبيق الاستمرار في الاستماع إلى الأحداث التي تحدث في النافذة. عندئذٍ سيكون لدينا مهمتان منفصلتان تعملان بالتوازي:</p>
+<p>تخيل اللحظة التي لم يتم فيها تشغيل الساعة بعد ويضغط المستخدم على زر &quot;ابدأ&quot;. هذا حدث كلاسيكي، وقد يعتقد المرء أن إحدى طرق الخيط الذي تعمل فيه النافذة يمكنها عندئذ إدارة الساعة. ومع ذلك، عندما تعمل إحدى طرق تطبيق واجهة المستخدم الرسومية (<bdi dir="ltr" class="odt-ltr-term">GUI</bdi>)، فإن خيطها لا يستمع بعد ذلك لأحداث واجهة المستخدم الرسومية. تحدث هذه الأحداث وتوضع في قائمة انتظار ليتم معالجتها بواسطة التطبيق بمجرد انتهاء الطريقة قيد التشغيل حاليًا. في مثال الساعة لدينا، ستظل الطريقة قيد التشغيل دائمًا لأن النقر على زر &quot;إيقاف&quot; هو الوسيلة الوحيدة لإيقافها. ومع ذلك، لن تتم معالجة هذا الحدث إلا بعد انتهاء الطريقة. نحن عالقون في حلقة مفرغة.</p>
+<p>يتمثل حل هذه المشكلة في أنه عندما ينقر المستخدم على زر &quot;<bdi dir="ltr" class="odt-ltr-term">Start</bdi>&quot;، يتم تشغيل مهمة لإدارة الساعة، ولكن يمكن للتطبيق الاستمرار في الاستماع إلى الأحداث التي تحدث في النافذة. عندئذٍ سيكون لدينا مهمتان منفصلتان تعملان بالتوازي:</p>
 <ul>
   <li>إدارة الساعة
   </li>
@@ -1084,9 +1086,9 @@
 </ul>
 
 <p>لنعد إلى ساعتنا الرسومية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000187000001561F97F17C.png" width="197" height="172" style="display:inline-block; margin:4px;width:5.212cm;height:4.56cm;" class="odt-zoomable" data-zoom-src="images/1000000000000187000001561F97F17C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>لا.</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextField (Editable=false)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">txtClock</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض الوقت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JButton</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">btnGoStop</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوقف أو يشغل الساعة</div></td></tr></table></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000187000001561F97F17C.png" width="197" height="172" style="display:inline-block; margin:4px;width:5.212cm;height:4.56cm;" class="odt-zoomable" data-zoom-src="images/1000000000000187000001561F97F17C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>لا.</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JTextField</bdi> (<bdi dir="ltr" class="odt-ltr-term">Editable</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">txtClock</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض الوقت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JButton</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">btnGoStop</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوقف أو يشغل الساعة</div></td></tr></table></td></tr></table>
 
-<p>فيما يلي شفرة المصدر للتطبيق الذي تم إنشاؤه باستخدام JBuilder:</p>
+<p>فيما يلي شفرة المصدر للتطبيق الذي تم إنشاؤه باستخدام <bdi dir="ltr" class="odt-ltr-term">JBuilder:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.*</span><span class="p">;</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.awt.event.*</span><span class="p">;</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.swing.*</span><span class="p">;</span>
@@ -1180,11 +1182,11 @@
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">          </span><span class="n">runHorloge</span><span class="p">();</span>
 <a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">        </span><span class="p">}</span>
 </code></pre></div>
-<p>تستدعي طريقة <em>run</em> الخاصة بالخيط طريقة <em>runHorloge</em> الخاصة بالتطبيق. وبمجرد الانتهاء من ذلك، يتم تشغيل الخيط:</p>
+<p>تستدعي طريقة <em><bdi dir="ltr" class="odt-ltr-term">run</bdi></em> الخاصة بالخيط طريقة <em><bdi dir="ltr" class="odt-ltr-term">runHorloge</bdi></em> الخاصة بالتطبيق. وبمجرد الانتهاء من ذلك، يتم تشغيل الخيط:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>      // on lance le thread
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>      thHorloge.start();
 </code></pre></div>
-<p>ثم يتم تنفيذ طريقة <em>runHorloge</em>:</p>
+<p>ثم يتم تنفيذ طريقة <em><bdi dir="ltr" class="odt-ltr-term">runHorloge</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runHorloge</span><span class="p">(){</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="c1">// we don&#39;t stop until we&#39;re told to stop</span>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="w"> </span><span class="n">finHorloge</span><span class="p">){</span>
@@ -1207,11 +1209,11 @@
 </code></pre></div>
 <p>مبدأ هذه الطريقة هو كما يلي:</p>
 <ol>
-  <li>يعرض الوقت الحالي في مربع النص <i>txtHorloge</i>
+  <li>يعرض الوقت الحالي في مربع النص <i><bdi dir="ltr" class="odt-ltr-term">txtHorloge</bdi></i>
   </li>
   <li>يتوقف لمدة ثانية واحدة
   </li>
-  <li>يستأنف الخطوة 1، بعد التحقق أولاً من المتغير المنطقي <i>finHorloge، </i>الذي سيتم تعيينه على true عندما ينقر المستخدم على زر <i>Stop</i>.
+  <li>يستأنف الخطوة 1، بعد التحقق أولاً من المتغير المنطقي <i><bdi dir="ltr" class="odt-ltr-term">finHorloge</bdi>، </i>الذي سيتم تعيينه على <bdi dir="ltr" class="odt-ltr-term">true</bdi> عندما ينقر المستخدم على زر <i><bdi dir="ltr" class="odt-ltr-term">Stop</bdi></i>.
   </li>
 </ol>
 <p><a id="toc12502420"></a>
@@ -1220,7 +1222,7 @@
 <a id="toc12157557"></a>
 <a id="toc11990047"></a></p>
 <h2 id="75">7.5. <span style="color: #4f81bd">تطبيق ساعة &quot; &quot;</span></h2>
-<p>نقوم بتحويل التطبيق الرسومي السابق إلى تطبيق صغير باستخدام الطريقة القياسية وننشئ مستند HTML التالي، <em>appletHorloge.htm</em>:</p>
+<p>نقوم بتحويل التطبيق الرسومي السابق إلى تطبيق صغير باستخدام الطريقة القياسية وننشئ مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> التالي، <em><bdi dir="ltr" class="odt-ltr-term">appletHorloge.htm</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Applet Horloge<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1236,7 +1238,7 @@
 <a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>عندما نقوم بتحميل هذا المستند مباشرة في IE بالنقر المزدوج عليه، نحصل على العرض التالي:</p>
+<p>عندما نقوم بتحميل هذا المستند مباشرة في <bdi dir="ltr" class="odt-ltr-term">IE</bdi> بالنقر المزدوج عليه، نحصل على العرض التالي:</p>
 <p><img src="images/100000000000014F000000E6D21CC036.png" width="334" height="229" style="width:8.827cm;height:6.061cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014F000000E6D21CC036.png" /></p>
 <p>في هذا المثال، توجد جميع العناصر المطلوبة من قبل التطبيق الصغير في نفس المجلد:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nx">E</span><span class="o">:</span><span class="err">\</span><span class="nx">data</span><span class="err">\</span><span class="nx">serge</span><span class="err">\</span><span class="nx">Jbuilder</span><span class="err">\</span><span class="nx">horloge</span><span class="err">\</span><span class="mf">1</span><span class="o">&gt;</span><span class="nx">dir</span>
@@ -1245,7 +1247,7 @@
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="mf">13</span><span class="o">/</span><span class="mo">06</span><span class="o">/</span><span class="mf">2002</span><span class="w">  </span><span class="mf">12</span><span class="o">:</span><span class="mf">17</span><span class="w">                  </span><span class="mf">512</span><span class="w"> </span><span class="nx">appletHorloge$2</span><span class="p">.</span><span class="kd">class</span>
 <a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="mf">13</span><span class="o">/</span><span class="mo">06</span><span class="o">/</span><span class="mf">2002</span><span class="w">  </span><span class="mf">12</span><span class="o">:</span><span class="mf">20</span><span class="w">                  </span><span class="mf">245</span><span class="w"> </span><span class="nx">appletHorloge</span><span class="p">.</span><span class="nx">htm</span>
 </code></pre></div>
-<p>يمكن تحسين التطبيق الصغير الخاص بنا. ذكرنا أنه عند تحميل التطبيق الصغير، يتم تنفيذ طريقة init، تليها طريقة <em>start</em> إذا كانت موجودة. بالإضافة إلى ذلك، عندما يغادر المستخدم الصفحة، يتم تنفيذ طريقة <em>stop</em> إذا كانت موجودة. وعندما يعود المستخدم إلى صفحة التطبيق الصغير، يتم استدعاء طريقة <em>start</em> مرة أخرى. عندما تنفذ التطبيقات الصغيرة خيوط الرسوم المتحركة المرئية، غالبًا ما تُستخدم طريقتا <em>start</em> و <em>stop</em> للتطبيق الصغير لتشغيل الخيوط وإيقافها. فمن غير الضروري بالفعل أن تستمر خيوط الرسوم المتحركة المرئية في العمل في الخلفية أثناء إخفاء الرسوم المتحركة.</p>
+<p>يمكن تحسين التطبيق الصغير الخاص بنا. ذكرنا أنه عند تحميل التطبيق الصغير، يتم تنفيذ طريقة <bdi dir="ltr" class="odt-ltr-term">init</bdi>، تليها طريقة <em><bdi dir="ltr" class="odt-ltr-term">start</bdi></em> إذا كانت موجودة. بالإضافة إلى ذلك، عندما يغادر المستخدم الصفحة، يتم تنفيذ طريقة <em><bdi dir="ltr" class="odt-ltr-term">stop</bdi></em> إذا كانت موجودة. وعندما يعود المستخدم إلى صفحة التطبيق الصغير، يتم استدعاء طريقة <em><bdi dir="ltr" class="odt-ltr-term">start</bdi></em> مرة أخرى. عندما تنفذ التطبيقات الصغيرة خيوط الرسوم المتحركة المرئية، غالبًا ما تُستخدم طريقتا <em><bdi dir="ltr" class="odt-ltr-term">start</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">stop</bdi></em> للتطبيق الصغير لتشغيل الخيوط وإيقافها. فمن غير الضروري بالفعل أن تستمر خيوط الرسوم المتحركة المرئية في العمل في الخلفية أثناء إخفاء الرسوم المتحركة.</p>
 <p>لذا نضيف طرق <em>البدء والإيقاف</em> التالية إلى تطبيقنا الصغير:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">stop</span><span class="p">(){</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="c1">// the page is hidden</span>
@@ -1293,7 +1295,7 @@
 <a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Thread horloge terminé&quot;</span><span class="p">);</span>
 <a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a><span class="w">  </span><span class="p">}</span><span class="c1">// runHorloge</span>
 </code></pre></div>
-<p>الآن نقوم بتشغيل التطبيق الصغير باستخدام <em>AppletViewer</em>:</p>
+<p>الآن نقوم بتشغيل التطبيق الصغير باستخدام <em><bdi dir="ltr" class="odt-ltr-term">AppletViewer</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nl">E</span><span class="p">:</span><span class="err">\</span><span class="n">data</span><span class="err">\</span><span class="n">serge</span><span class="err">\</span><span class="n">Jbuilder</span><span class="err">\</span><span class="n">horloge</span><span class="err">\</span><span class="mi">1</span><span class="o">&gt;</span><span class="n">appletviewer</span><span class="w"> </span><span class="n">appletHorloge</span><span class="p">.</span><span class="na">htm</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">Page</span><span class="w"> </span><span class="n">start</span><span class="w">    </span><span class="c1">// applet launched - page displayed</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">Thread</span><span class="w"> </span><span class="n">horloge</span><span class="w"> </span><span class="n">lancé</span><span class="w">    </span><span class="c1">// the thread is launched accordingly</span>
@@ -1308,7 +1310,7 @@
 <a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="n">Page</span><span class="w"> </span><span class="n">start</span><span class="w">    </span><span class="c1">// applet redisplay</span>
 <a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="n">Thread</span><span class="w"> </span><span class="n">horloge</span><span class="w"> </span><span class="n">lancé</span><span class="w">    </span><span class="c1">// thread relaunched accordingly</span>
 </code></pre></div>
-<p>مع <em>AppletViewer</em>، يحدث حدث <em>البدء</em> عندما تكون نافذة <em>AppletViewer</em> مرئية، ويحدث حدث <em>الإيقاف</em> عندما يتم تصغيرها. تظهر النتائج أعلاه أنه عندما يتم إخفاء مستند HTML، يتم إيقاف الخيط بالفعل إذا كان نشطًا.</p>
+<p>مع <em><bdi dir="ltr" class="odt-ltr-term">AppletViewer</bdi></em>، يحدث حدث <em>البدء</em> عندما تكون نافذة <em><bdi dir="ltr" class="odt-ltr-term">AppletViewer</bdi></em> مرئية، ويحدث حدث <em>الإيقاف</em> عندما يتم تصغيرها. تظهر النتائج أعلاه أنه عندما يتم إخفاء مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi>، يتم إيقاف الخيط بالفعل إذا كان نشطًا.</p>
 <p><a id="toc12502421"></a>
 <a id="toc12362933"></a>
 <a id="toc12361105"></a>
@@ -1344,7 +1346,7 @@
 <h3 id="761">7.6.1. <span style="color: #4f81bd">عداد غير متزامن</span></h3>
 <p>انظر إلى الواجهة الرسومية التالية: </p>
 <p><img src="images/10000000000002F80000023A2FFBF39C.png" width="379" height="284" style="width:10.028cm;height:7.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002F80000023A2FFBF39C.png" /></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextField</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">txtAGenerate</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحدد عدد الخيوط المطلوب إنشاؤها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextField</div><div style="margin:0 0 0.5em 0">(غير قابل للتحرير)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">txtGenerated</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض عدد الخيوط التي تم إنشاؤها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextField</div><div style="margin:0 0 0.5em 0">(غير قابل للتحرير)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">txtStatus</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوفر معلومات حول الأخطاء التي تمت مواجهتها وحول التطبيق نفسه</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JButton</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">btnGenerate</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يبدأ إنشاء مؤشر الترابط</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>رقم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>النوع</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الاسم</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JTextField</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">txtAGenerate</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحدد عدد الخيوط المطلوب إنشاؤها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JTextField</bdi></div><div style="margin:0 0 0.5em 0">(غير قابل للتحرير)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">txtGenerated</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يعرض عدد الخيوط التي تم إنشاؤها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JTextField</bdi></div><div style="margin:0 0 0.5em 0">(غير قابل للتحرير)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">txtStatus</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوفر معلومات حول الأخطاء التي تمت مواجهتها وحول التطبيق نفسه</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">JButton</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">btnGenerate</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يبدأ إنشاء مؤشر الترابط</div></td></tr></table>
 
 <p>يعمل التطبيق على النحو التالي:</p>
 <ul>
@@ -1469,19 +1471,19 @@
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">Thread</span><span class="o">[]</span><span class="w"> </span><span class="n">tâches</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span><span class="w">   </span><span class="c1">// threads</span>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">compteurs</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span><span class="w">   </span><span class="c1">// meters</span>
 </code></pre></div>
-<p>سيكون مصفوفة <em>المهام</em> هو مصفوفة الخيوط التي تم إنشاؤها. وسيتم ربط مصفوفة <em>العدادات</em> بمصفوفة <em>المهام</em>. وستكون لكل مهمة عدادها الخاص لاسترداد قيمة حقل <em>txtGenerated</em> من واجهة المستخدم الرسومية.</p>
+<p>سيكون مصفوفة <em>المهام</em> هو مصفوفة الخيوط التي تم إنشاؤها. وسيتم ربط مصفوفة <em>العدادات</em> بمصفوفة <em>المهام</em>. وستكون لكل مهمة عدادها الخاص لاسترداد قيمة حقل <em><bdi dir="ltr" class="odt-ltr-term">txtGenerated</bdi></em> من واجهة المستخدم الرسومية.</p>
 <ul>
-  <li>عند النقر على زر <i>Generate</i>، يتم تنفيذ طريقة <i>btnGenerate_actionPerformed</i>. 
+  <li>عند النقر على زر <i><bdi dir="ltr" class="odt-ltr-term">Generate</bdi></i>، يتم تنفيذ طريقة <i><bdi dir="ltr" class="odt-ltr-term">btnGenerate_actionPerformed</bdi></i>. 
   </li>
-  <li>تبدأ هذه الطريقة باسترداد عدد الخيوط المطلوب إنشاؤها. إذا لزم الأمر، يتم الإبلاغ عن خطأ إذا كان هذا الرقم غير صالح. ثم تقوم بإنشاء الخيوط المطلوبة، مع الحرص على تسجيل مراجعها في مصفوفة وتعيين رقم لكل منها. تستدعي طريقة <i>run </i>للخيوط التي تم إنشاؤها طريقة <i>increment </i>للفئة. يتم تشغيل جميع الخيوط (<i>start</i>). يتم أيضًا إنشاء مصفوفة العدادات المرتبطة بالخيوط.
+  <li>تبدأ هذه الطريقة باسترداد عدد الخيوط المطلوب إنشاؤها. إذا لزم الأمر، يتم الإبلاغ عن خطأ إذا كان هذا الرقم غير صالح. ثم تقوم بإنشاء الخيوط المطلوبة، مع الحرص على تسجيل مراجعها في مصفوفة وتعيين رقم لكل منها. تستدعي طريقة <i><bdi dir="ltr" class="odt-ltr-term">run</bdi> </i>للخيوط التي تم إنشاؤها طريقة <i><bdi dir="ltr" class="odt-ltr-term">increment</bdi> </i>للفئة. يتم تشغيل جميع الخيوط (<i><bdi dir="ltr" class="odt-ltr-term">start</bdi></i>). يتم أيضًا إنشاء مصفوفة العدادات المرتبطة بالخيوط.
   </li>
-  <li>طريقة <i>increment</i>:
+  <li>طريقة <i><bdi dir="ltr" class="odt-ltr-term">increment</bdi></i>:
   </li>
-  <li>تقرأ القيمة الحالية لحقل <i>txtGénérés </i>وتخزنها في العداد التابع للخيط قيد التشغيل حاليًا
+  <li>تقرأ القيمة الحالية لحقل <i><bdi dir="ltr" class="odt-ltr-term">txtGénérés</bdi> </i>وتخزنها في العداد التابع للخيط قيد التشغيل حاليًا
   </li>
   <li>تتوقف لمدة 100 مللي ثانية لإبقاء المعالج في حالة خمول متعمدة
   </li>
-  <li>تعرض القيمة الجديدة في حقل <i>txtGenerated</i>
+  <li>تعرض القيمة الجديدة في حقل <i><bdi dir="ltr" class="odt-ltr-term">txtGenerated</bdi></i>
   </li>
 </ul>
 
@@ -1512,15 +1514,15 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="w">   </span><span class="c1">// increment</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">synchronized</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrémente</span><span class="p">(){</span>
 </code></pre></div>
-<p>تعني الكلمة الرئيسية <code>**synchronized**</code> أنه لا يمكن إلا لخيط واحد في كل مرة تنفيذ طريقة <em><code>increment</code></em>. انظر إلى الترميز التالي:</p>
+<p>تعني الكلمة الرئيسية <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;synchronized&lt;/bdi&gt;**</code> أنه لا يمكن إلا لخيط واحد في كل مرة تنفيذ طريقة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;increment&lt;/bdi&gt;</code></em>. انظر إلى الترميز التالي:</p>
 <ul>
-  <li>كائن النافذة <i>F </i>الذي ينشئ مؤشرات ترابط في <i>btnGenerate_actionPerformed</i>
+  <li>كائن النافذة <i><bdi dir="ltr" class="odt-ltr-term">F</bdi> </i>الذي ينشئ مؤشرات ترابط في <i><bdi dir="ltr" class="odt-ltr-term">btnGenerate_actionPerformed</bdi></i>
   </li>
-  <li>خيطان T1 و T2 تم إنشاؤهما بواسطة F
+  <li>خيطان <bdi dir="ltr" class="odt-ltr-term">T1</bdi> و <bdi dir="ltr" class="odt-ltr-term">T2</bdi> تم إنشاؤهما بواسطة <bdi dir="ltr" class="odt-ltr-term">F</bdi>
   </li>
 </ul>
 
-<p>يتم إنشاء كلا الخيطين بواسطة F ثم يتم تشغيلهما. وبالتالي، سيقوم كلاهما بتنفيذ طريقة F<em>.run</em>. لنفترض أن T1 يصل أولاً. يقوم بتنفيذ F<em>.run</em> ثم F<em>.</em>increment، وهي طريقة متزامنة. يقرأ قيمة العداد 0، ويزيدها، ثم يتوقف مؤقتًا لمدة 100 مللي ثانية. ثم يتم تسليم المعالج إلى T2، الذي يقوم بدوره بتنفيذ F<em>.run</em> ثم F<em>.increment</em>. في هذه المرحلة، يتم حظره لأن الخيط T1 ينفذ حاليًا F<em>.increment</em>، وتضمن الكلمة الرئيسية <strong><em>synchronized</em></strong> أنه لا يمكن إلا لخيط واحد في كل مرة تنفيذ F<em>.increment</em>. ثم يفقد T2 المعالج دون أن يتمكن من قراءة قيمة العداد. بعد 100 مللي ثانية، يستعيد T1 المعالج، ويعرض قيمة العداد 1، ويخرج من F<em>.increment</em> ثم F<em>.run</em>، وينتهي. ثم يستعيد T2 المعالج ويمكنه الآن تنفيذ F<em>.incremente</em> لأن T1 لم يعد ينفذ هذه الطريقة. ثم يقرأ T2 قيمة العداد 1، ويزيدها، ويتوقف مؤقتًا لمدة 100 مللي ثانية. بعد 100 مللي ثانية، يستعيد المعالج، ويعرض قيمة العداد 2، وينتهي أيضًا. هذه المرة، القيمة التي تم الحصول عليها صحيحة. إليك مثال تم اختباره:</p>
+<p>يتم إنشاء كلا الخيطين بواسطة <bdi dir="ltr" class="odt-ltr-term">F</bdi> ثم يتم تشغيلهما. وبالتالي، سيقوم كلاهما بتنفيذ طريقة <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">run</bdi></em>. لنفترض أن <bdi dir="ltr" class="odt-ltr-term">T1</bdi> يصل أولاً. يقوم بتنفيذ <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">run</bdi></em> ثم <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.</em><bdi dir="ltr" class="odt-ltr-term">increment</bdi>، وهي طريقة متزامنة. يقرأ قيمة العداد 0، ويزيدها، ثم يتوقف مؤقتًا لمدة 100 مللي ثانية. ثم يتم تسليم المعالج إلى <bdi dir="ltr" class="odt-ltr-term">T2</bdi>، الذي يقوم بدوره بتنفيذ <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">run</bdi></em> ثم <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">increment</bdi></em>. في هذه المرحلة، يتم حظره لأن الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> ينفذ حاليًا <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">increment</bdi></em>، وتضمن الكلمة الرئيسية <strong><em><bdi dir="ltr" class="odt-ltr-term">synchronized</bdi></em></strong> أنه لا يمكن إلا لخيط واحد في كل مرة تنفيذ <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">increment</bdi></em>. ثم يفقد <bdi dir="ltr" class="odt-ltr-term">T2</bdi> المعالج دون أن يتمكن من قراءة قيمة العداد. بعد 100 مللي ثانية، يستعيد <bdi dir="ltr" class="odt-ltr-term">T1</bdi> المعالج، ويعرض قيمة العداد 1، ويخرج من <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">increment</bdi></em> ثم <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">run</bdi></em>، وينتهي. ثم يستعيد <bdi dir="ltr" class="odt-ltr-term">T2</bdi> المعالج ويمكنه الآن تنفيذ <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">incremente</bdi></em> لأن <bdi dir="ltr" class="odt-ltr-term">T1</bdi> لم يعد ينفذ هذه الطريقة. ثم يقرأ <bdi dir="ltr" class="odt-ltr-term">T2</bdi> قيمة العداد 1، ويزيدها، ويتوقف مؤقتًا لمدة 100 مللي ثانية. بعد 100 مللي ثانية، يستعيد المعالج، ويعرض قيمة العداد 2، وينتهي أيضًا. هذه المرة، القيمة التي تم الحصول عليها صحيحة. إليك مثال تم اختباره:</p>
 <p><img src="images/1000000000000113000000D6DBE0EDEE.png" width="273" height="212" style="width:7.213cm;height:5.613cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000113000000D6DBE0EDEE.png" /></p>
 <p><a id="toc12502424"></a>
 <a id="toc12362936"></a>
@@ -1534,10 +1536,10 @@
 <a id="toc428596968"></a>
 <a id="toc427837425"></a></p>
 <h3 id="763">7.6.3. <span style="color: #4f81bd">العد المتزامن بواسطة كائن</span></h3>
-<p>في المثال السابق، تمت مزامنة الوصول إلى العداد <em>txtGénérés</em> بواسطة طريقة. إذا كانت النافذة التي تنشئ الخيوط تسمى F، فيمكننا أيضًا القول إن طريقة <em>F.incremente</em> تمثل موردًا يجب ألا يستخدمه سوى خيط واحد في كل مرة. وبالتالي، فهو مورد حرج. تم ضمان الوصول المتزامن إلى هذا المورد بواسطة الكلمة الرئيسية <em>synchronized</em>:</p>
+<p>في المثال السابق، تمت مزامنة الوصول إلى العداد <em><bdi dir="ltr" class="odt-ltr-term">txtGénérés</bdi></em> بواسطة طريقة. إذا كانت النافذة التي تنشئ الخيوط تسمى <bdi dir="ltr" class="odt-ltr-term">F</bdi>، فيمكننا أيضًا القول إن طريقة <em><bdi dir="ltr" class="odt-ltr-term">F.incremente</bdi></em> تمثل موردًا يجب ألا يستخدمه سوى خيط واحد في كل مرة. وبالتالي، فهو مورد حرج. تم ضمان الوصول المتزامن إلى هذا المورد بواسطة الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">synchronized</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">synchronized</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrémente</span><span class="p">()</span>
 </code></pre></div>
-<p>ويمكن القول أيضًا إن المورد الحرج هو الكائن F نفسه. وهذا أكثر صرامة من الحالة التي يكون فيها المورد الحرج هو F<em>.increment</em>. ففي الحالة الأخيرة، إذا نفذ الخيط T1 <em>الأسلوب F.</em>increment، فلن يتمكن الخيط T2 من <em>تنفيذ F.increment</em>، لكنه يستطيع تنفيذ أي أسلوب آخر للكائن F، سواء كان متزامنًا أم لا. في الحالة التي يكون فيها الكائن F نفسه هو المورد الحرج، عندما يقوم مؤشر الترابط T1 بتنفيذ قسم متزامن من هذا الكائن، تصبح كل الأقسام المتزامنة الأخرى للكائن غير قابلة للوصول من قبل مؤشرات الترابط الأخرى. وبالتالي، إذا نفذ الخيط T1 الطريقة المتزامنة <em>F.</em>increment، فلن يتمكن الخيط T2 من تنفيذ <em>F.increment</em> فحسب، بل وأي قسم متزامن آخر من F، حتى لو لم يكن هناك خيط آخر يستخدمه. ولذلك، فإن هذه الطريقة أكثر تقييدًا.</p>
+<p>ويمكن القول أيضًا إن المورد الحرج هو الكائن <bdi dir="ltr" class="odt-ltr-term">F</bdi> نفسه. وهذا أكثر صرامة من الحالة التي يكون فيها المورد الحرج هو <bdi dir="ltr" class="odt-ltr-term">F</bdi><em>.<bdi dir="ltr" class="odt-ltr-term">increment</bdi></em>. ففي الحالة الأخيرة، إذا نفذ الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> <em>الأسلوب <bdi dir="ltr" class="odt-ltr-term">F.</bdi></em><bdi dir="ltr" class="odt-ltr-term">increment</bdi>، فلن يتمكن الخيط <bdi dir="ltr" class="odt-ltr-term">T2</bdi> من <em>تنفيذ <bdi dir="ltr" class="odt-ltr-term">F.increment</bdi></em>، لكنه يستطيع تنفيذ أي أسلوب آخر للكائن <bdi dir="ltr" class="odt-ltr-term">F</bdi>، سواء كان متزامنًا أم لا. في الحالة التي يكون فيها الكائن <bdi dir="ltr" class="odt-ltr-term">F</bdi> نفسه هو المورد الحرج، عندما يقوم مؤشر الترابط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> بتنفيذ قسم متزامن من هذا الكائن، تصبح كل الأقسام المتزامنة الأخرى للكائن غير قابلة للوصول من قبل مؤشرات الترابط الأخرى. وبالتالي، إذا نفذ الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> الطريقة المتزامنة <em><bdi dir="ltr" class="odt-ltr-term">F.</bdi></em><bdi dir="ltr" class="odt-ltr-term">increment</bdi>، فلن يتمكن الخيط <bdi dir="ltr" class="odt-ltr-term">T2</bdi> من تنفيذ <em><bdi dir="ltr" class="odt-ltr-term">F.increment</bdi></em> فحسب، بل وأي قسم متزامن آخر من <bdi dir="ltr" class="odt-ltr-term">F</bdi>، حتى لو لم يكن هناك خيط آخر يستخدمه. ولذلك، فإن هذه الطريقة أكثر تقييدًا.</p>
 <p>لنفترض إذن أن النافذة أصبحت المورد الحرج. عندئذ سنكتب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="w">   </span><span class="c1">// increment</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrémente</span><span class="p">(){</span>
@@ -1568,7 +1570,7 @@
 <a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a><span class="w">    </span><span class="p">}</span><span class="c1">//synchronized</span>
 <a id="__codelineno-32-28" name="__codelineno-32-28" href="#__codelineno-32-28"></a><span class="w">  </span><span class="p">}</span><span class="c1">// increment</span>
 </code></pre></div>
-<p>تستخدم جميع الخيوط نافذة <em><code>this</code></em> للتزامن. في وقت التشغيل، نحصل على نفس النتائج الصحيحة كما في السابق. يمكننا في الواقع التزامن على أي كائن معروف لجميع الخيوط. إليك طريقة أخرى، على سبيل المثال، تعطي نفس النتائج: </p>
+<p>تستخدم جميع الخيوط نافذة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;this&lt;/bdi&gt;</code></em> للتزامن. في وقت التشغيل، نحصل على نفس النتائج الصحيحة كما في السابق. يمكننا في الواقع التزامن على أي كائن معروف لجميع الخيوط. إليك طريقة أخرى، على سبيل المثال، تعطي نفس النتائج: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w">   </span><span class="c1">// instance variables</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">Thread</span><span class="o">[]</span><span class="w"> </span><span class="n">tâches</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span><span class="w">   </span><span class="c1">// threads</span>
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">compteurs</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span><span class="w">   </span><span class="c1">// meters</span>
@@ -1582,7 +1584,7 @@
 <a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="w">    </span><span class="p">}</span><span class="c1">//synchronized</span>
 <a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="w">  </span><span class="p">}</span><span class="c1">// increment</span>
 </code></pre></div>
-<p>تنشئ النافذة كائنًا <em>من نوع</em> Object سيُستخدم لمزامنة الخيوط. هذه الطريقة أفضل من تلك التي تتم المزامنة فيها على كائن <em><code>this</code></em> لأنها أقل تقييدًا. هنا، إذا كان الخيط T1 موجودًا في القسم المتزامن من <em><code>increment</code></em> وأراد الخيط T2 تنفيذ قسم متزامن آخر من نفس كائن <em><code>this</code></em> ولكن متزامنًا بواسطة كائن آخر غير <em><code>synchro</code></em>، فسيكون قادرًا على القيام بذلك.</p>
+<p>تنشئ النافذة كائنًا <em>من نوع</em> <bdi dir="ltr" class="odt-ltr-term">Object</bdi> سيُستخدم لمزامنة الخيوط. هذه الطريقة أفضل من تلك التي تتم المزامنة فيها على كائن <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;this&lt;/bdi&gt;</code></em> لأنها أقل تقييدًا. هنا، إذا كان الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> موجودًا في القسم المتزامن من <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;increment&lt;/bdi&gt;</code></em> وأراد الخيط <bdi dir="ltr" class="odt-ltr-term">T2</bdi> تنفيذ قسم متزامن آخر من نفس كائن <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;this&lt;/bdi&gt;</code></em> ولكن متزامنًا بواسطة كائن آخر غير <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;synchro&lt;/bdi&gt;</code></em>، فسيكون قادرًا على القيام بذلك.</p>
 <p><a id="toc12502425"></a>
 <a id="toc12362937"></a>
 <a id="toc12361109"></a>
@@ -1595,7 +1597,7 @@
 <a id="toc428596969"></a>
 <a id="toc427837426"></a></p>
 <h3 id="764">7.6.4. <span style="color: #4f81bd">المزامنة القائمة على الأحداث</span></h3>
-<p>هذه المرة، نستخدم <em>متغيرًا</em> منطقيًا <em><code>canPass</code></em> لإعلام الخيط بما إذا كان بإمكانه الدخول إلى قسم حرج أم لا. قد تبدو النسخة التي لا تحتوي على تزامن كما يلي:</p>
+<p>هذه المرة، نستخدم <em>متغيرًا</em> منطقيًا <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;canPass&lt;/bdi&gt;</code></em> لإعلام الخيط بما إذا كان بإمكانه الدخول إلى قسم حرج أم لا. قد تبدو النسخة التي لا تحتوي على تزامن كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#0000ff">while</span>(! peutPasser);        <span style="color:#008000">// on attend que peutPasser passe à vrai</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">peutPasser=<span style="font-weight:bold;color:#0000ff">false</span>;            <span style="color:#008000">// aucun autre thread ne doit passer</span></span></span>
@@ -1603,7 +1605,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">peutPasser=<span style="font-weight:bold;color:#0000ff">true</span>;            <span style="color:#008000">// un autre thread peut passer dans la section critique</span></span></span>
 </code></pre></div>
 
-<p>العبارة الأولى، حيث يدور الخيط في حلقة انتظارًا حتى تصبح <em>canPass</em> صحيحة، غير فعالة: فالخيط يشغل المعالج دون داعٍ. وهذا ما يُسمى بالانتظار النشط. يمكننا تحسين الكود على النحو التالي:</p>
+<p>العبارة الأولى، حيث يدور الخيط في حلقة انتظارًا حتى تصبح <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> صحيحة، غير فعالة: فالخيط يشغل المعالج دون داعٍ. وهذا ما يُسمى بالانتظار النشط. يمكننا تحسين الكود على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="n">peutPasser</span><span class="p">){</span><span class="w">        </span><span class="c1">// wait for peutPasser to change to true</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">   </span><span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">    </span><span class="c1">// off for 100 ms</span>
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">}</span>
@@ -1612,7 +1614,7 @@
 <a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="n">peutPasser</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span><span class="w">            </span><span class="c1">// another thread can enter the critical section</span>
 </code></pre></div>
 <p>حلقة الانتظار أفضل هنا: إذا لم يتمكن الخيط من المرور، فإنه ينتظر لمدة 100 مللي ثانية قبل التحقق مرة أخرى مما إذا كان بإمكانه المرور أم لا. في غضون ذلك، سيتم تخصيص المعالج لخيوط أخرى في النظام.</p>
-<p>في الواقع، هاتان الطريقتان غير صحيحتين: فهما لا تمنعان خيطين من دخول القسم الحرج في نفس الوقت. لنفترض أن خيط T1 يكتشف أن <em>canPass</em> صحيح. سيتقدم عندئذٍ إلى التعليمات التالية حيث يضبط <em>canPass</em> على false لحجب الخيوط الأخرى. ومع ذلك، قد يتم استباقه في تلك اللحظة، إما لأن شريحة وقت المعالج الخاصة به قد انتهت، أو لأن مهمة ذات أولوية أعلى قد طلبت المعالج، أو لأي سبب آخر. والنتيجة هي أنه يفقد المعالج. وسيستعيده بعد ذلك بقليل. في غضون ذلك، ستحصل المهام الأخرى على المعالج، بما في ذلك ربما مؤشر الترابط T2 الذي يدور في حلقة أثناء انتظار أن تصبح <em>peutPasser</em> صحيحة. وسيكتشف هو أيضًا أن <em>peutPasser</em> صحيحة (لم يكن لدى مؤشر الترابط الأول الوقت لتعيينها على false) وسيدخل أيضًا القسم الحرج. وهو ما لم يكن من المفترض أن يحدث.</p>
+<p>في الواقع، هاتان الطريقتان غير صحيحتين: فهما لا تمنعان خيطين من دخول القسم الحرج في نفس الوقت. لنفترض أن خيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> يكتشف أن <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> صحيح. سيتقدم عندئذٍ إلى التعليمات التالية حيث يضبط <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> على <bdi dir="ltr" class="odt-ltr-term">false</bdi> لحجب الخيوط الأخرى. ومع ذلك، قد يتم استباقه في تلك اللحظة، إما لأن شريحة وقت المعالج الخاصة به قد انتهت، أو لأن مهمة ذات أولوية أعلى قد طلبت المعالج، أو لأي سبب آخر. والنتيجة هي أنه يفقد المعالج. وسيستعيده بعد ذلك بقليل. في غضون ذلك، ستحصل المهام الأخرى على المعالج، بما في ذلك ربما مؤشر الترابط <bdi dir="ltr" class="odt-ltr-term">T2</bdi> الذي يدور في حلقة أثناء انتظار أن تصبح <em><bdi dir="ltr" class="odt-ltr-term">peutPasser</bdi></em> صحيحة. وسيكتشف هو أيضًا أن <em><bdi dir="ltr" class="odt-ltr-term">peutPasser</bdi></em> صحيحة (لم يكن لدى مؤشر الترابط الأول الوقت لتعيينها على <bdi dir="ltr" class="odt-ltr-term">false</bdi>) وسيدخل أيضًا القسم الحرج. وهو ما لم يكن من المفترض أن يحدث.</p>
 <p>التسلسل </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">while(! peutPasser){            // wait for peutPasser to change to true</span></span>
@@ -1637,7 +1639,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    peutPasser=true;                    // another thread can enter the critical section</span></span>
 </code></pre></div>
 
-<p>يعمل هذا المثال بشكل صحيح. يمكننا تحسينه بتجنب الانتظار شبه النشط للخيط أثناء قيامه بفحص قيمة المتغير المنطقي <em>canPass</em> بانتظام. بدلاً من الاستيقاظ كل 100 مللي ثانية لفحص حالة canPass، يمكنه الدخول في حالة السكون وطلب الاستيقاظ عندما تكون قيمة <em>canPass</em> صحيحة. نكتب ذلك على النحو التالي:</p>
+<p>يعمل هذا المثال بشكل صحيح. يمكننا تحسينه بتجنب الانتظار شبه النشط للخيط أثناء قيامه بفحص قيمة المتغير المنطقي <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> بانتظام. بدلاً من الاستيقاظ كل 100 مللي ثانية لفحص حالة <bdi dir="ltr" class="odt-ltr-term">canPass</bdi>، يمكنه الدخول في حالة السكون وطلب الاستيقاظ عندما تكون قيمة <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> صحيحة. نكتب ذلك على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">synchronized<span style="color:#000000">(synchro){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>if<span style="color:#000000"> (! peutPasser) {</span></span></span>
@@ -1651,14 +1653,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}// synchronized</span></span>
 </code></pre></div>
 
-<p>لا يمكن تنفيذ عملية <strong>synchro.wait()</strong> إلا بواسطة مؤشر ترابط هو &quot;المالك&quot; الحالي لكائن <em>synchro</em>. هنا، التسلسل هو:</p>
+<p>لا يمكن تنفيذ عملية <strong><bdi dir="ltr" class="odt-ltr-term">synchro.wait</bdi>()</strong> إلا بواسطة مؤشر ترابط هو &quot;المالك&quot; الحالي لكائن <em><bdi dir="ltr" class="odt-ltr-term">synchro</bdi></em>. هنا، التسلسل هو:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">synchronized<span style="color:#000000">(synchro){</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    …</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}// synchronized</span></span>
 </code></pre></div>
 
-<p>الذي يضمن أن الخيط يمتلك كائن <em>synchro</em>. من خلال عملية <strong>synchro.wait()</strong>، يتخلى الخيط عن ملكية قفل التزامن. لماذا يحدث هذا؟ عمومًا لأنه يفتقر إلى الموارد اللازمة لمواصلة العمل. لذا، بدلاً من حجب الخيوط الأخرى التي تنتظر مورد synchro، فإنه يتخلى عنه وينتظر المورد الذي يفتقر إليه. في مثالنا، ينتظر حتى يصبح القيمة المنطقية <em>canPass</em> صحيحة. كيف سيتم إخطاره بهذا الحدث؟ كما يلي:</p>
+<p>الذي يضمن أن الخيط يمتلك كائن <em><bdi dir="ltr" class="odt-ltr-term">synchro</bdi></em>. من خلال عملية <strong><bdi dir="ltr" class="odt-ltr-term">synchro.wait</bdi>()</strong>، يتخلى الخيط عن ملكية قفل التزامن. لماذا يحدث هذا؟ عمومًا لأنه يفتقر إلى الموارد اللازمة لمواصلة العمل. لذا، بدلاً من حجب الخيوط الأخرى التي تنتظر مورد <bdi dir="ltr" class="odt-ltr-term">synchro</bdi>، فإنه يتخلى عنه وينتظر المورد الذي يفتقر إليه. في مثالنا، ينتظر حتى يصبح القيمة المنطقية <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> صحيحة. كيف سيتم إخطاره بهذا الحدث؟ كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">synchronized<span style="color:#000000">(synchro){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span>if<span style="color:#000000"> (! peutPasser) {</span></span></span>
@@ -1676,15 +1678,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    }</span><span style="color:#000000"></span></span></span>
 </code></pre></div>
 
-<p>لننظر إلى الخيط الأول الذي يحصل على قفل التزامن. لنسمه T1. لنفترض أنه يجد أن القيمة المنطقية <em><code>canPass</code></em> صحيحة، لأنه الخيط الأول. ثم يضبطها على &quot;خطأ&quot;. ثم يخرج من القسم الحرج المقفل بواسطة كائن <em>التزامن</em>. يمكن بعد ذلك لخيط آخر الدخول إلى القسم الحرج للتحقق من قيمة <em><code>canPass</code></em>. سيجدها كاذبة (false) ثم ينتظر حدثًا (<em>wait</em>). وبذلك، يتخلى عن ملكية كائن <em>المزامنة</em>. يمكن بعد ذلك لخيط آخر الدخول إلى القسم الحرج: سينتظر هو أيضًا لأن <em>canPass</em> كاذبة (false). يمكننا بالتالي أن نحصل على خيوط متعددة تنتظر حدثًا على كائن <em>المزامنة</em>.</p>
-<p>لنعد إلى الخيط T1، الذي تم منحه حق الوصول. يقوم بتنفيذ القسم الحرج ثم يشير إلى أنه يمكن لخيط آخر المضي قدمًا الآن. ويقوم بذلك بالتسلسل التالي:</p>
+<p>لننظر إلى الخيط الأول الذي يحصل على قفل التزامن. لنسمه <bdi dir="ltr" class="odt-ltr-term">T1.</bdi> لنفترض أنه يجد أن القيمة المنطقية <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;canPass&lt;/bdi&gt;</code></em> صحيحة، لأنه الخيط الأول. ثم يضبطها على &quot;خطأ&quot;. ثم يخرج من القسم الحرج المقفل بواسطة كائن <em>التزامن</em>. يمكن بعد ذلك لخيط آخر الدخول إلى القسم الحرج للتحقق من قيمة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;canPass&lt;/bdi&gt;</code></em>. سيجدها كاذبة (<bdi dir="ltr" class="odt-ltr-term">false</bdi>) ثم ينتظر حدثًا (<em><bdi dir="ltr" class="odt-ltr-term">wait</bdi></em>). وبذلك، يتخلى عن ملكية كائن <em>المزامنة</em>. يمكن بعد ذلك لخيط آخر الدخول إلى القسم الحرج: سينتظر هو أيضًا لأن <em><bdi dir="ltr" class="odt-ltr-term">canPass</bdi></em> كاذبة (<bdi dir="ltr" class="odt-ltr-term">false</bdi>). يمكننا بالتالي أن نحصل على خيوط متعددة تنتظر حدثًا على كائن <em>المزامنة</em>.</p>
+<p>لنعد إلى الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi>، الذي تم منحه حق الوصول. يقوم بتنفيذ القسم الحرج ثم يشير إلى أنه يمكن لخيط آخر المضي قدمًا الآن. ويقوم بذلك بالتسلسل التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">synchronized<span style="color:#000000">(synchro){</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      synchro.notify();</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    }</span><span style="color:#000000"></span></span></span>
 </code></pre></div>
 
-<p>يجب أولاً استعادة حيازة كائن <em>sync</em> باستخدام عبارة <em>synchronized</em>. لا ينبغي أن يمثل هذا مشكلة لأنه يتنافس مع مؤشرات <em>الترابط</em> التي، إذا حصلت مؤقتًا على كائن sync، يجب أن تطلقه عبر <em>wait</em> لأنها تجد أن <em>peutPasser</em> كاذبة. لذلك سيحصل مؤشر الترابط T1 في النهاية على ملكية كائن <em>synchro</em>. وبمجرد الانتهاء من ذلك، فإنه يشير عبر عملية <em>synchro.notify</em> إلى أنه يجب إيقاظ أحد مؤشرات الترابط التي تم حظرها بواسطة <em>synchro.wait</em>. ثم يتخلى عن ملكية كائن <em>المزامنة</em> مرة أخرى، والتي تُمنح بعد ذلك لأحد مؤشرات الترابط المنتظرة. يواصل هذا الخيط تنفيذه بالتعليمات التي تلي <em><code>wait</code></em> التي كانت قد أوقفته مؤقتًا. بدوره، سينفذ القسم الحرج ويصدر <em><code>synchro.notify</code></em> لتحرير خيط آخر. وهكذا دواليك.</p>
+<p>يجب أولاً استعادة حيازة كائن <em><bdi dir="ltr" class="odt-ltr-term">sync</bdi></em> باستخدام عبارة <em><bdi dir="ltr" class="odt-ltr-term">synchronized</bdi></em>. لا ينبغي أن يمثل هذا مشكلة لأنه يتنافس مع مؤشرات <em>الترابط</em> التي، إذا حصلت مؤقتًا على كائن <bdi dir="ltr" class="odt-ltr-term">sync</bdi>، يجب أن تطلقه عبر <em><bdi dir="ltr" class="odt-ltr-term">wait</bdi></em> لأنها تجد أن <em><bdi dir="ltr" class="odt-ltr-term">peutPasser</bdi></em> كاذبة. لذلك سيحصل مؤشر الترابط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> في النهاية على ملكية كائن <em><bdi dir="ltr" class="odt-ltr-term">synchro</bdi></em>. وبمجرد الانتهاء من ذلك، فإنه يشير عبر عملية <em><bdi dir="ltr" class="odt-ltr-term">synchro.notify</bdi></em> إلى أنه يجب إيقاظ أحد مؤشرات الترابط التي تم حظرها بواسطة <em><bdi dir="ltr" class="odt-ltr-term">synchro.wait</bdi></em>. ثم يتخلى عن ملكية كائن <em>المزامنة</em> مرة أخرى، والتي تُمنح بعد ذلك لأحد مؤشرات الترابط المنتظرة. يواصل هذا الخيط تنفيذه بالتعليمات التي تلي <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;wait&lt;/bdi&gt;</code></em> التي كانت قد أوقفته مؤقتًا. بدوره، سينفذ القسم الحرج ويصدر <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;synchro.notify&lt;/bdi&gt;</code></em> لتحرير خيط آخر. وهكذا دواليك.</p>
 <p>دعونا نلقي نظرة على كيفية عمل ذلك باستخدام مثال العد الذي درسناه سابقًا.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">btnGénérer_actionPerformed</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">     </span><span class="c1">//thread generation</span>
@@ -1756,7 +1758,7 @@
 <a id="__codelineno-36-28" name="__codelineno-36-28" href="#__codelineno-36-28"></a><span class="w">    </span><span class="p">}</span><span class="c1">// synchronized</span>
 <a id="__codelineno-36-29" name="__codelineno-36-29" href="#__codelineno-36-29"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// synchronize</span>
 </code></pre></div>
-<p>الغرض من طريقة <em>synchronize</em> هو معالجة الخيوط واحدًا تلو الآخر. وهي تستخدم متغير تزامن يسمى <em>synchro</em> للقيام بذلك. لم تعد طريقة <em>increment</em> محمية بواسطة الكلمة الرئيسية <em>synchronized</em>:</p>
+<p>الغرض من طريقة <em><bdi dir="ltr" class="odt-ltr-term">synchronize</bdi></em> هو معالجة الخيوط واحدًا تلو الآخر. وهي تستخدم متغير تزامن يسمى <em><bdi dir="ltr" class="odt-ltr-term">synchro</bdi></em> للقيام بذلك. لم تعد طريقة <em><bdi dir="ltr" class="odt-ltr-term">increment</bdi></em> محمية بواسطة الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">synchronized</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="w">   </span><span class="c1">// increment</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrémente</span><span class="p">(){</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">     </span><span class="c1">// retrieve the thread number</span>
@@ -1797,7 +1799,7 @@
 <a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>4 passé
 <a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>4 terminé
 </code></pre></div>
-<p>لنفترض أن T0 إلى T4 هي الخيوط الخمسة التي أنشأها التطبيق. T0 هو أول من يحصل على قفل <em>المزامنة</em> ويجد أن <em><code>peutPasser</code></em> مضبوط على true. يقوم بتعيين <em><code>peutPasser</code></em> على false ويستمر: هذا هو الغرض من الرسالة الأولى <em>المرسلة</em>. على الأرجح، يستمر وينفذ القسم الحرج، وتحديداً طريقة <em><code>increment</code></em>. في هذه الطريقة، سوف يظل في حالة سكون لمدة 100 مللي ثانية (<em>sleep</em>). وبالتالي، فإنه يحرر المعالج. ثم يُمنح المعالج لخيط آخر، الخيط T1، الذي يحصل بعد ذلك على ملكية كائن <em>المزامنة</em>. يكتشف أنه لا يمكنه المضي قدمًا ويدخل في حالة انتظار (<em>wait</em>). ثم يحرر ملكية كائن <em>المزامنة</em> وكذلك المعالج. يتم تخصيص المعالج للخيط T2، الذي يواجه نفس المصير. خلال الـ 100 مللي ثانية التي يتم فيها إيقاف T0 مؤقتًا، يتم تعليق الخيوط من T1 إلى T4. هذا هو معنى الرسائل الأربع &quot;<em>waiting</em>&quot;. بعد 100 مللي ثانية، يستعيد T0 المعالج ويكمل عمله: هذا هو معنى الرسالة &quot;0 <em>finished</em>&quot;. ثم يحرر أحد الخيوط المحجوبة وينتهي. ثم يتم تخصيص المعالج الذي تم تحريره لخيط متاح: وهو الخيط الذي تم تحريره للتو. هنا، هو T1. ثم يدخل الخيط T1 القسم الحرج: هذا هو معنى الرسالة &quot;1 <em>passed</em>&quot;. يقوم بما عليه القيام به ثم يتوقف مؤقتًا لمدة 100 مللي ثانية. يصبح المعالج بعد ذلك متاحًا لخيط آخر، لكن جميع الخيوط تنتظر حدثًا: لا يمكن لأي منها الحصول على المعالج. بعد 100 مللي ثانية، يستعيد الخيط T1 المعالج وينتهي: هذا هو معنى الرسالة &quot;1 <em>finished</em>&quot;. ستتصرف الخيوط من T1 إلى T4 بنفس طريقة T1: هذا هو معنى سلسلة الرسائل الثلاث: &quot;passed&quot;، &quot;finished&quot;.</p>
+<p>لنفترض أن <bdi dir="ltr" class="odt-ltr-term">T0</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">T4</bdi> هي الخيوط الخمسة التي أنشأها التطبيق. <bdi dir="ltr" class="odt-ltr-term">T0</bdi> هو أول من يحصل على قفل <em>المزامنة</em> ويجد أن <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;peutPasser&lt;/bdi&gt;</code></em> مضبوط على <bdi dir="ltr" class="odt-ltr-term">true.</bdi> يقوم بتعيين <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;peutPasser&lt;/bdi&gt;</code></em> على <bdi dir="ltr" class="odt-ltr-term">false</bdi> ويستمر: هذا هو الغرض من الرسالة الأولى <em>المرسلة</em>. على الأرجح، يستمر وينفذ القسم الحرج، وتحديداً طريقة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;increment&lt;/bdi&gt;</code></em>. في هذه الطريقة، سوف يظل في حالة سكون لمدة 100 مللي ثانية (<em><bdi dir="ltr" class="odt-ltr-term">sleep</bdi></em>). وبالتالي، فإنه يحرر المعالج. ثم يُمنح المعالج لخيط آخر، الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi>، الذي يحصل بعد ذلك على ملكية كائن <em>المزامنة</em>. يكتشف أنه لا يمكنه المضي قدمًا ويدخل في حالة انتظار (<em><bdi dir="ltr" class="odt-ltr-term">wait</bdi></em>). ثم يحرر ملكية كائن <em>المزامنة</em> وكذلك المعالج. يتم تخصيص المعالج للخيط <bdi dir="ltr" class="odt-ltr-term">T2</bdi>، الذي يواجه نفس المصير. خلال الـ 100 مللي ثانية التي يتم فيها إيقاف <bdi dir="ltr" class="odt-ltr-term">T0</bdi> مؤقتًا، يتم تعليق الخيوط من <bdi dir="ltr" class="odt-ltr-term">T1</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">T4.</bdi> هذا هو معنى الرسائل الأربع &quot;<em><bdi dir="ltr" class="odt-ltr-term">waiting</bdi></em>&quot;. بعد 100 مللي ثانية، يستعيد <bdi dir="ltr" class="odt-ltr-term">T0</bdi> المعالج ويكمل عمله: هذا هو معنى الرسالة &quot;0 <em><bdi dir="ltr" class="odt-ltr-term">finished</bdi></em>&quot;. ثم يحرر أحد الخيوط المحجوبة وينتهي. ثم يتم تخصيص المعالج الذي تم تحريره لخيط متاح: وهو الخيط الذي تم تحريره للتو. هنا، هو <bdi dir="ltr" class="odt-ltr-term">T1.</bdi> ثم يدخل الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> القسم الحرج: هذا هو معنى الرسالة &quot;1 <em><bdi dir="ltr" class="odt-ltr-term">passed</bdi></em>&quot;. يقوم بما عليه القيام به ثم يتوقف مؤقتًا لمدة 100 مللي ثانية. يصبح المعالج بعد ذلك متاحًا لخيط آخر، لكن جميع الخيوط تنتظر حدثًا: لا يمكن لأي منها الحصول على المعالج. بعد 100 مللي ثانية، يستعيد الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> المعالج وينتهي: هذا هو معنى الرسالة &quot;1 <em><bdi dir="ltr" class="odt-ltr-term">finished</bdi></em>&quot;. ستتصرف الخيوط من <bdi dir="ltr" class="odt-ltr-term">T1</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">T4</bdi> بنفس طريقة <bdi dir="ltr" class="odt-ltr-term">T1:</bdi> هذا هو معنى سلسلة الرسائل الثلاث: &quot;<bdi dir="ltr" class="odt-ltr-term">passed</bdi>&quot;، &quot;<bdi dir="ltr" class="odt-ltr-term">finished</bdi>&quot;.</p>
 
 
 

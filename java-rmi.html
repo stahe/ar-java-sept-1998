@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -922,16 +924,16 @@
 <a id="toc12362973"></a>
 <a id="toc10974741"></a>
 <a id="toc459349631"></a></p>
-<h1 id="9-java-rmi">9. <span style="color: #365f91">JAVA RMI</span></h1>
+<h1 id="9-java-rmi">9. <span style="color: #365f91"><bdi dir="ltr" class="odt-ltr-term">JAVA RMI</bdi></span></h1>
 <p><a id="toc12502462"></a>
 <a id="toc12362974"></a>
 <a id="toc10974742"></a>
 <a id="toc459349632"></a></p>
 <h2 id="91">9.1. <span style="color: #4f81bd">مقدمة</span></h2>
-<p>لقد رأينا كيفية إنشاء تطبيقات الشبكة باستخدام أدوات الاتصال التي تسمى <em>sockets</em>. في تطبيق العميل/الخادم المبني على هذه الأدوات، فإن الرابط بين العميل والخادم هو بروتوكول الاتصال الذي اعتمداه للتواصل. يمكن كتابة التطبيقين بلغات مختلفة: Java، على سبيل المثال، للعميل، وPerl للخادم، أو أي تركيبة أخرى. لدينا بالفعل تطبيقان متميزان متصلان ببروتوكول اتصال معروف لكليهما. علاوة على ذلك، فإن الوصول إلى الشبكة عبر المقابس (sockets) ليس شفافًا لتطبيق Java: يجب أن يستخدم فئة Socket، وهي فئة تم إنشاؤها خصيصًا لإدارة أدوات الاتصال هذه المعروفة باسم <em>المقابس (sockets)</em>.</p>
-<p>تتيح لك <strong>Java RMI</strong> (استدعاء الطرق عن بُعد) إنشاء تطبيقات شبكية بالخصائص التالية:</p>
+<p>لقد رأينا كيفية إنشاء تطبيقات الشبكة باستخدام أدوات الاتصال التي تسمى <em><bdi dir="ltr" class="odt-ltr-term">sockets</bdi></em>. في تطبيق العميل/الخادم المبني على هذه الأدوات، فإن الرابط بين العميل والخادم هو بروتوكول الاتصال الذي اعتمداه للتواصل. يمكن كتابة التطبيقين بلغات مختلفة: <bdi dir="ltr" class="odt-ltr-term">Java</bdi>، على سبيل المثال، للعميل، و<bdi dir="ltr" class="odt-ltr-term">Perl</bdi> للخادم، أو أي تركيبة أخرى. لدينا بالفعل تطبيقان متميزان متصلان ببروتوكول اتصال معروف لكليهما. علاوة على ذلك، فإن الوصول إلى الشبكة عبر المقابس (<bdi dir="ltr" class="odt-ltr-term">sockets</bdi>) ليس شفافًا لتطبيق <bdi dir="ltr" class="odt-ltr-term">Java:</bdi> يجب أن يستخدم فئة <bdi dir="ltr" class="odt-ltr-term">Socket</bdi>، وهي فئة تم إنشاؤها خصيصًا لإدارة أدوات الاتصال هذه المعروفة باسم <em>المقابس (<bdi dir="ltr" class="odt-ltr-term">sockets</bdi>)</em>.</p>
+<p>تتيح لك <strong><bdi dir="ltr" class="odt-ltr-term">Java RMI</bdi></strong> (استدعاء الطرق عن بُعد) إنشاء تطبيقات شبكية بالخصائص التالية:</p>
 <ol>
-  <li>تطبيقات العميل/الخادم هي تطبيقات Java في طرفي الاتصال
+  <li>تطبيقات العميل/الخادم هي تطبيقات <bdi dir="ltr" class="odt-ltr-term">Java</bdi> في طرفي الاتصال
   </li>
   <li>يمكن للعميل استخدام الكائنات الموجودة على الخادم كما لو كانت محلية
   </li>
@@ -939,12 +941,12 @@
   </li>
 </ol>
 
-<p>النقطة الأخيرة هي عامل في قابلية النقل: إذا تغيرت طبقة الشبكة لتطبيق RMI، فلن يكون من الضروري إعادة كتابة التطبيق نفسه. بل إن فئات RMI في لغة Java هي التي ستحتاج إلى التكييف مع طبقة الشبكة الجديدة.</p>
-<p>مبدأ اتصال RMI هو كما يلي:</p>
+<p>النقطة الأخيرة هي عامل في قابلية النقل: إذا تغيرت طبقة الشبكة لتطبيق <bdi dir="ltr" class="odt-ltr-term">RMI</bdi>، فلن يكون من الضروري إعادة كتابة التطبيق نفسه. بل إن فئات <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> في لغة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> هي التي ستحتاج إلى التكييف مع طبقة الشبكة الجديدة.</p>
+<p>مبدأ اتصال <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> هو كما يلي:</p>
 <ol>
-  <li>يتم كتابة تطبيق Java قياسي على الجهاز A. وسيعمل هذا التطبيق كخادم. وللقيام بذلك، سيتم &quot;نشر&quot; بعض كائناته على الجهاز A، حيث يتم تشغيل التطبيق، وستصبح بعد ذلك خدمات.
+  <li>يتم كتابة تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> قياسي على الجهاز <bdi dir="ltr" class="odt-ltr-term">A.</bdi> وسيعمل هذا التطبيق كخادم. وللقيام بذلك، سيتم &quot;نشر&quot; بعض كائناته على الجهاز <bdi dir="ltr" class="odt-ltr-term">A</bdi>، حيث يتم تشغيل التطبيق، وستصبح بعد ذلك خدمات.
   </li>
-  <li>يتم كتابة تطبيق Java كلاسيكي على الجهاز B. وسيعمل هذا التطبيق كعميل. وسيكون له حق الوصول إلى الكائنات/الخدمات المنشورة على الجهاز A؛ أي أنه سيتمكن، عبر مرجع بعيد، من التعامل معها كما لو كانت محلية. وللقيام بذلك، سيحتاج إلى معرفة بنية الكائن البعيد الذي يريد الوصول إليه (الأساليب والخصائص).
+  <li>يتم كتابة تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi> كلاسيكي على الجهاز <bdi dir="ltr" class="odt-ltr-term">B.</bdi> وسيعمل هذا التطبيق كعميل. وسيكون له حق الوصول إلى الكائنات/الخدمات المنشورة على الجهاز <bdi dir="ltr" class="odt-ltr-term">A</bdi>؛ أي أنه سيتمكن، عبر مرجع بعيد، من التعامل معها كما لو كانت محلية. وللقيام بذلك، سيحتاج إلى معرفة بنية الكائن البعيد الذي يريد الوصول إليه (الأساليب والخصائص).
   </li>
 </ol>
 
@@ -953,7 +955,7 @@
 <a id="toc10974743"></a>
 <a id="toc459349633"></a></p>
 <h2 id="92">9.2. <span style="color: #4f81bd">لنتعلم من خلال مثال</span></h2>
-<p>النظرية الكامنة وراء واجهة RMI ليست بسيطة. ولتوضيح الأمور، سنستعرض خطوة بخطوة عملية كتابة تطبيق عميل/خادم باستخدام حزمة RMI في لغة Java. سنستخدم تطبيقًا موجودًا في العديد من الكتب حول RMI: يقوم العميل باستدعاء طريقة واحدة لكائن بعيد، والتي تقوم بدورها بإرجاع سلسلة. هنا، نقدم اختلافًا طفيفًا: يقوم الخادم بإعادة ما يرسله العميل إليه. لقد قدمنا بالفعل مثل هذا التطبيق في هذا الكتاب، وهو تطبيق يعتمد على المقابس.</p>
+<p>النظرية الكامنة وراء واجهة <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> ليست بسيطة. ولتوضيح الأمور، سنستعرض خطوة بخطوة عملية كتابة تطبيق عميل/خادم باستخدام حزمة <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> في لغة <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> سنستخدم تطبيقًا موجودًا في العديد من الكتب حول <bdi dir="ltr" class="odt-ltr-term">RMI:</bdi> يقوم العميل باستدعاء طريقة واحدة لكائن بعيد، والتي تقوم بدورها بإرجاع سلسلة. هنا، نقدم اختلافًا طفيفًا: يقوم الخادم بإعادة ما يرسله العميل إليه. لقد قدمنا بالفعل مثل هذا التطبيق في هذا الكتاب، وهو تطبيق يعتمد على المقابس.</p>
 <p><a id="toc12502464"></a>
 <a id="toc12362976"></a>
 <a id="toc10974744"></a>
@@ -962,7 +964,7 @@
 <p><a id="toc10974745"></a>
 <a id="toc459349635"></a></p>
 <h4 id="9211-1">9.2.1.1. <span style="color: #4f81bd">الخطوة 1: واجهة الكائن/الخادم</span></h4>
-<p>الكائن البعيد هو مثيل فئة يجب أن ينفذ واجهة <em>Remote</em> المحددة في حزمة <em>java.rmi</em>. طرق الكائن التي يمكن الوصول إليها عن بُعد هي تلك المُعلنة في واجهة مشتقة من واجهة <em>Remote</em>:</p>
+<p>الكائن البعيد هو مثيل فئة يجب أن ينفذ واجهة <em><bdi dir="ltr" class="odt-ltr-term">Remote</bdi></em> المحددة في حزمة <em><bdi dir="ltr" class="odt-ltr-term">java.rmi</bdi></em>. طرق الكائن التي يمكن الوصول إليها عن بُعد هي تلك المُعلنة في واجهة مشتقة من واجهة <em><bdi dir="ltr" class="odt-ltr-term">Remote</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span><span class="c1">// remote interface p</span>
@@ -970,11 +972,11 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">echo</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">rmi</span><span class="p">.</span><span class="na">RemoteException</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-<p>هنا، نعلن واجهة <em>interEcho</em> التي تعلن أن طريقة <em>echo</em> يمكن الوصول إليها عن بُعد. قد ترمي هذه الطريقة استثناءً من فئة RemoteException، التي تشمل جميع الأخطاء المتعلقة بالشبكة.</p>
+<p>هنا، نعلن واجهة <em><bdi dir="ltr" class="odt-ltr-term">interEcho</bdi></em> التي تعلن أن طريقة <em><bdi dir="ltr" class="odt-ltr-term">echo</bdi></em> يمكن الوصول إليها عن بُعد. قد ترمي هذه الطريقة استثناءً من فئة <bdi dir="ltr" class="odt-ltr-term">RemoteException</bdi>، التي تشمل جميع الأخطاء المتعلقة بالشبكة.</p>
 <p><a id="toc10974746"></a>
 <a id="toc459349636"></a></p>
 <h4 id="9212-2">9.2.1.2. <span style="color: #4f81bd">الخطوة 2: كتابة كائن الخادم</span></h4>
-<p>في الخطوة التالية، نحدد الفئة التي تنفذ الواجهة البعيدة السابقة. يجب أن تكون هذه الفئة مشتقة من فئة UnicastRemoteObject، التي توفر طرقًا تسمح باستدعاء الطرق عن بُعد.</p>
+<p>في الخطوة التالية، نحدد الفئة التي تنفذ الواجهة البعيدة السابقة. يجب أن تكون هذه الفئة مشتقة من فئة <bdi dir="ltr" class="odt-ltr-term">UnicastRemoteObject</bdi>، التي توفر طرقًا تسمح باستدعاء الطرق عن بُعد.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.server.*</span><span class="p">;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.net.*</span><span class="p">;</span>
@@ -995,13 +997,13 @@
 </code></pre></div>
 <p>في الفئة السابقة، نجد:</p>
 <ol>
-  <li>الطريقة التي تقوم بعملية echo
+  <li>الطريقة التي تقوم بعملية <bdi dir="ltr" class="odt-ltr-term">echo</bdi>
   </li>
-  <li>منشئ لا يقوم بأي شيء سوى استدعاء منشئ الفئة الأصلية. وهو موجود لإعلان أنه يمكن أن يرمي استثناء <i>RemoteException</i>.
+  <li>منشئ لا يقوم بأي شيء سوى استدعاء منشئ الفئة الأصلية. وهو موجود لإعلان أنه يمكن أن يرمي استثناء <i><bdi dir="ltr" class="odt-ltr-term">RemoteException</bdi></i>.
   </li>
 </ol>
 
-<p>سننشئ مثيلًا لهذه الفئة باستخدام طريقة <em>main</em>. لكي يكون الكائن/الخدمة متاحًا من الخارج، يجب إنشاؤه وتسجيله في دليل الكائنات التي يمكن الوصول إليها من الخارج. يقوم العميل الذي يرغب في الوصول إلى كائن بعيد بالخطوات التالية:</p>
+<p>سننشئ مثيلًا لهذه الفئة باستخدام طريقة <em><bdi dir="ltr" class="odt-ltr-term">main</bdi></em>. لكي يكون الكائن/الخدمة متاحًا من الخارج، يجب إنشاؤه وتسجيله في دليل الكائنات التي يمكن الوصول إليها من الخارج. يقوم العميل الذي يرغب في الوصول إلى كائن بعيد بالخطوات التالية:</p>
 <ol>
   <li>يتصل بخدمة الدليل على الجهاز الذي يوجد فيه الكائن المطلوب. تعمل خدمة الدليل هذه على منفذ يجب أن يعرفه العميل (1099 افتراضيًا). يطلب العميل من الدليل مرجعًا إلى كائن/خدمة، مع توفير اسمه. إذا كان هذا الاسم يتوافق مع كائن/خدمة في الدليل، فإن الدليل يعيد مرجعًا إلى العميل، يمكن للعميل من خلاله التواصل مع الكائن/الخدمة البعيدة.
   </li>
@@ -1009,13 +1011,13 @@
   </li>
 </ol>
 
-<p>بالعودة إلى الخادم الخاص بنا، يتعين علينا إنشاء كائن من نوع <em>srvEcho</em> وتسجيله في دليل الكائنات التي يمكن الوصول إليها من الخارج. ويتم هذا التسجيل باستخدام طريقة <em>rebind</em> الخاصة بفئة <em>Naming</em>:</p>
+<p>بالعودة إلى الخادم الخاص بنا، يتعين علينا إنشاء كائن من نوع <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi></em> وتسجيله في دليل الكائنات التي يمكن الوصول إليها من الخارج. ويتم هذا التسجيل باستخدام طريقة <em><bdi dir="ltr" class="odt-ltr-term">rebind</bdi></em> الخاصة بفئة <em><bdi dir="ltr" class="odt-ltr-term">Naming</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Naming.rebind(String nom, Remote obj)
 </code></pre></div>
 <p>حيث </p>
-<p><strong>name</strong>: الاسم الذي سيتم ربطه بالكائن البعيد</p>
-<p><strong>obj:</strong> الكائن البعيد</p>
-<p>وبالتالي تصبح فئة <em>srvEcho</em> كما يلي:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">name</bdi></strong>: الاسم الذي سيتم ربطه بالكائن البعيد</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">obj:</bdi></strong> الكائن البعيد</p>
+<p>وبالتالي تصبح فئة <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi></em> كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.server.*</span><span class="p">;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.net.*</span><span class="p">;</span>
@@ -1045,15 +1047,15 @@
 <a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="p">}</span><span class="c1">// hand</span>
 <a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="p">}</span><span class="c1">// end of class</span>
 </code></pre></div>
-<p>عند قراءة البرنامج السابق، يبدو أنه سيتوقف فورًا بعد إنشاء خدمة الصدى وتسجيلها. لكن هذا ليس صحيحًا. نظرًا لأن فئة <em>srvEcho</em> مشتقة من فئة UnicastRemoteObject، فإن الكائن الذي تم إنشاؤه يعمل إلى أجل غير مسمى: فهو يستمع لطلبات العملاء على منفذ مجهول، أي منفذ يختاره النظام بناءً على الظروف. إنشاء الخدمة غير متزامن: في المثال، تقوم الطريقة <em>الرئيسية</em> بإنشاء الخدمة وتستمر في التنفيذ؛ وستعرض &quot;Echo server ready.&quot;</p>
+<p>عند قراءة البرنامج السابق، يبدو أنه سيتوقف فورًا بعد إنشاء خدمة الصدى وتسجيلها. لكن هذا ليس صحيحًا. نظرًا لأن فئة <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi></em> مشتقة من فئة <bdi dir="ltr" class="odt-ltr-term">UnicastRemoteObject</bdi>، فإن الكائن الذي تم إنشاؤه يعمل إلى أجل غير مسمى: فهو يستمع لطلبات العملاء على منفذ مجهول، أي منفذ يختاره النظام بناءً على الظروف. إنشاء الخدمة غير متزامن: في المثال، تقوم الطريقة <em>الرئيسية</em> بإنشاء الخدمة وتستمر في التنفيذ؛ وستعرض &quot;<bdi dir="ltr" class="odt-ltr-term">Echo server ready.</bdi>&quot;</p>
 <p><a id="toc10974747"></a>
 <a id="toc459349637"></a></p>
 <h4 id="9213-3">9.2.1.3. <span style="color: #4f81bd">الخطوة 3: ترجمة تطبيق الخادم</span></h4>
-<p>في هذه المرحلة، يمكننا ترجمة الخادم الخاص بنا. نقوم بترجمة ملف <em>interEcho.java</em> من واجهة <em>interEcho</em>، وكذلك ملف <em>srvEcho.java</em> من فئة <em>srvEcho</em>. ونحصل على ملفات <em>.class</em> المقابلة: <em>interEcho.class</em> و <em>srvEcho.class</em>.</p>
+<p>في هذه المرحلة، يمكننا ترجمة الخادم الخاص بنا. نقوم بترجمة ملف <em><bdi dir="ltr" class="odt-ltr-term">interEcho.java</bdi></em> من واجهة <em><bdi dir="ltr" class="odt-ltr-term">interEcho</bdi></em>، وكذلك ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho.java</bdi></em> من فئة <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi></em>. ونحصل على ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> المقابلة: <em><bdi dir="ltr" class="odt-ltr-term">interEcho.class</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">srvEcho.class</bdi></em>.</p>
 <p><a id="toc10974748"></a>
 <a id="toc459349638"></a></p>
 <h4 id="9214-4">9.2.1.4. <span style="color: #4f81bd">الخطوة 4: كتابة العميل</span></h4>
-<p>نكتب عميلاً يأخذ عنوان URL لخادم الصدى كمعلمة و </p>
+<p>نكتب عميلاً يأخذ عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم الصدى كمعلمة و </p>
 <ol>
   <li>يقرأ سطرًا مكتوبًا على لوحة المفاتيح
   </li>
@@ -1061,7 +1063,7 @@
   </li>
   <li>يعرض الرد الذي يرسله
   </li>
-  <li>يعود إلى الخطوة 1 ويتوقف عندما يكون السطر المكتوب هو &quot;end&quot;.
+  <li>يعود إلى الخطوة 1 ويتوقف عندما يكون السطر المكتوب هو &quot;<bdi dir="ltr" class="odt-ltr-term">end</bdi>&quot;.
   </li>
 </ol>
 
@@ -1118,34 +1120,34 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>            serveur=(interEcho) Naming.lookup(urlService);
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">تذكر أن خدمة echo الخاصة بنا تم تسجيلها في دليل الخدمات الخاص بالجهاز الذي توجد عليه باستخدام التعليمات التالية:</span></p>
+<p><span style="color: #000000">تذكر أن خدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> الخاصة بنا تم تسجيلها في دليل الخدمات الخاص بالجهاز الذي توجد عليه باستخدام التعليمات التالية:</span></p>
 <p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">            Naming.rebind(<span style="font-style:italic">&quot;srvEcho&quot;</span>,serveurEcho);</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">وبالتالي، يستخدم العميل أيضًا طريقة من فئة </span><em><span style="color: #000000">Naming </span></em><span style="color: #000000">للحصول على مرجع للخادم الذي يريد استخدامه. تأخذ طريقة </span><strong><span style="color: #000000">البحث </span></strong><span style="color: #000000">المستخدمة عنوان URL للخدمة المطلوبة كمعلمة. يتخذ عنوان URL هذا شكل عنوان URL قياسي:</span></p>
+<p><span style="color: #000000">وبالتالي، يستخدم العميل أيضًا طريقة من فئة </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">Naming</bdi> </span></em><span style="color: #000000">للحصول على مرجع للخادم الذي يريد استخدامه. تأخذ طريقة </span><strong><span style="color: #000000">البحث </span></strong><span style="color: #000000">المستخدمة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للخدمة المطلوبة كمعلمة. يتخذ عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا شكل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> قياسي:</span></p>
 <p><strong><span style="color: #000000"> </span></strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    rmi://machine:port/nom_service
 </code></pre></div>
 <p>حيث </p>
-<p><strong>rmi:</strong> اختياري - بروتوكول RMI</p>
-<p><strong>machine</strong>: اسم أو عنوان IP للجهاز الذي يعمل عليه خادم echo - اختياري، القيمة الافتراضية هي <em>localhost</em>.</p>
-<p><strong>port</strong>: منفذ الاستماع لخدمة الدليل الخاصة بهذا الجهاز — اختياري، القيمة الافتراضية هي <em>1099</em></p>
-<p><strong>service_name</strong>: الاسم الذي تم تسجيل الخدمة المطلوبة تحته (<em>srvEcho</em> في مثالنا)</p>
-<p>ما يتم إرجاعه هو مثيل للواجهة البعيدة <em>interEcho</em>. بافتراض أن العميل والخادم ليسا على نفس الجهاز، عند ترجمة ملف العميل <em>cltEcho.java</em>، يجب أن يكون ملف <em>interEcho.class</em> — نتيجة ترجمة الواجهة البعيدة <em>interEcho</em> — موجودًا في نفس الدليل؛ وإلا، سيحدث خطأ في الترجمة في الأسطر التي تشير إلى هذه الواجهة.</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">rmi:</bdi></strong> اختياري - بروتوكول <bdi dir="ltr" class="odt-ltr-term">RMI</bdi></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">machine</bdi></strong>: اسم أو عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> للجهاز الذي يعمل عليه خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi> - اختياري، القيمة الافتراضية هي <em><bdi dir="ltr" class="odt-ltr-term">localhost</bdi></em>.</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">port</bdi></strong>: منفذ الاستماع لخدمة الدليل الخاصة بهذا الجهاز — اختياري، القيمة الافتراضية هي <em>1099</em></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">service</bdi>_name</strong>: الاسم الذي تم تسجيل الخدمة المطلوبة تحته (<em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi></em> في مثالنا)</p>
+<p>ما يتم إرجاعه هو مثيل للواجهة البعيدة <em><bdi dir="ltr" class="odt-ltr-term">interEcho</bdi></em>. بافتراض أن العميل والخادم ليسا على نفس الجهاز، عند ترجمة ملف العميل <em><bdi dir="ltr" class="odt-ltr-term">cltEcho.java</bdi></em>، يجب أن يكون ملف <em><bdi dir="ltr" class="odt-ltr-term">interEcho.class</bdi></em> — نتيجة ترجمة الواجهة البعيدة <em><bdi dir="ltr" class="odt-ltr-term">interEcho</bdi></em> — موجودًا في نفس الدليل؛ وإلا، سيحدث خطأ في الترجمة في الأسطر التي تشير إلى هذه الواجهة.</p>
 <p><a id="toc10974749"></a>
 <a id="toc459349639"></a></p>
-<h4 id="9215-5-class-">9.2.1.5. <span style="color: #4f81bd">الخطوة 5: إنشاء ملفات .class المطلوبة لتطبيق العميل-الخادم</span></h4>
-<p>للتمييز بوضوح بين مكونات جانب الخادم وجانب العميل، سنضع الخادم في الدليل <em>echo\server</em> والعميل في الدليل <em>echo\client</em>. </p>
+<h4 id="9215-5-class-">9.2.1.5. <span style="color: #4f81bd">الخطوة 5: إنشاء ملفات .<bdi dir="ltr" class="odt-ltr-term">class</bdi> المطلوبة لتطبيق العميل-الخادم</span></h4>
+<p>للتمييز بوضوح بين مكونات جانب الخادم وجانب العميل، سنضع الخادم في الدليل <em><bdi dir="ltr" class="odt-ltr-term">echo</bdi>\<bdi dir="ltr" class="odt-ltr-term">server</bdi></em> والعميل في الدليل <em><bdi dir="ltr" class="odt-ltr-term">echo</bdi>\<bdi dir="ltr" class="odt-ltr-term">client</bdi></em>. </p>
 <p>يحتوي دليل الخادم على ملفات المصدر التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>E:\data\java\RMI\echo\serveur&gt;dir *.java
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>INTERE~1 JAV           158  09/03/99  15:06 interEcho.java
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>SRVECH~1 JAV           759  09/03/99  15:07 srvEcho.java
 </code></pre></div>
-<p>بعد ترجمة هذين الملفين المصدرين، نحصل على ملفات <em>.class</em> التالية:</p>
+<p>بعد ترجمة هذين الملفين المصدرين، نحصل على ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>E:\data\java\RMI\echo\serveur&gt;dir *.class
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>SRVECH~1 CLA         1 129  09/03/99  15:58 srvEcho.class
@@ -1156,47 +1158,47 @@
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>CLTECH~1 JAV         1 427  09/03/99  16:08 cltEcho.java
 </code></pre></div>
-<p>بالإضافة إلى ملف <em>interEcho.class</em> الذي تم إنشاؤه أثناء ترجمة الخادم:</p>
+<p>بالإضافة إلى ملف <em><bdi dir="ltr" class="odt-ltr-term">interEcho.class</bdi></em> الذي تم إنشاؤه أثناء ترجمة الخادم:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>E:\data\java\RMI\echo\client&gt;dir *.class
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>INTERE~1 CLA           256  09/03/99  15:59 interEcho.class
 </code></pre></div>
-<p>بعد ترجمة ملف المصدر، نحصل على ملفات <em>.class</em> التالية: </p>
+<p>بعد ترجمة ملف المصدر، نحصل على ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> التالية: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>E:\data\java\RMI\echo\client&gt;dir *.class
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>CLTECH~1 CLA         1 506  09/03/99  16:08 cltEcho.class
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>INTERE~1 CLA           256  09/03/99  15:59 interEcho.class
 </code></pre></div>
-<p>إذا حاولنا تشغيل عميل <em>cltEcho</em>، فسنحصل على الخطأ التالي:</p>
+<p>إذا حاولنا تشغيل عميل <em><bdi dir="ltr" class="odt-ltr-term">cltEcho</bdi></em>، فسنحصل على الخطأ التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>E:\data\java\RMI\echo\client&gt;j:\jdk12\bin\java cltEcho rmi://localhost/srvEcho
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Erreur : java.rmi.UnmarshalException: error unmarshalling return; nested exception is:
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        java.lang.ClassNotFoundException: srvEcho_Stub
 </code></pre></div>
-<p>إذا حاولت تشغيل خادم srvEcho، فستظهر لك الرسالة التالية:</p>
+<p>إذا حاولت تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>، فستظهر لك الرسالة التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>E:\data\java\RMI\echo\serveur&gt;j:\jdk12\bin\java srvEcho
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Erreur java.rmi.StubNotFoundException: Stub class not found: srvEcho_Stub; nested exception is:
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        java.lang.ClassNotFoundException: srvEcho_Stub  lors du lancement du serveur d’écho
 </code></pre></div>
-<p>في كلتا الحالتين، تشير آلة Java الافتراضية إلى أنها لم تتمكن من العثور على فئة <em>srvEcho_stub</em>. في الواقع، لم نسمع عن هذه الفئة من قبل. في العميل، تم تحديد موقع الخادم باستخدام العبارة التالية:</p>
+<p>في كلتا الحالتين، تشير آلة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الافتراضية إلى أنها لم تتمكن من العثور على فئة <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub</em>. في الواقع، لم نسمع عن هذه الفئة من قبل. في العميل، تم تحديد موقع الخادم باستخدام العبارة التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>            serveur=(interEcho) Naming.lookup(urlService);                
 </code></pre></div>
 <p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">هنا، </span><em><span style="color: #000000">urlservice </span></em><span style="color: #000000">هي السلسلة </span>rmi://localhost/srvEcho مع </p>
-<p><strong>RMI</strong>: بروتوكول RMI</p>
-<p><strong>Localhost</strong>: الجهاز الذي يعمل عليه الخادم — في هذه الحالة، نفس الجهاز الذي يعمل عليه العميل. عادةً ما تكون الصيغة machine:port. إذا لم يتم تحديد منفذ، يتم استخدام المنفذ 1099 افتراضيًا. خدمة دليل الخادم تستمع على هذا المنفذ.</p>
-<p><strong>srvEcho</strong>: هذا هو اسم الخدمة المحددة المطلوبة</p>
-<p>لم يتم الإبلاغ عن أي أخطاء أثناء التحويل البرمجي. كان من الضروري فقط أن يكون ملف <em>interEcho.class</em> الخاص بالواجهة البعيدة متاحًا.</p>
-<p>أثناء وقت التشغيل، تتطلب الآلة الافتراضية وجود ملف <em>srvEcho_stub.class</em> إذا كانت الخدمة المطلوبة هي خدمة srvEcho؛ وبشكل عام، يلزم وجود ملف <em>X_stub.class</em> لخدمة <em>X</em>. هذا الملف ضروري فقط أثناء وقت التشغيل، وليس أثناء ترجمة العميل. وينطبق الأمر نفسه على الخادم. إذن، ما هو هذا الملف بالضبط؟</p>
-<p>يوجد على الخادم فئة <em>srvEcho.</em>class، وهي كائننا/خدمتنا البعيدة. لا يزال العميل، حتى لو لم يكن بحاجة إلى هذه الفئة، بحاجة إلى نوع من صورتها من أجل التواصل معها. في الواقع، لا يرسل العميل طلباته مباشرة إلى الكائن البعيد: بل يرسلها إلى صورته المحلية <em>srvEcho_stub.class</em> الموجودة على نفس الجهاز الذي يوجد عليه هو نفسه. تتواصل هذه الصورة المحلية، <em>srvEcho_stub.class،</em> مع صورة مماثلة (<em>srvEcho_stub.class</em>) موجودة على الخادم. يتم إنشاء هذه الصورة من ملف <em>.class</em> الخاص بالخادم باستخدام أداة Java تسمى <em>rmic</em>. في نظام Windows، الأمر:</p>
+<p><span style="color: #000000">هنا، </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">urlservice</bdi> </span></em><span style="color: #000000">هي السلسلة </span><bdi dir="ltr" class="odt-ltr-term">rmi://localhost/srvEcho</bdi> مع </p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">RMI</bdi></strong>: بروتوكول <bdi dir="ltr" class="odt-ltr-term">RMI</bdi></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">Localhost</bdi></strong>: الجهاز الذي يعمل عليه الخادم — في هذه الحالة، نفس الجهاز الذي يعمل عليه العميل. عادةً ما تكون الصيغة <bdi dir="ltr" class="odt-ltr-term">machine:port.</bdi> إذا لم يتم تحديد منفذ، يتم استخدام المنفذ 1099 افتراضيًا. خدمة دليل الخادم تستمع على هذا المنفذ.</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi></strong>: هذا هو اسم الخدمة المحددة المطلوبة</p>
+<p>لم يتم الإبلاغ عن أي أخطاء أثناء التحويل البرمجي. كان من الضروري فقط أن يكون ملف <em><bdi dir="ltr" class="odt-ltr-term">interEcho.class</bdi></em> الخاص بالواجهة البعيدة متاحًا.</p>
+<p>أثناء وقت التشغيل، تتطلب الآلة الافتراضية وجود ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> إذا كانت الخدمة المطلوبة هي خدمة <bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>؛ وبشكل عام، يلزم وجود ملف <em><bdi dir="ltr" class="odt-ltr-term">X</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> لخدمة <em><bdi dir="ltr" class="odt-ltr-term">X</bdi></em>. هذا الملف ضروري فقط أثناء وقت التشغيل، وليس أثناء ترجمة العميل. وينطبق الأمر نفسه على الخادم. إذن، ما هو هذا الملف بالضبط؟</p>
+<p>يوجد على الخادم فئة <em><bdi dir="ltr" class="odt-ltr-term">srvEcho.</bdi></em><bdi dir="ltr" class="odt-ltr-term">class</bdi>، وهي كائننا/خدمتنا البعيدة. لا يزال العميل، حتى لو لم يكن بحاجة إلى هذه الفئة، بحاجة إلى نوع من صورتها من أجل التواصل معها. في الواقع، لا يرسل العميل طلباته مباشرة إلى الكائن البعيد: بل يرسلها إلى صورته المحلية <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الموجودة على نفس الجهاز الذي يوجد عليه هو نفسه. تتواصل هذه الصورة المحلية، <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi>،</em> مع صورة مماثلة (<em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em>) موجودة على الخادم. يتم إنشاء هذه الصورة من ملف <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الخاص بالخادم باستخدام أداة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> تسمى <em><bdi dir="ltr" class="odt-ltr-term">rmic</bdi></em>. في نظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، الأمر:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>E:\data\java\RMI\echo\serveur&gt;j:\jdk12\bin\rmic srvEcho
 </code></pre></div>
-<p>سيؤدي ذلك إلى إنشاء ملفين آخرين <em>بتنسيق .class</em> من ملف <em>srvEcho.class</em>:</p>
+<p>سيؤدي ذلك إلى إنشاء ملفين آخرين <em>بتنسيق .<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> من ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho.class</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>E:\data\java\RMI\echo\serveur&gt;dir *.class
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>SRVECH~2 CLA         3 264  09/03/99  16:57 srvEcho_Stub.class
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>SRVECH~3 CLA         1 736  09/03/99  16:57 srvEcho_Skel.class
 </code></pre></div>
-<p>لدينا هنا ملف <em>srvEcho_stub.class</em> الذي يحتاجه كل من العميل والخادم في وقت التشغيل. هناك أيضًا ملف <em>srvEcho_Skel.</em>class، والغرض منه غير معروف حاليًا. ننسخ ملف <em>srvEcho_stub.class</em> إلى دلائل العميل والخادم ونحذف ملف <em>srvEcho_Skel.class</em>. لدينا الآن الملفات التالية:</p>
+<p>لدينا هنا ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الذي يحتاجه كل من العميل والخادم في وقت التشغيل. هناك أيضًا ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Skel.</em><bdi dir="ltr" class="odt-ltr-term">class</bdi>، والغرض منه غير معروف حاليًا. ننسخ ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> إلى دلائل العميل والخادم ونحذف ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Skel.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em>. لدينا الآن الملفات التالية:</p>
 <p><strong>على جانب الخادم:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>E:\data\java\RMI\echo\serveur&gt;dir *.class
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
@@ -1218,17 +1220,17 @@
 <ul>
   <li>يُنشئ الخدمة
   </li>
-  <li>ويسجلها في دليل الخدمات للجهاز الذي يعمل عليه خادم echo
+  <li>ويسجلها في دليل الخدمات للجهاز الذي يعمل عليه خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi>
   </li>
 </ul>
 
 <p>تتطلب هذه الخطوة الأخيرة خدمة تسجيل. يتم تشغيلها باستخدام الأمر:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>start j:\jdk12\bin\rmiregistry
 </code></pre></div>
-<p><strong>rmiregistry</strong> هي خدمة التسجيل. هنا، يتم تشغيلها في الخلفية في نافذة موجه أوامر Windows باستخدام الأمر <strong>start</strong>. مع تنشيط التسجيل، يمكننا إنشاء خدمة echo وتسجيلها في سجل الخدمات. مرة أخرى، يتم تشغيلها في الخلفية باستخدام الأمر <em>start</em>:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi></strong> هي خدمة التسجيل. هنا، يتم تشغيلها في الخلفية في نافذة موجه أوامر <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> باستخدام الأمر <strong><bdi dir="ltr" class="odt-ltr-term">start</bdi></strong>. مع تنشيط التسجيل، يمكننا إنشاء خدمة <bdi dir="ltr" class="odt-ltr-term">echo</bdi> وتسجيلها في سجل الخدمات. مرة أخرى، يتم تشغيلها في الخلفية باستخدام الأمر <em><bdi dir="ltr" class="odt-ltr-term">start</bdi></em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>E:\data\java\RMI\echo\serveur&gt;start j:\jdk12\bin\java srvEcho
 </code></pre></div>
-<p>يعمل خادم echo في نافذة DOS جديدة ويعرض الناتج المطلوب:</p>
+<p>يعمل خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi> في نافذة <bdi dir="ltr" class="odt-ltr-term">DOS</bdi> جديدة ويعرض الناتج المطلوب:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Serveur d’écho prêt
 </code></pre></div>
 <p>كل ما تبقى هو تشغيل العميل واختباره:</p>
@@ -1244,13 +1246,13 @@
 <h4 id="9217">9.2.1.7. <span style="color: #4f81bd">العميل والخادم على جهازين مختلفين</span></h4>
 <p>في المثال السابق، كان العميل والخادم على نفس الجهاز. الآن نضعهما على جهازين مختلفين:</p>
 <ul>
-  <li>الخادم على جهاز يعمل بنظام Windows
+  <li>الخادم على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
   </li>
-  <li>العميل على جهاز يعمل بنظام Linux
+  <li>العميل على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>
   </li>
 </ul>
 
-<p>يتم تشغيل الخادم كما في السابق على جهاز Windows. على جهاز Linux، تم نقل ملفات .class الخاصة بالعميل:</p>
+<p>يتم تشغيل الخادم كما في السابق على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> على جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، تم نقل ملفات .<bdi dir="ltr" class="odt-ltr-term">class</bdi> الخاصة بالعميل:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>shiva[serge]:/home/admin/serge/java/rmi/client#
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$ dir
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>total 9
@@ -1267,7 +1269,7 @@
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">      </span><span class="nx">java</span><span class="p">.</span><span class="nx">rmi</span><span class="p">.</span><span class="nx">UnmarshalException</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="nx">unmarshalling</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">header</span><span class="p">;</span><span class="w"> </span><span class="nx">nested</span><span class="w"> </span><span class="nx">exception</span><span class="w"> </span><span class="nx">is</span><span class="o">:</span><span class="w"> </span>
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">      </span><span class="nx">java</span><span class="p">.</span><span class="nx">rmi</span><span class="p">.</span><span class="nx">UnmarshalException</span><span class="o">:</span><span class="w"> </span><span class="nx">skeleton</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">found</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="nx">required</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="nx">version</span>
 </code></pre></div>
-<p>إذن لدينا خطأ: يبدو أن آلة Java الافتراضية تتطلب الملف <em>srvEcho_skel.class</em>، الذي تم إنشاؤه بواسطة الأداة المساعدة <em>rmic</em> ولكن لم يتم استخدامه حتى الآن. نقوم بإعادة إنشائه وننقله أيضًا إلى جهاز Linux:</p>
+<p>إذن لدينا خطأ: يبدو أن آلة <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الافتراضية تتطلب الملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_skel.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em>، الذي تم إنشاؤه بواسطة الأداة المساعدة <em><bdi dir="ltr" class="odt-ltr-term">rmic</bdi></em> ولكن لم يتم استخدامه حتى الآن. نقوم بإعادة إنشائه وننقله أيضًا إلى جهاز <bdi dir="ltr" class="odt-ltr-term">Linux:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>shiva[serge]:/home/admin/serge/java/rmi/client#
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>$ dir
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>total 11
@@ -1278,7 +1280,7 @@
 <a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>-rw-r--r--   1 serge    admin        1736 Mar 10 10:17 srvEcho_Skel.class
 <a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>-rw-r--r--   1 serge    admin        3264 Mar 10 10:02 srvEcho_Stub.class
 </code></pre></div>
-<p>نحصل على نفس الخطأ كما من قبل... لذا نعيد التفكير في الأمر ونعيد قراءة وثائق RMI. نستنتج في النهاية أن الخادم نفسه ربما يحتاج إلى ملف <em>srvEcho_Skel.class</em> الشهير. ثم نعيد تشغيل الخادم على جهاز Windows مع وجود ملفَي <em>srvEcho_Stub.class</em> و <em>srvEcho_Skel.class:</em></p>
+<p>نحصل على نفس الخطأ كما من قبل... لذا نعيد التفكير في الأمر ونعيد قراءة وثائق <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> نستنتج في النهاية أن الخادم نفسه ربما يحتاج إلى ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Skel.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الشهير. ثم نعيد تشغيل الخادم على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> مع وجود ملفَي <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Skel.<bdi dir="ltr" class="odt-ltr-term">class:</bdi></em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>E:\data\java\RMI\echo\serveur&gt;dir *.class
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>SRVECH~1 CLA         1 129  09/03/99  15:58 srvEcho.class
@@ -1288,7 +1290,7 @@
 <a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
 <a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>E:\data\java\RMI\echo\serveur&gt;start j:\jdk12\bin\java srvEcho
 </code></pre></div>
-<p>ثم، على جهاز Linux، نختبر العميل مرة أخرى، وهذه المرة يعمل: </p>
+<p>ثم، على جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، نختبر العميل مرة أخرى، وهذه المرة يعمل: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>shiva[serge]:/home/admin/serge/java/rmi/client#
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>$ dir *.class
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>-rw-r--r--   1 serge    admin        1506 Mar 10 10:02 cltEcho.class
@@ -1303,7 +1305,7 @@
 <a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>Réponse serveur : [msg2]
 <a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>Message : fin
 </code></pre></div>
-<p>وبالتالي يمكننا أن نستنتج أنه، من جانب الخادم، يجب أن يكون كل من ملفَي <em>srvEcho_Stub.class</em> و <em>srvEcho_Skel.class</em> موجودين. أما من جانب العميل، فلم يكن ضروريًا حتى الآن سوى ملف <em>srvEcho_Stub.class</em>. وقد ثبت أنه ضروري عندما كان العميل والخادم على نفس جهاز Windows. أما في نظام Linux، فسنقوم بإزالته لنرى ما سيحدث...</p>
+<p>وبالتالي يمكننا أن نستنتج أنه، من جانب الخادم، يجب أن يكون كل من ملفَي <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Skel.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> موجودين. أما من جانب العميل، فلم يكن ضروريًا حتى الآن سوى ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em>. وقد ثبت أنه ضروري عندما كان العميل والخادم على نفس جهاز <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> أما في نظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، فسنقوم بإزالته لنرى ما سيحدث...</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>shiva[serge]:/home/admin/serge/java/rmi/client#
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>$ dir *.class
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>-rw-r--r--   1 serge    admin        1506 Mar 10 10:02 cltEcho.class
@@ -1325,7 +1327,7 @@
 <a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>Erreur : java.rmi.UnexpectedException: Unexpected exception; nested exception is: 
 <a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>        java.rmi.RMISecurityException: security.No security manager, stub class loader disabled
 </code></pre></div>
-<p>لدينا خطأ مثير للاهتمام يبدو أنه يشير إلى أن آلة جافا الافتراضية حاولت تحميل فئة &quot;<em>stub&quot;</em> سيئة السمعة، لكنها فشلت بسبب عدم وجود &quot;مدير أمان&quot;. نتذكر أننا قرأنا شيئًا عن هذا الأمر في الوثائق. نعود إلى الموضوع... ونجد أن الخادم يجب أن ينشئ ويثبت مدير أمان ليضمن للعملاء الذين يطلبون تحميل الفئات أن الفئات آمنة. بدون <em>مدير الأمان</em> هذا، يكون تحميل الفئات مستحيلًا. يبدو أن هذا مناسب: طلب عميل Linux الخاص بنا ملف <em>srvEcho_stub.class</em> الذي يحتاجه من الخادم، ورفض الخادم، مشيرًا إلى أنه لم يتم تثبيت مدير أمان. لذا نقوم بتعديل كود الوظيفة <em>الرئيسية</em> للخادم على النحو التالي:</p>
+<p>لدينا خطأ مثير للاهتمام يبدو أنه يشير إلى أن آلة جافا الافتراضية حاولت تحميل فئة &quot;<em><bdi dir="ltr" class="odt-ltr-term">stub</bdi>&quot;</em> سيئة السمعة، لكنها فشلت بسبب عدم وجود &quot;مدير أمان&quot;. نتذكر أننا قرأنا شيئًا عن هذا الأمر في الوثائق. نعود إلى الموضوع... ونجد أن الخادم يجب أن ينشئ ويثبت مدير أمان ليضمن للعملاء الذين يطلبون تحميل الفئات أن الفئات آمنة. بدون <em>مدير الأمان</em> هذا، يكون تحميل الفئات مستحيلًا. يبدو أن هذا مناسب: طلب عميل <bdi dir="ltr" class="odt-ltr-term">Linux</bdi> الخاص بنا ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الذي يحتاجه من الخادم، ورفض الخادم، مشيرًا إلى أنه لم يتم تثبيت مدير أمان. لذا نقوم بتعديل كود الوظيفة <em>الرئيسية</em> للخادم على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="w">     </span><span class="c1">// service creation </span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">arg</span><span class="o">[]</span><span class="p">){</span>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
@@ -1342,15 +1344,15 @@
 <a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="w">    </span><span class="p">}</span><span class="c1">// hand</span>
 </code></pre></div>
-<p>نقوم بتجميع وإنشاء الملفين <em>srvEcho_stub.class</em> و <em>srvEcho_Skel.class</em> باستخدام أداة <em>rmic</em>. نبدأ خدمة الدليل (<em>rmiregistry</em>) ثم الخادم، ونحصل على خطأ لم يكن موجودًا من قبل! </p>
+<p>نقوم بتجميع وإنشاء الملفين <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Skel.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> باستخدام أداة <em><bdi dir="ltr" class="odt-ltr-term">rmic</bdi></em>. نبدأ خدمة الدليل (<em><bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi></em>) ثم الخادم، ونحصل على خطأ لم يكن موجودًا من قبل! </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Erreur java.security.AccessControlException: access denied (java.net.SocketPermission 127.0.0.1:1099 connect,resolve)  lors du lancement du serveur d’écho
 </code></pre></div>
 <p>يبدو أن مدير الأمان كان صارمًا للغاية. نراجع الوثائق مرة أخرى... ندرك أنه عندما يكون مدير الأمان نشطًا، يجب تحديد أذونات البرنامج عند تشغيله. يتم ذلك باستخدام الخيار التالي:</p>
-<div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;start j:\\jdk12\\bin\\java -Djava.security.policy=mypolicy srvEcho&lt;/mark&gt;
+<div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;start j:&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdk12&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;bin&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;java&lt;/bdi&gt; -&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Djava.security.policy&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;mypolicy srvEcho&lt;/bdi&gt;&lt;/mark&gt;
 </code></pre></div>
 <p>حيث </p>
-<p><em>java.security.policy</em> هي كلمة رئيسية</p>
-<p><em>mypolicy</em> هو ملف نصي يحدد أذونات البرنامج. وفي هذه الحالة، يكون كما يلي:</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">java.security.policy</bdi></em> هي كلمة رئيسية</p>
+<p><em><bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></em> هو ملف نصي يحدد أذونات البرنامج. وفي هذه الحالة، يكون كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>grant {
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    // Allow everything for now
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    permission java.security.AllPermission;
@@ -1359,19 +1361,19 @@
 <p>يتمتع البرنامج هنا بأذونات كاملة.</p>
 <p>لنبدأ من جديد. انتقل إلى دليل الخادم وقم بما يلي:</p>
 <ul>
-  <li>ابدأ خدمة الدليل: <mark style="background-color: #ffff00">start j:\jdk12\bin\rmiregistry</mark>
+  <li>ابدأ خدمة الدليل: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi></mark>
   </li>
-  <li>ابدأ تشغيل الخادم:     <mark style="background-color: #ffff00">start j:\jdk12\bin\java -Djava.security.policy=mypolicy srvEcho</mark>
+  <li>ابدأ تشغيل الخادم:     <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy srvEcho</bdi></mark>
   </li>
 </ul>
 
-<p>وهذه المرة، يبدأ خادم echo (ولكن ليس العميل بعد) بشكل صحيح. الآن يمكنك تجربة ما يلي:</p>
+<p>وهذه المرة، يبدأ خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi> (ولكن ليس العميل بعد) بشكل صحيح. الآن يمكنك تجربة ما يلي:</p>
 <ul>
-  <li>أوقف خادم echo، ثم خدمة الدليل
+  <li>أوقف خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi>، ثم خدمة الدليل
   </li>
   <li>أعد تشغيل خدمة الدليل أثناء وجودك في دليل غير دليل الخادم
   </li>
-  <li>العودة إلى دليل الخادم بدء تشغيل خادم echo — ستظهر لك الرسالة التالية:
+  <li>العودة إلى دليل الخادم بدء تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi> — ستظهر لك الرسالة التالية:
   </li>
 </ul>
 
@@ -1380,13 +1382,13 @@
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is:
 <a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>java.lang.ClassNotFoundException: srvEcho_Stub  lors du lancement du serveur d’écho
 </code></pre></div>
-<p>يمكننا أن نستنتج أن الدليل الذي يتم من خلاله تشغيل خدمة الدليل مهم. هنا، لم تتمكن Java من العثور على <em>srvEcho_stub.class</em> لأن خدمة الدليل لم يتم تشغيلها من دليل الخادم. عند تشغيل الخادم، يمكنك تحديد الدليل الذي توجد فيه الفئات المطلوبة من قبل الخادم:</p>
+<p>يمكننا أن نستنتج أن الدليل الذي يتم من خلاله تشغيل خدمة الدليل مهم. هنا، لم تتمكن <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من العثور على <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> لأن خدمة الدليل لم يتم تشغيلها من دليل الخادم. عند تشغيل الخادم، يمكنك تحديد الدليل الذي توجد فيه الفئات المطلوبة من قبل الخادم:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>start j:\jdk12\bin\java 
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>-Djava.security.policy=mypolicy 
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>-Djava.rmi.server.codebase=file:/e:/data/java/rmi/echo/serveur/ 
 <a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>srvEcho
 </code></pre></div>
-<p>يوجد الأمر في سطر واحد. تُستخدم الكلمة الرئيسية <code>&lt;mark style="background-color: #ffff00"&gt;java.rmi.server.codebase&lt;/mark&gt;</code> لتحديد عنوان URL للدليل الذي يحتوي على الفئات المطلوبة من قبل الخادم. في هذه الحالة، يحدد عنوان URL بروتوكول <code>file</code>—وهو بروتوكول الوصول إلى الملفات المحلية—والدليل الذي يحتوي على ملفات <em>.class</em> الخاصة بالخادم. لذلك، إذا تابعت كما يلي:</p>
+<p>يوجد الأمر في سطر واحد. تُستخدم الكلمة الرئيسية <code>&lt;mark style="background-color: #ffff00"&gt;&lt;bdi dir="ltr" class="odt-ltr-term"&gt;java.rmi.server.codebase&lt;/bdi&gt;&lt;/mark&gt;</code> لتحديد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للدليل الذي يحتوي على الفئات المطلوبة من قبل الخادم. في هذه الحالة، يحدد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بروتوكول <code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;file&lt;/bdi&gt;</code>—وهو بروتوكول الوصول إلى الملفات المحلية—والدليل الذي يحتوي على ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الخاصة بالخادم. لذلك، إذا تابعت كما يلي:</p>
 <ul>
   <li>إيقاف خدمة الدليل
   </li>
@@ -1423,7 +1425,7 @@
 <a id="__codelineno-35-19" name="__codelineno-35-19" href="#__codelineno-35-19"></a>Erreur : java.rmi.UnexpectedException: Unexpected exception; nested exception is: 
 <a id="__codelineno-35-20" name="__codelineno-35-20" href="#__codelineno-35-20"></a>        java.rmi.RMISecurityException: security.No security manager, stub class loader disabled
 </code></pre></div>
-<p>نحصل على نفس الخطأ الذي يشير إلى عدم وجود مدير أمان. نعتقد أننا ربما أخطأنا وأن العميل هو الذي يحتاج إلى إنشاء مدير أمان خاص به. نترك الخادم مع مدير الأمان الخاص به ولكننا ننشئ واحدًا للعميل أيضًا. تصبح الوظيفة الرئيسية للعميل <em>cltEcho.java</em> عندئذٍ: </p>
+<p>نحصل على نفس الخطأ الذي يشير إلى عدم وجود مدير أمان. نعتقد أننا ربما أخطأنا وأن العميل هو الذي يحتاج إلى إنشاء مدير أمان خاص به. نترك الخادم مع مدير الأمان الخاص به ولكننا ننشئ واحدًا للعميل أيضًا. تصبح الوظيفة الرئيسية للعميل <em><bdi dir="ltr" class="odt-ltr-term">cltEcho.java</bdi></em> عندئذٍ: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">arg</span><span class="o">[]</span><span class="p">){</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">         </span><span class="c1">// syntax : cltEcho machine po</span>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">        </span><span class="n">rt</span><span class="w"> </span><span class="c1">// machine: machine where the echo server </span>
@@ -1455,9 +1457,9 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">ثم نمضي كما يلي:</span></p>
 <ul>
-  <li>إعادة ترجمة <i>cltEcho.java</i>
+  <li>إعادة ترجمة <i><bdi dir="ltr" class="odt-ltr-term">cltEcho.java</bdi></i>
   </li>
-  <li>نقل ملفات .class إلى جهاز Linux
+  <li>نقل ملفات .<bdi dir="ltr" class="odt-ltr-term">class</bdi> إلى جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>
   </li>
 </ul>
 
@@ -1493,26 +1495,26 @@
 <a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a><span class="nx">Erreur</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">java</span><span class="p">.</span><span class="nx">rmi</span><span class="p">.</span><span class="nx">UnmarshalException</span><span class="o">:</span><span class="w"> </span><span class="nx">Return</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">found</span><span class="p">;</span><span class="w"> </span><span class="nx">nested</span><span class="w"> </span><span class="nx">exception</span><span class="w"> </span><span class="nx">is</span><span class="o">:</span><span class="w"> </span>
 <a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a><span class="w">        </span><span class="nx">java</span><span class="p">.</span><span class="nx">lang</span><span class="p">.</span><span class="nx">ClassNotFoundException</span><span class="o">:</span><span class="w"> </span><span class="nx">srvEcho_Stub</span>
 </code></pre></div>
-<p>على الرغم من المظاهر، فإننا نحرز تقدماً: لم يعد الخطأ كما كان. يمكننا أن نرى أن العميل تمكن من طلب <em>srvEcho_Stub.class</em> من الخادم، لكن الخادم لم يتمكن من العثور عليه. لذلك، يجب أن يكون لدى العميل مدير أمان إذا أراد أن يتمكن من طلب الفئات من الخادم.</p>
-<p>إذا نظرنا إلى الخطأ السابق، نرى أنه تم البحث عن الملف <em>srvEcho_Stub.class</em> في الدليل e:/data/java/rmi/echo/server/ ولم يتم العثور عليه. ومع ذلك، هذا هو المكان الذي يوجد فيه بالضبط. إذا نظرنا عن كثب إلى قائمة الطرق المرتبطة بالخطأ، نجد هذه الطريقة: sun.net.www.protocol.file.FileURLConnection.getInputStream. يبدو أن العميل قد فتح اتصالاً باستخدام كائن <em>FileURLConnection</em>. نعتقد أن كل هذا مرتبط بكيفية بدء تشغيل الخادم:</p>
+<p>على الرغم من المظاهر، فإننا نحرز تقدماً: لم يعد الخطأ كما كان. يمكننا أن نرى أن العميل تمكن من طلب <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> من الخادم، لكن الخادم لم يتمكن من العثور عليه. لذلك، يجب أن يكون لدى العميل مدير أمان إذا أراد أن يتمكن من طلب الفئات من الخادم.</p>
+<p>إذا نظرنا إلى الخطأ السابق، نرى أنه تم البحث عن الملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> في الدليل <bdi dir="ltr" class="odt-ltr-term">e:/data/java/rmi/echo/server/</bdi> ولم يتم العثور عليه. ومع ذلك، هذا هو المكان الذي يوجد فيه بالضبط. إذا نظرنا عن كثب إلى قائمة الطرق المرتبطة بالخطأ، نجد هذه الطريقة: <bdi dir="ltr" class="odt-ltr-term">sun.net.www.protocol.file.FileURLConnection.getInputStream.</bdi> يبدو أن العميل قد فتح اتصالاً باستخدام كائن <em><bdi dir="ltr" class="odt-ltr-term">FileURLConnection</bdi></em>. نعتقد أن كل هذا مرتبط بكيفية بدء تشغيل الخادم:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>start j:\jdk12\bin\java 
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>-Djava.security.policy=mypolicy 
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>-Djava.rmi.server.codebase=file:/e:/data/java/rmi/echo/serveur/ 
 <a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>srvEcho
 </code></pre></div>
-<p>يبدو أن رسالة الخطأ تشير إلى قيمة الكلمة الرئيسية <em>java.rmi.server.codebase</em>. عندما ننظر إلى الوثائق مرة أخرى، نرى أن قيمة هذه الكلمة الرئيسية، في الأمثلة المقدمة، هي دائمًا: http://..، أي أن البروتوكول المستخدم هو HTTP. ليس من الواضح كيف يطلب العميل فئاته ويحصل عليها من الخادم. ربما يطلبها باستخدام عنوان URL المحدد بواسطة الكلمة الرئيسية *<code>java.rmi.server.codebase*</code>، والتي يتم تعيينها عند تشغيل الخادم. لذلك قررنا تشغيل الخادم باستخدام الأمر الجديد التالي:</p>
+<p>يبدو أن رسالة الخطأ تشير إلى قيمة الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">java.rmi.server.codebase</bdi></em>. عندما ننظر إلى الوثائق مرة أخرى، نرى أن قيمة هذه الكلمة الرئيسية، في الأمثلة المقدمة، هي دائمًا: <bdi dir="ltr" class="odt-ltr-term">http://..</bdi>، أي أن البروتوكول المستخدم هو <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> ليس من الواضح كيف يطلب العميل فئاته ويحصل عليها من الخادم. ربما يطلبها باستخدام عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المحدد بواسطة الكلمة الرئيسية *<code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;java.rmi.server.codebase&lt;/bdi&gt;*</code>، والتي يتم تعيينها عند تشغيل الخادم. لذلك قررنا تشغيل الخادم باستخدام الأمر الجديد التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>start j:\jdk12\bin\java -Djava.security.policy=mypolicy
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>-Djava.rmi.server.codebase=http://tahe.istia.univ-angers.fr/rmi/echo/ srvEcho
 </code></pre></div>
-<p>أصبح البروتوكول الآن HTTP. يجب علينا نقل ملفات <em>.class</em> إلى موقع يمكن لخادم HTTP الوصول إليه على الجهاز الذي سيتم تخزين الفئات عليه. في مثالنا هذا، يعمل الخادم على جهاز يعمل بنظام Windows مزود بخادم HTTP من Microsoft PWS. ويقع المجلد الجذر لهذا الخادم <em>في d:\Inetpub\wwwroot</em>. ولذلك، فإننا نتبع الخطوات التالية:</p>
+<p>أصبح البروتوكول الآن <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> يجب علينا نقل ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> إلى موقع يمكن لخادم <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الوصول إليه على الجهاز الذي سيتم تخزين الفئات عليه. في مثالنا هذا، يعمل الخادم على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> مزود بخادم <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> من <bdi dir="ltr" class="odt-ltr-term">Microsoft PWS.</bdi> ويقع المجلد الجذر لهذا الخادم <em>في <bdi dir="ltr" class="odt-ltr-term">d:</bdi>\<bdi dir="ltr" class="odt-ltr-term">Inetpub</bdi>\<bdi dir="ltr" class="odt-ltr-term">wwwroot</bdi></em>. ولذلك، فإننا نتبع الخطوات التالية:</p>
 <ul>
-  <li>قم بإنشاء الدليل <i>d:\Inetpub\wwwroot\rmi\echo</i>
+  <li>قم بإنشاء الدليل <i><bdi dir="ltr" class="odt-ltr-term">d:</bdi>\<bdi dir="ltr" class="odt-ltr-term">Inetpub</bdi>\<bdi dir="ltr" class="odt-ltr-term">wwwroot</bdi>\<bdi dir="ltr" class="odt-ltr-term">rmi</bdi>\<bdi dir="ltr" class="odt-ltr-term">echo</bdi></i>
   </li>
-  <li>ضع ملفات<i> .class </i>الخاصة بالخادم وملف <i>mypolicy </i>هناك
+  <li>ضع ملفات<i> .<bdi dir="ltr" class="odt-ltr-term">class</bdi> </i>الخاصة بالخادم وملف <i><bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi> </i>هناك
   </li>
   <li>قم بتشغيل خادم الويب إذا لم يكن قيد التشغيل بالفعل
   </li>
-  <li>أعد تشغيل خدمة التسجيل (rmiregistry)
+  <li>أعد تشغيل خدمة التسجيل (<bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi>)
   </li>
   <li>أعد تشغيل الخادم باستخدام الأمر 
   </li>
@@ -1522,7 +1524,7 @@
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>-Djava.rmi.server.codebase=http://tahe.istia.univ-angers.fr/rmi/echo/ srvEcho
 </code></pre></div>
 <ul>
-  <li>على جهاز Linux، قم بتشغيل العميل:
+  <li>على جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، قم بتشغيل العميل:
   </li>
 </ul>
 
@@ -1539,8 +1541,8 @@
 <a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>Réponse serveur : [msg2]
 <a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>Message : fin
 </code></pre></div>
-<p>يا للهول! لقد نجح الأمر. استرد العميل ملف <em>srvEcho_Stub.class</em> بنجاح.</p>
-<p>كل هذا أعطانا بعض الأفكار، ونحن نتساءل عما إذا كان العميل الذي يعمل على جهاز Windows الخاص بالخادم سيعمل أيضًا بدون ملف <em>srvEcho_Stub.class.</em> ننتقل إلى دليل العميل، ونحذف ملف <em>srvEcho_Stub.class</em> إذا كان موجودًا، ونطلق العميل بنفس الطريقة كما في Linux:</p>
+<p>يا للهول! لقد نجح الأمر. استرد العميل ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> بنجاح.</p>
+<p>كل هذا أعطانا بعض الأفكار، ونحن نتساءل عما إذا كان العميل الذي يعمل على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الخاص بالخادم سيعمل أيضًا بدون ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class.</bdi></em> ننتقل إلى دليل العميل، ونحذف ملف <em><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi>_Stub.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> إذا كان موجودًا، ونطلق العميل بنفس الطريقة كما في <bdi dir="ltr" class="odt-ltr-term">Linux:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>E:\data\java\RMI\echo\client&gt;dir *.class
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>CLTECH~1 CLA         1 622  10/03/99  14:12 cltEcho.class
@@ -1555,30 +1557,30 @@
 <p><a id="toc10974752"></a>
 <a id="toc459349642"></a></p>
 <h4 id="9218">9.2.1.8. <span style="color: #4f81bd">ملخص</span></h4>
-<p>جانب خادم Windows:</p>
+<p>جانب خادم <bdi dir="ltr" class="odt-ltr-term">Windows:</bdi></p>
 <ul>
   <li>يحتوي الخادم على مدير أمان
   </li>
-  <li>وقد تم تشغيله بالخيارات التالية: <mark style="background-color: #ffff00">start j:\jdk12\bin\java -Djava.security.policy=mypolicy</mark>
+  <li>وقد تم تشغيله بالخيارات التالية: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></mark>
   </li>
 </ul>
 
-<p><mark style="background-color: #ffff00">-Djava.rmi.server.codebase=http://tahe.istia.univ-angers.fr/rmi/echo/ srvEcho</mark></p>
-<p>جانب العميل (Linux أو Windows)</p>
+<p><mark style="background-color: #ffff00">-<bdi dir="ltr" class="odt-ltr-term">Djava.rmi.server.codebase</bdi>=<bdi dir="ltr" class="odt-ltr-term">http://tahe.istia.univ-angers.fr/rmi/echo/ srvEcho</bdi></mark></p>
+<p>جانب العميل (<bdi dir="ltr" class="odt-ltr-term">Linux</bdi> أو <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>)</p>
 <ul>
   <li>يحتوي العميل على مدير أمان
   </li>
-  <li>على نظام Linux، تم تشغيله بواسطة `<mark style="background-color: #ffff00">java cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho`</mark>
+  <li>على نظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، تم تشغيله بواسطة `<mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">java cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi>`</mark>
   </li>
-  <li>في نظام Windows، تم تشغيله بواسطة <mark style="background-color: #ffff00">j:\jdk12\bin\java -Djava.security.policy=mypolicy cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</mark>
+  <li>في نظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، تم تشغيله بواسطة <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi></mark>
   </li>
 </ul>
 <p><a id="toc10974753"></a>
 <a id="toc459349643"></a></p>
-<h4 id="9219-echo-linux-windows-linux">9.2.1.9. <span style="color: #4f81bd">خادم Echo على نظام Linux، وعملاء على نظامي Windows وLinux</span></h4>
-<p>سنقوم الآن بنقل الخادم إلى جهاز Linux واختبار عملاء Linux و Windows. الإجراء كما يلي:</p>
+<h4 id="9219-echo-linux-windows-linux">9.2.1.9. <span style="color: #4f81bd">خادم <bdi dir="ltr" class="odt-ltr-term">Echo</bdi> على نظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، وعملاء على نظامي <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> و<bdi dir="ltr" class="odt-ltr-term">Linux</bdi></span></h4>
+<p>سنقوم الآن بنقل الخادم إلى جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi> واختبار عملاء <bdi dir="ltr" class="odt-ltr-term">Linux</bdi> و <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> الإجراء كما يلي:</p>
 <ul>
-  <li>انقل ملفات<i> .class </i>الخاصة بالخادم إلى جهاز Linux 
+  <li>انقل ملفات<i> .<bdi dir="ltr" class="odt-ltr-term">class</bdi> </i>الخاصة بالخادم إلى جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi> 
   </li>
 </ul>
 
@@ -1593,19 +1595,19 @@
 <a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>-rw-r--r--   1 serge    admin        3264 Mar 10 16:09 srvEcho_Stub.class
 </code></pre></div>
 <ul>
-  <li>نظرًا لأن <i>srvEcho_Stub.class </i>سيتم طلبه من قبل العملاء، فإن الدليل الذي تم اختياره لفئات الخادم هو دليل يمكن الوصول إليه من خادم HTTP الخاص بجهاز Linux. هنا، عنوان URL لهذا الدليل هو<i> http://shiva.istia.univ-angers.fr/~serge/rmi/echo/serveur</i>
+  <li>نظرًا لأن <i><bdi dir="ltr" class="odt-ltr-term">srvEcho_Stub.class</bdi> </i>سيتم طلبه من قبل العملاء، فإن الدليل الذي تم اختياره لفئات الخادم هو دليل يمكن الوصول إليه من خادم <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الخاص بجهاز <bdi dir="ltr" class="odt-ltr-term">Linux.</bdi> هنا، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لهذا الدليل هو<i> <bdi dir="ltr" class="odt-ltr-term">http://shiva.istia.univ-angers.fr/</bdi>~<bdi dir="ltr" class="odt-ltr-term">serge/rmi/echo/serveur</bdi></i>
   </li>
-  <li>يتم تشغيل خدمة التسجيل في الخلفية: <i>/usr/local/bin/jdk/rmiregistry &amp;</i>
+  <li>يتم تشغيل خدمة التسجيل في الخلفية: <i>/<bdi dir="ltr" class="odt-ltr-term">usr/local/bin/jdk/rmiregistry</bdi> &amp;</i>
   </li>
-  <li>يتم تشغيل الخادم في الخلفية: <i><mark style="background-color: #ffff00">/usr/local/bin/jdk/bin/java</mark></i>
+  <li>يتم تشغيل الخادم في الخلفية: <i><mark style="background-color: #ffff00">/<bdi dir="ltr" class="odt-ltr-term">usr/local/bin/jdk/bin/java</bdi></mark></i>
   </li>
 </ul>
 
-<p><em><mark style="background-color: #ffff00"> -Djava.rmi.server.codebase=http://shiva.istia.univ-angers.fr/~serge/rmi/echo/server/ </mark></em></p>
-<p><em><mark style="background-color: #ffff00">srvEcho &amp;</mark></em></p>
-<p>يمكننا اختبار العملاء. عميل Windows أولاً. </p>
+<p><em><mark style="background-color: #ffff00"> -<bdi dir="ltr" class="odt-ltr-term">Djava.rmi.server.codebase</bdi>=<bdi dir="ltr" class="odt-ltr-term">http://shiva.istia.univ-angers.fr/</bdi>~<bdi dir="ltr" class="odt-ltr-term">serge/rmi/echo/server/</bdi> </mark></em></p>
+<p><em><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">srvEcho</bdi> &amp;</mark></em></p>
+<p>يمكننا اختبار العملاء. عميل <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> أولاً. </p>
 <ul>
-  <li>انتقل إلى دليل العميل على جهاز Windows
+  <li>انتقل إلى دليل العميل على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
   </li>
   <li>قم بتشغيل العميل باستخدام الأمر: 
   </li>
@@ -1616,7 +1618,7 @@
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>Réponse serveur : [msg1]
 <a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>Message : fin
 </code></pre></div>
-<p>اختبار عميل Linux:</p>
+<p>اختبار عميل <bdi dir="ltr" class="odt-ltr-term">Linux:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>shiva[serge]:/home/admin/serge/java/rmi/echo/client#
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>$ java cltEcho srvEcho
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>Message : msg1
@@ -1625,37 +1627,37 @@
 <a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>Réponse serveur : [msg2]
 <a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>Message : fin
 </code></pre></div>
-<p>لاحظ أنه بالنسبة لعميل Linux الذي يعمل على نفس الجهاز الذي يعمل عليه خادم echo، لم تكن هناك حاجة لتحديد جهاز في عنوان URL للخدمة المطلوبة.</p>
+<p>لاحظ أنه بالنسبة لعميل <bdi dir="ltr" class="odt-ltr-term">Linux</bdi> الذي يعمل على نفس الجهاز الذي يعمل عليه خادم <bdi dir="ltr" class="odt-ltr-term">echo</bdi>، لم تكن هناك حاجة لتحديد جهاز في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للخدمة المطلوبة.</p>
 <p><a id="toc12502465"></a>
 <a id="toc12362977"></a>
 <a id="toc10974754"></a>
 <a id="toc459349644"></a></p>
-<h2 id="93-sql-windows">9.3. <span style="color: #4f81bd">المثال الثاني: خادم SQL على جهاز يعمل بنظام Windows</span></h2>
+<h2 id="93-sql-windows">9.3. <span style="color: #4f81bd">المثال الثاني: خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi></span></h2>
 <p><a id="toc12502466"></a>
 <a id="toc12362978"></a>
 <a id="toc10974755"></a>
 <a id="toc459349645"></a></p>
 <h3 id="931">9.3.1. <span style="color: #4f81bd">المشكلة</span></h3>
-<p>في فصل JDBC، رأينا كيفية إدارة قواعد البيانات العلائقية. في الأمثلة المقدمة، كانت التطبيقات وقاعدة البيانات المستخدمة موجودة على نفس جهاز Windows. هنا، نقترح كتابة خادم RMI على جهاز Windows يسمح للعملاء البعيدين بالوصول إلى قواعد البيانات العامة ODBC الموجودة على الجهاز الذي يستضيف الخادم.</p>
+<p>في فصل <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>، رأينا كيفية إدارة قواعد البيانات العلائقية. في الأمثلة المقدمة، كانت التطبيقات وقاعدة البيانات المستخدمة موجودة على نفس جهاز <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> هنا، نقترح كتابة خادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> على جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> يسمح للعملاء البعيدين بالوصول إلى قواعد البيانات العامة <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> الموجودة على الجهاز الذي يستضيف الخادم.</p>
 <p><img src="images/100000000000044C000001A84172300A.png" width="550" height="212" style="width:14.554cm;height:5.609cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044C000001A84172300A.png" /></p>
-<p>يمكن لعميل RMI تنفيذ ثلاث عمليات:</p>
+<p>يمكن لعميل <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> تنفيذ ثلاث عمليات:</p>
 <ul>
   <li>الاتصال بقاعدة البيانات التي يختارها
   </li>
-  <li>إرسال استعلامات SQL
+  <li>إرسال استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>
   </li>
   <li>إغلاق الاتصال
   </li>
 </ul>
 
-<p>يقوم الخادم بتنفيذ استعلامات SQL الخاصة بالعميل وإرسال النتائج مرة أخرى إلى العميل. هذه هي وظيفته الأساسية، ولهذا السبب سنشير إليه باسم خادم SQL.</p>
-<p>نطبق الخطوات المختلفة التي رأيناها سابقًا مع خادم echo.</p>
+<p>يقوم الخادم بتنفيذ استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الخاصة بالعميل وإرسال النتائج مرة أخرى إلى العميل. هذه هي وظيفته الأساسية، ولهذا السبب سنشير إليه باسم خادم <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi></p>
+<p>نطبق الخطوات المختلفة التي رأيناها سابقًا مع خادم <bdi dir="ltr" class="odt-ltr-term">echo.</bdi></p>
 <p><a id="toc12502467"></a>
 <a id="toc12362979"></a>
 <a id="toc10974756"></a>
 <a id="toc459349646"></a></p>
 <h3 id="932-1">9.3.2. <span style="color: #4f81bd">الخطوة 1: الواجهة البعيدة</span></h3>
-<p>الواجهة البعيدة هي الواجهة التي تسرد أساليب خادم RMI التي ستكون متاحة لعملاء RMI. سنستخدم الواجهة التالية:</p>
+<p>الواجهة البعيدة هي الواجهة التي تسرد أساليب خادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> التي ستكون متاحة لعملاء <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> سنستخدم الواجهة التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>
 <a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w"> </span><span class="c1">// remote interface p</span>
@@ -1669,14 +1671,14 @@
 <a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a><span class="n">moteException</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <p>فيما يلي وظائف الطرق المختلفة:</p>
-<p><strong>Connect</strong>: يتصل العميل بقاعدة بيانات بعيدة، موفرًا <em>برنامج التشغيل وعنوان URL</em> الخاص بـ JDBC، بالإضافة إلى <em>معرفه وكلمة مروره</em> للوصول إلى قاعدة البيانات. يعرض الخادم سلسلة تشير إلى نتيجة الاتصال:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">Connect</bdi></strong>: يتصل العميل بقاعدة بيانات بعيدة، موفرًا <em>برنامج التشغيل وعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></em> الخاص بـ <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi>، بالإضافة إلى <em>معرفه وكلمة مروره</em> للوصول إلى قاعدة البيانات. يعرض الخادم سلسلة تشير إلى نتيجة الاتصال:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>    200 - Connexion réussie
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>    500 - Echec de la connexion
 </code></pre></div>
-<p><strong>executeSQL</strong>: يطلب العميل تنفيذ استعلام SQL على قاعدة البيانات التي يتصل بها. ويحدد الحرف الذي يجب أن يفصل بين الحقول في النتائج التي يتم إرجاعها إليه. يعرض الخادم مصفوفة من السلاسل:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">executeSQL</bdi></strong>: يطلب العميل تنفيذ استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على قاعدة البيانات التي يتصل بها. ويحدد الحرف الذي يجب أن يفصل بين الحقول في النتائج التي يتم إرجاعها إليه. يعرض الخادم مصفوفة من السلاسل:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>    100 n
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>    لاستعلام تحديث قاعدة البيانات، حيث n هو عدد الصفوف التي تم تحديثها
+<div class="highlight"><pre><span></span><code>    لاستعلام تحديث قاعدة البيانات، حيث &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;n&lt;/bdi&gt; هو عدد الصفوف التي تم تحديثها
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>    500 msg d’erreur
 </code></pre></div>
@@ -1692,7 +1694,7 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>إذا أعاد الاستعلام نتائج. الصفوف التي يعيدها الخادم هي نتائج الاستعلام.
 </code></pre></div>
-<p><strong>close</strong>: يقوم العميل بإغلاق اتصاله بقاعدة البيانات البعيدة. يعرض الخادم سلسلة تشير إلى نتيجة هذا الإغلاق:</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">close</bdi></strong>: يقوم العميل بإغلاق اتصاله بقاعدة البيانات البعيدة. يعرض الخادم سلسلة تشير إلى نتيجة هذا الإغلاق:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>    200 Base fermée
 <a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>    500 Erreur lors de la fermeture de la base (msg d’erreur)
 </code></pre></div>
@@ -1701,7 +1703,7 @@
 <a id="toc10974757"></a>
 <a id="toc459349647"></a></p>
 <h3 id="933-2">9.3.3. <span style="color: #4f81bd">الخطوة 2: كتابة الخادم</span></h3>
-<p>فيما يلي شفرة المصدر بلغة جافا لخادم SQL. ويتطلب فهمها الإلمام بإدارة قواعد البيانات عبر JDBC وبناء خوادم RMI. ومن المفترض أن تسهل التعليقات المرفقة بالبرنامج عملية الفهم.</p>
+<p>فيما يلي شفرة المصدر بلغة جافا لخادم <bdi dir="ltr" class="odt-ltr-term">SQL.</bdi> ويتطلب فهمها الإلمام بإدارة قواعد البيانات عبر <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> وبناء خوادم <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> ومن المفترض أن تسهل التعليقات المرفقة بالبرنامج عملية الفهم.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.server.*</span><span class="p">;</span>
@@ -1846,31 +1848,31 @@
 <a id="toc12362981"></a>
 <a id="toc10974758"></a>
 <a id="toc459349648"></a></p>
-<h3 id="934-rmi">9.3.4. <span style="color: #4f81bd">كتابة عميل RMI</span></h3>
-<p>يتم استدعاء عميل خادم RMI بالمعلمات التالية:</p>
+<h3 id="934-rmi">9.3.4. <span style="color: #4f81bd">كتابة عميل <bdi dir="ltr" class="odt-ltr-term">RMI</bdi></span></h3>
+<p>يتم استدعاء عميل خادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> بالمعلمات التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>    urlserviceAnnuaire pilote urlBase id mdp separateur
 </code></pre></div>
-<p><strong>directoryServiceURL</strong>: عنوان URL RMI لخدمة الدليل التي سجلت خادم SQL</p>
-<p><strong>driver</strong>: برنامج التشغيل الذي يجب أن يستخدمه خادم SQL لإدارة قاعدة البيانات</p>
-<p><strong>urlBase</strong>: عنوان URL JDBC لقاعدة البيانات المراد إدارتها</p>
-<p><strong>id</strong>: معرف العميل أو null في حالة عدم وجود معرف</p>
-<p><strong>password</strong>: كلمة مرور العميل أو null في حالة عدم وجود كلمة مرور</p>
-<p><strong>separator</strong>: الحرف الذي يجب أن يستخدمه خادم SQL لفصل الحقول في صفوف نتائج الاستعلام</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">directoryServiceURL</bdi></strong>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL RMI</bdi> لخدمة الدليل التي سجلت خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">driver</bdi></strong>: برنامج التشغيل الذي يجب أن يستخدمه خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لإدارة قاعدة البيانات</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">urlBase</bdi></strong>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL JDBC</bdi> لقاعدة البيانات المراد إدارتها</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">id</bdi></strong>: معرف العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود معرف</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">password</bdi></strong>: كلمة مرور العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود كلمة مرور</p>
+<p><strong><bdi dir="ltr" class="odt-ltr-term">separator</bdi></strong>: الحرف الذي يجب أن يستخدمه خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لفصل الحقول في صفوف نتائج الاستعلام</p>
 <p>فيما يلي مثال على المعلمات المحتملة: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>    srvSQL sun.jdbc.odbc.JdbcOdbcDriver jdbc:odbc:articles null null ,
 </code></pre></div>
 <p>مع ما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>urlserviceAnnuaire    srvSQL
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>اسم RMI لخادم SQL
+<div class="highlight"><pre><span></span><code>اسم &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;RMI&lt;/bdi&gt; لخادم &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;SQL&lt;/bdi&gt;
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>pilote     sun.jdbc.odbc.JdbcOdbcDriver
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>برنامج التشغيل القياسي لقواعد البيانات المزودة بواجهة ODBC
+<div class="highlight"><pre><span></span><code>برنامج التشغيل القياسي لقواعد البيانات المزودة بواجهة &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ODBC&lt;/bdi&gt;
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>urlBase    jdbc:odbc:articles
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>لاستخدام قاعدة بيانات المقالات المدرجة في قواعد بيانات ODBC العامة لجهاز Windows
+<div class="highlight"><pre><span></span><code>لاستخدام قاعدة بيانات المقالات المدرجة في قواعد بيانات &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ODBC&lt;/bdi&gt; العامة لجهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Windows&lt;/bdi&gt;
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>id    null
 </code></pre></div>
@@ -1886,7 +1888,7 @@
 </code></pre></div>
 <p>بمجرد التشغيل باستخدام المعلمات المذكورة أعلاه، يتبع العميل الخطوات التالية:</p>
 <ul>
-  <li>يقوم بالاتصال بخادم RMI <b>srvSQL</b>، وهو خادم RMI موجود على نفس الجهاز الذي يوجد عليه العميل
+  <li>يقوم بالاتصال بخادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> <b><bdi dir="ltr" class="odt-ltr-term">srvSQL</bdi></b>، وهو خادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> موجود على نفس الجهاز الذي يوجد عليه العميل
   </li>
   <li>يطلبون الاتصال بقاعدة بيانات المقالات
   </li>
@@ -1895,9 +1897,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>connect(‘’sun.jdbc.odbc.JdbcOdbcDriver’’, ‘‘jdbc:odbc:articles’’, ’’’’, ’’’’)
 </code></pre></div>
 <ul>
-  <li>يطلب من المستخدم كتابة استعلام SQL
+  <li>يطلب من المستخدم كتابة استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>
   </li>
-  <li>يرسله إلى خادم SQL
+  <li>يرسله إلى خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>
   </li>
 </ul>
 
@@ -1906,11 +1908,11 @@
 <ul>
   <li>يعرض النتائج التي أرجعها الخادم على الشاشة
   </li>
-  <li>يطلب من المستخدم مرة أخرى كتابة استعلام SQL على لوحة المفاتيح. سيتوقف عند <b>انتهاء</b> الاستعلام.
+  <li>يطلب من المستخدم مرة أخرى كتابة استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على لوحة المفاتيح. سيتوقف عند <b>انتهاء</b> الاستعلام.
   </li>
 </ul>
 
-<p>فيما يلي كود عميل Java. التعليقات كافية لفهمه.</p>
+<p>فيما يلي كود عميل <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> التعليقات كافية لفهمه.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.rmi.*</span><span class="p">;</span>
 <a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>
@@ -2021,7 +2023,7 @@
 <a id="toc12362982"></a>
 <a id="toc10974759"></a>
 <a id="toc459349649"></a></p>
-<h3 id="935-3-class">9.3.5. <span style="color: #4f81bd">الخطوة 3: إنشاء ملفات .class</span></h3>
+<h3 id="935-3-class">9.3.5. <span style="color: #4f81bd">الخطوة 3: إنشاء ملفات .<bdi dir="ltr" class="odt-ltr-term">class</bdi></span></h3>
 <ul>
   <li>تم تجميع الخادم
   </li>
@@ -2037,7 +2039,7 @@
 <a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>SRVSQL~1 CLA         3 238  12/03/99  17:54 srvSQL.class
 </code></pre></div>
 <ul>
-  <li>تم إنشاء ملفات Stub و Skel
+  <li>تم إنشاء ملفات <bdi dir="ltr" class="odt-ltr-term">Stub</bdi> و <bdi dir="ltr" class="odt-ltr-term">Skel</bdi>
   </li>
 </ul>
 
@@ -2052,7 +2054,7 @@
 <a id="__codelineno-67-9" name="__codelineno-67-9" href="#__codelineno-67-9"></a>SRVSQL~3 CLA         2 414  12/03/99  17:56 srvSQL_Skel.class
 </code></pre></div>
 <ul>
-  <li>انقل الملفات interSQL.class و srvSQL_Stub.class و srvSQL_Skel.class إلى دليل العميل
+  <li>انقل الملفات <bdi dir="ltr" class="odt-ltr-term">interSQL.class</bdi> و <bdi dir="ltr" class="odt-ltr-term">srvSQL_Stub.class</bdi> و <bdi dir="ltr" class="odt-ltr-term">srvSQL_Skel.class</bdi> إلى دليل العميل
   </li>
 </ul>
 
@@ -2081,7 +2083,7 @@
 <a id="toc12362983"></a>
 <a id="toc10974760"></a>
 <a id="toc459349650"></a></p>
-<h3 id="936-4-windows">9.3.6. <span style="color: #4f81bd">الخطوة 4: الاختبار باستخدام الخادم والعميل على نفس جهاز Windows</span></h3>
+<h3 id="936-4-windows">9.3.6. <span style="color: #4f81bd">الخطوة 4: الاختبار باستخدام الخادم والعميل على نفس جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi></span></h3>
 <ul>
   <li>يتم تشغيل خدمة الدليل في دليل غير دليل الخادم والعميل
   </li>
@@ -2090,7 +2092,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>F:\&gt;start j:\jdk12\bin\rmiregistry
 </code></pre></div>
 <ul>
-  <li>ضع ملف <b>mypolicy</b> التالي في دلائل العميل والخادم
+  <li>ضع ملف <b><bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></b> التالي في دلائل العميل والخادم
   </li>
 </ul>
 
@@ -2148,14 +2150,14 @@
 <a id="toc12362984"></a>
 <a id="toc10974761"></a>
 <a id="toc459349651"></a></p>
-<h3 id="937-5-windows-linux">9.3.7. <span style="color: #4f81bd">الخطوة 5: الاختبار باستخدام خادم على جهاز يعمل بنظام Windows وعميل على جهاز يعمل بنظام Linux</span></h3>
+<h3 id="937-5-windows-linux">9.3.7. <span style="color: #4f81bd">الخطوة 5: الاختبار باستخدام خادم على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> وعميل على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi></span></h3>
 <ul>
   <li>إذا لزم الأمر، أوقف الخادم وخدمة الدليل
   </li>
 </ul>
 
 <ul>
-  <li>انقل ملفات .class الخاصة بالعميل إلى جهاز يعمل بنظام Linux
+  <li>انقل ملفات .<bdi dir="ltr" class="odt-ltr-term">class</bdi> الخاصة بالعميل إلى جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>
   </li>
 </ul>
 
@@ -2165,7 +2167,7 @@
 <a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>-rw-r--r--   1 serge    admin         451 Mar 11 14:37 interSQL.class
 </code></pre></div>
 <ul>
-  <li>يتم وضع ملفات الخادم في دليل يمكن الوصول إليه من خادم HTTP الخاص بجهاز Windows
+  <li>يتم وضع ملفات الخادم في دليل يمكن الوصول إليه من خادم <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الخاص بجهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>
   </li>
 </ul>
 
@@ -2193,7 +2195,7 @@
 <a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>-Djava.rmi.server.codebase=http://tahe.istia.univ-angers.fr/rmi/sql/ srvSQL
 </code></pre></div>
 <ul>
-  <li>قم بتشغيل العميل على جهاز Linux
+  <li>قم بتشغيل العميل على جهاز <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>
   </li>
 </ul>
 
@@ -2230,7 +2232,7 @@
 <a id="toc10974762"></a>
 <a id="toc459349652"></a></p>
 <h3 id="938">9.3.8. <span style="color: #4f81bd">الخلاصة</span></h3>
-<p>هذا تطبيق مثير للاهتمام لأنه يتيح الوصول إلى قاعدة البيانات من أي محطة عمل على الشبكة. كان بإمكاننا كتابة هذا التطبيق بالطريقة التقليدية باستخدام المقابس (sockets)، وهو ما يتطلبه التمرين الوارد في الفصل الخاص بقواعد البيانات. لو كنا سنكتب هذا التطبيق بالطريقة التقليدية:</p>
+<p>هذا تطبيق مثير للاهتمام لأنه يتيح الوصول إلى قاعدة البيانات من أي محطة عمل على الشبكة. كان بإمكاننا كتابة هذا التطبيق بالطريقة التقليدية باستخدام المقابس (<bdi dir="ltr" class="odt-ltr-term">sockets</bdi>)، وهو ما يتطلبه التمرين الوارد في الفصل الخاص بقواعد البيانات. لو كنا سنكتب هذا التطبيق بالطريقة التقليدية:</p>
 <ul>
   <li>سيكون لدينا عميل وخادم يمكن كتابتهما بلغات مختلفة
   </li>
@@ -2247,11 +2249,11 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>client : executeSQL requete, separateur
 </code></pre></div>
-<p>لطلب من الخادم تنفيذ استعلام SQL على قاعدة البيانات المتصلة بالعميل. <strong>الفاصل</strong> هو الحرف المستخدم لفصل الحقول في أسطر الاستجابة.</p>
+<p>لطلب من الخادم تنفيذ استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على قاعدة البيانات المتصلة بالعميل. <strong>الفاصل</strong> هو الحرف المستخدم لفصل الحقول في أسطر الاستجابة.</p>
 <p>قد يرد الخادم بشيء مثل </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>    100 n
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>    للاستعلام الخاص بتحديث قاعدة البيانات، حيث n هو عدد الصفوف التي تم تحديثها
+<div class="highlight"><pre><span></span><code>    للاستعلام الخاص بتحديث قاعدة البيانات، حيث &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;n&lt;/bdi&gt; هو عدد الصفوف التي تم تحديثها
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>    500 msg d’erreur
 </code></pre></div>
@@ -2273,14 +2275,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>    200 Base fermée
 <a id="__codelineno-87-2" name="__codelineno-87-2" href="#__codelineno-87-2"></a>    500 Erreur lors de la fermeture de la base (msg d’erreur)
 </code></pre></div>
-<p>هنا نرى أنه إذا تمكنا من إنشاء تطبيق تقليدي باستخدام بروتوكول من النوع الموصوف أعلاه، فيمكننا استنتاج بنية محتملة لخادم RMI. حيث يوجد في البروتوكول رسالة من العميل إلى الخادم من النوع:</p>
+<p>هنا نرى أنه إذا تمكنا من إنشاء تطبيق تقليدي باستخدام بروتوكول من النوع الموصوف أعلاه، فيمكننا استنتاج بنية محتملة لخادم <bdi dir="ltr" class="odt-ltr-term">RMI.</bdi> حيث يوجد في البروتوكول رسالة من العميل إلى الخادم من النوع:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>    commande param1 param2 ... paramq
 </code></pre></div>
-<p>يمكن أن يكون لدينا طريقة داخل خادم RMI</p>
+<p>يمكن أن يكون لدينا طريقة داخل خادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>    String commande(param1,param2,..., paramq)
 </code></pre></div>
 <p>ويجب أن تكون هذه الطريقة، التي يمكن للعميل الوصول إليها، جزءًا من واجهة الخادم المنشورة.</p>
-<p>وختامًا، لاحظ أن خادمنا لا يتعامل حاليًا إلا مع عميل واحد: فهو لا يستطيع التعامل مع عدة عملاء بالشكل الذي كُتب به حاليًا. في الواقع، إذا اتصل عميل بقاعدة البيانات B1، يقوم الخادم بإنشاء كائن <em>Connection</em> بقيمة DB=DB1. وإذا طلب عميل ثانٍ اتصالًا بقاعدة البيانات B2، يقوم الخادم بإنشائه بقيمة <em>Connection</em> DB=DB2، مما يؤدي إلى قطع اتصال العميل الأول بقاعدة البيانات B1.</p>
+<p>وختامًا، لاحظ أن خادمنا لا يتعامل حاليًا إلا مع عميل واحد: فهو لا يستطيع التعامل مع عدة عملاء بالشكل الذي كُتب به حاليًا. في الواقع، إذا اتصل عميل بقاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">B1</bdi>، يقوم الخادم بإنشاء كائن <em><bdi dir="ltr" class="odt-ltr-term">Connection</bdi></em> بقيمة <bdi dir="ltr" class="odt-ltr-term">DB</bdi>=<bdi dir="ltr" class="odt-ltr-term">DB1.</bdi> وإذا طلب عميل ثانٍ اتصالًا بقاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">B2</bdi>، يقوم الخادم بإنشائه بقيمة <em><bdi dir="ltr" class="odt-ltr-term">Connection</bdi></em> <bdi dir="ltr" class="odt-ltr-term">DB</bdi>=<bdi dir="ltr" class="odt-ltr-term">DB2</bdi>، مما يؤدي إلى قطع اتصال العميل الأول بقاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">B1.</bdi></p>
 <p><a id="toc12502474"></a>
 <a id="toc12362986"></a>
 <a id="toc10974763"></a>
@@ -2291,13 +2293,13 @@
 <a id="toc10974764"></a>
 <a id="toc459349654"></a></p>
 <h3 id="941-1">9.4.1. <span style="color: #4f81bd">التمرين 1</span></h3>
-<p>قم بتوسيع خادم SQL السابق بحيث يمكنه التعامل مع عدة عملاء.</p>
+<p>قم بتوسيع خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> السابق بحيث يمكنه التعامل مع عدة عملاء.</p>
 <p><a id="toc12502476"></a>
 <a id="toc12362988"></a>
 <a id="toc10974765"></a>
 <a id="toc459349655"></a></p>
 <h3 id="942-2">9.4.2. <span style="color: #4f81bd">التمرين 2</span></h3>
-<p>اكتب برنامج Java الصغير للتجارة الإلكترونية المقدم في تمارين فصل JDBC بحيث يعمل مع خادم RMI من التمرين السابق.</p>
+<p>اكتب برنامج <bdi dir="ltr" class="odt-ltr-term">Java</bdi> الصغير للتجارة الإلكترونية المقدم في تمارين فصل <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> بحيث يعمل مع خادم <bdi dir="ltr" class="odt-ltr-term">RMI</bdi> من التمرين السابق.</p>
 
 
 
