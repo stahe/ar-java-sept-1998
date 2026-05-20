@@ -961,8 +961,8 @@
 
     **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdbc:odbc:Articles&lt;/bdi&gt;**
 </code></pre></div>
-<p><em><bdi dir="ltr" class="odt-ltr-term">id</bdi></em>: معرف المستخدم (تسجيل الدخول)</p>
-<p><em><bdi dir="ltr" class="odt-ltr-term">mdp</bdi></em>: كلمة مرور المستخدم</p>
+<p><em>id</em>: معرف المستخدم (تسجيل الدخول)</p>
+<p><em>mdp</em>: كلمة مرور المستخدم</p>
 <p>باختصار، يتصل البرنامج بقاعدة بيانات:</p>
 <ul>
   <li>يتم تحديده بواسطة اسم (<bdi dir="ltr" class="odt-ltr-term">URL</bdi>)
@@ -1092,7 +1092,7 @@
   </li>
 </ol>
 
-<p>نتيجة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;SELECT&lt;/bdi&gt;</code></em> هي جدول. إذا أخذنا في الاعتبار جدول <code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;ARTICLES&lt;/bdi&gt;</code> السابق وأردنا الحصول على أسماء العناصر التي يقل مخزونها الحالي عن الحد الأدنى، فسنكتب: <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;SELECT name FROM articles WHERE current&lt;/bdi&gt;\_stock &amp;lt; &lt;bdi dir="ltr" class="odt-ltr-term"&gt;min&lt;/bdi&gt;\_stock*</code>. وإذا أردنا فرزها أبجديًا حسب الاسم، فسنكتب:     </em><bdi dir="ltr" class="odt-ltr-term">select name from articles where current</bdi>_stock &lt; <bdi dir="ltr" class="odt-ltr-term">minimum</bdi>_stock <bdi dir="ltr" class="odt-ltr-term">order by name</bdi>*</p>
+<p>نتيجة <em><code>SELECT</code></em> هي جدول. إذا أخذنا في الاعتبار جدول <code>ARTICLES</code> السابق وأردنا الحصول على أسماء العناصر التي يقل مخزونها الحالي عن الحد الأدنى، فسنكتب: <em><code>SELECT name FROM articles WHERE current\_stock &amp;lt; min\_stock*</code>. وإذا أردنا فرزها أبجديًا حسب الاسم، فسنكتب:     </em><bdi dir="ltr" class="odt-ltr-term">select name from articles where current</bdi>_stock &lt; <bdi dir="ltr" class="odt-ltr-term">minimum</bdi>_stock <bdi dir="ltr" class="odt-ltr-term">order by name</bdi>*</p>
 <p>لتنفيذ هذا النوع من الاستعلامات، توفر فئة <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> طريقة <strong><bdi dir="ltr" class="odt-ltr-term">executeQuery</bdi></strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    ResultSet executeQuery(String requête)
 </code></pre></div>
@@ -1118,7 +1118,7 @@
 <p>لاسترداد حقل &quot;<em><bdi dir="ltr" class="odt-ltr-term">coli</bdi></em>&quot; من الصف الحالي. يشير <em><bdi dir="ltr" class="odt-ltr-term">Type</bdi></em> إلى نوع حقل <em><bdi dir="ltr" class="odt-ltr-term">coli</bdi></em>. غالبًا ما تُستخدم طريقة <em><bdi dir="ltr" class="odt-ltr-term">getString</bdi></em> على جميع الحقول، مما يسمح لك باسترداد محتوى الحقل كسلسلة. يمكنك بعد ذلك تحويلها إذا لزم الأمر. إذا كنت لا تعرف اسم العمود، يمكنك استخدام الطرق </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Type getType(i) 
 </code></pre></div>
-<p>حيث <bdi dir="ltr" class="odt-ltr-term">i</bdi> هو مؤشر العمود المطلوب (<bdi dir="ltr" class="odt-ltr-term">i</bdi>&gt;=1).</p>
+<p>حيث i هو مؤشر العمود المطلوب (i&gt;=1).</p>
 <p><a id="toc10974729"></a>
 <a id="toc459349619"></a></p>
 <h4 id="6234">6.2.3.4. <span style="color: #4f81bd">مثال أول</span></h4>
@@ -1196,7 +1196,7 @@
 <ol>
   <li><b><bdi dir="ltr" class="odt-ltr-term">int getColumnCount</bdi>()، </b>التي تُرجع عدد الأعمدة في <i><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi></i>
   </li>
-  <li><b><bdi dir="ltr" class="odt-ltr-term">String getColumnLabel</bdi>(<bdi dir="ltr" class="odt-ltr-term">int i</bdi>)، </b>والتي تُرجع اسم العمود <bdi dir="ltr" class="odt-ltr-term">i</bdi> في <i><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi> </i>(<bdi dir="ltr" class="odt-ltr-term">i</bdi> &gt;= 1)
+  <li><b><bdi dir="ltr" class="odt-ltr-term">String getColumnLabel</bdi>(<bdi dir="ltr" class="odt-ltr-term">int i</bdi>)، </b>والتي تُرجع اسم العمود i في <i><bdi dir="ltr" class="odt-ltr-term">ResultSet</bdi> </i>(i &gt;= 1)
   </li>
 </ol>
 <p><a id="toc10974731"></a>
@@ -1479,7 +1479,7 @@
 <p>يحتوي كائن <em><bdi dir="ltr" class="odt-ltr-term">Statement</bdi></em> المطلوب لتنفيذ استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على طريقة <em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em> قادرة على تنفيذ أي نوع من استعلامات <bdi dir="ltr" class="odt-ltr-term">SQL:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>    boolean execute(String requête)
 </code></pre></div>
-<p>القيمة المرجعة هي القيمة المنطقية <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;true&lt;/bdi&gt;</code></em> إذا أعاد الاستعلام <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;ResultSet&lt;/bdi&gt;*</code> (</em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;executeQuery&lt;/bdi&gt;*</code>) ، و<em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;false&lt;/bdi&gt;</code></em> إذا أعاد رقمًا (<em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;executeUpdate&lt;/bdi&gt;*</code>). يمكن استرداد </em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;ResultSet&lt;/bdi&gt;</code><em> الناتج باستخدام طريقة </em><em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;getResultSet&lt;/bdi&gt;</code></em><em> ، وعدد الصفوف المحدثة باستخدام طريقة </em><em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;getUpdateCount&lt;/bdi&gt;</code></em>*. وبالتالي، سنكتب:</p>
+<p>القيمة المرجعة هي القيمة المنطقية <em><code>true</code></em> إذا أعاد الاستعلام <em><code>ResultSet*</code> (</em><code>executeQuery*</code>) ، و<em><code>false</code></em> إذا أعاد رقمًا (<em><code>executeUpdate*</code>). يمكن استرداد </em><code>ResultSet</code><em> الناتج باستخدام طريقة </em><em><code>getResultSet</code></em><em> ، وعدد الصفوف المحدثة باستخدام طريقة </em><em><code>getUpdateCount</code></em>*. وبالتالي، سنكتب:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content">Statement S=...;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">ResultSet RS=...;</span></span>
@@ -1796,7 +1796,7 @@
 <p>بمجرد تحديد مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>، يمكننا اختبار برنامجنا:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001430000016CCE514EE1.png" width="324" height="365" style="display:inline-block; margin:4px;width:8.56cm;height:9.648cm;" class="odt-zoomable" data-zoom-src="images/10000000000001430000016CCE514EE1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000016A565280B8.png" width="325" height="362" style="display:inline-block; margin:4px;width:8.601cm;height:9.58cm;" class="odt-zoomable" data-zoom-src="images/10000000000001450000016A565280B8.png" /></td></tr></table>
 
-<p>دعونا نلقي نظرة على الكود الذي تم تعديله مقارنةً بالإصدار الرسومي الذي لا يحتوي على قاعدة بيانات. فيما يلي كود فئة <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impots&lt;/bdi&gt;</code>* المستخدم حتى الآن:</p>
+<p>دعونا نلقي نظرة على الكود الذي تم تعديله مقارنةً بالإصدار الرسومي الذي لا يحتوي على قاعدة بيانات. فيما يلي كود فئة <code>*impots</code>* المستخدم حتى الآن:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1">// creation of an impots class</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">impots</span><span class="p">{</span>
@@ -1844,7 +1844,7 @@
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">    </span><span class="c1">// dsnIMPOTS: DSN database name</span>
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">     </span><span class="c1">// userIMPOTS, mdpIMPOTS: database login/password</span>
 </code></pre></div>
-<p>في هذا المثال، قررنا عدم تنفيذ هذا المنشئ الجديد في فئة <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impots&lt;/bdi&gt;</code>* بل في فئة مشتقة، وهي <code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impotsJDBC&lt;/bdi&gt;*</code>:</p>
+<p>في هذا المثال، قررنا عدم تنفيذ هذا المنشئ الجديد في فئة <code>*impots</code>* بل في فئة مشتقة، وهي <code>*impotsJDBC*</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1">// imported packages</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.*</span><span class="p">;</span>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
@@ -2106,7 +2106,7 @@
 <div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>تحميل الورقة</b></div>
 
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-<p>أثناء حدث <bdi dir="ltr" class="odt-ltr-term">form</bdi>_load، يتم فتح الجدول المرتبط بـ <em><bdi dir="ltr" class="odt-ltr-term">data1</bdi></em> (<em><bdi dir="ltr" class="odt-ltr-term">data1.refresh</bdi></em>). إذا فشل فتح الجدول، يتم عرض رسالة خطأ وينتهي البرنامج (<em><bdi dir="ltr" class="odt-ltr-term">end</bdi></em>). خلاف ذلك، يتم عرض النموذج مع ظهور السجل الأول من جدول <em><bdi dir="ltr" class="odt-ltr-term">articles</bdi></em>. لا يُسمح بإدخال أي بيانات في الحقول (الخاصية <bdi dir="ltr" class="odt-ltr-term">enabled</bdi> مضبوطة على <bdi dir="ltr" class="odt-ltr-term">false</bdi>). لا يمكن الإدخال إلا باستخدام خياري <bdi dir="ltr" class="odt-ltr-term">Add</bdi> و <bdi dir="ltr" class="odt-ltr-term">Edit.</bdi> يتم إخفاء زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>).</p>
+<p>أثناء حدث <bdi dir="ltr" class="odt-ltr-term">form</bdi>_load، يتم فتح الجدول المرتبط بـ <em><bdi dir="ltr" class="odt-ltr-term">data1</bdi></em> (<em><bdi dir="ltr" class="odt-ltr-term">data1.refresh</bdi></em>). إذا فشل فتح الجدول، يتم عرض رسالة خطأ وينتهي البرنامج (<em>end</em>). خلاف ذلك، يتم عرض النموذج مع ظهور السجل الأول من جدول <em><bdi dir="ltr" class="odt-ltr-term">articles</bdi></em>. لا يُسمح بإدخال أي بيانات في الحقول (الخاصية <bdi dir="ltr" class="odt-ltr-term">enabled</bdi> مضبوطة على <bdi dir="ltr" class="odt-ltr-term">false</bdi>). لا يمكن الإدخال إلا باستخدام خياري <bdi dir="ltr" class="odt-ltr-term">Add</bdi> و <bdi dir="ltr" class="odt-ltr-term">Edit.</bdi> يتم إخفاء زري &quot;موافق&quot; و&quot;إلغاء&quot; (<bdi dir="ltr" class="odt-ltr-term">visible</bdi>=<bdi dir="ltr" class="odt-ltr-term">false</bdi>).</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <div style="margin:0 0 0.75em 0; background-color:#f2f2f2; padding:0.35em 0.6em"><b>الجزء 1</b></div>
 
@@ -2267,9 +2267,9 @@
 <p><strong>تهيئة شريط التمرير</strong></p>
 <p>عند التحميل (<bdi dir="ltr" class="odt-ltr-term">form</bdi>_load)، سيتم تهيئة شريط التمرير على النحو التالي:</p>
 <ul>
-  <li><bdi dir="ltr" class="odt-ltr-term">min</bdi>=0
+  <li>min=0
   </li>
-  <li><bdi dir="ltr" class="odt-ltr-term">max</bdi>=<bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount-1</bdi>
+  <li>max=<bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount-1</bdi>
   </li>
   <li>القيمة=1
   </li>
@@ -2278,7 +2278,7 @@
 <p>لاحظ أنه فور فتح قاعدة البيانات (<bdi dir="ltr" class="odt-ltr-term">data1.refresh</bdi>)، يكون عدد السجلات في الجدول الذي يمثله <bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount</bdi> غير صحيح. يجب الانتقال إلى نهاية الجدول (<bdi dir="ltr" class="odt-ltr-term">MoveLast</bdi>)، ثم العودة إلى بداية الجدول (<bdi dir="ltr" class="odt-ltr-term">MoveFirst</bdi>) حتى يصبح صحيحًا.</p>
 <p><strong>الإجراء المباشر على محرك الأقراص</strong></p>
 <p>يمثل موضع مؤشر شريط التمرير الموضع في الجدول.</p>
-<p>عندما يغير المستخدم شريط التمرير (المسمى <bdi dir="ltr" class="odt-ltr-term">position</bdi> هنا)، يتم تشغيل حدث <bdi dir="ltr" class="odt-ltr-term">position</bdi>_change. في هذا الحدث، سنقوم بتغيير السجل الحالي في الجدول بحيث يعكس الحركة التي تمت على شريط التمرير. للقيام بذلك، سنستخدم حقل <strong><bdi dir="ltr" class="odt-ltr-term">absoluteposition</bdi></strong> في <bdi dir="ltr" class="odt-ltr-term">data1.recordset.</bdi> عندما نعين القيمة <strong><bdi dir="ltr" class="odt-ltr-term">i</bdi></strong> لهذا الحقل، يصبح السجل رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في الجدول هو السجل الحالي. يتم ترقيم السجلات بدءًا من 0، وبالتالي يكون لها رقم في النطاق [0،<bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount-1</bdi>]. في الإجراء <bdi dir="ltr" class="odt-ltr-term">position</bdi>_change، نكتب ببساطة</p>
+<p>عندما يغير المستخدم شريط التمرير (المسمى <bdi dir="ltr" class="odt-ltr-term">position</bdi> هنا)، يتم تشغيل حدث <bdi dir="ltr" class="odt-ltr-term">position</bdi>_change. في هذا الحدث، سنقوم بتغيير السجل الحالي في الجدول بحيث يعكس الحركة التي تمت على شريط التمرير. للقيام بذلك، سنستخدم حقل <strong><bdi dir="ltr" class="odt-ltr-term">absoluteposition</bdi></strong> في <bdi dir="ltr" class="odt-ltr-term">data1.recordset.</bdi> عندما نعين القيمة <strong>i</strong> لهذا الحقل، يصبح السجل رقم i في الجدول هو السجل الحالي. يتم ترقيم السجلات بدءًا من 0، وبالتالي يكون لها رقم في النطاق [0،<bdi dir="ltr" class="odt-ltr-term">data1.recordset.recordcount-1</bdi>]. في الإجراء <bdi dir="ltr" class="odt-ltr-term">position</bdi>_change، نكتب ببساطة</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>    data1.recordset.absoluteposition=position.value
 </code></pre></div>
 <p>بحيث يعكس السجل الحالي المعروض في النموذج الحركة التي تمت على عصا التحكم.</p>
@@ -2300,7 +2300,7 @@
   </li>
   <li>يتم تعطيل القوائم، ويتم عرض زري <b>&quot;موافق</b>&quot; و&quot;<b>إلغاء</b>&quot;
   </li>
-  <li>عندما ينقر المستخدم على &quot;موافق&quot;، يجب أن نبحث عن السجل المطابق للرمز الذي أدخله المستخدم. ومع ذلك، فإن إجراء <bdi dir="ltr" class="odt-ltr-term">OK_click</bdi> مستخدم بالفعل لخياري <b>&quot;تصفح/إضافة</b>&quot; و<b>&quot;تصفح/تعديل</b>&quot;. للتمييز بين هذه الحالات، نحتاج إلى إدارة متغير عام، سنسميه هنا &quot;<b><bdi dir="ltr" class="odt-ltr-term">state</bdi></b>&quot;، والذي سيكون له ثلاث قيم محتملة: &quot;<bdi dir="ltr" class="odt-ltr-term">add</bdi>&quot; و&quot;<bdi dir="ltr" class="odt-ltr-term">modify</bdi>&quot; و&quot;<bdi dir="ltr" class="odt-ltr-term">search</bdi>&quot;. ستستخدم الإجراءات المرتبطة بزرّي &quot;موافق&quot; و&quot;إلغاء&quot; هذا المتغير لتحديد السياق الذي يتم استدعاؤها فيه.
+  <li>عندما ينقر المستخدم على &quot;موافق&quot;، يجب أن نبحث عن السجل المطابق للرمز الذي أدخله المستخدم. ومع ذلك، فإن إجراء <bdi dir="ltr" class="odt-ltr-term">OK_click</bdi> مستخدم بالفعل لخياري <b>&quot;تصفح/إضافة</b>&quot; و<b>&quot;تصفح/تعديل</b>&quot;. للتمييز بين هذه الحالات، نحتاج إلى إدارة متغير عام، سنسميه هنا &quot;<b><bdi dir="ltr" class="odt-ltr-term">state</bdi></b>&quot;، والذي سيكون له ثلاث قيم محتملة: &quot;add&quot; و&quot;<bdi dir="ltr" class="odt-ltr-term">modify</bdi>&quot; و&quot;<bdi dir="ltr" class="odt-ltr-term">search</bdi>&quot;. ستستخدم الإجراءات المرتبطة بزرّي &quot;موافق&quot; و&quot;إلغاء&quot; هذا المتغير لتحديد السياق الذي يتم استدعاؤها فيه.
   </li>
   <li>إذا كانت<b> الحالة </b>هي &quot;<bdi dir="ltr" class="odt-ltr-term">search</bdi>&quot;، في الإجراء المرتبط بـ <bdi dir="ltr" class="odt-ltr-term">OK</bdi>، فإننا
     <ul>

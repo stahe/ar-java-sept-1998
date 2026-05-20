@@ -1870,7 +1870,7 @@
   </li>
   <li>إذا لم يتلق بروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> الذي أرسل مقطعًا ما إقرارًا بالاستلام بعد مرور فترة زمنية معينة، فإنه يعيد إرسال المقطع المعني، مما يضمن جودة خدمة توصيل المعلومات.
   </li>
-  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبالتالي، يمكن لعملية الوجهة إرسال إقرارات حتى أثناء استمرار عملية المصدر في إرسال المعلومات. وهذا يسمح، على سبيل المثال، لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر بإرسال شرائح متعددة دون انتظار إقرار. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا باستلام مقطع معين رقم <bdi dir="ltr" class="odt-ltr-term">n</bdi>، فسيستأنف إرسال المقاطع من تلك النقطة.
+  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبالتالي، يمكن لعملية الوجهة إرسال إقرارات حتى أثناء استمرار عملية المصدر في إرسال المعلومات. وهذا يسمح، على سبيل المثال، لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر بإرسال شرائح متعددة دون انتظار إقرار. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا باستلام مقطع معين رقم n، فسيستأنف إرسال المقاطع من تلك النقطة.
   </li>
 </ul>
 <p><a id="toc12502435"></a>
@@ -1901,13 +1901,13 @@
 
 جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Sun&lt;/bdi&gt; في &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;ISERPA&lt;/bdi&gt; في أنجيه
 
-من الواضح أنه سيكون من الأنسب الإشارة إلى جهاز ما باسمه بدلاً من عنوان &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;IP&lt;/bdi&gt; الخاص به. وهذا يثير مسألة تفرد الأسماء: فهناك ملايين الأجهزة المتصلة ببعضها البعض. قد يتصور المرء وجود هيئة مركزية تقوم بتعيين الأسماء. ولا شك أن ذلك سيكون أمراً مرهقاً للغاية. وقد تم في الواقع توزيع السيطرة على الأسماء عبر **النطاقات**. تدار كل نطاق من قبل منظمة صغيرة الحجم عمومًا تتمتع بحرية كاملة في اختيار أسماء الأجهزة. وبالتالي، تنتمي الأجهزة في فرنسا إلى نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;fr&lt;/bdi&gt;**، الذي تديره &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Inria&lt;/bdi&gt; في باريس. ولتبسيط الأمور أكثر، يتم توزيع السيطرة بشكل أكبر: يتم إنشاء نطاقات داخل نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;fr&lt;/bdi&gt;**. وبالتالي، تنتمي جامعة أنجيه إلى نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ-Angers&lt;/bdi&gt;**. ويتمتع القسم الذي يدير هذا النطاق بحرية كاملة في تسمية الأجهزة الموجودة على شبكة جامعة أنجيه. في الوقت الحالي، لم يتم تقسيم هذا النطاق إلى أقسام فرعية. ولكن في جامعة كبيرة تضم العديد من الأجهزة المتصلة بالشبكة، قد يتم ذلك.
+من الواضح أنه سيكون من الأنسب الإشارة إلى جهاز ما باسمه بدلاً من عنوان &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;IP&lt;/bdi&gt; الخاص به. وهذا يثير مسألة تفرد الأسماء: فهناك ملايين الأجهزة المتصلة ببعضها البعض. قد يتصور المرء وجود هيئة مركزية تقوم بتعيين الأسماء. ولا شك أن ذلك سيكون أمراً مرهقاً للغاية. وقد تم في الواقع توزيع السيطرة على الأسماء عبر **النطاقات**. تدار كل نطاق من قبل منظمة صغيرة الحجم عمومًا تتمتع بحرية كاملة في اختيار أسماء الأجهزة. وبالتالي، تنتمي الأجهزة في فرنسا إلى نطاق **fr**، الذي تديره &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Inria&lt;/bdi&gt; في باريس. ولتبسيط الأمور أكثر، يتم توزيع السيطرة بشكل أكبر: يتم إنشاء نطاقات داخل نطاق **fr**. وبالتالي، تنتمي جامعة أنجيه إلى نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ-Angers&lt;/bdi&gt;**. ويتمتع القسم الذي يدير هذا النطاق بحرية كاملة في تسمية الأجهزة الموجودة على شبكة جامعة أنجيه. في الوقت الحالي، لم يتم تقسيم هذا النطاق إلى أقسام فرعية. ولكن في جامعة كبيرة تضم العديد من الأجهزة المتصلة بالشبكة، قد يتم ذلك.
 
 تم تسمية جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;DPX2/320&lt;/bdi&gt; في جامعة أنجيه *باسم* &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt;، بينما تم تسمية جهاز كمبيوتر شخصي 486DX50 *باسم &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;liny&lt;/bdi&gt;*. كيف يمكنك الإشارة إلى هذه الأجهزة من الخارج؟ عن طريق تحديد التسلسل الهرمي للنطاقات التي تنتمي إليها. وبالتالي، سيكون الاسم الكامل لجهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt; هو:
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>        Lagaffe.univ-Angers.fr
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>يمكن استخدام الأسماء النسبية داخل النطاقات. وبالتالي، داخل نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;fr&lt;/bdi&gt;** وخارج نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ&lt;/bdi&gt;**-&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Angers&lt;/bdi&gt;، يمكن الإشارة إلى جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt; على النحو التالي
+<div class="highlight"><pre><span></span><code>يمكن استخدام الأسماء النسبية داخل النطاقات. وبالتالي، داخل نطاق **fr** وخارج نطاق **&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;univ&lt;/bdi&gt;**-&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Angers&lt;/bdi&gt;، يمكن الإشارة إلى جهاز &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Lagaffe&lt;/bdi&gt; على النحو التالي
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>        Lagaffe.univ-Angers
 </code></pre></div>
@@ -2056,7 +2056,7 @@
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>nom : shiva.istia.univ-angers.fr
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>identité : shiva.istia.univ-angers.fr/193.52.43.5
 </code></pre></div>
-<p>باستخدام استدعاء <strong><bdi dir="ltr" class="odt-ltr-term">Java</bdi></strong> <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;getbyname www.ibm.com&lt;/bdi&gt;</code>**، نحصل على:</p>
+<p>باستخدام استدعاء <strong><bdi dir="ltr" class="odt-ltr-term">Java</bdi></strong> <code>**getbyname www.ibm.com</code>**، نحصل على:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>IP : 204.146.18.33
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>nom : www.ibm.com
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>identité : www.ibm.com/204.146.18.33
@@ -2107,7 +2107,7 @@
   </li>
   <li>إذا لم يتلق بروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> الذي أرسل المقطع إقرارًا بالاستلام بعد مرور فترة زمنية معينة، فإنه يعيد إرسال المقطع المعني، مما يضمن جودة خدمة توصيل المعلومات.
   </li>
-  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبالتالي، يمكن لعملية الوجهة إرسال إقرارات حتى أثناء استمرار عملية المصدر في إرسال المعلومات. وهذا يسمح، على سبيل المثال، لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر بإرسال شرائح متعددة دون انتظار إقرار. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا باستلام مقطع معين رقم <bdi dir="ltr" class="odt-ltr-term">n</bdi>، فسيستأنف إرسال المقاطع من تلك النقطة.
+  <li>الدائرة الافتراضية التي يتم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبالتالي، يمكن لعملية الوجهة إرسال إقرارات حتى أثناء استمرار عملية المصدر في إرسال المعلومات. وهذا يسمح، على سبيل المثال، لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر بإرسال شرائح متعددة دون انتظار إقرار. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا باستلام مقطع معين رقم n، فسيستأنف إرسال المقاطع من تلك النقطة.
   </li>
 </ul>
 
@@ -2697,7 +2697,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>Serveur d&#39;écho lancé sur le port 187
 <a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>Client [127.0.0.1,tahe,1059] connecté au serveur [127.0.0.1,tahe,187]
 </code></pre></div>
-<p>هنا، يشير <em><bdi dir="ltr" class="odt-ltr-term">tahe</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">localhost</bdi></em> إلى نفس الجهاز. في نافذة عميل <bdi dir="ltr" class="odt-ltr-term">Tel</bdi><em><bdi dir="ltr" class="odt-ltr-term">net</bdi></em>، يمكنك كتابة أسطر من النص. يقوم الخادم بإعادة عرضها:</p>
+<p>هنا، يشير <em><bdi dir="ltr" class="odt-ltr-term">tahe</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">localhost</bdi></em> إلى نفس الجهاز. في نافذة عميل <bdi dir="ltr" class="odt-ltr-term">Tel</bdi><em>net</em>، يمكنك كتابة أسطر من النص. يقوم الخادم بإعادة عرضها:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>Client [127.0.0.1,tahe,1059] connectÚ au serveur [127.0.0.1,tahe,187]
 <a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>je suis là
 <a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>[je suis là]
@@ -2910,9 +2910,9 @@
 
 <p>لذلك، فإن الحلقة التي ترسل سطرًا واحدًا إلى الخادم وتستقبل سطرًا واحدًا من الخادم ليست مناسبة دائمًا. لذلك سننشئ حلقتين منفصلتين:</p>
 <ul>
-  <li>حلقة لقراءة الأوامر المكتوبة على لوحة المفاتيح لإرسالها إلى الخادم. سيشير المستخدم إلى نهاية الأوامر باستخدام الكلمة الرئيسية &quot;<i><bdi dir="ltr" class="odt-ltr-term">fin</bdi></i>&quot;.
+  <li>حلقة لقراءة الأوامر المكتوبة على لوحة المفاتيح لإرسالها إلى الخادم. سيشير المستخدم إلى نهاية الأوامر باستخدام الكلمة الرئيسية &quot;<i>fin</i>&quot;.
   </li>
-  <li>حلقة لاستقبال وعرض ردود الخادم. ستكون هذه حلقة لا نهائية لن تتوقف إلا بإغلاق الخادم للاتصال بالشبكة أو بكتابة المستخدم للأمر <i>&quot;<bdi dir="ltr" class="odt-ltr-term">end</bdi>&quot; </i>على لوحة المفاتيح.
+  <li>حلقة لاستقبال وعرض ردود الخادم. ستكون هذه حلقة لا نهائية لن تتوقف إلا بإغلاق الخادم للاتصال بالشبكة أو بكتابة المستخدم للأمر <i>&quot;end&quot; </i>على لوحة المفاتيح.
   </li>
 </ul>
 
@@ -2964,7 +2964,7 @@
   </li>
   <li>بمجرد إرسال الرسالة، يمكننا إخبار الخادم بأننا انتهينا باستخدام الأمر <b><bdi dir="ltr" class="odt-ltr-term">quit</bdi></b>. ثم يقوم الخادم بإغلاق اتصال الشبكة. يمكن لسلسلة القراءة اكتشاف هذا الحدث والتوقف.
   </li>
-  <li>ثم يكتب المستخدم <b>&quot;<bdi dir="ltr" class="odt-ltr-term">end</bdi>&quot; </b>على لوحة المفاتيح لإيقاف مؤشر الترابط الذي يقرأ الأوامر المكتوبة على لوحة المفاتيح أيضًا.
+  <li>ثم يكتب المستخدم <b>&quot;end&quot; </b>على لوحة المفاتيح لإيقاف مؤشر الترابط الذي يقرأ الأوامر المكتوبة على لوحة المفاتيح أيضًا.
   </li>
 </ul>
 
@@ -3020,7 +3020,7 @@
   </li>
   <li><b><bdi dir="ltr" class="odt-ltr-term">list</bdi></b>، للحصول على قائمة بالرسائل بالصيغة رقم، الحجم بالبايت
   </li>
-  <li><b><bdi dir="ltr" class="odt-ltr-term">retr</bdi> </b><i><bdi dir="ltr" class="odt-ltr-term">i</bdi></i>، لقراءة الرسالة رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi>
+  <li><b><bdi dir="ltr" class="odt-ltr-term">retr</bdi> </b><i>i</i>، لقراءة الرسالة رقم i
   </li>
   <li><b>الخروج</b>، لإنهاء الجلسة.
   </li>
@@ -3280,11 +3280,11 @@
 <ul>
   <li>خيط مخصص حصريًا لقراءة أسطر النص المرسلة من العميل
   </li>
-  <li>خيط مخصص حصريًا لقراءة الردود التي يكتبها المستخدم. سيشير هذا الخيط، باستخدام الأمر `<b><bdi dir="ltr" class="odt-ltr-term">fin</bdi>`</b>، إلى أنه يغلق الاتصال مع العميل.
+  <li>خيط مخصص حصريًا لقراءة الردود التي يكتبها المستخدم. سيشير هذا الخيط، باستخدام الأمر `<b>fin`</b>، إلى أنه يغلق الاتصال مع العميل.
   </li>
 </ul>
 
-<p>يقوم الخادم بإنشاء خيطين لكل عميل. إذا كان هناك <bdi dir="ltr" class="odt-ltr-term">n</bdi> عميل، فسيكون هناك 2n خيطًا نشطًا في نفس الوقت. لا يتوقف الخادم نفسه أبدًا ما لم يضغط المستخدم على <bdi dir="ltr" class="odt-ltr-term">Ctrl-C</bdi> على لوحة المفاتيح. دعونا نلقي نظرة على بعض الأمثلة.</p>
+<p>يقوم الخادم بإنشاء خيطين لكل عميل. إذا كان هناك n عميل، فسيكون هناك 2n خيطًا نشطًا في نفس الوقت. لا يتوقف الخادم نفسه أبدًا ما لم يضغط المستخدم على <bdi dir="ltr" class="odt-ltr-term">Ctrl-C</bdi> على لوحة المفاتيح. دعونا نلقي نظرة على بعض الأمثلة.</p>
 <p>يعمل الخادم على المنفذ 100، ونستخدم العميل العام للتواصل معه. تبدو نافذة العميل كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">E:\data\serge\MSNET\c#\réseau\client tcp générique&gt; <span style="background-color:#ffff00">java clientTCPgenerique localhost 100</span></span></span>
@@ -3409,7 +3409,7 @@
 <a id="__codelineno-83-20" name="__codelineno-83-20" href="#__codelineno-83-20"></a>[fin du Thread de lecture des demandes du client 2]
 <a id="__codelineno-83-21" name="__codelineno-83-21" href="#__codelineno-83-21"></a>[fin du Thread de lecture des réponses du serveur au client 2]
 </code></pre></div>
-<p>السطور التي تبدأ بـ <em>2:</em> يتم إرسالها من الخادم إلى العميل رقم 2. يغلق الأمر &quot;<em><bdi dir="ltr" class="odt-ltr-term">end</bdi></em>&quot; الاتصال من الخادم إلى العميل. في ردنا، اقتصرنا على رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> التالية:</p>
+<p>السطور التي تبدأ بـ <em>2:</em> يتم إرسالها من الخادم إلى العميل رقم 2. يغلق الأمر &quot;<em>end</em>&quot; الاتصال من الخادم إلى العميل. في ردنا، اقتصرنا على رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> التالية:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>HTTP/1.1 200 OK
 <a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>2 : Server: serveur tcp generique
 <a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a>2 : Connection: close
@@ -3426,7 +3426,7 @@
 <a id="__codelineno-85-7" name="__codelineno-85-7" href="#__codelineno-85-7"></a>2 :    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-85-8" name="__codelineno-85-8" href="#__codelineno-85-8"></a>2 : <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>ثم يقوم المستخدم بإغلاق الاتصال بالعميل عن طريق كتابة الأمر <em>&quot;<bdi dir="ltr" class="odt-ltr-term">fin</bdi>&quot;</em>. عندئذٍ يدرك المتصفح أن استجابة الخادم قد اكتملت ويمكنه عرضها:</p>
+<p>ثم يقوم المستخدم بإغلاق الاتصال بالعميل عن طريق كتابة الأمر <em>&quot;fin&quot;</em>. عندئذٍ يدرك المتصفح أن استجابة الخادم قد اكتملت ويمكنه عرضها:</p>
 <p><img src="images/10000000000002950000008DBC616A81.png" width="662" height="141" style="width:17.505cm;height:3.734cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002950000008DBC616A81.png" /></p>
 <p>إذا قمت، في المثال أعلاه، بتحديد &quot;<em>عرض/المصدر&quot; (<bdi dir="ltr" class="odt-ltr-term">View/Source</bdi></em>) لمعرفة ما تلقّاه المتصفح، فستحصل على:</p>
 <p><img src="images/10000000000001780000009D297D1B44.png" width="375" height="156" style="width:9.91cm;height:4.138cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001780000009D297D1B44.png" /></p>
@@ -3645,7 +3645,7 @@
 </ul>
 
 <p>إذا استبدلنا <bdi dir="ltr" class="odt-ltr-term">GET</bdi> بـ <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> في المثال أعلاه، فسيرسل لنا الخادم رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> فقط وليس صفحة <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> </p>
-<p>سيُطلق على عميل الويب الخاص بنا الاسم التالي: <strong><bdi dir="ltr" class="odt-ltr-term">java clientweb URL</bdi></strong> <bdi dir="ltr" class="odt-ltr-term">cmd</bdi>، حيث يمثل <strong><bdi dir="ltr" class="odt-ltr-term">URL</bdi></strong> عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب، ويمثل <strong><bdi dir="ltr" class="odt-ltr-term">cmd</bdi></strong> إحدى الكلمتين الرئيسيتين <bdi dir="ltr" class="odt-ltr-term">GET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> للإشارة إلى ما إذا كنا نريد الرؤوس فقط (<bdi dir="ltr" class="odt-ltr-term">HEAD</bdi>) أم محتوى الصفحة أيضًا (<bdi dir="ltr" class="odt-ltr-term">GET</bdi>). لنلقِ نظرة على المثال الأول. نبدأ بتشغيل خادم <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> ثم عميل الويب على نفس الجهاز:</p>
+<p>سيُطلق على عميل الويب الخاص بنا الاسم التالي: <strong><bdi dir="ltr" class="odt-ltr-term">java clientweb URL</bdi></strong> cmd، حيث يمثل <strong><bdi dir="ltr" class="odt-ltr-term">URL</bdi></strong> عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب، ويمثل <strong>cmd</strong> إحدى الكلمتين الرئيسيتين <bdi dir="ltr" class="odt-ltr-term">GET</bdi> أو <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi> للإشارة إلى ما إذا كنا نريد الرؤوس فقط (<bdi dir="ltr" class="odt-ltr-term">HEAD</bdi>) أم محتوى الصفحة أيضًا (<bdi dir="ltr" class="odt-ltr-term">GET</bdi>). لنلقِ نظرة على المثال الأول. نبدأ بتشغيل خادم <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> ثم عميل الويب على نفس الجهاز:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">dos&gt;<span style="background-color:#ffff00">java clientweb http://localhost HEAD</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">HTTP/1.1 302 Object moved</span></span>
@@ -3987,7 +3987,7 @@
 <a id="toc9394464"></a></p>
 <h3 id="847">8.4.7. <span style="color: #4f81bd">خادم حساب الضرائب</span></h3>
 <p>نحن نعيد النظر في تمرين الضرائب، الذي تمت تغطيته بالفعل بأشكال مختلفة. دعونا نراجع أحدث نسخة:</p>
-<p>تم إنشاء فئة أساسية باسم <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impots&lt;/bdi&gt;</code>**. سماتها هي ثلاثة مصفوفات من الأرقام:</p>
+<p>تم إنشاء فئة أساسية باسم <code>**impots</code>**. سماتها هي ثلاثة مصفوفات من الأرقام:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">impots</span><span class="p">{</span>
 <a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>
 <a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a><span class="w">  </span><span class="c1">// data required for tax calculation</span>
@@ -4018,7 +4018,7 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>  protected impots(){}
 </code></pre></div>
-<p>تم اشتقاق فئة <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impotsJDBC&lt;/bdi&gt;**</code> من هذه الفئة، مما يسمح بتعبئة المصفوفات الثلاثة <em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;limites&lt;/bdi&gt;*</code> و<code>*&lt;bdi dir="ltr" class="odt-ltr-term"&gt;coeffR&lt;/bdi&gt;*</code> و</em><code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;coeffN&lt;/bdi&gt;</code>* من محتويات قاعدة البيانات:</p>
+<p>تم اشتقاق فئة <code>**impotsJDBC**</code> من هذه الفئة، مما يسمح بتعبئة المصفوفات الثلاثة <em><code>limites*</code> و<code>*coeffR*</code> و</em><code>coeffN</code>* من محتويات قاعدة البيانات:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">impotsJDBC</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">impots</span><span class="p">{</span>
 <a id="__codelineno-99-2" name="__codelineno-99-2" href="#__codelineno-99-2"></a><span class="w">  </span><span class="c1">// addition of a constructor for building</span>
 <a id="__codelineno-99-3" name="__codelineno-99-3" href="#__codelineno-99-3"></a><span class="w">   </span><span class="c1">// limit tables, coeffr, coeffn from table</span>
@@ -4129,7 +4129,7 @@
 <a id="__codelineno-102-25" name="__codelineno-102-25" href="#__codelineno-102-25"></a><span class="w">        </span><span class="p">}</span><span class="c1">//catch</span>
 <a id="__codelineno-102-26" name="__codelineno-102-26" href="#__codelineno-102-26"></a><span class="w">    </span><span class="p">}</span><span class="c1">//listening thread</span>
 </code></pre></div>
-<p>لدينا هنا خادم <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> كلاسيكي يستمع على المنفذ <em><bdi dir="ltr" class="odt-ltr-term">portEcoute</bdi></em>. يتم التعامل مع طلبات العميل بواسطة طريقة <em><bdi dir="ltr" class="odt-ltr-term">run</bdi></em> في مؤشر الترابط <bdi dir="ltr" class="odt-ltr-term">traiteCientImpots</bdi>، والتي يتم تمرير معلمتين إليها عند الإنشاء:</p>
+<p>لدينا هنا خادم <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> كلاسيكي يستمع على المنفذ <em><bdi dir="ltr" class="odt-ltr-term">portEcoute</bdi></em>. يتم التعامل مع طلبات العميل بواسطة طريقة <em>run</em> في مؤشر الترابط <bdi dir="ltr" class="odt-ltr-term">traiteCientImpots</bdi>، والتي يتم تمرير معلمتين إليها عند الإنشاء:</p>
 <ol>
   <li>كائن <i><bdi dir="ltr" class="odt-ltr-term">Socket liaisonClient</bdi>، </i>الذي سيسمح بالوصول إلى العميل
   </li>
@@ -4153,7 +4153,7 @@
 <a id="__codelineno-103-14" name="__codelineno-103-14" href="#__codelineno-103-14"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">objImpots</span><span class="o">=</span><span class="n">objImpots</span><span class="p">;</span>
 <a id="__codelineno-103-15" name="__codelineno-103-15" href="#__codelineno-103-15"></a><span class="w">    </span><span class="p">}</span><span class="c1">//manufacturer</span>
 </code></pre></div>
-<p>تقوم طريقة <em><bdi dir="ltr" class="odt-ltr-term">run</bdi></em> بمعالجة طلبات العملاء. وهي عبارة عن أسطر نصية يمكن أن تتخذ شكلين:</p>
+<p>تقوم طريقة <em>run</em> بمعالجة طلبات العملاء. وهي عبارة عن أسطر نصية يمكن أن تتخذ شكلين:</p>
 <ol>
   <li>متزوج (نعم/لا) عدد_الأطفال الراتب_السنوي
   </li>
@@ -4711,7 +4711,7 @@
 <a id="toc459349600"></a></p>
 <h4 id="8533">8.5.3.3. <span style="color: #4f81bd">القوائم</span></h4>
 <p>هيكل قائمة التطبيق كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القائمة الرئيسية</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القائمة الفرعية</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>البريد</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إرسال</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إرسال الرسالة من عنصر التحكم 5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">خروج</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الخروج من التطبيق</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>خيارات</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء التتبع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء عنصر التحكم 6</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة المراقبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة المراقبة 6</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء مربع الحوار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء قائمة الحوار 7</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة الحوار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة الحوار 7</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تكوين</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح للمستخدم بتحديد</div><div style="margin:0 0 0.5em 0">- عنوان خادم <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi> الذي يستخدمه البرنامج</div><div style="margin:0 0 0.5em 0">- عنوان بريده الإلكتروني</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حفظ...</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحفظ التكوين السابق في ملف .<bdi dir="ltr" class="odt-ltr-term">ini</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>المؤلف</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">معلومات حقوق النشر</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القائمة الرئيسية</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>القائمة الفرعية</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>البريد</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إرسال</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إرسال الرسالة من عنصر التحكم 5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">خروج</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الخروج من التطبيق</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>خيارات</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء التتبع</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء عنصر التحكم 6</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة المراقبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة المراقبة 6</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء مربع الحوار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">إخفاء قائمة الحوار 7</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة الحوار</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مسح قائمة الحوار 7</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تكوين</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يسمح للمستخدم بتحديد</div><div style="margin:0 0 0.5em 0">- عنوان خادم <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi> الذي يستخدمه البرنامج</div><div style="margin:0 0 0.5em 0">- عنوان بريده الإلكتروني</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">حفظ...</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحفظ التكوين السابق في ملف .ini</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>المؤلف</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">معلومات حقوق النشر</div></td></tr></table>
 
 <p><a id="toc10974711"></a>
 <a id="toc459349601"></a></p>
@@ -4751,9 +4751,9 @@
     <ul>
       <li>سطر <i><b>&quot;<bdi dir="ltr" class="odt-ltr-term">Subject</bdi>&quot;</b></i>: نص الموضوع من عنصر التحكم 2
       </li>
-      <li><bdi dir="ltr" class="odt-ltr-term">a</bdi> سطر <i><b><bdi dir="ltr" class="odt-ltr-term">Cc::</bdi> </b></i>عناوين من الاختبار 3
+      <li>a سطر <i><b><bdi dir="ltr" class="odt-ltr-term">Cc::</bdi> </b></i>عناوين من الاختبار 3
       </li>
-      <li><bdi dir="ltr" class="odt-ltr-term">a</bdi> سطر <i><b>&quot;<bdi dir="ltr" class="odt-ltr-term">Bcc</bdi>&quot;</b></i>: عناوين من الاختبار 4
+      <li>a سطر <i><b>&quot;<bdi dir="ltr" class="odt-ltr-term">Bcc</bdi>&quot;</b></i>: عناوين من الاختبار 4
       </li>
       <li>نص الرسالة للتحكم 5
       </li>
@@ -4792,7 +4792,7 @@
 <p><a id="toc10974712"></a>
 <a id="toc459349602"></a></p>
 <h4 id="8535">8.5.3.5. <span style="color: #4f81bd">إدارة ملف التكوين</span></h4>
-<p>من المستحسن ألا يضطر المستخدم إلى إعادة تكوين البرنامج في كل مرة يستخدمه. لتحقيق ذلك، إذا تم <strong>تحديد</strong> خيار <strong><em>&quot;خيارات/حفظ التكوين</em></strong> عند الخروج&quot;، فإن إغلاق البرنامج يحفظ معلومتين تم تعيينهما عبر خيار <strong><em>&quot;خيارات/تكوين</em></strong>&quot;، بالإضافة إلى حالة قائمتي التتبع، في ملف <strong><em><bdi dir="ltr" class="odt-ltr-term">sendmail.ini</bdi></em></strong> الموجود في نفس الدليل الذي يوجد فيه ملف .<bdi dir="ltr" class="odt-ltr-term">exe</bdi> الخاص بالبرنامج. هذا الملف له التنسيق التالي:</p>
+<p>من المستحسن ألا يضطر المستخدم إلى إعادة تكوين البرنامج في كل مرة يستخدمه. لتحقيق ذلك، إذا تم <strong>تحديد</strong> خيار <strong><em>&quot;خيارات/حفظ التكوين</em></strong> عند الخروج&quot;، فإن إغلاق البرنامج يحفظ معلومتين تم تعيينهما عبر خيار <strong><em>&quot;خيارات/تكوين</em></strong>&quot;، بالإضافة إلى حالة قائمتي التتبع، في ملف <strong><em><bdi dir="ltr" class="odt-ltr-term">sendmail.ini</bdi></em></strong> الموجود في نفس الدليل الذي يوجد فيه ملف .exe الخاص بالبرنامج. هذا الملف له التنسيق التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-128-1" name="__codelineno-128-1" href="#__codelineno-128-1"></a>SmtpServer=shiva.istia.univ-angers.fr
 <a id="__codelineno-128-2" name="__codelineno-128-2" href="#__codelineno-128-2"></a>ReplyAddress=serge.tahe@istia.univ-angers.fr
 <a id="__codelineno-128-3" name="__codelineno-128-3" href="#__codelineno-128-3"></a>Suivi=0

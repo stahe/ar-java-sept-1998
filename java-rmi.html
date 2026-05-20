@@ -1063,7 +1063,7 @@
   </li>
   <li>يعرض الرد الذي يرسله
   </li>
-  <li>يعود إلى الخطوة 1 ويتوقف عندما يكون السطر المكتوب هو &quot;<bdi dir="ltr" class="odt-ltr-term">end</bdi>&quot;.
+  <li>يعود إلى الخطوة 1 ويتوقف عندما يكون السطر المكتوب هو &quot;end&quot;.
   </li>
 </ol>
 
@@ -1348,7 +1348,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Erreur java.security.AccessControlException: access denied (java.net.SocketPermission 127.0.0.1:1099 connect,resolve)  lors du lancement du serveur d’écho
 </code></pre></div>
 <p>يبدو أن مدير الأمان كان صارمًا للغاية. نراجع الوثائق مرة أخرى... ندرك أنه عندما يكون مدير الأمان نشطًا، يجب تحديد أذونات البرنامج عند تشغيله. يتم ذلك باستخدام الخيار التالي:</p>
-<div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;start j:&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdk12&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;bin&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;java&lt;/bdi&gt; -&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Djava.security.policy&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;mypolicy srvEcho&lt;/bdi&gt;&lt;/mark&gt;
+<div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;start j:&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdk12&lt;/bdi&gt;\\bin\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;java&lt;/bdi&gt; -&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Djava.security.policy&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;mypolicy srvEcho&lt;/bdi&gt;&lt;/mark&gt;
 </code></pre></div>
 <p>حيث </p>
 <p><em><bdi dir="ltr" class="odt-ltr-term">java.security.policy</bdi></em> هي كلمة رئيسية</p>
@@ -1361,9 +1361,9 @@
 <p>يتمتع البرنامج هنا بأذونات كاملة.</p>
 <p>لنبدأ من جديد. انتقل إلى دليل الخادم وقم بما يلي:</p>
 <ul>
-  <li>ابدأ خدمة الدليل: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi></mark>
+  <li>ابدأ خدمة الدليل: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi></mark>
   </li>
-  <li>ابدأ تشغيل الخادم:     <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy srvEcho</bdi></mark>
+  <li>ابدأ تشغيل الخادم:     <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy srvEcho</bdi></mark>
   </li>
 </ul>
 
@@ -1388,7 +1388,7 @@
 <a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>-Djava.rmi.server.codebase=file:/e:/data/java/rmi/echo/serveur/ 
 <a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>srvEcho
 </code></pre></div>
-<p>يوجد الأمر في سطر واحد. تُستخدم الكلمة الرئيسية <code>&lt;mark style="background-color: #ffff00"&gt;&lt;bdi dir="ltr" class="odt-ltr-term"&gt;java.rmi.server.codebase&lt;/bdi&gt;&lt;/mark&gt;</code> لتحديد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للدليل الذي يحتوي على الفئات المطلوبة من قبل الخادم. في هذه الحالة، يحدد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بروتوكول <code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;file&lt;/bdi&gt;</code>—وهو بروتوكول الوصول إلى الملفات المحلية—والدليل الذي يحتوي على ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الخاصة بالخادم. لذلك، إذا تابعت كما يلي:</p>
+<p>يوجد الأمر في سطر واحد. تُستخدم الكلمة الرئيسية <code>&lt;mark style="background-color: #ffff00"&gt;java.rmi.server.codebase&lt;/mark&gt;</code> لتحديد عنوان URL للدليل الذي يحتوي على الفئات المطلوبة من قبل الخادم. في هذه الحالة، يحدد عنوان URL بروتوكول <code>file</code>—وهو بروتوكول الوصول إلى الملفات المحلية—والدليل الذي يحتوي على ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> الخاصة بالخادم. لذلك، إذا تابعت كما يلي:</p>
 <ul>
   <li>إيقاف خدمة الدليل
   </li>
@@ -1502,13 +1502,13 @@
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>-Djava.rmi.server.codebase=file:/e:/data/java/rmi/echo/serveur/ 
 <a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>srvEcho
 </code></pre></div>
-<p>يبدو أن رسالة الخطأ تشير إلى قيمة الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">java.rmi.server.codebase</bdi></em>. عندما ننظر إلى الوثائق مرة أخرى، نرى أن قيمة هذه الكلمة الرئيسية، في الأمثلة المقدمة، هي دائمًا: <bdi dir="ltr" class="odt-ltr-term">http://..</bdi>، أي أن البروتوكول المستخدم هو <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> ليس من الواضح كيف يطلب العميل فئاته ويحصل عليها من الخادم. ربما يطلبها باستخدام عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المحدد بواسطة الكلمة الرئيسية *<code>&lt;bdi dir="ltr" class="odt-ltr-term"&gt;java.rmi.server.codebase&lt;/bdi&gt;*</code>، والتي يتم تعيينها عند تشغيل الخادم. لذلك قررنا تشغيل الخادم باستخدام الأمر الجديد التالي:</p>
+<p>يبدو أن رسالة الخطأ تشير إلى قيمة الكلمة الرئيسية <em><bdi dir="ltr" class="odt-ltr-term">java.rmi.server.codebase</bdi></em>. عندما ننظر إلى الوثائق مرة أخرى، نرى أن قيمة هذه الكلمة الرئيسية، في الأمثلة المقدمة، هي دائمًا: <bdi dir="ltr" class="odt-ltr-term">http://..</bdi>، أي أن البروتوكول المستخدم هو <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> ليس من الواضح كيف يطلب العميل فئاته ويحصل عليها من الخادم. ربما يطلبها باستخدام عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المحدد بواسطة الكلمة الرئيسية *<code>java.rmi.server.codebase*</code>، والتي يتم تعيينها عند تشغيل الخادم. لذلك قررنا تشغيل الخادم باستخدام الأمر الجديد التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>start j:\jdk12\bin\java -Djava.security.policy=mypolicy
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>-Djava.rmi.server.codebase=http://tahe.istia.univ-angers.fr/rmi/echo/ srvEcho
 </code></pre></div>
 <p>أصبح البروتوكول الآن <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> يجب علينا نقل ملفات <em>.<bdi dir="ltr" class="odt-ltr-term">class</bdi></em> إلى موقع يمكن لخادم <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الوصول إليه على الجهاز الذي سيتم تخزين الفئات عليه. في مثالنا هذا، يعمل الخادم على جهاز يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> مزود بخادم <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> من <bdi dir="ltr" class="odt-ltr-term">Microsoft PWS.</bdi> ويقع المجلد الجذر لهذا الخادم <em>في <bdi dir="ltr" class="odt-ltr-term">d:</bdi>\<bdi dir="ltr" class="odt-ltr-term">Inetpub</bdi>\<bdi dir="ltr" class="odt-ltr-term">wwwroot</bdi></em>. ولذلك، فإننا نتبع الخطوات التالية:</p>
 <ul>
-  <li>قم بإنشاء الدليل <i><bdi dir="ltr" class="odt-ltr-term">d:</bdi>\<bdi dir="ltr" class="odt-ltr-term">Inetpub</bdi>\<bdi dir="ltr" class="odt-ltr-term">wwwroot</bdi>\<bdi dir="ltr" class="odt-ltr-term">rmi</bdi>\<bdi dir="ltr" class="odt-ltr-term">echo</bdi></i>
+  <li>قم بإنشاء الدليل <i><bdi dir="ltr" class="odt-ltr-term">d:</bdi>\<bdi dir="ltr" class="odt-ltr-term">Inetpub</bdi>\<bdi dir="ltr" class="odt-ltr-term">wwwroot</bdi>\rmi\<bdi dir="ltr" class="odt-ltr-term">echo</bdi></i>
   </li>
   <li>ضع ملفات<i> .<bdi dir="ltr" class="odt-ltr-term">class</bdi> </i>الخاصة بالخادم وملف <i><bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi> </i>هناك
   </li>
@@ -1561,7 +1561,7 @@
 <ul>
   <li>يحتوي الخادم على مدير أمان
   </li>
-  <li>وقد تم تشغيله بالخيارات التالية: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></mark>
+  <li>وقد تم تشغيله بالخيارات التالية: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></mark>
   </li>
 </ul>
 
@@ -1572,7 +1572,7 @@
   </li>
   <li>على نظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، تم تشغيله بواسطة `<mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">java cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi>`</mark>
   </li>
-  <li>في نظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، تم تشغيله بواسطة <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\<bdi dir="ltr" class="odt-ltr-term">bin</bdi>\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi></mark>
+  <li>في نظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، تم تشغيله بواسطة <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi></mark>
   </li>
 </ul>
 <p><a id="toc10974753"></a>
@@ -1678,7 +1678,7 @@
 <p><strong><bdi dir="ltr" class="odt-ltr-term">executeSQL</bdi></strong>: يطلب العميل تنفيذ استعلام <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> على قاعدة البيانات التي يتصل بها. ويحدد الحرف الذي يجب أن يفصل بين الحقول في النتائج التي يتم إرجاعها إليه. يعرض الخادم مصفوفة من السلاسل:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>    100 n
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>    لاستعلام تحديث قاعدة البيانات، حيث &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;n&lt;/bdi&gt; هو عدد الصفوف التي تم تحديثها
+<div class="highlight"><pre><span></span><code>    لاستعلام تحديث قاعدة البيانات، حيث n هو عدد الصفوف التي تم تحديثها
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>    500 msg d’erreur
 </code></pre></div>
@@ -1855,7 +1855,7 @@
 <p><strong><bdi dir="ltr" class="odt-ltr-term">directoryServiceURL</bdi></strong>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL RMI</bdi> لخدمة الدليل التي سجلت خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi></p>
 <p><strong><bdi dir="ltr" class="odt-ltr-term">driver</bdi></strong>: برنامج التشغيل الذي يجب أن يستخدمه خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لإدارة قاعدة البيانات</p>
 <p><strong><bdi dir="ltr" class="odt-ltr-term">urlBase</bdi></strong>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL JDBC</bdi> لقاعدة البيانات المراد إدارتها</p>
-<p><strong><bdi dir="ltr" class="odt-ltr-term">id</bdi></strong>: معرف العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود معرف</p>
+<p><strong>id</strong>: معرف العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود معرف</p>
 <p><strong><bdi dir="ltr" class="odt-ltr-term">password</bdi></strong>: كلمة مرور العميل أو <bdi dir="ltr" class="odt-ltr-term">null</bdi> في حالة عدم وجود كلمة مرور</p>
 <p><strong><bdi dir="ltr" class="odt-ltr-term">separator</bdi></strong>: الحرف الذي يجب أن يستخدمه خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لفصل الحقول في صفوف نتائج الاستعلام</p>
 <p>فيما يلي مثال على المعلمات المحتملة: </p>
@@ -2253,7 +2253,7 @@
 <p>قد يرد الخادم بشيء مثل </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>    100 n
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>    للاستعلام الخاص بتحديث قاعدة البيانات، حيث &lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;n&lt;/bdi&gt; هو عدد الصفوف التي تم تحديثها
+<div class="highlight"><pre><span></span><code>    للاستعلام الخاص بتحديث قاعدة البيانات، حيث n هو عدد الصفوف التي تم تحديثها
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>    500 msg d’erreur
 </code></pre></div>
