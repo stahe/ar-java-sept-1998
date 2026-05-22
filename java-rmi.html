@@ -1348,7 +1348,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Erreur java.security.AccessControlException: access denied (java.net.SocketPermission 127.0.0.1:1099 connect,resolve)  lors du lancement du serveur d’écho
 </code></pre></div>
 <p>يبدو أن مدير الأمان كان صارمًا للغاية. نراجع الوثائق مرة أخرى... ندرك أنه عندما يكون مدير الأمان نشطًا، يجب تحديد أذونات البرنامج عند تشغيله. يتم ذلك باستخدام الخيار التالي:</p>
-<div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;start j:&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdk12&lt;/bdi&gt;\\bin\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;java&lt;/bdi&gt; -&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;Djava.security.policy&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;mypolicy srvEcho&lt;/bdi&gt;&lt;/mark&gt;
+<div class="highlight"><pre><span></span><code>&lt;mark style=&quot;background-color: #ffff00&quot;&gt;&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;start j:&lt;/bdi&gt;\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;jdk12&lt;/bdi&gt;\\bin\\&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;java -Djava.security.policy&lt;/bdi&gt;=&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;mypolicy srvEcho&lt;/bdi&gt;&lt;/mark&gt;
 </code></pre></div>
 <p>حيث </p>
 <p><em><bdi dir="ltr" class="odt-ltr-term">java.security.policy</bdi></em> هي كلمة رئيسية</p>
@@ -1363,7 +1363,7 @@
 <ul>
   <li>ابدأ خدمة الدليل: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">rmiregistry</bdi></mark>
   </li>
-  <li>ابدأ تشغيل الخادم:     <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy srvEcho</bdi></mark>
+  <li>ابدأ تشغيل الخادم:     <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java -Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy srvEcho</bdi></mark>
   </li>
 </ul>
 
@@ -1561,7 +1561,7 @@
 <ul>
   <li>يحتوي الخادم على مدير أمان
   </li>
-  <li>وقد تم تشغيله بالخيارات التالية: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></mark>
+  <li>وقد تم تشغيله بالخيارات التالية: <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">start j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java -Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy</bdi></mark>
   </li>
 </ul>
 
@@ -1572,7 +1572,7 @@
   </li>
   <li>على نظام <bdi dir="ltr" class="odt-ltr-term">Linux</bdi>، تم تشغيله بواسطة `<mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">java cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi>`</mark>
   </li>
-  <li>في نظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، تم تشغيله بواسطة <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java</bdi> -<bdi dir="ltr" class="odt-ltr-term">Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi></mark>
+  <li>في نظام <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، تم تشغيله بواسطة <mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">j:</bdi>\<bdi dir="ltr" class="odt-ltr-term">jdk12</bdi>\bin\<bdi dir="ltr" class="odt-ltr-term">java -Djava.security.policy</bdi>=<bdi dir="ltr" class="odt-ltr-term">mypolicy cltEcho rmi://tahe.istia.univ-angers.fr/srvEcho</bdi></mark>
   </li>
 </ul>
 <p><a id="toc10974753"></a>
